@@ -1,0 +1,93 @@
+.rent-contact {
+  line-height: 1.2;
+  font-size: 14px;
+  letter-spacing: 0.075em;
+}
+
+.rent-contact__list {
+  @include clear-list();
+
+  @include mq-min(375px) {
+    max-width: 252px;
+  }
+}
+
+.rent-contact__item {
+  margin-bottom: 28px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.rent-contact__button {
+  width: 100%;
+}
+
+.rent-contact__item-caption {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 400;
+  text-transform: lowercase;
+}
+
+.rent-contact__item-value {
+  display: inline-block;
+}
+
+.rent-contact__email {
+  text-decoration: none;
+  color: $primary-color;
+  outline: none;
+}
+
+.rent-contact__phone {
+  font-weight: 400;
+  font-size: 24px;
+  text-decoration: none;
+  letter-spacing: normal;
+  color: inherit;
+  outline: none;
+}
+
+.rent-contact__presentation {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  transition: 0.1s;
+  outline: none;
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.rent-contact__presentation-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+  fill: currentColor;
+  transition: 0.2s;
+}
+
+.rent-contact__presentation-text {
+  span {
+    box-decoration-break: clone;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-image: linear-gradient(#c5eafc, #c5eafc);
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 100% 6px;
+    transition: 0.2s;
+  }
+
+  .rent-contact__presentation:hover &,
+  .rent-contact__presentation:focus & {
+    span {
+      background-size: 100% 100%;
+    }
+  }
+}

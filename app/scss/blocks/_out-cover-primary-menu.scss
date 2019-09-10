@@ -1,0 +1,50 @@
+.out-cover-primary-menu {
+}
+
+.out-cover-primary-menu__list {
+  @include clear-list();
+
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 16px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+
+  li {
+  }
+
+  a {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $base-color;
+    transition: 0.1s;
+
+    &:hover,
+    &:focus {
+      color: $primary-color;
+    }
+  }
+
+  @include mq-min(667px) {
+    grid-auto-flow: column;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include mq-min(768px) {
+    grid-gap: 20px;
+    font-size: 20px;
+  }
+
+  @include mq-min(1024px) {
+    grid-template-columns: repeat(4, 1fr);
+    font-size: 24px;
+  }
+
+  @include mq-min(1280px) {
+    grid-gap: 28px;
+    font-size: 28px;
+  }
+}

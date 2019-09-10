@@ -1,0 +1,86 @@
+.out-cover {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  height: 100%;
+  padding-top: 66px; // высота верхней части шапки сайта
+  transform: scale(1.2);
+  color: $base-color;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  transition: $duration * 2;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  will-change: transform, visibility;
+
+  &--opened {
+    transform: scale(1);
+    pointer-events: all;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @include mq-min(768px) {
+    padding-top: 86px; // высота верхней части шапки сайта
+  }
+
+  @include mq-min(1024px) {
+    padding-top: 96px; // высота верхней части шапки сайта
+  }
+}
+
+.out-cover__inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.out-cover__body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  box-sizing: border-box;
+}
+
+.out-cover__item {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid;
+
+  @include mq-min(768px) {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+
+  @include mq-min(1024px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    &--primary-menu {
+      border-bottom: none;
+    }
+
+    &--secondary-menu {
+      order: -1;
+    }
+
+    &--info-menu {
+      display: none;
+    }
+  }
+
+  @include mq-min(1280px) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
+
+.out-cover__footer {
+
+}

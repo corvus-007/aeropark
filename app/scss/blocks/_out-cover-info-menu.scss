@@ -1,0 +1,38 @@
+.out-cover-info-menu {
+
+}
+
+.out-cover-info-menu__list {
+  @include clear-list();
+
+  display: grid;
+  grid-gap: 16px;
+  font-size: 16px;
+  line-height: 1.2;
+
+  li {
+
+  }
+
+  a {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-decoration: none;
+    color: $base-color;
+    transition: 0.1s;
+
+    &:hover,
+    &:focus {
+      color: $primary-color;
+    }
+  }
+}
+
+.out-cover-info-menu__item-icon {
+  width: 1.2em;
+  height: 1.2em;
+  margin-right: 4px;
+  display: inline-block;
+  vertical-align: top;
+  fill: currentColor;
+}

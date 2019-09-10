@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <title>Поиск</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  @@include('blocks/site-header.html')
+
+  <main class="site-main">
+    <article class="page search-page">
+      <div class="container">
+        <div class="search">
+          <form class="search__form search-form" action="/page-search.html" method="GET" autocomplete="off">
+            <label class="search-form__field">
+              <input class="search-form__input input" type="search" name="q" value="" placeholder="Поиск" autofocus>
+              <button class="search-form__submit" type="submit" aria-label="Начать поиск">
+                <svg class="search-form__submit-icon" width="16" height="16">
+                  <use xlink:href="/images/symbols.svg#icon-search"></use>
+                </svg>
+              </button>
+            </label>
+            <p class="search-form__text"><small>Просто начните печатать</small></p>
+          </form> <!-- .search__form.search-form -->
+
+          <div class="search__result search-result">
+            <p class="search-result__empty">По вашему запросу ничего не найдено :(</p>
+            <ul class="search-result__list">
+              <li class="search-result__item search-result-item">
+                <a class="search-result-item__wraplink" href="">
+                  <p class="search-result-item__title"><b>Terranova</b></p>
+                  <p class="search-result-item__tags"><span class="hatch-maker">магазины</span></p>
+                  <p class="search-result-item__text">Терранова предлагает одеваться в стильную, но по ценовым качествам доступную одежду. Это всегда немного уличный, немного спортивный стиль: рваные <b>джинсы</b>, длинные футболки с цветными надписями и яркими картинками, легкие летние сарафаны и удобные куртки и пальто, очень много различных аксессуаров и, конечно же, сумки. Девиз компании «Spirito Italiano» — «Дух Италии», вполне себя оправдывает: одежда от Terranova отличается яркостью, экстравагантностью и притягательной выразительностью, как и сама Италия.</p>
+                </a>
+              </li>
+              <li class="search-result__item search-result-item">
+                <a class="search-result-item__wraplink" href="">
+                  <p class="search-result-item__title"><b>Распродажа до 70% началась в MAVI</b></p>
+                  <p class="search-result-item__tags"><span class="hatch-maker">акции</span></p>
+                  <p class="search-result-item__text">Только для вас в период с 27 августа и до 17 сентября в магазинах MAVI – сумасшедшие скидки! Любые джинсы со скидками до 70%! Ждём вас в магазинах MAVI на втором этаже ТРЦ «АЭРО ПАРК».</p>
+                </a>
+              </li>
+            </ul>
+          </div> <!-- .search__result.search-result -->
+        </div> <!-- .search -->
+      </div>
+    </article>
+  </main>
+
+  @@include('blocks/site-footer.html')
+  @@include('blocks/site-scripts.html')
+</body>
+</html>

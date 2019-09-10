@@ -1,0 +1,40 @@
+.search-result {
+
+}
+
+.search-result__empty {
+  max-width: 500px;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 1.15;
+}
+
+.search-result__list {
+  @include clear-list();
+}
+
+.search-result__item {
+  position: relative;
+  margin-bottom: 28px;
+  padding-bottom: 28px;
+
+  &:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+    &::before {
+      content: none;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100px;
+    height: 4px;
+    transform: translateY(50%);
+    background-color: $accent-color;
+  }
+}

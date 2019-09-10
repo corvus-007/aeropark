@@ -1,0 +1,65 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  // justify-content: center;
+  min-width: 220px;
+  padding: 16px 24px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: $primary-font;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: $primary-color;
+  border: 1px solid transparent;
+  letter-spacing: 0.075em;
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+  user-select: none;
+  transition: $duration * 2;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: darken($primary-color, 6%);
+  }
+
+  &:active {
+    // color: #ffffff;
+    // background-color: lighten($primary-color, 6%);
+    opacity: 0.8;
+  }
+
+  &--fluid {
+    width: 100%;
+  }
+}
+
+.button__icon-holder {
+  position: relative;
+  width: 16px;
+  height: 100%;
+  flex-shrink: 0;
+
+  &--left {
+    margin-right: 16px;
+  }
+
+  &--right {
+    margin-left: 16px;
+  }
+}
+
+.button__icon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  transform: translate3d(0, -50%, 0);
+  fill: currentColor;
+}

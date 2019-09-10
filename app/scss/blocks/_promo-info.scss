@@ -1,0 +1,48 @@
+.promo-info {
+  line-height: 1.2;
+  font-size: 14px;
+  letter-spacing: 0.075em;
+}
+
+.promo-info__list {
+  @include clear-list();
+
+  @include mq-min(375px) {
+    max-width: 252px;
+  }
+}
+
+.promo-info__item {
+  display: flex;
+  margin-bottom: 36px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.promo-info__item-icon {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  fill: currentColor;
+}
+
+.promo-info__item-content {
+  flex-grow: 1;
+}
+
+.promo-info__floor {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.promo-info__floor-figure {
+  font-size: em(72px, 24px);
+  line-height: 1;
+}
+
+.promo-info__button {
+  width: 100%;
+}

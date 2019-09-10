@@ -1,0 +1,44 @@
+.site-header-top {
+  position: relative;
+  z-index: 15;
+
+  .white-header & {
+    color: #ffffff;
+  }
+}
+
+.site-header-top__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-header-top__search {
+  margin-right: 64px;
+}
+
+.site-header-top__contact {
+  position: relative;
+  z-index: 5;
+  flex-grow: 1;
+}
+
+.site-header-top__logo {
+  position: relative;
+  margin-left: 68px;
+  margin-right: 68px;
+  z-index: 5;
+}
+
+.site-header-top__links {
+  position: relative;
+  z-index: 5;
+  flex-grow: 1;
+}
+
+.site-header-top__additional-menu-toggle {
+  position: relative;
+  z-index: 5;
+  flex-shrink: 0;
+  margin-left: 64px;
+}

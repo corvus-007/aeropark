@@ -1,0 +1,49 @@
+.common-slider-button {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 60px;
+  height: 60px;
+  transform: translateY(-50%);
+  color: $base-color;
+  background-color: #ffffff;
+  box-shadow: 0 14px 25px 19px rgba(#212121, 0.4);
+  border: none;
+  border-radius: 50%;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+
+  &:hover {
+
+  }
+
+  &:focus {
+
+  }
+
+  &:active {
+
+  }
+
+  &--prev {
+    left: 24px;
+  }
+
+  &--next {
+    right: 24px;
+  }
+}
+
+.common-slider-button__icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}

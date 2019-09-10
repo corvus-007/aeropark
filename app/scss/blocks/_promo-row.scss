@@ -1,0 +1,29 @@
+.promo-row {
+  display: grid;
+  grid-gap: 60px;
+
+  @include mq-min(768px) {
+    grid-template-columns: 1fr 252px;
+    grid-gap: 40px;
+  }
+
+  @include mq-min(1024px) {
+    grid-template-columns: 1fr 296px;
+    grid-gap: 60px;
+  }
+
+  @include mq-min(1280px) {
+    grid-gap: 80px;
+  }
+}
+
+.promo-row__content {
+}
+
+.promo-row__aside {
+  position: relative;
+
+  @include mq-max(767px) {
+    grid-row-start: 1;
+  }
+}

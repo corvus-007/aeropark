@@ -1,0 +1,27 @@
+.site-header {
+  body:not(.home) & {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.site-header__top {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid $gray-214;
+}
+
+.site-header__top-container {
+
+}
+
+.site-header__bottom {
+  position: relative;
+  z-index: 1;
+}
+
+.site-header__bottom-container {
+
+}

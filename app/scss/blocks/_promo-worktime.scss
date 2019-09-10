@@ -1,0 +1,37 @@
+.promo-worktime {
+}
+
+.promo-worktime__list {
+  @include clear-list();
+}
+
+.promo-worktime__item {
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.promo-worktime__days {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+
+.promo-worktime__time {
+  display: flex;
+  align-items: center;
+}
+
+.promo-worktime__time-delimiter-sign {
+  flex-grow: 1;
+  height: 1px;
+  margin-left: 8px;
+  margin-right: 8px;
+  color: transparent;
+  background-color: $primary-color;
+  overflow: hidden;
+  user-select: none;
+  pointer-events: none;
+}

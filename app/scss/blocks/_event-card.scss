@@ -1,0 +1,94 @@
+.event-card {
+}
+
+.event-card__wraplink {
+  display: block;
+  line-height: 1.2;
+  text-decoration: none;
+  font-weight: 500;
+  color: $base-color;
+  overflow: hidden;
+  border-radius: 4px;
+  transition: 0.4s;
+
+  &:hover,
+  &:focus {
+    transform: translate3d(0, -4px, 0);
+    color: $base-color;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.event-card__picture {
+  @include make-fit-object();
+
+  margin-bottom: 16px;
+  border-radius: 4px;
+
+  img {
+    transition: 0.5s;
+  }
+}
+
+.event-card__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.event-card__title {
+  order: 1;
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+
+  @include mq-min(768px) {
+    font-size: 18px;
+  }
+}
+
+.event-card__info {
+  @include clear-list();
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+
+  @include mq-min(768px) {
+    letter-spacing: 0.075em;
+  }
+}
+
+.event-card__info-item {
+  margin-bottom: 12px;
+}
+
+.event-card__type-tag {
+  margin-right: 8px;
+  padding-left: 4px;
+  padding-right: 4px;
+  text-transform: lowercase;
+  background-image: linear-gradient($gray-234, $gray-234);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 100% 8px;
+}
+
+.event-card__date {
+  display: inline-flex;
+  align-items: center;
+}
+
+.event-card__date-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  fill: currentColor;
+}
+
+.event-card__date-text {
+}

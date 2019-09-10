@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <title>События</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="white-header">
+  @@include('blocks/site-header.html')
+
+  <main class="site-main">
+    <article class="page page--pull-top">
+      <header class="page__header page-header page-header--has-banner">
+        <div class="page-header__inner container">
+          <h1 class="page-header__title page-title">События</h1>
+        </div>
+        <div class="page-feature-image">
+          <img src="https://images.unsplash.com/photo-1519567241046-7f570eee3ce6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1516&q=80" alt="" role="presentation">
+        </div>
+      </header>
+
+      <div class="page-content container">
+        <div class="events">
+          <!-- .events-filter--open - опции фильтра открыты -->
+          <div class="events__filter events-filter">
+            <button class="events-filter__current input" type="button">
+              <span class="visually-hidden">Фильтрация по:</span>
+              <span class="events-filter__label">Все</span>
+            </button>
+            <ul class="events-filter__options">
+              <li class="events-filter__options-item event-filter-option event-filter-option--active">
+                <button class="event-filter-option__button" type="button" data-filter="*">Все</button>
+              </li>
+              <li class="events-filter__options-item event-filter-option">
+                <button class="event-filter-option__button" type="button" data-filter=".filter-actions">Акции</button>
+              </li>
+              <li class="events-filter__options-item event-filter-option">
+                <button class="event-filter-option__button" type="button" data-filter=".filter-events">События</button>
+              </li>
+              <li class="events-filter__options-item event-filter-option">
+                <button class="event-filter-option__button" type="button" data-filter=".filter-news">Новости</button>
+              </li>
+            </ul>
+          </div> <!-- .events__filter.events-filter -->
+
+          <ul class="events__list events-cards">
+            <li class="events-cards__item event-card filter-events">
+              <a class="event-card__wraplink" href="">
+                <span class="event-card__picture">
+                  <img src="https://trc-aeropark.ru/media/8864e32e-ed79-49d8-85f3-23de77ed00fa.png.596.0.png" alt="Сезон профессий в детском клубе «Авиатор»">
+                </span>
+                <span class="event-card__content">
+                  <h2 class="event-card__title">Сезон профессий в детском клубе «Авиатор»</h2>
+                  <ul class="event-card__info">
+                    <li class="event-card__info-item">
+                      <span class="event-card__type-tag">События</span>
+                    </li>
+                    <li class="event-card__info-item">
+                      <span class="event-card__date">
+                        <svg class="event-card__date-icon" width="16" height="16">
+                          <use xlink:href="/images/symbols.svg#icon-calendar"></use>
+                        </svg>
+                        <span class="event-card__date-text">1 сен – 24 сен</span>
+                      </span>
+                    </li>
+                  </ul>
+                </span>
+              </a>
+            </li>
+            <li class="events-cards__item event-card filter-events">
+              <a class="event-card__wraplink" href="">
+                <span class="event-card__picture">
+                  <img src="https://images.unsplash.com/photo-1509828945144-552b3b1a968d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="«АЭРО квиз» – сезон
+                  осенних игр 2019 г.">
+                </span>
+                <span class="event-card__content">
+                  <h2 class="event-card__title">«АЭРО квиз» – сезон осенних игр 2019 г.</h2>
+                  <ul class="event-card__info">
+                    <li class="event-card__info-item">
+                      <span class="event-card__type-tag">События</span>
+                    </li>
+                    <li class="event-card__info-item">
+                      <span class="event-card__date">
+                        <svg class="event-card__date-icon" width="16" height="16">
+                          <use xlink:href="/images/symbols.svg#icon-calendar"></use>
+                        </svg>
+                        <span class="event-card__date-text">6 авг – 15 ноя</span>
+                      </span>
+                    </li>
+                  </ul>
+                </span>
+              </a>
+            </li>
+            <li class="events-cards__item event-card filter-events">
+              <a class="event-card__wraplink" href="">
+                <span class="event-card__picture">
+                  <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80" alt="«Отличный старт!»">
+                </span>
+                <span class="event-card__content">
+                  <h2 class="event-card__title">«Отличный старт!»</h2>
+                  <ul class="event-card__info">
+                    <li class="event-card__info-item">
+                      <span class="event-card__type-tag">События</span>
+                    </li>
+                    <li class="event-card__info-item">
+                      <span class="event-card__date">
+                        <svg class="event-card__date-icon" width="16" height="16">
+                          <use xlink:href="/images/symbols.svg#icon-calendar"></use>
+                        </svg>
+                        <span class="event-card__date-text">1 сен – 24 сен</span>
+                      </span>
+                    </li>
+                  </ul>
+                </span>
+              </a>
+            </li>
+            <li class="events-cards__item event-card filter-news">
+              <a class="event-card__wraplink" href="">
+                <span class="event-card__picture">
+                  <img src="https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="Расписание работы АЭРО БОТА в ТРЦ «АЭРО ПАРК»">
+                </span>
+                <span class="event-card__content">
+                  <h2 class="event-card__title">Расписание работы АЭРО БОТА в ТРЦ «АЭРО ПАРК»</h2>
+                  <ul class="event-card__info">
+                    <li class="event-card__info-item">
+                      <span class="event-card__type-tag">Новости</span>
+                    </li>
+                  </ul>
+                </span>
+              </a>
+            </li>
+            <li class="events-cards__item event-card filter-events">
+              <a class="event-card__wraplink" href="">
+                <span class="event-card__picture">
+                  <img src="https://images.unsplash.com/photo-1464820453369-31d2c0b651af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" alt="Новый сезон в клубе «Авиатор»">
+                </span>
+                <span class="event-card__content">
+                  <h2 class="event-card__title">Новый сезон в клубе «Авиатор»</h2>
+                  <ul class="event-card__info">
+                    <li class="event-card__info-item">
+                      <span class="event-card__type-tag">События</span>
+                    </li>
+                    <li class="event-card__info-item">
+                      <span class="event-card__date">
+                        <svg class="event-card__date-icon" width="16" height="16">
+                          <use xlink:href="/images/symbols.svg#icon-calendar"></use>
+                        </svg>
+                        <span class="event-card__date-text">6 авг – 15 ноя</span>
+                      </span>
+                    </li>
+                  </ul>
+                </span>
+              </a>
+            </li>
+            <li class="events-cards__item event-card filter-actions">
+              <a class="event-card__wraplink" href="/page-promo.html">
+                <span class="event-card__picture">
+                  <img src="https://images.unsplash.com/photo-1550615162-ed342f474ebf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" alt="Уникальный SKODA EXPERIENCE в Брянске!">
+                </span>
+                <span class="event-card__content">
+                  <h2 class="event-card__title">Уникальный SKODA EXPERIENCE в Брянске!</h2>
+                  <ul class="event-card__info">
+                    <li class="event-card__info-item">
+                      <span class="event-card__type-tag">Акции</span>
+                    </li>
+                    <li class="event-card__info-item">
+                      <span class="event-card__date">
+                        <svg class="event-card__date-icon" width="16" height="16">
+                          <use xlink:href="/images/symbols.svg#icon-calendar"></use>
+                        </svg>
+                        <span class="event-card__date-text">12 авг – 12 сен</span>
+                      </span>
+                    </li>
+                  </ul>
+                </span>
+              </a>
+            </li>
+          </ul> <!-- .events__list.events-cards -->
+        </div> <!-- .events -->
+      </div> <!-- .page-content.container -->
+    </article>
+  </main>
+
+  @@include('blocks/site-footer.html')
+  @@include('blocks/site-scripts.html')
+</body>
+</html>

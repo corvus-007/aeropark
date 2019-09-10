@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <title>Арендаторам</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  @@include('blocks/site-header.html')
+
+  <main class="site-main">
+    <article class="page rent-page page--pull-top">
+      <header class="page-header">
+        <div class="page-header__inner container">
+          <h1 class="page-header__title page-title">Арендаторам</h1>
+        </div>
+      </header>
+
+      <div class="page-content container">
+        <div class="rent">
+          <div class="rent-row">
+            <div class="rent-row__content">
+              <div class="textual">
+                <p><b>Суперрегиональный торговый центр.</b></p>
+                <p>
+                  «АЭРО ПАРК» – один из крупнейших торгово-развлекательных центров в регионе. Расположен в центре города Брянск (соединяет 3 основных густонаселенных района: Советский, Бежицкий и Володарский).
+                </p>
+              </div>
+            </div>
+          </div> <!-- .rent-row -->
+
+          <div class="rent-row">
+            <div class="rent__features rent-features">
+              <ul class="rent-features__list">
+                <li class="rent-features__item">
+                  <svg class="rent-features__item-icon" width="16" height="16">
+                    <use xlink:href="/images/symbols.svg#icon-square-area"></use>
+                  </svg>
+                  <dl class="rent-features__item-content">
+                    <dt>
+                      <span class="rent-features__item-figure">84&nbsp;000</span> м²
+                    </dt>
+                    <dd>Арендная площадь ТРЦ «АЭРО ПАРК» составляет более 84 000 кв.&nbsp;м</dd>
+                  </dl>
+                </li>
+                <li class="rent-features__item">
+                  <svg class="rent-features__item-icon" width="16" height="16">
+                    <use xlink:href="/images/symbols.svg#icon-family"></use>
+                  </svg>
+                  <dl class="rent-features__item-content">
+                    <dt>
+                      <span class="rent-features__item-figure">34&nbsp;000</span> чел. <br> в&nbsp;день
+                    </dt>
+                    <dd>Самый высокий показатель посещаемости по всему региону</dd>
+                  </dl>
+                </li>
+              </ul>
+            </div>
+          </div> <!-- .rent-row -->
+
+          <div class="rent-row">
+            <div class="rent-row__content">
+              <div class="textual">
+                <p>
+                  В ТРЦ «АЭРО ПАРК» расположились более 250 магазинов, 20 ресторанов и кафе, салоны красоты, 8-ми зальный мультиплекс «Панорама», экстрим-парк «Атмосфера», детский развлекательный центр «Бумеранг». Сочетание таких проектов в одном месте позволяет найти что-то интересное посетителям всех возрастов.
+                </p>
+
+                <p>
+                  «АЭРО ПАРК» - первый в Брянске торгово-развлекательный центр, собравший в себе такие бренды, как Zara, Bershka, Stradivarius, Pull&Bear, Reserved, Mohito, House, СROPP, Sinsay, H&M,  «Декатлон», «Снежная Королева», Terranova, «Дочки-Сыночки», гипермаркет «Лента»,«Леонардо»,«Технопарк», «М.Видео», OBI, территорию мебельных магазинов - «Мебель Холл». 
+                </p>
+              </div>
+            </div>
+            <div class="rent-row__aside">
+              <section class="rent-contact">
+                <ul class="rent-contact__list">
+                  <li class="rent-contact__item">
+                    <button class="rent-contact__button button" type="button" data-fancybox data-src="#dsfdsf">
+                      <span class="button__icon-holder button__icon-holder--left">
+                        <svg class="button__icon" width="16" height="16">
+                          <use xlink:href="/images/symbols.svg#icon-message"></use>
+                        </svg>
+                      </span>
+                      <span class="button__text">Заявка на аренду</span>
+                    </button>
+                  </li>
+                  <li class="rent-contact__item">
+                    <span class="rent-contact__item-caption">Отдел аренды</span>
+                    <a class="rent-contact__item-value rent-contact__email" href="mailto:arenda@trc-aeropark.ru">arenda@trc-aeropark.ru</a>
+                  </li>
+                  <li class="rent-contact__item">
+                    <span class="rent-contact__item-caption">Контактный телефон</span>
+                    <a class="rent-contact__item-value rent-contact__phone" href="tel:+74832599933">+7 (4832) 59-99-33</a>
+                  </li>
+                  <li class="rent-contact__item">
+                    <a class="rent-contact__presentation" href="" target="_blank">
+                      <svg class="rent-contact__presentation-icon" width="16" height="16">
+                        <use xlink:href="/images/symbols.svg#icon-pdf-file"></use>
+                      </svg>
+                      <span class="rent-contact__presentation-text">
+                        <span>Презентация <br> ТРЦ «АЭРО ПАРК»</span>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </section>
+            </div>
+          </div> <!-- .rent-row -->
+        </div> <!-- .rent -->
+      </div> <!-- .page-content -->
+    </article>
+  </main>
+
+  @@include('blocks/site-footer.html')
+  @@include('blocks/site-scripts.html')
+</body>
+</html>

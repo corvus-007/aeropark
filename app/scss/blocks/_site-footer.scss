@@ -1,0 +1,32 @@
+.site-footer {
+  padding-top: 68px;
+  padding-bottom: 68px;
+  background-color: #edf0f0;
+}
+
+.site-footer__inner {
+  margin-bottom: -40px;
+}
+
+.site-footer__area {
+  margin-bottom: 24px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.site-footer__socials-icon {
+  @include mq-max(767px) {
+    width: 24px;
+  }
+}
+
+.site-footer__copy {
+  margin: 0;
+  font-size: 11px;
+}
+
+.site-footer__developer {
+  text-align: right;
+}
