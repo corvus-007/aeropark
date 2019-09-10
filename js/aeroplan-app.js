@@ -611,7 +611,6 @@ function calcLogoPosition(d, property) {
     return null;
   }
 
-  debugger;
   var path = document.querySelector("[data-place-id=\"".concat(d.id, "\"]"));
   var pathPosition = path.getBBox();
   var pathX = pathPosition.x;
