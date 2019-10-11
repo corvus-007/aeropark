@@ -1,0 +1,47 @@
+.common-filter-option {
+
+}
+
+.common-filter-option__button {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 16px;
+  appearance: none;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 12px;
+  text-align: left;
+  white-space: nowrap;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  box-sizing: border-box;
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+
+  .common-filter-option--active & {
+    background-color: $gray-245;
+  }
+
+  @include mq-min(768px) {
+    padding: 0;
+    text-align: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -8px;
+      left: -8px;
+      right: -8px;
+      bottom: -8px;
+    }
+
+    .common-filter-option--active & {
+      color: $primary-color;
+      background-color: transparent;
+    }
+  }
+}

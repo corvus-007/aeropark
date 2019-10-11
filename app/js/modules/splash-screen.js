@@ -1,4 +1,4 @@
-window.splashScreen = (function (window) {
+window.splashScreen = (function (window, $) {
   'use strict';
 
   var splashScreen = document.querySelector('.splash-screen');
@@ -7,12 +7,28 @@ window.splashScreen = (function (window) {
     return;
   }
 
+  var isLoaded = false;
+
   document.body.style.overflowY = 'hidden';
   document.body.style.paddingRight = window.util.getScrollbarWidth() + 'px';
 
   window.addEventListener('load', function () {
+    hideSplashScreen();
+  });
+
+  setTimeout(() => {
+    hideSplashScreen()
+  }, 1000 * 8);
+
+  function hideSplashScreen() {
+    if (isLoaded) {
+      return;
+    }
+
     splashScreen.classList.add('splash-screen--hidden');
     document.body.style.overflowY = '';
     document.body.style.paddingRight = '';
-  });
-})(window);
+
+    isLoaded = true;
+  }
+})(window, jQuery);

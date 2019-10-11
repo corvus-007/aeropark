@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <title>Кинотеатр</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="white-header">
+  @@include('blocks/site-header.html')
+
+  <main class="site-main">
+    <article class="page page--pull-top">
+      <header class="page__header page-header page-header--has-banner">
+        <div class="page-header__inner container">
+          <h1 class="page-header__title page-title">Кинотеатр</h1>
+        </div>
+        <div class="page-feature-image">
+          <img src="https://images.unsplash.com/photo-1519567241046-7f570eee3ce6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1516&q=80" alt="" role="presentation">
+        </div>
+      </header>
+
+      <div class="page-content container">
+        <div class="cinema">
+          <div class="cinema__filter common-page-filter">
+            <button class="common-page-filter__current input" type="button">
+              <span class="visually-hidden">Фильтрация по:</span>
+              <span class="common-page-filter__label"></span>
+            </button>
+            <ul class="common-page-filter__options">
+              <li class="common-page-filter__options-item common-filter-option">
+                <button class="common-filter-option__button" type="button" data-filter=".filter-today">Сегодня</button>
+              </li>
+              <li class="common-page-filter__options-item common-filter-option">
+                <button class="common-filter-option__button" type="button" data-filter=".filter-tomorrow">Завтра</button>
+              </li>
+            </ul>
+          </div>
+        </div> <!-- .cinema -->
+
+        <div class="cinema-row">
+          <div class="cinema-row__content">
+            <ul class="movies-cards" data-filter-cards>
+              <li class="movies-cards__item movie-card filter-today">
+                <a class="movie-card__wraplink" href="./page-movie.html">
+                  <div class="movie-card__poster">
+                    <img src="images/movies-posters/01.jpg" alt="Мстители: Финал">
+                  </div>
+                  <div class="movie-card__content">
+                    <h3 class="movie-card__title">Мстители: Финал</h3>
+                    <ul class="movie-card__genres">
+                      <li>фантастика</li>
+                      <li>боевик</li>
+                      <li>приключения</li>
+                    </ul>
+                  </div>
+                </a>
+              </li>
+              <li class="movies-cards__item movie-card filter-today">
+                <a class="movie-card__wraplink" href="./page-movie.html">
+                  <div class="movie-card__poster">
+                    <img src="images/movies-posters/02.jpg" alt="Как приручить дракона 3">
+                  </div>
+                  <div class="movie-card__content">
+                    <h3 class="movie-card__title">Как приручить дракона 3</h3>
+                    <ul class="movie-card__genres">
+                      <li>приключения</li>
+                      <li>экшен</li>
+                      <li>анимация</li>
+                    </ul>
+                  </div>
+                </a>
+              </li>
+              <li class="movies-cards__item movie-card filter-today">
+                <a class="movie-card__wraplink" href="./page-movie.html">
+                  <div class="movie-card__poster">
+                    <img src="images/movies-posters/03.jpg" alt="Джон Уик 3">
+                  </div>
+                  <div class="movie-card__content">
+                    <h3 class="movie-card__title">Джон Уик 3</h3>
+                    <ul class="movie-card__genres">
+                      <li>боевик</li>
+                      <li>триллер</li>
+                      <li>криминал</li>
+                      <li>экшен</li>
+                    </ul>
+                  </div>
+                </a>
+              </li>
+              <li class="movies-cards__item movie-card filter-today filter-tomorrow">
+                <a class="movie-card__wraplink" href="./page-movie.html">
+                  <div class="movie-card__poster">
+                    <img src="images/movies-posters/04.jpg" alt="Шазам">
+                  </div>
+                  <div class="movie-card__content">
+                    <h3 class="movie-card__title">Шазам</h3>
+                    <ul class="movie-card__genres">
+                      <li>фэнтези</li>
+                      <li>боевик</li>
+                      <li>комедия</li>
+                      <li>приключения</li>
+                    </ul>
+                  </div>
+                </a>
+              </li>
+              <li class="movies-cards__item movie-card filter-today">
+                <a class="movie-card__wraplink" href="./page-movie.html">
+                  <div class="movie-card__poster">
+                    <img src="images/movies-posters/05.jpg" alt="Зеленая книга">
+                  </div>
+                  <div class="movie-card__content">
+                    <h3 class="movie-card__title">Зеленая книга</h3>
+                    <ul class="movie-card__genres">
+                      <li>комедия</li>
+                    </ul>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div> <!-- .cinema-row__content -->
+
+          <div class="cinema-row__aside">
+            <section class="aside-info">
+              <ul class="aside-info__list">
+                <li class="aside-info__item">
+                  <div class="aside-info__floor">
+                    <span class="aside-info__floor-figure">2</span>
+                    этаж</div>
+                </li>
+                <li class="aside-info__item">
+                  <a href="" class="aside-info__button button">
+                    <span class="button__icon-holder button__icon-holder--left">
+                      <svg class="button__icon" width="16" height="16">
+                        <use xlink:href="./images/symbols.svg#icon-pin"></use>
+                      </svg>
+                    </span>
+                    Показать на карте
+                  </a>
+                </li>
+                <li class="aside-info__item">
+                  <svg class="aside-info__item-icon" width="16" height="16">
+                    <use xlink:href="./images/symbols.svg#icon-phone"></use>
+                  </svg>
+                  <div class="aside-info__item-content">
+                    <span class="visually-hidden">Телефон:</span>
+                    <a href="tel:+7 4832 32‑20-20">+7 (4832) 32‑20-20</a>
+                  </div>
+                </li>
+                <li class="aside-info__item">
+                  <svg class="aside-info__item-icon" width="16" height="16">
+                    <use xlink:href="./images/symbols.svg#icon-clock"></use>
+                  </svg>
+                  <div class="aside-info__item-content">
+                    <div class="promo-worktime">
+                      <span class="visually-hidden">Время работы:</span>
+                      <ul class="promo-worktime__list">
+                        <li class="promo-worktime__item">
+                          <span class="promo-worktime__days">вс – чт:</span>
+                          <div class="promo-worktime__time">
+                            10:00
+                            <span class="promo-worktime__time-delimiter-sign">–</span>
+                            22:00
+                          </div>
+                        </li>
+                        <li class="promo-worktime__item">
+                          <span class="promo-worktime__days">пт – сб:</span>
+                          <div class="promo-worktime__time">
+                            11:30
+                            <span class="promo-worktime__time-delimiter-sign">–</span>
+                            23:00
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </section> <!-- .aside-info -->
+          </div> <!-- .cinema-row__aside -->
+        </div> <!-- .cinema-row -->
+      </div> <!-- .page-content.container -->
+    </article>
+  </main>
+
+  @@include('blocks/site-footer.html')
+  @@include('blocks/site-scripts.html')
+</body>
+</html>

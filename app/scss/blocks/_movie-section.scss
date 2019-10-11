@@ -1,0 +1,18 @@
+.movie-section {
+  margin-bottom: 60px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.movie-section__title {
+  margin: 0;
+  margin-bottom: 28px;
+  font-weight: 500;
+  font-size: 28px;
+
+  @media (min-width: 768px) {
+    font-size: 36px;
+  }
+}

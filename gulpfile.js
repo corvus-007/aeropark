@@ -25,26 +25,21 @@ const folder = {
   build: 'build'
 };
 
-task('stylesDev', () => {
-  return src([
-    `${folder.src}/scss/style.scss`,
-    `${folder.src}/scss/aeroplan-style.scss`
-  ])
-    .pipe(
-      plumber({
-        errorHandler: function(err) {
-          console.log(err);
-        }
-      })
-    )
-    .pipe(sass())
-    .pipe(
-      postcss([
-        autoprefixer()
-      ])
-    )
-    .pipe(dest(`${folder.build}/`))
-    .pipe(browserSync.stream());
+const isDevelopment =
+  !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
+task('styles', () => {
+  return (
+    src('app/scss/style.scss')
+    // .pipe(gulpIf(isDevelopment, sourcemaps.init()))
+
+      .pipe(sass())
+      .pipe(postcss([autoprefixer()]))
+      // .pipe(gulpIf(!isDevelopment, cssnano()))
+
+      // .pipe(gulpIf(isDevelopment, sourcemaps.write()))
+      .pipe(dest('build/'))
+      .pipe(browserSync.stream())
+  );
 });
 
 // function stylesDev(cb) {
@@ -265,7 +260,7 @@ function serve(cb) {
     server: folder.build
   });
 
-  watch(`${folder.src}/scss/**/*`, series('stylesDev'));
+  watch(`${folder.src}/scss/**/*`, series('styles'));
   watch(`${folder.src}/fonts/**/*`, copyFonts);
   watch(`${folder.src}/images/**/*`, copyImages);
   watch(
@@ -282,7 +277,10 @@ function serve(cb) {
     [`${folder.src}/js/modules/*.js`, `${folder.src}/js/modules.js`],
     modulesJS
   );
-  watch('./app/js/aeroplan/**/*.js', series('aeroplan-scripts')).on('change', browserSync.reload);
+  watch('./app/js/aeroplan/**/*.js', series('aeroplan-scripts')).on(
+    'change',
+    browserSync.reload
+  );
 
   cb();
 }
@@ -296,7 +294,7 @@ function deployProject(cb) {
 const buildDev = series(
   clean,
   parallel(
-    'stylesDev',
+    'styles',
     copyImages,
     copyJS,
     modulesJS,

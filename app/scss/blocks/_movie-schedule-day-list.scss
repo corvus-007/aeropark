@@ -1,0 +1,9 @@
+.movie-schedule-day-list {
+  @include clear-list();
+}
+
+.movie-schedule-day-list__item:not(:last-child) {
+  margin-bottom: 36px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid $gray-214;
+}

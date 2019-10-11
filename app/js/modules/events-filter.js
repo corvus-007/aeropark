@@ -7,17 +7,11 @@ window.eventsFilter = (function() {
     return;
   }
 
-  // const iso = new Isotope('.events-cards', {
-  //   itemSelector: '.events-cards__item',
-  //   layoutMode: 'fitRows'
-  // });
-
   const eventsFilter = events.querySelector('.events-filter');
   const currentElem = eventsFilter.querySelector('.events-filter__current');
   const labelElem = eventsFilter.querySelector('.events-filter__label');
   const optionsList = eventsFilter.querySelector('.events-filter__options');
   const eventsCardsList = events.querySelector('.events-cards');
-  // let eventCardItems = eventsCardsList.querySelectorAll('.events-cards__item');
 
   let filterText = '';
 
@@ -29,10 +23,7 @@ window.eventsFilter = (function() {
     hideAllItems();
 
     eventCardItems.forEach(card => {
-      // debugger;
       if (card.matches(value)) {
-        // card.hidden = false;
-
         card.classList.remove('events-cards__item--hidden');
         card.classList.add('events-cards__item--show');
       }

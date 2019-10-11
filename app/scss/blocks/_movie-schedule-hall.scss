@@ -1,0 +1,17 @@
+.movie-schedule-hall {
+  display: flex;
+  align-items: baseline;
+}
+
+.movie-schedule-hall__title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  width: 160px;
+  margin-right: 40px;
+  color: $muted-color;
+}
+
+.movie-schedule-hall__session-list {
+
+}

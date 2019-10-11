@@ -633,8 +633,6 @@ function calcLogoPosition(d, property) {
     return null;
   }
 
-  debugger;
-
   const path = document.querySelector(`[data-place-id="${d.id}"]`);
   const pathPosition = path.getBBox();
 

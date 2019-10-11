@@ -1,0 +1,11 @@
+.movie-schedule-hall-list {
+  @include clear-list();
+}
+
+.movie-schedule-hall-list__item {
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

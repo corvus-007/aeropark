@@ -25,8 +25,11 @@
 // @import "blocks/custom-ol";
 // @import "blocks/custom-ul";
 @import "blocks/textual";
-@import "blocks/common-slider-button";
 @import "blocks/section-header-link";
+@import "blocks/aside-info";
+@import "blocks/common-slider-button";
+@import "blocks/common-filter-option";
+@import "blocks/common-page-filter";
 @import "blocks/common-section";
 @import "blocks/header-search-form";
 @import "blocks/header-search";
@@ -76,6 +79,23 @@
 @import "blocks/search-result-item";
 @import "blocks/search-result";
 @import "blocks/search";
+
+@import "blocks/cinema-row";
+@import "blocks/cinema";
+
+@import "blocks/shops";
+
+@import "blocks/movie-info";
+@import "blocks/movie-schedule-session-list";
+@import "blocks/movie-schedule-hall";
+@import "blocks/movie-schedule-hall-list";
+@import "blocks/movie-schedule-day";
+@import "blocks/movie-schedule-day-list";
+@import "blocks/movie-schedule";
+@import "blocks/movie-section";
+@import "blocks/movie-row";
+@import "blocks/movie";
+@import "blocks/movie-page";
 
 // @import "blocks/page";
 @import "blocks/footer-contact";
