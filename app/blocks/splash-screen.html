@@ -10,7 +10,7 @@
     width: 100vw;
     height: 100%;
     background-color: #ffffff;
-    transition: 0.3s;
+    transition: 0.1s;
   }
 
   .splash-screen--hidden {
@@ -19,70 +19,22 @@
     pointer-events: none;
   }
 
-  .sk-folding-cube {
-    margin: 20px auto;
-    width: 82px;
-    height: 82px;
-    position: relative;
-    transform: rotateZ(45deg);
+  .splash-screen__item {
+
   }
 
-  .sk-folding-cube .sk-cube {
-    float: left;
-    width: 50%;
-    height: 50%;
-    position: relative;
-    transform: scale(1.1);
-  }
-  .sk-folding-cube .sk-cube:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #3aa652;
-    animation: sk-foldCubeAngle 2.4s infinite linear both;
-  }
-  .sk-folding-cube .sk-cube2 {
-    transform: scale(1.1) rotateZ(90deg);
-  }
-  .sk-folding-cube .sk-cube3 {
-    transform: scale(1.1) rotateZ(180deg);
-  }
-  .sk-folding-cube .sk-cube4 {
-    transform: scale(1.1) rotateZ(270deg);
-  }
-  .sk-folding-cube .sk-cube2:before {
-    animation-delay: 0.3s;
-  }
-  .sk-folding-cube .sk-cube3:before {
-    animation-delay: 0.6s;
-  }
-  .sk-folding-cube .sk-cube4:before {
-    animation-delay: 0.9s;
-  }
-
-  @keyframes sk-foldCubeAngle {
-    0%, 10% {
-      transform: perspective(140px) rotateX(-180deg);
-      opacity: 0;
-    } 25%, 75% {
-      transform: perspective(140px) rotateX(0deg);
-      opacity: 1;
-    } 90%, 100% {
-      transform: perspective(140px) rotateY(180deg);
-      opacity: 0;
-    }
+  .splash-screen__loader {
+    width: 120px;
+    height: 120px;
   }
 </style>
+
 <div id="splash-screen" class="splash-screen">
   <div class="splash-screen__item">
-    <div class="sk-folding-cube">
-      <div class="sk-cube1 sk-cube"></div>
-      <div class="sk-cube2 sk-cube"></div>
-      <div class="sk-cube4 sk-cube"></div>
-      <div class="sk-cube3 sk-cube"></div>
-    </div>
+    <svg class="splash-screen__loader" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+      <path fill="none" d="M24 30C11 30 5 43 5 50s6 20 19 20c20 0 32-40 52-40 13 0 19 13 19 20s-6 20-19 20c-20 0-32-40-52-40z" stroke="url(#a)" stroke-width="8" stroke-dasharray="160 100" stroke-linecap="round">
+        <animate attributeName="stroke-dashoffset" calcMode="linear" values="0;257" keyTimes="0;1" dur="1.2" begin="0s" repeatCount="indefinite"></animate>
+      </path>
+    </svg>
   </div>
 </div>
