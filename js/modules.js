@@ -161,6 +161,40 @@ window.headerSearch = function () {
   }
 }();
 
+window.siteHeader = function () {
+  'use strict';
+
+  var header = document.querySelector('.site-header');
+
+  if (!header) {
+    return;
+  }
+
+  var headerBottom = document.querySelector('.site-header-bottom');
+  var headerBottomStuck = window.matchMedia('(min-width: 1024px)').matches ? generateHeaderBottomStuck() : '';
+  var headerSentinel = generateSentinel();
+  header.after(headerSentinel, headerBottomStuck);
+  var headerObserver = new IntersectionObserver(function (entrys) {
+    var entry = entrys[0];
+    document.body.classList.toggle('is-header-sticky', !entry.isIntersecting);
+  }, {
+    threshold: 1
+  });
+  headerObserver.observe(headerSentinel);
+
+  function generateSentinel() {
+    var div = document.createElement('div');
+    div.setAttribute('class', 'site-header__sentinel');
+    return div;
+  }
+
+  function generateHeaderBottomStuck() {
+    var clone = headerBottom.cloneNode(true);
+    clone.setAttribute('class', 'site-header-bottom-stuck');
+    return clone;
+  }
+}();
+
 var menuLinks = document.querySelectorAll(".site-menu__link");
 
 _toConsumableArray(menuLinks).forEach(function (link) {

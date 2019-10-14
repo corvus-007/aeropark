@@ -21,7 +21,7 @@
     width: 100vw;
     height: 100%;
     background-color: #ffffff;
-    transition: 0.3s;
+    transition: 0.1s;
   }
 
   .splash-screen--hidden {
@@ -30,71 +30,23 @@
     pointer-events: none;
   }
 
-  .sk-folding-cube {
-    margin: 20px auto;
-    width: 82px;
-    height: 82px;
-    position: relative;
-    transform: rotateZ(45deg);
+  .splash-screen__item {
+
   }
 
-  .sk-folding-cube .sk-cube {
-    float: left;
-    width: 50%;
-    height: 50%;
-    position: relative;
-    transform: scale(1.1);
-  }
-  .sk-folding-cube .sk-cube:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #3aa652;
-    animation: sk-foldCubeAngle 2.4s infinite linear both;
-  }
-  .sk-folding-cube .sk-cube2 {
-    transform: scale(1.1) rotateZ(90deg);
-  }
-  .sk-folding-cube .sk-cube3 {
-    transform: scale(1.1) rotateZ(180deg);
-  }
-  .sk-folding-cube .sk-cube4 {
-    transform: scale(1.1) rotateZ(270deg);
-  }
-  .sk-folding-cube .sk-cube2:before {
-    animation-delay: 0.3s;
-  }
-  .sk-folding-cube .sk-cube3:before {
-    animation-delay: 0.6s;
-  }
-  .sk-folding-cube .sk-cube4:before {
-    animation-delay: 0.9s;
-  }
-
-  @keyframes sk-foldCubeAngle {
-    0%, 10% {
-      transform: perspective(140px) rotateX(-180deg);
-      opacity: 0;
-    } 25%, 75% {
-      transform: perspective(140px) rotateX(0deg);
-      opacity: 1;
-    } 90%, 100% {
-      transform: perspective(140px) rotateY(180deg);
-      opacity: 0;
-    }
+  .splash-screen__loader {
+    width: 120px;
+    height: 120px;
   }
 </style>
+
 <div id="splash-screen" class="splash-screen">
   <div class="splash-screen__item">
-    <div class="sk-folding-cube">
-      <div class="sk-cube1 sk-cube"></div>
-      <div class="sk-cube2 sk-cube"></div>
-      <div class="sk-cube4 sk-cube"></div>
-      <div class="sk-cube3 sk-cube"></div>
-    </div>
+    <svg class="splash-screen__loader" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+      <path fill="none" d="M24 30C11 30 5 43 5 50s6 20 19 20c20 0 32-40 52-40 13 0 19 13 19 20s-6 20-19 20c-20 0-32-40-52-40z" stroke="url(#a)" stroke-width="8" stroke-dasharray="160 100" stroke-linecap="round">
+        <animate attributeName="stroke-dashoffset" calcMode="linear" values="0;257" keyTimes="0;1" dur="1.2" begin="0s" repeatCount="indefinite"></animate>
+      </path>
+    </svg>
   </div>
 </div>
 
@@ -102,50 +54,52 @@
   <header class="site-header">
     <div class="site-header__top site-header-top">
       <div class="site-header-top__container container">
-        <div class="site-header-top__search header-search" data-header-search>
-          <button class="header-search__toggle" type="button" aria-label="Показать поиск" data-toggle-search>
-            <svg class="header-search__toggle-icon" width="16" height="16">
-              <use xlink:href="./images/symbols.svg#icon-search"></use>
-            </svg>
-          </button>
-          <div class="header-search__form-wrapper">
-            <div class="container">
-              <p class="header-search__title">Поиск</p>
-              <form class="header-search__form header-search-form" action="./page-search.html" method="GET" autocomplete="off">
-                <input class="header-search-form__input input" type="search" name="q" min="2" placeholder="Крутойс" data-header-search-input>
-                <button class="header-search-form__submit" type="submit" aria-label="Начать поиск">
-                  <svg class="header-search-form__submit-icon" width="16" height="16">
-                    <use xlink:href="./images/symbols.svg#icon-search"></use>
-                  </svg>
-                </button>
-              </form>
-              <div class="header-search__result">
-                <p class="header-search__result-empty">По вашему запросу ничего не найдено :(</p>
+        <div class="site-header-top__left">
+          <div class="site-header-top__search header-search" data-header-search>
+            <button class="header-search__toggle" type="button" aria-label="Показать поиск" data-toggle-search>
+              <svg class="header-search__toggle-icon" width="16" height="16">
+                <use xlink:href="./images/symbols.svg#icon-search"></use>
+              </svg>
+            </button>
+            <div class="header-search__form-wrapper">
+              <div class="container">
+                <p class="header-search__title">Поиск</p>
+                <form class="header-search__form header-search-form" action="./page-search.html" method="GET" autocomplete="off">
+                  <input class="header-search-form__input input" type="search" name="q" min="2" placeholder="Крутойс" data-header-search-input>
+                  <button class="header-search-form__submit" type="submit" aria-label="Начать поиск">
+                    <svg class="header-search-form__submit-icon" width="16" height="16">
+                      <use xlink:href="./images/symbols.svg#icon-search"></use>
+                    </svg>
+                  </button>
+                </form>
+                <div class="header-search__result">
+                  <p class="header-search__result-empty">По вашему запросу ничего не найдено :(</p>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
+          </div> <!-- .site-header-top__search.header-search -->
 
-        <ul class="site-header-top__contact header-contact">
-          <li class="header-contact__item">
-            <svg class="header-contact__icon" width="16" height="16">
-              <use xlink:href="./images/symbols.svg#icon-pin"></use>
-            </svg>
-            <span class="header-contact__text">
-              г. Брянск,
-              <br> ул. Объездная, 30</span>
-          </li>
-          <li class="header-contact__item header-timework">
-            <svg class="header-contact__icon" width="16" height="16">
-              <use xlink:href="./images/symbols.svg#icon-clock"></use>
-            </svg>
-            <span class="header-contact__text">10:00–22:30</span>
-          </li>
-        </ul>
+          <ul class="site-header-top__contact header-contact">
+            <li class="header-contact__item">
+              <svg class="header-contact__icon" width="16" height="16">
+                <use xlink:href="./images/symbols.svg#icon-pin"></use>
+              </svg>
+              <span class="header-contact__text">
+                г. Брянск,
+                <br> ул. Объездная, 30</span>
+            </li>
+            <li class="header-contact__item header-timework">
+              <svg class="header-contact__icon" width="16" height="16">
+                <use xlink:href="./images/symbols.svg#icon-clock"></use>
+              </svg>
+              <span class="header-contact__text">10:00–22:30</span>
+            </li>
+          </ul>
+        </div> <!-- .site-header-top__left -->
 
         <div class="site-header-top__logo site-logo">
           <a class="site-logo__link" href="./index.html">
-            <svg class="site-logo__svg" viewBox="0 0 2105 686.3" width="170">
+            <svg class="site-logo__svg" viewBox="0 0 2105 686.3">
               <defs>
                 <linearGradient id="a" x1="765.2" y1="632" x2="1344.1" y2="54.3" gradientUnits="userSpaceOnUse">
                   <stop class="site-logo__stop" offset="0" stop-color="#E7418F" />
@@ -161,32 +115,34 @@
               <path fill="#2B2A29" d="M368.4 342.7c-.3 3.4-3.8 6.7-8 6.7h-48.3c-8.8 0-14.5-1.1-17.2-3.3-2.7-2.2-9.6-6.3-10-12.5v38.6c.5-6.5 7.5-10.8 10.1-13 2.6-2.3 8.3-3.4 17.1-3.4h48.5c3.3 0 7.5 1.7 7.8 5v-18.1zM1490.2 428.8c6.4-3.2 13.5-7.5 21.3-23.8l68.7-141 7.6 16.2 59 127.2a37.1 37.1 0 0 0 20.2 21.4h-59.9c12.2-3.7 16.5-10 11.9-21l-13.5-29.7h-68.7l-11.3 25a59.4 59.4 0 0 0-2.9 7.3c-.6 2-.9 3.8-.9 5.2 0 7 7.4 10.5 15.3 13.2h-46.8zm50.3-59.8h61.2l-29.4-66-31.8 66zM1748.3 394V291c0-15.8-8.5-17.5-22.8-21.2h70.4c18.6 0 32.7 3.5 42.4 10.6 9.6 7 14.5 17.3 14.5 30.8 0 9.3-2.3 17.5-6.8 24.6a38.8 38.8 0 0 1-18.8 15.3c-5.3 2-11.2 3.5-18 4.4-4.5.6-14.5 1.1-22.1 1.3 14.7-4 24.4-8.4 30.4-15.1 11.5-12.7 12.6-42.6-1-54.6-6.5-5.8-16.2-8.7-29-8.7-5.4 0-9 .8-10.9 2.5-1.9 1.6-2.8 5.3-2.8 11v106c0 18.9 3.6 26 18.9 31h-63.3c15.3-5 18.9-12.1 18.9-31V394z" />
             </svg>
           </a>
-        </div>
+        </div> <!-- .site-logo -->
 
-        <div class="site-header-top__links header-links">
-          <a class="header-links__item header-link" href="./page-aeroplan.html">
-            <svg class="header-link__icon header-link__icon--left" width="16" height="16">
-              <use xlink:href="./images/symbols.svg#icon-map"></use>
-            </svg>
-            <span class="header-link__text">Карта ТРЦ</span>
-          </a>
+        <div class="site-header-top__right">
+          <div class="site-header-top__links header-links">
+            <a class="header-links__item header-links__item--map header-link" href="./page-aeroplan.html">
+              <svg class="header-link__icon header-link__icon--left" width="16" height="16">
+                <use xlink:href="./images/symbols.svg#icon-map"></use>
+              </svg>
+              <span class="header-link__text">Карта ТРЦ</span>
+            </a>
 
-          <a class="header-links__item header-link" href="./page-rent.html">
-            <svg class="header-link__icon header-link__icon--left" width="16" height="16">
-              <use xlink:href="./images/symbols.svg#icon-key"></use>
-            </svg>
-            <span class="header-link__text">Арендаторам</span>
-          </a>
-        </div>
+            <a class="header-links__item header-link" href="./page-rent.html">
+              <svg class="header-link__icon header-link__icon--left" width="16" height="16">
+                <use xlink:href="./images/symbols.svg#icon-key"></use>
+              </svg>
+              <span class="header-link__text">Арендаторам</span>
+            </a>
+          </div>
 
-        <button class="site-header-top__additional-menu-toggle out-cover-toggle" type="button" aria-label="Показать дополнительное меню">
-          <span class="out-cover-toggle__line"></span>
-        </button>
+          <button class="site-header-top__additional-menu-toggle out-cover-toggle" type="button" aria-label="Показать дополнительное меню">
+            <span class="out-cover-toggle__line"></span>
+          </button>
+        </div> <!-- .site-header-top__right -->
       </div>
-    </div>
+    </div> <!-- .site-header__top.site-header-top -->
 
-    <div class="site-header__bottom">
-      <div class="site-header__bottom-container container">
+    <div class="site-header__bottom site-header-bottom">
+      <div class="site-header-bottom__container container">
         <nav class="site-menu">
           <ul class="site-menu__list">
             <li class="site-menu__item">
@@ -304,8 +260,14 @@
           </ul>
         </nav>
       </div>
-    </div>
+    </div> <!-- .site-header__bottom -->
   </header>
+
+  <!--
+    Generate:
+    <div class="site-header__sentinel"></div>
+    <div class="site-header-bottom-stuck">…</div>
+  -->
 
 
   <div class="events-slider swiper-container" data-events-slider>
