@@ -1,5 +1,4 @@
 .site-logo {
-
 }
 
 .site-logo__link {
@@ -7,7 +6,7 @@
 }
 
 .site-logo__svg {
-  .white-header & {
+  .white-header:not(.is-header-search-showed):not(.is-out-cover-opened) & {
     path {
       fill: #ffffff;
     }

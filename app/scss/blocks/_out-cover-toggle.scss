@@ -1,13 +1,15 @@
 $out-cover-toggle-line-height: 3px;
+$padding-cover-toggle: 8px;
 
 .out-cover-toggle {
   position: relative;
   display: block;
   width: 16px;
   height: 15px;
-  padding: 0;
+  padding: $padding-cover-toggle;
   border: none;
-  box-sizing: border-box;
+  color: currentColor;
+  box-sizing: content-box;
   background-color: transparent;
   outline: none;
   cursor: pointer;
@@ -16,8 +18,8 @@ $out-cover-toggle-line-height: 3px;
   &::after {
     content: "";
     position: absolute;
-    left: 0;
-    right: 0;
+    left: $padding-cover-toggle;
+    right: $padding-cover-toggle;
     height: $out-cover-toggle-line-height;
     margin: auto;
     background-color: currentColor;
@@ -25,11 +27,11 @@ $out-cover-toggle-line-height: 3px;
   }
 
   &::before {
-    top: 0;
+    top: $padding-cover-toggle;
   }
 
   &::after {
-    bottom: 0;
+    bottom: $padding-cover-toggle;
   }
 
   &--fired {
@@ -56,10 +58,10 @@ $out-cover-toggle-line-height: 3px;
 
 .out-cover-toggle__line {
   position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
+  left: $padding-cover-toggle;
+  top: $padding-cover-toggle;
+  right: $padding-cover-toggle;
+  bottom: $padding-cover-toggle;
   height: $out-cover-toggle-line-height;
   margin: auto;
   background-color: currentColor;

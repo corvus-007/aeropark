@@ -5,6 +5,11 @@
   .white-header & {
     color: #ffffff;
   }
+
+  .is-out-cover-opened &,
+  .is-header-search-showed & {
+    color: $base-color;
+  }
 }
 
 .site-header-top__container {
@@ -25,9 +30,9 @@
 
 .site-header-top__logo {
   position: relative;
+  z-index: 5;
   margin-left: 68px;
   margin-right: 68px;
-  z-index: 5;
 }
 
 .site-header-top__links {

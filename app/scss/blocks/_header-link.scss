@@ -51,6 +51,23 @@
     background-color: $accent-color;
     opacity: 0.7;
   }
+
+  .white-header:not(.is-header-search-showed):not(.is-out-cover-opened) & {
+    color: #ffffff;
+    background-color: transparent;
+    border-color: #ffffff;
+
+    &::before {
+      opacity: 0;
+    }
+
+    &:hover,
+    &:focus {
+      color: $base-color;
+      background-color: #ffffff;
+      border-color: #ffffff;
+    }
+  }
 }
 
 .header-link__icon {
