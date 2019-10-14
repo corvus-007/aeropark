@@ -1,0 +1,26 @@
+.site-header-bottom-stuck {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  transform: translate3d(0, -100%, 0);
+  color: $base-color;
+  background-color: #ffffff;
+  border-bottom: 1px solid $gray-234;
+  transition: 0.1s cubic-bezier(0.73, 0.66, 0.34, 0.74);
+  will-change: transform, opacity;
+  opacity: 0;
+  pointer-events: none;
+
+  .is-header-sticky & {
+    transform: translate3d(0, 0, 0);
+    transition-duration: 0.2s;
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  @include mq-max(1023px) {
+    display: none;
+  }
+}

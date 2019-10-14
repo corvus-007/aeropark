@@ -2,8 +2,24 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  white-space: nowrap;
 }
 
 .header-links__item {
+  margin-right: 16px;
 
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include mq-max(1023px) {
+    display: none;
+
+    &--map {
+      position: absolute;
+      left: 16px;
+      z-index: 5;
+      display: inline-flex;
+    }
+  }
 }

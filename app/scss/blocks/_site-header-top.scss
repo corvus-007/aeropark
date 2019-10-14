@@ -1,6 +1,7 @@
 .site-header-top {
-  position: relative;
-  z-index: 15;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $gray-214;
 
   .white-header & {
     color: #ffffff;
@@ -10,6 +11,11 @@
   .is-header-search-showed & {
     color: $base-color;
   }
+
+  @include mq-min(768px) {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
 }
 
 .site-header-top__container {
@@ -18,32 +24,110 @@
   justify-content: space-between;
 }
 
+.site-header-top__left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  padding-right: 80px;
+  box-sizing: border-box;
+
+  @include mq-min(768px) {
+    padding-right: 52px;
+  }
+
+  @include mq-min(1024px) {
+    padding-right: 12%;
+  }
+}
+
+.site-header-top__right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  padding-left: 80px;
+  box-sizing: border-box;
+
+  @include mq-min(768px) {
+    padding-left: 52px;
+  }
+
+  @include mq-min(1024px) {
+    padding-left: 12%;
+  }
+}
+
 .site-header-top__search {
-  margin-right: 64px;
+  margin-right: 16px;
+
+  @include mq-max(1023px) {
+    display: none;
+  }
+
+  @include mq-min(1280px) {
+    margin-right: 64px;
+  }
 }
 
 .site-header-top__contact {
-  position: relative;
-  z-index: 5;
-  flex-grow: 1;
+  flex-grow: 0.2;
+
+  @include mq-max(1023px) {
+    display: none;
+  }
+
+  @include mq-min(1024px) {
+    position: relative;
+    z-index: 5;
+    flex-grow: 0.5;
+  }
 }
 
 .site-header-top__logo {
-  position: relative;
-  z-index: 5;
-  margin-left: 68px;
-  margin-right: 68px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  flex-shrink: 0;
+  width: 120px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mq-min(768px) {
+    width: 140px;
+  }
+
+  @include mq-min(1024px) {
+    z-index: 5;
+    width: 160px;
+  }
+
+  @include mq-min(1280px) {
+    width: 172px;
+  }
 }
 
 .site-header-top__links {
-  position: relative;
-  z-index: 5;
-  flex-grow: 1;
+  flex-grow: 0.2;
+
+  @include mq-min(1024px) {
+    position: relative;
+    z-index: 5;
+    flex-grow: 0.5;
+  }
 }
 
 .site-header-top__additional-menu-toggle {
-  position: relative;
-  z-index: 5;
   flex-shrink: 0;
-  margin-left: 64px;
+  margin-left: auto;
+
+  @include mq-min(768px) {
+    margin-left: 16px;
+  }
+
+  @include mq-min(1280px) {
+    position: relative;
+    z-index: 5;
+    margin-left: 64px;
+  }
 }

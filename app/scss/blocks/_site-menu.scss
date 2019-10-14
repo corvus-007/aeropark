@@ -1,5 +1,4 @@
 .site-menu {
-
 }
 
 .site-menu__list {
@@ -15,7 +14,7 @@
 
 .site-menu__link {
   display: block;
-  padding: 30px 5px;
+  padding: 28px 4px;
   font-weight: 400;
   font-size: 14px;
   text-align: center;
@@ -30,12 +29,22 @@
   .white-header & {
     color: #ffffff;
   }
+
+  .site-header-bottom-stuck & {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: #505a64;
+  }
 }
 
 .site-menu__frame {
   display: block;
   position: relative;
   margin-bottom: 10px;
+
+  .site-header-bottom-stuck & {
+    margin-bottom: 0;
+  }
 }
 
 .site-menu__decor {
@@ -71,13 +80,15 @@
     background-color: #ff93c3;
   }
 
-  .white-header & {
+  .site-header-bottom-stuck & {
     &--little {
-      // background-color: #ffffff;
+      width: 12px;
+      height: 12px;
     }
 
     &--big {
-      // background-color: #ffffff;
+      width: 16px;
+      height: 16px;
     }
   }
 }
@@ -86,6 +97,11 @@
   width: 42px;
   height: 42px;
   fill: currentColor;
+
+  .site-header-bottom-stuck & {
+    width: 28px;
+    height: 28px;
+  }
 }
 
 .site-menu__link-text {
@@ -93,5 +109,9 @@
 
   .white-header & {
     color: #ffffff;
+  }
+
+  .site-header-bottom-stuck & {
+    color: $base-color;
   }
 }

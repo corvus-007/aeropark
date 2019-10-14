@@ -8,9 +8,8 @@
 }
 
 .site-header__top {
-  padding-top: 25px;
-  padding-bottom: 25px;
-  border-bottom: 1px solid $gray-214;
+  position: relative;
+  z-index: 15;
 }
 
 .site-header__top-container {
@@ -20,8 +19,14 @@
 .site-header__bottom {
   position: relative;
   z-index: 1;
+
+  @include mq-max(1023px) {
+    display: none;
+  }
 }
 
-.site-header__bottom-container {
-
+.site-header__sentinel {
+  position: absolute;
+  top: 300px;
+  height: 40px;
 }
