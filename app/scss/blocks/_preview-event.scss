@@ -18,7 +18,7 @@
 }
 
 .preview-event__picture {
-  @include make-fit-object(320, 400);
+  @include make-fit-object(1, 1);
 
   &::after {
     content: "";
