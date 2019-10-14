@@ -1,38 +1,26 @@
 html {
   font-size: $font-size;
+
   scroll-behavior: smooth;
 }
 
 body {
+  position: relative;
   margin: 0;
   font-weight: 500;
   font-size: 100%;
   line-height: 1.45;
   font-family: $primary-font;
+  font-variant-ligatures: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   color: $base-color;
   background-color: #ffffff;
 
-  // &::before {
-  //   content: "";
-  //   position: fixed;
-  //   top: 0;
-  //   left: 50%;
-  //   width: 1px;
-  //   bottom: 0;
-  //   background-color: tomato;
-  //   pointer-events: none;
-  // }
-
   &.no-scroll-page {
     overflow-y: hidden;
   }
 }
-
-// .container {
-//   @include make-container();
-// }
 
 img {
   max-width: 100%;
@@ -43,7 +31,3 @@ img {
 .visually-hidden {
   @include visually-hidden();
 }
-
-
-.grid-item { width: 25%; }
-.grid-item--width2 { width: 50%; }
