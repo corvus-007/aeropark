@@ -386,107 +386,127 @@ window.eventsFilter = function () {
 window.commonPageFilter = function () {
   'use strict';
 
-  window.addEventListener('DOMContentLoaded', function () {
-    var commonPageFilter = document.querySelector('.common-page-filter');
+  var COLLPASED_CLASS = 'common-page-filter--collapsed';
+  var commonPageFilter = document.querySelector('.common-page-filter');
 
-    if (!commonPageFilter) {
+  if (!commonPageFilter) {
+    return;
+  }
+
+  var currentElem = commonPageFilter.querySelector('.common-page-filter__current');
+  var labelElem = commonPageFilter.querySelector('.common-page-filter__label');
+  var optionsList = commonPageFilter.querySelector('.common-page-filter__options');
+  var toggleCollapsedStateText = ['Показать все', 'Скрыть'];
+  var toggle = generateToggle();
+  var initOption = optionsList.firstElementChild;
+  var initButton = initOption.querySelector('[data-filter]');
+  var initValue = initButton.dataset.filter;
+  var initTextValue = initButton.textContent;
+  var cardsList = document.querySelector('[data-filter-cards]');
+  var filterText = '';
+  commonPageFilter.classList.add(COLLPASED_CLASS);
+  commonPageFilter.append(toggle);
+  optionsList.addEventListener('click', onOptionsListClick);
+  currentElem.addEventListener('click', onCurrentElemClick);
+  toggle.addEventListener('click', onToggleClick);
+
+  function onCurrentElemClick(evt) {
+    var isEventFilterOpen = commonPageFilter.classList.contains('common-page-filter--open');
+
+    if (!isEventFilterOpen) {
+      openFilterOptions();
+    } else {
+      closeFilterOptions();
+    }
+
+    window.addEventListener('click', onWindowClick);
+  }
+
+  function onWindowClick(evt) {
+    var target = evt.target;
+
+    if (!target.closest('.common-page-filter')) {
+      window.removeEventListener('click', onWindowClick);
+      closeFilterOptions();
+    }
+  }
+
+  function onToggleClick(evt) {
+    evt.preventDefault();
+    var isCollapsedOptions = commonPageFilter.classList.contains(COLLPASED_CLASS);
+    toggle.textContent = !isCollapsedOptions ? toggleCollapsedStateText[0] : toggleCollapsedStateText[1];
+    commonPageFilter.classList.toggle(COLLPASED_CLASS, !isCollapsedOptions);
+  }
+
+  function generateToggle() {
+    var toggle = document.createElement('button');
+    toggle.setAttribute('type', 'button');
+    toggle.setAttribute('data-filter-toggle', '');
+    toggle.setAttribute('class', 'common-page-filter__toggle');
+    toggle.textContent = toggleCollapsedStateText[0];
+    return toggle;
+  }
+
+  function filterItems() {
+    var value = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '*';
+    var cardsItems = cardsList.children;
+    hideAllItems();
+
+    _toConsumableArray(cardsItems).forEach(function (card) {
+      if (card.matches(value)) {
+        card.classList.remove('events-cards__item--hidden');
+        card.classList.add('events-cards__item--show');
+      }
+    });
+  }
+
+  updateTextAtLabel(initTextValue);
+  setActiveOption(initOption);
+  filterItems(initValue);
+
+  function hideAllItems() {
+    var cardsItems = cardsList.children;
+
+    _toConsumableArray(cardsItems).forEach(function (card) {
+      card.classList.add('events-cards__item--hidden');
+      card.classList.remove('events-cards__item--show');
+    });
+  }
+
+  function clearActiveToOptions() {
+    optionsList.querySelector('.common-filter-option--active').classList.remove('common-filter-option--active');
+  }
+
+  function setActiveOption(optionElem) {
+    optionElem.classList.add('common-filter-option--active');
+  }
+
+  function openFilterOptions() {
+    commonPageFilter.classList.add('common-page-filter--open');
+  }
+
+  function closeFilterOptions() {
+    commonPageFilter.classList.remove('common-page-filter--open');
+  }
+
+  function updateTextAtLabel(text) {
+    labelElem.textContent = text;
+  }
+
+  function onOptionsListClick(evt) {
+    evt.preventDefault();
+    var button = evt.target.closest('button');
+
+    if (!button) {
       return;
     }
 
-    var currentElem = commonPageFilter.querySelector('.common-page-filter__current');
-    var labelElem = commonPageFilter.querySelector('.common-page-filter__label');
-    var optionsList = commonPageFilter.querySelector('.common-page-filter__options');
-    var initOption = optionsList.firstElementChild;
-    var initButton = initOption.querySelector('[data-filter]');
-    var initValue = initButton.dataset.filter;
-    var initTextValue = initButton.textContent;
-    var cardsList = document.querySelector('[data-filter-cards]');
-    var filterText = '';
-    optionsList.addEventListener('click', onOptionsListClick);
-    currentElem.addEventListener('click', onCurrentElemClick);
-
-    function filterItems() {
-      var value = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '*';
-      var cardsItems = cardsList.children;
-      hideAllItems();
-
-      _toConsumableArray(cardsItems).forEach(function (card) {
-        if (card.matches(value)) {
-          card.classList.remove('events-cards__item--hidden');
-          card.classList.add('events-cards__item--show');
-        }
-      });
-    }
-
-    updateTextAtLabel(initTextValue);
-    setActiveOption(initOption);
-    filterItems(initValue);
-
-    function hideAllItems() {
-      var cardsItems = cardsList.children;
-
-      _toConsumableArray(cardsItems).forEach(function (card) {
-        card.classList.add('events-cards__item--hidden');
-        card.classList.remove('events-cards__item--show');
-      });
-    }
-
-    function clearActiveToOptions() {
-      optionsList.querySelector('.common-filter-option--active').classList.remove('common-filter-option--active');
-    }
-
-    function setActiveOption(optionElem) {
-      optionElem.classList.add('common-filter-option--active');
-    }
-
-    function openFilterOptions() {
-      commonPageFilter.classList.add('common-page-filter--open');
-    }
-
-    function closeFilterOptions() {
-      commonPageFilter.classList.remove('common-page-filter--open');
-    }
-
-    function updateTextAtLabel(text) {
-      labelElem.textContent = text;
-    }
-
-    function onOptionsListClick(evt) {
-      evt.preventDefault();
-      var button = evt.target.closest('button');
-
-      if (!button) {
-        return;
-      }
-
-      clearActiveToOptions();
-      setActiveOption(button.closest('.common-filter-option'));
-      var filterValue = button.dataset.filter;
-      filterText = button.textContent;
-      updateTextAtLabel(filterText);
-      closeFilterOptions();
-      filterItems(filterValue);
-    }
-
-    function onCurrentElemClick(evt) {
-      var isEventFilterOpen = commonPageFilter.classList.contains('common-page-filter--open');
-
-      if (!isEventFilterOpen) {
-        openFilterOptions();
-      } else {
-        closeFilterOptions();
-      }
-
-      window.addEventListener('click', onWindowClick);
-    }
-
-    function onWindowClick(evt) {
-      var target = evt.target;
-
-      if (!target.closest('.common-page-filter')) {
-        window.removeEventListener('click', onWindowClick);
-        closeFilterOptions();
-      }
-    }
-  });
+    clearActiveToOptions();
+    setActiveOption(button.closest('.common-filter-option'));
+    var filterValue = button.dataset.filter;
+    filterText = button.textContent;
+    updateTextAtLabel(filterText);
+    closeFilterOptions();
+    filterItems(filterValue);
+  }
 }();
