@@ -15,7 +15,9 @@
     <article class="page page--pull-top">
       <header class="page__header page-header page-header--has-banner">
         <div class="page-header__inner container">
-          <h1 class="page-header__title page-title">События</h1>
+          <div class="page-header__content">
+            <h1 class="page-header__title page-title">События</h1>
+          </div>
         </div>
         <div class="page-feature-image">
           <img src="https://images.unsplash.com/photo-1519567241046-7f570eee3ce6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1516&q=80" alt="" role="presentation">
@@ -24,29 +26,28 @@
 
       <div class="page-content container">
         <div class="events">
-          <!-- .events-filter--open - опции фильтра открыты -->
-          <div class="events__filter events-filter">
-            <button class="events-filter__current input" type="button">
+          <div class="events__filter common-page-filter">
+            <button class="common-page-filter__current input" type="button">
               <span class="visually-hidden">Фильтрация по:</span>
-              <span class="events-filter__label">Все</span>
+              <span class="common-page-filter__label"></span>
             </button>
-            <ul class="events-filter__options">
-              <li class="events-filter__options-item event-filter-option event-filter-option--active">
-                <button class="event-filter-option__button" type="button" data-filter="*">Все</button>
+            <ul class="common-page-filter__options">
+              <li class="common-page-filter__options-item common-filter-option">
+                <button class="common-filter-option__button" type="button" data-filter="*">Все</button>
               </li>
-              <li class="events-filter__options-item event-filter-option">
-                <button class="event-filter-option__button" type="button" data-filter=".filter-actions">Акции</button>
+              <li class="common-page-filter__options-item common-filter-option">
+                <button class="common-filter-option__button" type="button" data-filter=".filter-actions">Акции</button>
               </li>
-              <li class="events-filter__options-item event-filter-option">
-                <button class="event-filter-option__button" type="button" data-filter=".filter-events">События</button>
+              <li class="common-page-filter__options-item common-filter-option">
+                <button class="common-filter-option__button" type="button" data-filter=".filter-events">События</button>
               </li>
-              <li class="events-filter__options-item event-filter-option">
-                <button class="event-filter-option__button" type="button" data-filter=".filter-news">Новости</button>
+              <li class="common-page-filter__options-item common-filter-option">
+                <button class="common-filter-option__button" type="button" data-filter=".filter-news">Новости</button>
               </li>
             </ul>
-          </div> <!-- .events__filter.events-filter -->
+          </div> <!-- .common-page-filter -->
 
-          <ul class="events__list events-cards">
+          <ul class="events__list events-cards" data-filter-cards>
             <li class="events-cards__item event-card filter-events">
               <a class="event-card__wraplink" href="">
                 <span class="event-card__picture">
