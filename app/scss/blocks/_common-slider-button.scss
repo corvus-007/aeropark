@@ -7,8 +7,8 @@
   justify-content: center;
   margin: 0;
   padding: 0;
-  width: 60px;
-  height: 60px;
+  width: 48px;
+  height: 48px;
   transform: translateY(-50%);
   color: $base-color;
   background-color: #ffffff;
@@ -33,11 +33,39 @@
   }
 
   &--prev {
-    left: 24px;
+    left: 16px;
   }
 
   &--next {
-    right: 24px;
+    right: 16px;
+  }
+
+  &.swiper-button-disabled {
+    opacity: 0.6;
+    cursor: default;
+  }
+
+  @include mq-min(768px) {
+    &--prev {
+      left: 20px;
+    }
+
+    &--next {
+      right: 20px;
+    }
+  }
+
+  @include mq-min(1024px) {
+    width: 60px;
+    height: 60px;
+
+    &--prev {
+      left: 24px;
+    }
+
+    &--next {
+      right: 24px;
+    }
   }
 }
 
