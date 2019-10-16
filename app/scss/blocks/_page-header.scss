@@ -2,14 +2,28 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 400px;
   margin-bottom: 40px;
-  padding-top: 252px;
   padding-bottom: 20px;
   box-sizing: border-box;
 
   &--has-banner {
     color: #ffffff;
+  }
+
+  .page--pull-top & {
+    min-height: 252px;
+  }
+
+  @include mq-min(768px) {
+    .page--pull-top & {
+      padding-top: calc(#{$site-header-top-tablet-height} + 40px);
+    }
+  }
+
+  @include mq-min(1024px) {
+    .page--pull-top & {
+      padding-top: calc(#{$site-header-laptop-height} + 60px);
+    }
   }
 }
 
@@ -18,8 +32,8 @@
   z-index: 1;
   display: flex;
   align-items: center;
-  flex-grow: 1;
   height: 100%;
+  margin-top: auto;
 }
 
 .page-header__picture {
@@ -41,11 +55,9 @@
 }
 
 .page-header__content {
-
 }
 
 .page-header__title {
-
 }
 
 .page-header__subtitle {

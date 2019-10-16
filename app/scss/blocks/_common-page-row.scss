@@ -1,6 +1,6 @@
 .common-page-row {
   display: grid;
-  grid-gap: 60px;
+  gap: 60px;
   margin-bottom: 68px;
 
   &:last-of-type {
@@ -9,17 +9,17 @@
 
   @include mq-min(768px) {
     grid-template-columns: 1fr 232px;
-    grid-gap: 40px;
+    gap: 40px;
   }
 
   @include mq-min(1024px) {
     grid-template-columns: 1fr 252px;
-    grid-gap: 60px;
+    gap: 60px;
   }
 
   @include mq-min(1280px) {
     grid-template-columns: 1fr 296px;
-    grid-gap: 80px;
+    gap: 80px;
   }
 }
 

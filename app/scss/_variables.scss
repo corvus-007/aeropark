@@ -30,9 +30,8 @@ $secondary-font: inherit;
 $duration: 0.25s;
 $border-radius: 2px;
 
-$site-header-top-height: 114px;
-$site-header-bottom-stuck-height: 78px;
-
-// Grid
-$grid-columns: 12;
-$gutter: 30px;
+$site-header-laptop-height: 218px; // общая высота шапки на лэптопе
+$site-header-top-mobile-height: 72px; // высота верхней части шапки на мобильном
+$site-header-top-tablet-height: 80px; // высота верхней части шапки на планшете
+$site-header-top-laptop-height: 85px; // высота верхней части шапки на лэптопе
+$site-header-bottom-stuck-height: 78px; // высота нижней прилипающей части шапки

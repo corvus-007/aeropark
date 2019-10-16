@@ -6,7 +6,7 @@
   bottom: 0;
   z-index: 3;
   height: 100%;
-  padding-top: 66px; // высота верхней части шапки сайта
+  padding-top: $site-header-top-mobile-height;
   transform: scale(1.2);
   color: $base-color;
   background-color: #ffffff;
@@ -25,11 +25,11 @@
   }
 
   @include mq-min(768px) {
-    padding-top: 86px; // высота верхней части шапки сайта
+    padding-top: $site-header-top-tablet-height;
   }
 
   @include mq-min(1024px) {
-    padding-top: 96px; // высота верхней части шапки сайта
+    padding-top: $site-header-top-laptop-height;
   }
 }
 
@@ -60,20 +60,23 @@
   }
 
   @include mq-min(1024px) {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 44px;
+    padding-bottom: 44px;
 
     &--info-menu {
       display: none;
     }
+
+    &--secondary-menu {
+      border-bottom: none;
+    }
   }
 
   @include mq-min(1280px) {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 52px;
+    padding-bottom: 52px;
   }
 }
 
 .out-cover__footer {
-
 }

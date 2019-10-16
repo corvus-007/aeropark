@@ -6,7 +6,7 @@
 
   display: grid;
   grid-template-rows: repeat(3, auto);
-  grid-gap: 16px;
+  gap: 16px;
   font-weight: 600;
   font-size: 18px;
   line-height: 1.2;
@@ -34,7 +34,7 @@
   }
 
   @include mq-min(768px) {
-    grid-gap: 20px;
+    gap: 40px 20px;
     font-size: 20px;
   }
 
@@ -44,7 +44,7 @@
   }
 
   @include mq-min(1280px) {
-    grid-gap: 28px;
+    gap: 48px 28px;
     font-size: 28px;
   }
 }

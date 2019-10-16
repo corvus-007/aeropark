@@ -1,5 +1,16 @@
 .page {
   &--pull-top {
-    margin-top: -252px;
+  }
+
+  @include mq-min(768px) {
+    &--pull-top {
+      margin-top: calc((#{$site-header-top-tablet-height} + 40px) * -1);
+    }
+  }
+
+  @include mq-min(1024px) {
+    &--pull-top {
+      margin-top: calc((#{$site-header-laptop-height} + 60px) * -1);
+    }
   }
 }

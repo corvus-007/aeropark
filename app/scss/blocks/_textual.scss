@@ -89,12 +89,12 @@
   @include mq-min(1024px) {
     .alignleft {
       float: left;
-      margin-right: $gutter;
+      margin-right: 20px;
     }
 
     .alignright {
       float: right;
-      margin-left: $gutter;
+      margin-left: 20px;
     }
   }
 }
