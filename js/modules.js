@@ -291,98 +291,6 @@ window.movieCardEmbilight = function (window, $) {
   });
 }(window, jQuery);
 
-window.eventsFilter = function () {
-  'use strict';
-
-  var events = document.querySelector('.events');
-
-  if (!events) {
-    return;
-  }
-
-  var eventsFilter = events.querySelector('.events-filter');
-  var currentElem = eventsFilter.querySelector('.events-filter__current');
-  var labelElem = eventsFilter.querySelector('.events-filter__label');
-  var optionsList = eventsFilter.querySelector('.events-filter__options');
-  var eventsCardsList = events.querySelector('.events-cards');
-  var filterText = '';
-
-  function filterItems() {
-    var value = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '*';
-    var eventCardItems = eventsCardsList.querySelectorAll('.events-cards__item');
-    hideAllItems();
-    eventCardItems.forEach(function (card) {
-      if (card.matches(value)) {
-        card.classList.remove('events-cards__item--hidden');
-        card.classList.add('events-cards__item--show');
-      }
-    });
-  }
-
-  filterItems();
-
-  function hideAllItems() {
-    var eventCardItems = eventsCardsList.querySelectorAll('.events-cards__item');
-    eventCardItems.forEach(function (card) {
-      // card.hidden = true;
-      card.classList.add('events-cards__item--hidden');
-      card.classList.remove('events-cards__item--show');
-    });
-  }
-
-  optionsList.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    var button = evt.target.closest('button');
-
-    if (!button) {
-      return;
-    }
-
-    optionsList.querySelector('.event-filter-option--active').classList.remove('event-filter-option--active');
-    button.closest('.event-filter-option').classList.add('event-filter-option--active');
-    var filterValue = button.dataset.filter;
-    filterText = button.textContent;
-    labelElem.textContent = filterText;
-    closeFilterOptions();
-    filterItems(filterValue); // iso.arrange({
-    //   filter: filterValue
-    // });
-  }); // function showCard(card) {
-  //   card.classList.t
-  // }
-
-  currentElem.addEventListener('click', onCurrentElemClick);
-
-  function openFilterOptions() {
-    eventsFilter.classList.add('events-filter--open');
-  }
-
-  function closeFilterOptions() {
-    eventsFilter.classList.remove('events-filter--open');
-  }
-
-  function onCurrentElemClick(evt) {
-    var isEventFilterOpen = eventsFilter.classList.contains('events-filter--open');
-
-    if (!isEventFilterOpen) {
-      openFilterOptions();
-    } else {
-      closeFilterOptions();
-    }
-
-    window.addEventListener('click', onWindowClick);
-  }
-
-  function onWindowClick(evt) {
-    var target = evt.target;
-
-    if (!target.closest('.events-filter')) {
-      closeFilterOptions();
-      window.removeEventListener('click', onWindowClick);
-    }
-  }
-}();
-
 window.commonPageFilter = function () {
   'use strict';
 
@@ -393,24 +301,30 @@ window.commonPageFilter = function () {
     return;
   }
 
+  commonPageFilter.classList.add(COLLPASED_CLASS);
   var currentElem = commonPageFilter.querySelector('.common-page-filter__current');
   var labelElem = commonPageFilter.querySelector('.common-page-filter__label');
   var optionsList = commonPageFilter.querySelector('.common-page-filter__options');
-  var toggleCollapsedStateText = ['Показать все', 'Скрыть'];
-  var toggle = generateToggle();
+  var cardsList = document.querySelector('[data-filter-cards]');
   var initOption = optionsList.firstElementChild;
   var initButton = initOption.querySelector('[data-filter]');
   var initValue = initButton.dataset.filter;
   var initTextValue = initButton.textContent;
-  var cardsList = document.querySelector('[data-filter-cards]');
+  var toggleCollapsedStateText = ['Показать все', 'Скрыть'];
   var filterText = '';
-  commonPageFilter.classList.add(COLLPASED_CLASS);
-  commonPageFilter.append(toggle);
+  var toggle = null;
+
+  if (checkIsOverflowOptions()) {
+    toggle = generateToggle();
+    commonPageFilter.append(toggle);
+    toggle.addEventListener('click', onToggleClick);
+  }
+
   optionsList.addEventListener('click', onOptionsListClick);
   currentElem.addEventListener('click', onCurrentElemClick);
-  toggle.addEventListener('click', onToggleClick);
 
   function onCurrentElemClick(evt) {
+    evt.preventDefault();
     var isEventFilterOpen = commonPageFilter.classList.contains('common-page-filter--open');
 
     if (!isEventFilterOpen) {
@@ -438,10 +352,13 @@ window.commonPageFilter = function () {
     commonPageFilter.classList.toggle(COLLPASED_CLASS, !isCollapsedOptions);
   }
 
+  function checkIsOverflowOptions() {
+    return optionsList.scrollWidth > optionsList.clientWidth;
+  }
+
   function generateToggle() {
     var toggle = document.createElement('button');
     toggle.setAttribute('type', 'button');
-    toggle.setAttribute('data-filter-toggle', '');
     toggle.setAttribute('class', 'common-page-filter__toggle');
     toggle.textContent = toggleCollapsedStateText[0];
     return toggle;
