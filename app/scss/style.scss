@@ -10,7 +10,7 @@
 
 // Vendors
 @import "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox";
-@import "../../node_modules/swiper/dist/css/swiper.min";
+@import "../../node_modules/swiper/swiper";
 
 // Blocks
 @import "blocks/button";
@@ -26,10 +26,12 @@
 // @import "blocks/custom-ul";
 @import "blocks/textual";
 @import "blocks/section-header-link";
+@import "blocks/aside-info-worktime";
 @import "blocks/aside-info";
 @import "blocks/common-slider-button";
 @import "blocks/common-filter-option";
 @import "blocks/common-page-filter";
+@import "blocks/common-page-row";
 @import "blocks/common-section";
 @import "blocks/header-search-form";
 @import "blocks/header-search";
@@ -65,10 +67,6 @@
 @import "blocks/events";
 
 @import "blocks/promo";
-@import "blocks/promo-worktime";
-@import "blocks/promo-info";
-@import "blocks/promo-row";
-@import "blocks/promo-page-header";
 @import "blocks/promo-page";
 
 @import "blocks/rent-contact";
@@ -82,7 +80,6 @@
 @import "blocks/search-result";
 @import "blocks/search";
 
-@import "blocks/cinema-row";
 @import "blocks/cinema";
 
 @import "blocks/shops";
@@ -95,9 +92,11 @@
 @import "blocks/movie-schedule-day-list";
 @import "blocks/movie-schedule";
 @import "blocks/movie-section";
-@import "blocks/movie-row";
 @import "blocks/movie";
 @import "blocks/movie-page";
+
+@import "blocks/shop-gallery";
+@import "blocks/shop";
 
 // @import "blocks/page";
 @import "blocks/footer-contact";

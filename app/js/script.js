@@ -46,4 +46,12 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   );
+
+  new Swiper('[data-shop-gallery]', {
+    speed: 600,
+    navigation: {
+      nextEl: '.common-slider-button--next',
+      prevEl: '.common-slider-button--prev'
+    }
+  });
 });

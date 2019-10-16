@@ -5,5 +5,4 @@
 //=require modules/site-header.js
 //=require modules/site-menu.js
 //=require modules/movie-card-ambilight.js
-//=require modules/events-filter.js
 //=require modules/common-page-filter.js

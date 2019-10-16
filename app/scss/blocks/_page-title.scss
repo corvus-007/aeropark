@@ -4,12 +4,36 @@
   font-size: 32px;
   line-height: 1.2;
 
+  &--little {
+    font-size: 28px;
+  }
+
+  @include mq-min(667px) {
+    &--little {
+      font-size: 60px;
+    }
+  }
+
   @include mq-min(768px) {
     line-height: 1;
     font-size: 60px;
+
+    &--little {
+      font-size: 40px;
+    }
   }
 
   @include mq-min(1024px) {
     font-size: 72px;
+
+    &--little {
+      font-size: 48px;
+    }
+  }
+
+  @include mq-min(1280px) {
+    &--little {
+      font-size: 60px;
+    }
   }
 }
