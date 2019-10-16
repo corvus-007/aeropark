@@ -1,5 +1,20 @@
 .common-page-filter {
   position: relative;
+
+  @include mq-min(768px) {
+    &--collapsed {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        width: 200px;
+        background-image: linear-gradient(to right, rgba(#ffffff, 0.5), #ffffff 40%);
+      }
+    }
+  }
 }
 
 .common-page-filter__current {
@@ -17,10 +32,10 @@
     margin: auto;
     width: 4px;
     height: 4px;
+    transform: rotate(45deg);
     border: 2px solid $gray-122;
     border-top: none;
     border-left: none;
-    transform: rotate(45deg);
     transition: 0.5s;
     pointer-events: none;
   }
@@ -42,29 +57,39 @@
 .common-page-filter__options {
   @include clear-list();
 
+  overflow-x: hidden;
+
   @include mq-max(767px) {
     position: absolute;
     left: 0;
     right: 0;
     z-index: 2;
+    max-height: 300px;
+    transform: translate3d(0, 4px, 0);
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
     background-color: #ffffff;
     border: 1px solid $gray-234;
     box-shadow: 0 4px 8px rgba(#000000, 0.1);
-    transform: translate3d(0, 4px, 0);
     opacity: 0;
     pointer-events: none;
     transition: 0.3s;
 
     .common-page-filter--open & {
+      transform: translate3d(0, 0, 0);
       opacity: 1;
       pointer-events: all;
-      transform: translate3d(0, 0, 0);
     }
   }
 
   @include mq-min(768px) {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
+
+    .common-page-filter--collapsed & {
+      flex-wrap: nowrap;
+    }
   }
 }
 
@@ -78,11 +103,65 @@
   }
 
   @include mq-min(768px) {
-    margin-right: 20px;
-    margin-bottom: 16px;
+    margin-right: 24px;
+    margin-top: 8px;
+    margin-bottom: 8px;
 
     &:last-child {
       margin-right: 0;
+    }
+  }
+}
+
+.common-page-filter__toggle {
+  @include mq-max(767px) {
+    display: none;
+  }
+
+  @include mq-min(768px) {
+    display: inline-flex;
+    align-items: center;
+    margin-left: -12px;
+    padding: 8px 12px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    font-family: $primary-font;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $primary-color;
+    background-color: transparent;
+    border: none;
+    user-select: none;
+    cursor: pointer;
+    outline: none;
+
+    &::after {
+      content: "";
+      position: relative;
+      top: 1px;
+      width: 4px;
+      height: 4px;
+      margin-left: 8px;
+      border: 2px solid currentColor;
+      border-top: none;
+      border-left: none;
+      transform: rotate(45deg) scale(-1);
+      pointer-events: none;
+    }
+
+    .common-page-filter--collapsed & {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 2;
+
+      &::after {
+        top: -1px;
+        transform: rotate(45deg);
+      }
     }
   }
 }
