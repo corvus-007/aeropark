@@ -38,6 +38,7 @@
   flex-direction: column;
   height: 100%;
   overflow-y: auto;
+  overscroll-behavior-y: contain;
   box-sizing: border-box;
 }
 
@@ -61,14 +62,6 @@
   @include mq-min(1024px) {
     padding-top: 40px;
     padding-bottom: 40px;
-
-    &--primary-menu {
-      border-bottom: none;
-    }
-
-    &--secondary-menu {
-      order: -1;
-    }
 
     &--info-menu {
       display: none;
