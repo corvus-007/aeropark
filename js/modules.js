@@ -43,7 +43,7 @@ window.util = function () {
   };
 }();
 
-window.splashScreen = function (window, $) {
+window.splashScreen = function () {
   'use strict';
 
   var splashScreen = document.querySelector('.splash-screen');
@@ -72,7 +72,7 @@ window.splashScreen = function (window, $) {
     document.body.style.paddingRight = '';
     isLoaded = true;
   }
-}(window, jQuery);
+}();
 
 window.outCover = function () {
   'use strict';

@@ -30,21 +30,37 @@
     pointer-events: none;
   }
 
-  .splash-screen__item {
-
-  }
+  .splash-screen__item {}
 
   .splash-screen__loader {
     width: 120px;
     height: 120px;
   }
+
+  .splash-screen__loader path {
+    fill: none;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-dasharray: 160 100;
+    animation: anim-loader-path 1.2s infinite linear;
+  }
+
+  @keyframes anim-loader-path {
+    0% {
+      stroke-dashoffset: 0;
+    }
+
+    100% {
+      stroke-dashoffset: 257;
+    }
+  }
+
 </style>
 
 <div id="splash-screen" class="splash-screen">
   <div class="splash-screen__item">
-    <svg class="splash-screen__loader" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
-      <path fill="none" d="M24 30C11 30 5 43 5 50s6 20 19 20c20 0 32-40 52-40 13 0 19 13 19 20s-6 20-19 20c-20 0-32-40-52-40z" stroke="url(#a)" stroke-width="8" stroke-dasharray="160 100" stroke-linecap="round">
-        <animate attributeName="stroke-dashoffset" calcMode="linear" values="0;257" keyTimes="0;1" dur="1.2" begin="0s" repeatCount="indefinite"></animate>
+    <svg class="splash-screen__loader" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+      <path d="M24 30C11 30 5 43 5 50s6 20 19 20c20 0 32-40 52-40 13 0 19 13 19 20s-6 20-19 20c-20 0-32-40-52-40z" stroke="url(#a)">
       </path>
     </svg>
   </div>
@@ -65,7 +81,7 @@
               <div class="container">
                 <p class="header-search__title">Поиск</p>
                 <form class="header-search__form header-search-form" action="./page-search.html" method="GET" autocomplete="off">
-                  <input class="header-search-form__input input" type="search" name="q" min="2" placeholder="Крутойс" data-header-search-input>
+                  <input class="header-search-form__input input" type="text" name="q" min="2" placeholder="Крутойс" data-header-search-input>
                   <button class="header-search-form__submit" type="submit" aria-label="Начать поиск">
                     <svg class="header-search-form__submit-icon" width="16" height="16">
                       <use xlink:href="./images/symbols.svg#icon-search"></use>
