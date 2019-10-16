@@ -1,4 +1,6 @@
 .back-link__holder {
+  position: relative;
+  z-index: 2;
   margin-bottom: 76px;
 }
 
@@ -10,6 +12,7 @@
   text-transform: uppercase;
   letter-spacing: 0.075em;
   color: $primary-color;
+  user-select: none;
   outline: none;
 }
 
