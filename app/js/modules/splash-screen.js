@@ -1,4 +1,4 @@
-window.splashScreen = (function (window, $) {
+window.splashScreen = (function() {
   'use strict';
 
   var splashScreen = document.querySelector('.splash-screen');
@@ -12,12 +12,12 @@ window.splashScreen = (function (window, $) {
   document.body.style.overflowY = 'hidden';
   document.body.style.paddingRight = window.util.getScrollbarWidth() + 'px';
 
-  window.addEventListener('load', function () {
+  window.addEventListener('load', function() {
     hideSplashScreen();
   });
 
   setTimeout(() => {
-    hideSplashScreen()
+    hideSplashScreen();
   }, 1000 * 8);
 
   function hideSplashScreen() {
@@ -31,4 +31,4 @@ window.splashScreen = (function (window, $) {
 
     isLoaded = true;
   }
-})(window, jQuery);
+})();
