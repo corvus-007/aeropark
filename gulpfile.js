@@ -29,44 +29,13 @@ const isDevelopment =
   !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
 task('styles', () => {
   return (
-    src('app/scss/style.scss')
-    // .pipe(gulpIf(isDevelopment, sourcemaps.init()))
-
+    src(['app/scss/style.scss', 'app/scss/aeroplan-style.scss'])
       .pipe(sass())
       .pipe(postcss([autoprefixer()]))
-      // .pipe(gulpIf(!isDevelopment, cssnano()))
-
-      // .pipe(gulpIf(isDevelopment, sourcemaps.write()))
       .pipe(dest('build/'))
       .pipe(browserSync.stream())
   );
 });
-
-// function stylesDev(cb) {
-//   return src([
-//     `${folder.src}/scss/style.scss`,
-//     `${folder.src}/scss/aeroplan-style.scss`
-//   ])
-//     .pipe(
-//       plumber({
-//         errorHandler: function(err) {
-//           console.log(err);
-//         }
-//       })
-//     )
-//     .pipe(sass())
-//     .pipe(
-//       postcss([
-//         autoprefixer({
-//           browsers: ['last 2 version']
-//         })
-//       ])
-//     )
-//     .pipe(dest(`${folder.build}/`))
-//     .pipe(browserSync.stream());
-
-//   cb();
-// }
 
 function stylesProduction(cb) {
   return src([`${folder.src}/scss/style.scss`], { sourcemaps: true })
