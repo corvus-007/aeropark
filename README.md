@@ -39,7 +39,7 @@ other/
 5. Установить модули из package.json — `npm install`
 
 ## Запуск проекта
-`npm serve`
+`npm start`
 ## Сборка проекта
 `npm run build`
 ## Удаление папки build
@@ -54,3 +54,12 @@ other/
 
 ### Слайдер событий
 Размер изображений: `1080×400`
+
+### Фильтрация
+У списка с карточками должен быть data-атрибут `data-filter-cards`, например:
+```html
+<ul class="events__list events-cards" data-filter-cards>
+  <li class="events-cards__item event-card filter-events">…</li>
+  …
+</ul>
+```
