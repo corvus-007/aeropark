@@ -1,26 +1,33 @@
-.promo-row {
+.common-page-row {
   display: grid;
   grid-gap: 60px;
+  margin-bottom: 68px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 
   @include mq-min(768px) {
-    grid-template-columns: 1fr 252px;
+    grid-template-columns: 1fr 232px;
     grid-gap: 40px;
   }
 
   @include mq-min(1024px) {
-    grid-template-columns: 1fr 296px;
+    grid-template-columns: 1fr 252px;
     grid-gap: 60px;
   }
 
   @include mq-min(1280px) {
+    grid-template-columns: 1fr 296px;
     grid-gap: 80px;
   }
 }
 
-.promo-row__content {
+.common-page-row__content {
+  min-width: 100%;
 }
 
-.promo-row__aside {
+.common-page-row__aside {
   position: relative;
 
   @include mq-max(767px) {
