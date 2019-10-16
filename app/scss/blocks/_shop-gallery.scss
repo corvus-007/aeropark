@@ -1,0 +1,11 @@
+.shop-gallery {
+
+}
+
+.shop-gallery__item {
+  width: 100%;
+
+  a {
+    @include make-fit-object(16, 10);
+  }
+}
