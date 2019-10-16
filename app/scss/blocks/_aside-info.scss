@@ -1,6 +1,6 @@
 .aside-info {
   position: sticky;
-  top: 20px;
+  top: calc(#{$site-header-bottom-stuck-height} + 20px);
   bottom: 20px;
   line-height: 1.2;
   font-size: 14px;
@@ -9,10 +9,6 @@
 
 .aside-info__list {
   @include clear-list();
-
-  @include mq-min(375px) {
-    max-width: 252px;
-  }
 }
 
 .aside-info__item {
@@ -37,13 +33,18 @@
 
   a {
     text-decoration: none;
-    color: $primary-color;
+    color: currentColor;
+
+    &:hover,
+    &:focus {
+      color: $primary-color;
+    }
   }
 }
 
 .aside-info__floor {
-  font-size: 24px;
   font-weight: 400;
+  font-size: 24px;
 }
 
 .aside-info__floor-figure {
@@ -53,4 +54,9 @@
 
 .aside-info__button {
   width: 100%;
+  max-width: 252px;
+}
+
+.aside-info__worktime {
+  max-width: 228px;
 }
