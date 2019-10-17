@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 15;
   transform: translate3d(0, -100%, 0);
   color: $base-color;
   background-color: #ffffff;
@@ -14,6 +14,13 @@
   pointer-events: none;
 
   .is-header-sticky & {
+    transform: translate3d(0, 0, 0);
+    transition-duration: 0.2s;
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  &:focus-within {
     transform: translate3d(0, 0, 0);
     transition-duration: 0.2s;
     opacity: 1;

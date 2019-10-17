@@ -18,6 +18,10 @@
   color: $primary-color;
   user-select: none;
   outline: none;
+
+  &:focus-visible {
+    @include keyboard-focus-rule();
+  }
 }
 
 .back-link__icon {

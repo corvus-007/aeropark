@@ -34,10 +34,15 @@
   a {
     text-decoration: none;
     color: currentColor;
+    outline: none;
 
     &:hover,
     &:focus {
       color: $primary-color;
+    }
+
+    &:focus-visible {
+      @include keyboard-focus-rule();
     }
   }
 }

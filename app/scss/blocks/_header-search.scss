@@ -18,6 +18,10 @@
     background-color: darken($gray-234, 4%);
   }
 
+  &:focus-visible {
+    @include keyboard-focus-rule();
+  }
+
   &:active {
     opacity: 0.7;
   }

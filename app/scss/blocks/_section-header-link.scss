@@ -3,10 +3,14 @@
   align-items: center;
   font-weight: 600;
   font-size: 12px;
+  line-height: 1;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   text-decoration: none;
-  line-height: 1;
+
+  &:focus-visible {
+    @include keyboard-focus-rule();
+  }
 }
 
 .section-header-link__text {

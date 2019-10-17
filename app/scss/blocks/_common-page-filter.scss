@@ -137,6 +137,10 @@
     cursor: pointer;
     outline: none;
 
+    &:focus-visible {
+      @include keyboard-focus-rule();
+    }
+
     &::after {
       content: "";
       position: relative;

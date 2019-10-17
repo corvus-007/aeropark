@@ -9,6 +9,12 @@
   }
 }
 
+@mixin keyboard-focus-rule() {
+  outline: 1px solid #8186d5;
+  outline: 1px solid $gray-122;
+  // outline-offset: 2px;
+}
+
 @mixin clear-mr-edges-elem() {
   & > :first-child {
     margin-top: 0;

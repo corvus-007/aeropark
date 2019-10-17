@@ -47,6 +47,10 @@
 
   a {
     text-decoration: none;
+
+    &:focus-visible {
+      @include keyboard-focus-rule();
+    }
   }
 
   @include mq-max(666px) {

@@ -28,6 +28,7 @@
   display: block;
   color: $base-color;
   transition: 0.2s;
+  outline: none;
 
   &::before {
     content: "";

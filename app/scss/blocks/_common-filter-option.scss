@@ -54,12 +54,15 @@
       transition: 0.2s;
     }
 
-    .common-filter-option:not(.common-filter-option--active) &:hover,
-    .common-filter-option:not(.common-filter-option--active) &:focus-visible {
+    .common-filter-option:not(.common-filter-option--active) &:hover {
       &::after {
         opacity: 1;
         transform: translateY(0);
       }
+    }
+
+    .common-filter-option:not(.common-filter-option--active) &:focus-visible {
+      @include keyboard-focus-rule();
     }
 
     .common-filter-option--active & {
