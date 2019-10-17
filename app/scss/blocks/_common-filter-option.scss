@@ -54,7 +54,8 @@
       transition: 0.2s;
     }
 
-    &:hover {
+    .common-filter-option:not(.common-filter-option--active) &:hover,
+    .common-filter-option:not(.common-filter-option--active) &:focus-visible {
       &::after {
         opacity: 1;
         transform: translateY(0);
@@ -64,6 +65,7 @@
     .common-filter-option--active & {
       color: $primary-color;
       background-color: transparent;
+      cursor: default;
     }
   }
 }
