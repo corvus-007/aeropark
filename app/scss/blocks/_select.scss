@@ -11,7 +11,7 @@
     height: 11px;
     margin: auto;
     background-color: rgba(49, 128, 35, 0.678);
-    transition: $duration;
+    transition: 0.2s;
     pointer-events: none;
   }
 
@@ -37,7 +37,7 @@
     outline: none;
     box-shadow: none;
     box-sizing: border-box;
-    transition: $duration * 2;
+    transition: 0.2s;
 
     &::-ms-expand {
       display: none;
@@ -45,8 +45,8 @@
 
     &:hover,
     &:focus {
-      border-color: #e0e0e0;
       background-color: #fff;
+      border-color: #e0e0e0;
     }
   }
 

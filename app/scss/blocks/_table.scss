@@ -14,10 +14,10 @@ caption {
 
 th,
 td {
-  border: 1px solid #364f6b;
   padding: rem(8);
   text-align: left;
-  transition: $duration / 2;
+  border: 1px solid #364f6b;
+  transition: 0.2s;
 }
 
 thead {

@@ -24,7 +24,7 @@ svg {
   stroke-width: 0.5;
   stroke-linejoin: round;
   stroke-linecap: round;
-  transition: 0.25s;
+  transition: 0.2s;
 
   &--hovered {
     // fill: #8e89d8;
@@ -76,7 +76,7 @@ svg {
   background-color: #e7e7e7;
   border: none;
   border-radius: 0;
-  transition: 0.25s;
+  transition: 0.2s;
   box-sizing: border-box;
   outline: none;
 
@@ -197,7 +197,7 @@ svg {
   grid-row-start: 1;
   grid-row-end: 2;
   background-color: #fff;
-  transition: 0.3s;
+  transition: 0.2s;
 
   height: 440px;
   opacity: 0;

@@ -1,5 +1,8 @@
 .page {
+  // padding-top: calc(#{$site-header-top-mobile-height} + 40px);
+
   &--pull-top {
+    margin-top: calc((#{$site-header-top-mobile-height} + 40px) * -1);
   }
 
   @include mq-min(768px) {

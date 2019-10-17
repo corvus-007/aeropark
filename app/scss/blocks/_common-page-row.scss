@@ -31,6 +31,8 @@
   position: relative;
 
   @include mq-max(767px) {
-    grid-row-start: 1;
+    .common-page-row--inverse-stack & {
+      grid-row-start: 1;
+    }
   }
 }

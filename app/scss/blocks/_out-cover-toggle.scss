@@ -23,7 +23,7 @@ $padding-cover-toggle: 8px;
     height: $out-cover-toggle-line-height;
     margin: auto;
     background-color: currentColor;
-    transition: top $duration $duration, bottom $duration $duration, transform $duration;
+    transition: top 0.2s 0.2s, bottom 0.2s 0.2s, transform 0.2s;
   }
 
   &::before {
@@ -37,7 +37,7 @@ $padding-cover-toggle: 8px;
   &--fired {
     &::before,
     &::after {
-      transition: top $duration, bottom $duration, transform $duration $duration;
+      transition: top 0.2s, bottom 0.2s, transform 0.2s 0.2s;
     }
 
     &::before {
@@ -65,7 +65,7 @@ $padding-cover-toggle: 8px;
   height: $out-cover-toggle-line-height;
   margin: auto;
   background-color: currentColor;
-  transition: $duration;
+  transition: 0.2s;
 
   .out-cover-toggle--fired & {
     opacity: 0;

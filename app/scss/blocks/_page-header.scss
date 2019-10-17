@@ -11,7 +11,7 @@
   }
 
   .page--pull-top & {
-    min-height: 252px;
+    padding-top: calc(#{$site-header-top-mobile-height} + 40px);
   }
 
   @include mq-min(768px) {

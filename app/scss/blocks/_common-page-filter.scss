@@ -36,7 +36,7 @@
     border: 2px solid $gray-122;
     border-top: none;
     border-left: none;
-    transition: 0.5s;
+    transition: 0.2s;
     pointer-events: none;
   }
 
@@ -73,7 +73,7 @@
     box-shadow: 0 4px 8px rgba(#000000, 0.1);
     opacity: 0;
     pointer-events: none;
-    transition: 0.3s;
+    transition: 0.2s;
 
     .common-page-filter--open & {
       transform: translate3d(0, 0, 0);

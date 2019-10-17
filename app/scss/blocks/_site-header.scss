@@ -26,6 +26,6 @@
 
 .site-header__sentinel {
   position: absolute;
-  top: 300px;
+  top: $site-header-laptop-height;
   pointer-events: none;
 }

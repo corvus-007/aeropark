@@ -7,11 +7,11 @@
   z-index: 3;
   height: 100%;
   padding-top: $site-header-top-mobile-height;
-  transform: scale(1.2);
+  transform: scale(1.05);
   color: $base-color;
   background-color: #ffffff;
   box-sizing: border-box;
-  transition: $duration * 2;
+  transition: 0.2s;
   pointer-events: none;
   opacity: 0;
   visibility: hidden;
