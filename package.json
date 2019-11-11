@@ -22,10 +22,11 @@
     "gulp-svgstore": "^7.0.1",
     "gulp-uglify": "^3.0.2",
     "run-sequence": "^2.2.1",
+    "webpack": "^4.41.2",
     "webpack-stream": "^5.2.1"
   },
   "scripts": {
-    "build": "gulp build",
+    "build": "set NODE_ENV=production && gulp build",
     "start": "npm run build && gulp serve",
     "deploy": "npm run build && gulp deploy"
   },

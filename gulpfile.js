@@ -7,7 +7,8 @@ const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const cssnano = require('cssnano');
 const babel = require('gulp-babel');
-const webpack = require('webpack-stream');
+const webpack = require('webpack');
+const webpackStream = require('webpack-stream');
 const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
 const fileinclude = require('gulp-file-include');
@@ -17,6 +18,8 @@ const browserSync = require('browser-sync').create();
 const autoprefixer = require('autoprefixer');
 const del = require('del');
 const ghPages = require('gulp-gh-pages');
+
+const webpackConfig = require('./webpack.config');
 
 const isDevBuild = process.env.NODE_ENV !== 'production';
 console.log(isDevBuild);
@@ -72,7 +75,7 @@ function stylesProduction(cb) {
 }
 
 function pluginsJSDev(cb) {
-  src(`${folder.src}/js/plugins.js`)
+  src([`${folder.src}/js/plugins.js`, '!./app/js/aeroplan/'])
     .pipe(include())
     .pipe(dest(`${folder.build}/js`))
     .pipe(browserSync.stream());
@@ -88,30 +91,44 @@ function pluginsJSProduction() {
     .pipe(browserSync.stream());
 }
 
+// task('aeroplan-scripts', () => {
+//   return src('./app/js/aeroplan/aeroplan-app.js')
+//     .pipe(
+//       webpack({
+//         output: {
+//           filename: 'aeroplan-app.js'
+//         },
+//         module: {
+//           rules: [
+//             {
+//               test: /\.(js)$/,
+//               exclude: /(node_modules)/,
+//               loader: 'babel-loader',
+//               options: {
+//                 presets: ['@babel/env']
+//               }
+//             }
+//           ]
+//         },
+//         mode: isDevBuild ? 'development' : 'production',
+//         devtool: !isDevBuild ? 'inline-source-map' : false
+//       })
+//     )
+//     .pipe(dest('./build/js'));
+// });
+
 task('aeroplan-scripts', () => {
-  return src('./app/js/aeroplan/aeroplan-app.js')
+return src('./app/js/aeroplan/aeroplan-app.js')
     .pipe(
-      webpack({
-        output: {
-          filename: 'aeroplan-app.js'
-        },
-        module: {
-          rules: [
-            {
-              test: /\.(js)$/,
-              exclude: /(node_modules)/,
-              loader: 'babel-loader',
-              options: {
-                presets: ['@babel/env']
-              }
-            }
-          ]
-        },
-        mode: isDevBuild ? 'development' : 'production',
-        devtool: !isDevBuild ? 'inline-source-map' : false
+      babel({
+        presets: ['@babel/env']
       })
     )
-    .pipe(dest('./build/js'));
+    .pipe(
+      webpackStream(webpackConfig, webpack)
+    )
+    .pipe(dest('build/js'))
+    .pipe(browserSync.stream());
 });
 
 task('scripts', cb => {
@@ -119,7 +136,7 @@ task('scripts', cb => {
   return (
     src('./app/js/app.js')
       .pipe(
-        webpack({
+        webpackStream({
           output: {
             filename: 'app.js'
           },
@@ -246,10 +263,7 @@ function serve(cb) {
     [`${folder.src}/js/modules/*.js`, `${folder.src}/js/modules.js`],
     modulesJS
   );
-  watch('./app/js/aeroplan/**/*.js', series('aeroplan-scripts')).on(
-    'change',
-    browserSync.reload
-  );
+  watch('./app/js/aeroplan/**/*.js', series('aeroplan-scripts'));
 
   cb();
 }
