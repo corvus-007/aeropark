@@ -1,6 +1,6 @@
 import {
   categoryFilter,
-  forWhoFilter,
+  audienceFilter,
   discountFilter
 } from './modules/filter-options';
 import ToggleFloors from './modules/toggle-floors';
@@ -11,7 +11,7 @@ import * as d3 from 'd3';
 import Popper from 'popper.js';
 
 const MIN_ZOOM = 0.5;
-const MAX_ZOOM = 4.5;
+const MAX_ZOOM = 8;
 const PLAN_PLACE_CLASS = `plan-place`;
 const PLAN_PLACE_HOVERED_CLASS = `plan-place--hovered`;
 const PLAN_PLACE_SELECTED_CLASS = `plan-place--selected`;
@@ -27,7 +27,7 @@ const params = new URLSearchParams(url.search);
 const placeId = params.get(`place_id`);
 const filterForm = document.querySelector(`[data-plans-filter-form]`);
 const categoryFilterSelect = filterForm.querySelector(`[name="category"]`);
-const forWhoFilterSelect = filterForm.querySelector(`[name="for-who"]`);
+const audienceFilterSelect = filterForm.querySelector(`[name="audience"]`);
 const discountFilterSelect = filterForm.querySelector(`[name="discount"]`);
 const plansWrapper = document.querySelector(`.aero-plans`);
 
@@ -63,7 +63,11 @@ const dimensionFloorsArr = [];
 const reference = document.documentElement;
 const popper = document.querySelector(`.aero-plan-popper`);
 const popperInstance = new Popper(reference, popper, {
+  placement: 'right',
   modifiers: {
+    flip: {
+      behavior: ['left']
+    },
     preventOverflow: {
       boundariesElement: plansWrapper
     }
@@ -80,7 +84,7 @@ console.dir(aeroPlans);
 aeroPlans.forEach(renderPlan);
 
 categoryFilterSelect.appendChild(createOptionsList(categoryFilter));
-forWhoFilterSelect.appendChild(createOptionsList(forWhoFilter));
+audienceFilterSelect.appendChild(createOptionsList(audienceFilter));
 discountFilterSelect.appendChild(createOptionsList(discountFilter));
 
 createToggleFloorsControls();
@@ -100,6 +104,7 @@ zoomActionsContainer.addEventListener(`click`, clickZoomContainerHandler);
 function renderPlan(plan, planIndex) {
   const { dimensions, boundaryShape } = plan.settings;
   const areas = plan.areas;
+  // const activeAreas = areas.filter((place) => place.status);
   const helpMarkers = plan.helpMarkers;
   const planWidth = dimensions.width;
   const planHeight = dimensions.height;
@@ -188,7 +193,19 @@ function renderPlan(plan, planIndex) {
     .attr(`data-link-url`, d => (d.link ? d.link.url : null))
     .attr(`data-link-text`, d => (d.link ? d.link.text : null))
     .attr(`data-button-text`, d => (d.button ? d.button.text : null))
-    .attr(`d`, d => d.path)
+    .attr(`d`, d => {
+      if (!('status' in d)) {
+        return d.path;
+      }
+
+      const status = Boolean(d.status);
+
+      if (status) {
+        return d.path;
+      }
+
+      return '';
+    })
     .classed(PLAN_PLACE_CLASS, true);
 
   // placesPaths.on("click", function (d) {
@@ -248,7 +265,9 @@ function renderPlan(plan, planIndex) {
     mainG.attr('transform', d3.event.transform);
   }
 
-  svg.call(zoom);
+  svg.call(zoom).on('wheel', function() {
+    d3.event.preventDefault();
+  });
 }
 
 // Переход со страницы магазина по указанному id
@@ -450,7 +469,7 @@ function keyupSearchInputHandler(evt) {
   }
 }
 
-function focusSearchInputHandler(evt) {
+function focusSearchInputHandler() {
   const value = searchInput.value;
 
   searchResultCursor = 0;
@@ -469,7 +488,7 @@ function clickSearchClearButtonHandler(evt) {
   hideSearchResultList();
 }
 
-function inputSearchInputHandler(evt) {
+function inputSearchInputHandler() {
   const value = searchInput.value;
   togglePlanSearchFormFieldFilledModifier(value);
 }
@@ -490,6 +509,7 @@ function clickSearchResultListHandler(evt) {
   }
 
   const value = li.dataset.title;
+  // const id = li.dataset.id;
 
   fillSearchInput(value);
 }
@@ -533,18 +553,21 @@ function getMatches(value, data) {
 function renderMatches(mathList) {
   let resultHTMLStr = ``;
 
+  console.log(mathList);
+
   mathList.forEach((floorAreas, index) => {
     const numberFloor = index + 1;
 
     floorAreas.forEach(areaObj => {
+      const id = areaObj.id;
       const title = areaObj.title;
       const description = areaObj.description;
       const floor = numberFloor;
       const li = `
-      <li class="autocomplete-list__item" data-title="${title}">
+      <li class="autocomplete-list__item" data-title="${title}" data-id="${id}">
         <b>${title}</b>
         <span>${description}</span>
-        <span>(${floor}этаж)</span>
+        <span>(${floor} этаж)</span>
       </li>
       `;
 
@@ -733,6 +756,7 @@ function renderPlanPopper(pathNode) {
   const link = `<a href="${linkUrl}" target="_blank">${linkText}</a>`;
   const buttonText = pathNode.dataset.buttonText || ``;
   const button = `<button type="button">${buttonText}</button>`;
+  const hasInteractionElems = linkText || buttonText;
 
   popper.innerHTML = `
     <h2 class="aero-plan-popper__title">${title}</h2>
@@ -740,6 +764,11 @@ function renderPlanPopper(pathNode) {
     <p>${link}</p>
     <p>${button}</p>
   `;
+
+  popper.classList.toggle(
+    'aero-plan-popper--has-interaction',
+    hasInteractionElems
+  );
   popperInstance.update();
   popperInstance.reference = pathNode;
   popper.hidden = false;
@@ -749,6 +778,7 @@ function removeClassSelectedAreas() {
   const selectedPaths = document.querySelectorAll(
     `.${PLAN_PLACE_SELECTED_CLASS}`
   );
+
   [...selectedPaths].forEach(it => {
     it.classList.remove(PLAN_PLACE_SELECTED_CLASS);
   });
