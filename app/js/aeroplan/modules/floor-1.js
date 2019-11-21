@@ -1,4 +1,4 @@
-import { categoryFilter, forWhoFilter, discountFilter } from './filter-options';
+import { categoryFilter, audienceFilter, discountFilter } from './filter-options';
 
 export default {
   settings: {
@@ -85,7 +85,7 @@ export default {
         categoryFilter[`Одежда`],
         categoryFilter[`Аксессуары`]
       ]),
-      audience: new Set([forWhoFilter[`Женская одежда`]]),
+      audience: new Set([audienceFilter[`Женская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
       path: `M1194 533h-36v-38l16-16h20z`
@@ -374,7 +374,7 @@ export default {
       description: `Мужские украшения`,
       discount: new Set(),
       category: new Set([categoryFilter[`Аксессуары`]]),
-      audience: new Set([forWhoFilter[`Мужская одежда`]]),
+      audience: new Set([audienceFilter[`Мужская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
       path: `M573.5 406.5v28h-16v-28z`
@@ -391,8 +391,8 @@ export default {
         categoryFilter[`Бытовая техника и электроника`]
       ]),
       audience: new Set([
-        forWhoFilter[`Мужская одежда`],
-        forWhoFilter[`Женская одежда`]
+        audienceFilter[`Мужская одежда`],
+        audienceFilter[`Женская одежда`]
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
@@ -649,8 +649,8 @@ export default {
         categoryFilter[`Бытовая техника и электроника`]
       ]),
       audience: new Set([
-        forWhoFilter[`Мужская одежда`],
-        forWhoFilter[`Женская одежда`]
+        audienceFilter[`Мужская одежда`],
+        audienceFilter[`Женская одежда`]
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
@@ -999,7 +999,7 @@ export default {
         categoryFilter[`Аксессуары`],
         categoryFilter[`Обувь`]
       ]),
-      audience: new Set([forWhoFilter[`Женская одежда`]]),
+      audience: new Set([audienceFilter[`Женская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
       path: `M943 479h36v54h-36z`
@@ -1063,8 +1063,8 @@ export default {
       discount: new Set(),
       category: new Set([categoryFilter[`Бельё`]]),
       audience: new Set([
-        forWhoFilter[`Мужская одежда`],
-        forWhoFilter[`Женская одежда`]
+        audienceFilter[`Мужская одежда`],
+        audienceFilter[`Женская одежда`]
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
@@ -1094,7 +1094,7 @@ export default {
         categoryFilter[`Обувь`],
         categoryFilter[`Головные уборы`]
       ]),
-      audience: new Set([forWhoFilter[`Женская одежда`]]),
+      audience: new Set([audienceFilter[`Женская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
       path: `M979 479h38v54h-38z`
@@ -1170,8 +1170,8 @@ export default {
       discount: new Set(),
       category: new Set([categoryFilter[`Бельё`]]),
       audience: new Set([
-        forWhoFilter[`Мужская одежда`],
-        forWhoFilter[`Женская одежда`]
+        audienceFilter[`Мужская одежда`],
+        audienceFilter[`Женская одежда`]
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
@@ -1220,8 +1220,8 @@ export default {
         categoryFilter[`Аксессуары`]
       ]),
       audience: new Set([
-        forWhoFilter[`Мужская одежда`],
-        forWhoFilter[`Женская одежда`]
+        audienceFilter[`Мужская одежда`],
+        audienceFilter[`Женская одежда`]
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
@@ -1255,8 +1255,8 @@ export default {
         categoryFilter[`Головные уборы`]
       ]),
       audience: new Set([
-        forWhoFilter[`Мужская одежда`],
-        forWhoFilter[`Женская одежда`]
+        audienceFilter[`Мужская одежда`],
+        audienceFilter[`Женская одежда`]
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
@@ -1279,7 +1279,7 @@ export default {
       description: `Детские товары и игрушки`,
       discount: new Set(),
       category: new Set([categoryFilter[`Детские товары`]]),
-      audience: new Set([forWhoFilter[`Товары для детей`]]),
+      audience: new Set([audienceFilter[`Товары для детей`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
       path: `M312 75h49V1H215v115h97V75z`
@@ -1313,9 +1313,9 @@ export default {
         categoryFilter[`Головные уборы`]
       ]),
       audience: new Set([
-        forWhoFilter[`Мужская одежда`],
-        forWhoFilter[`Женская одежда`],
-        forWhoFilter[`Товары для детей`]
+        audienceFilter[`Мужская одежда`],
+        audienceFilter[`Женская одежда`],
+        audienceFilter[`Товары для детей`]
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
@@ -1354,8 +1354,8 @@ export default {
         categoryFilter[`Аксессуары`]
       ]),
       audience: new Set([
-        forWhoFilter[`Мужская одежда`],
-        forWhoFilter[`Женская одежда`]
+        audienceFilter[`Мужская одежда`],
+        audienceFilter[`Женская одежда`]
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
@@ -1369,7 +1369,7 @@ export default {
       description: ``,
       discount: new Set(),
       category: new Set([categoryFilter[`Бельё`]]),
-      audience: new Set([forWhoFilter[`Женская одежда`]]),
+      audience: new Set([audienceFilter[`Женская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
       path: `M906 157h-35v73.4l35-27.4v-46z`
@@ -1422,8 +1422,8 @@ export default {
       discount: new Set(),
       category: new Set([categoryFilter[`Аксессуары`]]),
       audience: new Set([
-        forWhoFilter[`Мужская одежда`],
-        forWhoFilter[`Женская одежда`]
+        audienceFilter[`Мужская одежда`],
+        audienceFilter[`Женская одежда`]
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
@@ -1459,8 +1459,8 @@ export default {
         categoryFilter[`Аксессуары`]
       ]),
       audience: new Set([
-        forWhoFilter[`Мужская одежда`],
-        forWhoFilter[`Женская одежда`]
+        audienceFilter[`Мужская одежда`],
+        audienceFilter[`Женская одежда`]
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
@@ -1507,9 +1507,9 @@ export default {
         categoryFilter[`Аксессуары`]
       ]),
       audience: new Set([
-        forWhoFilter[`Мужская одежда`],
-        forWhoFilter[`Женская одежда`],
-        forWhoFilter[`Товары для детей`]
+        audienceFilter[`Мужская одежда`],
+        audienceFilter[`Женская одежда`],
+        audienceFilter[`Товары для детей`]
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
@@ -1560,9 +1560,9 @@ export default {
         categoryFilter[`Бельё`]
       ]),
       audience: new Set([
-        forWhoFilter[`Мужская одежда`],
-        forWhoFilter[`Женская одежда`],
-        forWhoFilter[`Товары для детей`]
+        audienceFilter[`Мужская одежда`],
+        audienceFilter[`Женская одежда`],
+        audienceFilter[`Товары для детей`]
       ]),
       link: {
         text: ``,
@@ -1602,8 +1602,8 @@ export default {
         categoryFilter[`Головные уборы`]
       ]),
       audience: new Set([
-        forWhoFilter[`Мужская одежда`],
-        forWhoFilter[`Женская одежда`]
+        audienceFilter[`Мужская одежда`],
+        audienceFilter[`Женская одежда`]
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
@@ -1617,7 +1617,7 @@ export default {
       description: `Чулочно-носочная продукция, белье, одежда для сна`,
       discount: new Set(),
       category: new Set([categoryFilter[`Бельё`]]),
-      audience: new Set([forWhoFilter[`Женская одежда`]]),
+      audience: new Set([audienceFilter[`Женская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
       path: `M1088 348h36v32h-36z`
@@ -1639,8 +1639,8 @@ export default {
       discount: new Set(),
       category: new Set([categoryFilter[`Одежда`]]),
       audience: new Set([
-        forWhoFilter[`Мужская одежда`],
-        forWhoFilter[`Женская одежда`]
+        audienceFilter[`Мужская одежда`],
+        audienceFilter[`Женская одежда`]
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
@@ -1655,8 +1655,8 @@ export default {
       discount: new Set(),
       category: new Set([categoryFilter[`Аксессуары`]]),
       audience: new Set([
-        forWhoFilter[`Мужская одежда`],
-        forWhoFilter[`Женская одежда`]
+        audienceFilter[`Мужская одежда`],
+        audienceFilter[`Женская одежда`]
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
@@ -1684,7 +1684,7 @@ export default {
         categoryFilter[`Аксессуары`],
         categoryFilter[`Подарки и сувениры`]
       ]),
-      audience: new Set([forWhoFilter[`Женская одежда`]]),
+      audience: new Set([audienceFilter[`Женская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
       path: `M1088 296h20v31h-20z`
@@ -1719,9 +1719,9 @@ export default {
         categoryFilter[`Обувь`]
       ]),
       audience: new Set([
-        forWhoFilter[`Мужская одежда`],
-        forWhoFilter[`Женская одежда`],
-        forWhoFilter[`Товары для детей`]
+        audienceFilter[`Мужская одежда`],
+        audienceFilter[`Женская одежда`],
+        audienceFilter[`Товары для детей`]
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
@@ -1757,8 +1757,8 @@ export default {
       discount: new Set(),
       category: new Set([categoryFilter[`Бельё`]]),
       audience: new Set([
-        forWhoFilter[`Мужская одежда`],
-        forWhoFilter[`Женская одежда`]
+        audienceFilter[`Мужская одежда`],
+        audienceFilter[`Женская одежда`]
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
@@ -1772,7 +1772,7 @@ export default {
       description: `Бутик мужской одежды`,
       discount: new Set(),
       category: new Set([categoryFilter[`Одежда`]]),
-      audience: new Set([forWhoFilter[`Мужская одежда`]]),
+      audience: new Set([audienceFilter[`Мужская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
       path: `M1088 380h36v30h-36z`
@@ -1960,9 +1960,9 @@ export default {
         categoryFilter[`Аксессуары`]
       ]),
       audience: new Set([
-        forWhoFilter[`Женская одежда`],
-        forWhoFilter[`Мужская одежда`],
-        forWhoFilter[`Товары для детей`]
+        audienceFilter[`Женская одежда`],
+        audienceFilter[`Мужская одежда`],
+        audienceFilter[`Товары для детей`]
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
@@ -2010,8 +2010,8 @@ export default {
       discount: new Set(),
       category: new Set([categoryFilter[`Бельё`]]),
       audience: new Set([
-        forWhoFilter[`Мужская одежда`],
-        forWhoFilter[`Женская одежда`]
+        audienceFilter[`Мужская одежда`],
+        audienceFilter[`Женская одежда`]
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
@@ -2047,9 +2047,9 @@ export default {
         categoryFilter[`Аксессуары`]
       ]),
       audience: new Set([
-        forWhoFilter[`Мужская одежда`],
-        forWhoFilter[`Женская одежда`],
-        forWhoFilter[`Товары для детей`]
+        audienceFilter[`Мужская одежда`],
+        audienceFilter[`Женская одежда`],
+        audienceFilter[`Товары для детей`]
       ]),
       link: {
         text: `1 действующая акция`,
@@ -2105,8 +2105,8 @@ export default {
         categoryFilter[`Бытовая техника и электроника`]
       ]),
       audience: new Set([
-        forWhoFilter[`Мужская одежда`],
-        forWhoFilter[`Женская одежда`]
+        audienceFilter[`Мужская одежда`],
+        audienceFilter[`Женская одежда`]
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
@@ -2135,8 +2135,8 @@ export default {
         categoryFilter[`Бытовая техника и электроника`]
       ]),
       audience: new Set([
-        forWhoFilter[`Мужская одежда`],
-        forWhoFilter[`Женская одежда`]
+        audienceFilter[`Мужская одежда`],
+        audienceFilter[`Женская одежда`]
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
@@ -2199,7 +2199,7 @@ export default {
       description: `Женская одежда`,
       discount: new Set([]),
       category: new Set([categoryFilter[`Одежда`]]),
-      audience: new Set([forWhoFilter[`Женская одежда`]]),
+      audience: new Set([audienceFilter[`Женская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
       path: `M365 160h52v104h-52z`
@@ -2231,9 +2231,9 @@ export default {
         categoryFilter[`Аксессуары`]
       ]),
       audience: new Set([
-        forWhoFilter[`Мужская одежда`],
-        forWhoFilter[`Женская одежда`],
-        forWhoFilter[`Товары для детей`]
+        audienceFilter[`Мужская одежда`],
+        audienceFilter[`Женская одежда`],
+        audienceFilter[`Товары для детей`]
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
@@ -2275,8 +2275,8 @@ export default {
       discount: new Set(),
       category: new Set([categoryFilter[`Одежда`]]),
       audience: new Set([
-        forWhoFilter[`Мужская одежда`],
-        forWhoFilter[`Товары для детей`]
+        audienceFilter[`Мужская одежда`],
+        audienceFilter[`Товары для детей`]
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
@@ -2369,7 +2369,7 @@ export default {
         categoryFilter[`Обувь`],
         categoryFilter[`Аксессуары`]
       ]),
-      audience: new Set([forWhoFilter[`Товары для детей`]]),
+      audience: new Set([audienceFilter[`Товары для детей`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
       path: `M657 479h35v54h-35z`
@@ -2491,8 +2491,8 @@ export default {
         categoryFilter[`Аксессуары`]
       ]),
       audience: new Set([
-        forWhoFilter[`Мужская одежда`],
-        forWhoFilter[`Женская одежда`]
+        audienceFilter[`Мужская одежда`],
+        audienceFilter[`Женская одежда`]
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
@@ -2519,7 +2519,7 @@ export default {
       description: `Супермаркет парфюмерно-косметической продукции`,
       discount: new Set(),
       category: new Set([categoryFilter[`Парфюмерия и косметика`]]),
-      audience: new Set([forWhoFilter[`Товары для детей`]]),
+      audience: new Set([audienceFilter[`Товары для детей`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
       path: `M728 396v49h76l33-16v-33H728z`
@@ -2579,8 +2579,8 @@ export default {
       discount: new Set(),
       category: new Set([categoryFilter[`Головные уборы`]]),
       audience: new Set([
-        forWhoFilter[`Мужская одежда`],
-        forWhoFilter[`Женская одежда`]
+        audienceFilter[`Мужская одежда`],
+        audienceFilter[`Женская одежда`]
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
@@ -2660,8 +2660,8 @@ export default {
         categoryFilter[`Обувь`]
       ]),
       audience: new Set([
-        forWhoFilter[`Мужская одежда`],
-        forWhoFilter[`Женская одежда`]
+        audienceFilter[`Мужская одежда`],
+        audienceFilter[`Женская одежда`]
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
@@ -2695,7 +2695,7 @@ export default {
         categoryFilter[`Обувь`],
         categoryFilter[`Аксессуары`]
       ]),
-      audience: new Set([forWhoFilter[`Женская одежда`]]),
+      audience: new Set([audienceFilter[`Женская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
       path: `M804 396v-92.4a51.5 51.5 0 0 1-2.4-7.6H728v100z`
@@ -2731,8 +2731,8 @@ export default {
       discount: new Set(),
       category: new Set([categoryFilter[`Одежда`]]),
       audience: new Set([
-        forWhoFilter[`Мужская одежда`],
-        forWhoFilter[`Товары для детей`]
+        audienceFilter[`Мужская одежда`],
+        audienceFilter[`Товары для детей`]
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
@@ -2759,7 +2759,7 @@ export default {
         categoryFilter[`Одежда`],
         categoryFilter[`Аксессуары`]
       ]),
-      audience: new Set([forWhoFilter[`Женская одежда`]]),
+      audience: new Set([audienceFilter[`Женская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
       path: `M597 296l-13 13v29h15v35h22v-77h-24z`
@@ -2779,7 +2779,7 @@ export default {
       description: `Женская одежда`,
       discount: new Set(),
       category: new Set([categoryFilter[`Одежда`]]),
-      audience: new Set([forWhoFilter[`Женская одежда`]]),
+      audience: new Set([audienceFilter[`Женская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
       path: `M290 377v-6h-39v27h39v-21z`
@@ -2804,7 +2804,7 @@ export default {
       description: `Женская молодежная одежда`,
       discount: new Set(),
       category: new Set([categoryFilter[`Одежда`]]),
-      audience: new Set([forWhoFilter['Женская одежда']]),
+      audience: new Set([audienceFilter['Женская одежда']]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
       path: `M251 398v25l14 25h25v-50h-39z`
@@ -2847,7 +2847,7 @@ export default {
       description: `Удобная обувь для взрослых и детей`,
       discount: new Set(),
       category: new Set([categoryFilter[`Обувь`]]),
-      audience: new Set([forWhoFilter[`Товары для детей`]]),
+      audience: new Set([audienceFilter[`Товары для детей`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
       path: `M265 349h25v22h-25z`
@@ -2877,9 +2877,9 @@ export default {
       discount: new Set(),
       category: new Set([categoryFilter[`Одежда`]]),
       audience: new Set([
-        forWhoFilter[`Мужская одежда`],
-        forWhoFilter[`Женская одежда`],
-        forWhoFilter[`Товары для детей`]
+        audienceFilter[`Мужская одежда`],
+        audienceFilter[`Женская одежда`],
+        audienceFilter[`Товары для детей`]
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
@@ -2918,8 +2918,8 @@ export default {
         categoryFilter[`Аксессуары`]
       ]),
       audience: new Set([
-        forWhoFilter[`Мужская одежда`],
-        forWhoFilter[`Женская одежда`]
+        audienceFilter[`Мужская одежда`],
+        audienceFilter[`Женская одежда`]
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
@@ -2955,8 +2955,8 @@ export default {
         categoryFilter[`Аксессуары`]
       ]),
       audience: new Set([
-        forWhoFilter[`Мужская одежда`],
-        forWhoFilter[`Женская одежда`]
+        audienceFilter[`Мужская одежда`],
+        audienceFilter[`Женская одежда`]
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
@@ -2989,7 +2989,7 @@ export default {
       description: `Одежда для стильных девушек`,
       discount: new Set(),
       category: new Set([categoryFilter[`Одежда`]]),
-      audience: new Set([forWhoFilter[`Женская одежда`]]),
+      audience: new Set([audienceFilter[`Женская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
       path: `M290 349v28h62v-81h-62v53z`
@@ -3030,8 +3030,8 @@ export default {
         categoryFilter[`Аксессуары`]
       ]),
       audience: new Set([
-        forWhoFilter[`Мужская одежда`],
-        forWhoFilter[`Женская одежда`]
+        audienceFilter[`Мужская одежда`],
+        audienceFilter[`Женская одежда`]
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
@@ -3053,7 +3053,7 @@ export default {
       description: `Женская одежда из Белоруссии`,
       discount: new Set(),
       category: new Set([categoryFilter[`Одежда`]]),
-      audience: new Set([forWhoFilter[`Женская одежда`]]),
+      audience: new Set([audienceFilter[`Женская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
       path: `M477 420v28h57l13-13v-15h-70z`
@@ -3117,7 +3117,7 @@ export default {
       description: `Обувь для мужчин, женщин и детей`,
       discount: new Set(),
       category: new Set([categoryFilter[`Обувь`]]),
-      audience: new Set([forWhoFilter[`Товары для детей`]]),
+      audience: new Set([audienceFilter[`Товары для детей`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
       path: `M352 397h47v51h-47z`
@@ -3186,7 +3186,7 @@ export default {
       description: `Мужская одежда`,
       discount: new Set(),
       category: new Set([categoryFilter[`Одежда`]]),
-      audience: new Set([forWhoFilter[`Мужская одежда`]]),
+      audience: new Set([audienceFilter[`Мужская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
       path: `M364 479h35v54h-35z`
@@ -3254,7 +3254,7 @@ export default {
       description: `Бутик итальянской одежды`,
       discount: new Set(),
       category: new Set([categoryFilter[`Одежда`]]),
-      audience: new Set([forWhoFilter[`Женская одежда`]]),
+      audience: new Set([audienceFilter[`Женская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
       path: `M533 479h-23v54h37v-40l-14-14z`
@@ -3279,7 +3279,7 @@ export default {
       description: `Женская, мужская обувь, детская обувь и аксессуары`,
       discount: new Set(),
       category: new Set([categoryFilter[`Обувь`]]),
-      audience: new Set([forWhoFilter[`Товары для детей`]]),
+      audience: new Set([audienceFilter[`Товары для детей`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
       path: `M448 479h-49v54h49v-54z`
@@ -3303,7 +3303,7 @@ export default {
       description: `Пальто премиум-класса`,
       discount: new Set(),
       category: new Set([categoryFilter[`Одежда`]]),
-      audience: new Set([forWhoFilter[`Женская одежда`]]),
+      audience: new Set([audienceFilter[`Женская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
       path: `M479 479v54h31v-54h-31z`
@@ -3361,9 +3361,9 @@ export default {
         categoryFilter[`Детские товары`]
       ]),
       audience: new Set([
-        forWhoFilter[`Мужская одежда`],
-        forWhoFilter[`Женская одежда`],
-        forWhoFilter[`Товары для детей`]
+        audienceFilter[`Мужская одежда`],
+        audienceFilter[`Женская одежда`],
+        audienceFilter[`Товары для детей`]
       ]),
       path: `M92 200H1v173h167V174H92v26z`
     },

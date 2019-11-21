@@ -1,4 +1,4 @@
-import { categoryFilter, forWhoFilter, discountFilter } from './filter-options';
+import { categoryFilter, audienceFilter, discountFilter } from './filter-options';
 
 export default {
   settings: {
@@ -56,8 +56,8 @@ export default {
         categoryFilter[`Бытовая техника и электроника`]
       ]),
       audience: new Set([
-        forWhoFilter[`Мужская одежда`],
-        forWhoFilter[`Женская одежда`]
+        audienceFilter[`Мужская одежда`],
+        audienceFilter[`Женская одежда`]
       ]),
       rent: true,
       link: {

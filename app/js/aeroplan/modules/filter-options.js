@@ -35,7 +35,7 @@ export const categoryFilter = {
   'Кофейня': 33,
 };
 
-export const forWhoFilter = {
+export const audienceFilter = {
   'Все': `all`,
   'Мужская одежда': 1,
   'Женская одежда': 2,
