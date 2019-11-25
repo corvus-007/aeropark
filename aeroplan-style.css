@@ -1,9 +1,190 @@
-.aero-plans-filter-form {
-  margin-bottom: 24px; }
+.toggle-floors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #ffffff;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.1); }
 
-.filter-select {
-  font-size: 18px;
-  font-family: inherit; }
+.toggle-floors__item {
+  position: relative; }
+
+.toggle-floors__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: inherit;
+  color: #212121;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: pointer;
+  outline: none; }
+  .toggle-floors__button:hover {
+    color: #ffffff;
+    background-color: #928bf3; }
+  .toggle-floors__item--active .toggle-floors__button {
+    color: #ffffff;
+    background-color: #8178f1;
+    cursor: default; }
+
+.toggle-floors__badge-value {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 12px;
+  height: 12px;
+  padding: 0 2px;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  line-height: 1;
+  color: #7a7a7a;
+  background-color: #ffffff;
+  border-radius: 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+  .toggle-floors__badge-value:empty {
+    display: none; }
+
+.zoom-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.1); }
+
+.zoom-actions__button {
+  display: block;
+  padding: 12px;
+  color: #d6d6d6;
+  background-color: #ffffff;
+  border: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-right: 1px solid #eaeaea; }
+  .zoom-actions__button:last-child {
+    border-right: none; }
+  .zoom-actions__button:hover {
+    color: #7a7a7a; }
+  .zoom-actions__button:active {
+    color: #212121;
+    -webkit-transition-duration: 0.1s;
+            transition-duration: 0.1s; }
+
+.zoom-actions__button-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+  pointer-events: none; }
+
+.plans-filter-form {
+  display: grid;
+  gap: 36px;
+  grid-template-columns: 1fr auto;
+  max-width: 960px;
+  margin-bottom: 40px; }
+
+.plans-filter-form__fields {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr); }
+
+.plans-filter-form__select select {
+  padding-top: 8px;
+  padding-bottom: 8px; }
+
+.plans-filter-form__reset {
+  min-width: auto;
+  padding: 8px 12px;
+  color: #212121;
+  background-color: #e4e4e4; }
+
+.plans-search-form {
+  position: relative;
+  z-index: 10;
+  margin-bottom: 20px; }
+
+.plans-search-form__input {
+  padding-right: 52px; }
+
+.plans-search-form__button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden; }
+  .plans-search-form__field--filled .plans-search-form__button {
+    opacity: 1;
+    visibility: visible; }
+
+.plans-search-form__result-list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: #fff; }
+
+.autocomplete-list {
+  max-height: 300px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: auto;
+  overscroll-behavior-y: contain; }
+
+.autocomplete-list__item {
+  padding: 12px;
+  cursor: pointer;
+  font-size: 14px; }
+  .autocomplete-list__item:hover {
+    background-color: #eeeeee; }
+  .autocomplete-list__item--highlighted {
+    background-color: #e4e4e4; }
 
 .plan-place {
   fill: #b5b0f7;
@@ -13,12 +194,18 @@
   stroke-linecap: round;
   -webkit-transition: 0.2s;
   transition: 0.2s; }
-  .plan-place--hovered {
+  .plan-place:hover {
     fill: #928bf3; }
   .plan-place--filtered {
     fill: #4fb1ff; }
+    .plan-place--filtered:hover {
+      fill: #269fff; }
     .plan-place--filtered.plan-place--hovered {
       fill: #269fff; }
+  .plan-place--active {
+    fill: #de4383; }
+    .plan-place--active:hover {
+      fill: #de4383; }
   .plan-place--selected {
     fill: #de4383; }
     .plan-place--selected.plan-place--hovered {
@@ -27,98 +214,20 @@
 .logos-group {
   pointer-events: none; }
 
-.aero-plans-toggle-floors {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  margin-bottom: 24px; }
-
-.aero-plans-toggle-floors__item {
+.aero-map {
   position: relative; }
 
-.aero-plans-toggle-floors__button {
-  display: block;
-  padding: 16px 24px;
-  font-weight: 500;
-  font-size: 18px;
-  font-family: inherit;
-  background-color: #e7e7e7;
-  border: none;
-  border-radius: 0;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  outline: none; }
-  .aero-plans-toggle-floors__item--active .aero-plans-toggle-floors__button {
-    background-color: #b5b0f7; }
-
-.aero-plans-toggle-floors__badge {
+.aero-map__toggle-floors {
   position: absolute;
-  top: 0;
-  right: 0; }
+  right: 28px;
+  bottom: 28px;
+  z-index: 5; }
 
-.aero-plans-toggle-floors__badge-value {
-  display: block;
-  width: 16px;
-  height: 16px;
-  text-align: center;
-  line-height: 16px;
-  padding: 4px;
-  font-size: 14px;
-  line-height: 1;
-  background-color: #fff;
-  border-radius: 50%; }
-  .aero-plans-toggle-floors__badge-value:empty {
-    display: none; }
-
-.zoom-actions {
-  margin-bottom: 24px; }
-
-.aero-plans-search-form {
-  position: relative;
-  z-index: 1; }
-
-.aero-plans-search-form__input {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  padding-right: 50px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
-
-.aero-plans-search-form__button {
+.aero-map__zoom-actions {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  opacity: 0;
-  visibility: hidden; }
-  .aero-plans-search-form__field--filled .aero-plans-search-form__button {
-    opacity: 1;
-    visibility: visible; }
-
-.aero-plans-search-form__result-list {
-  position: absolute;
-  left: 0;
-  right: 0;
-  background-color: #fff; }
-
-.autocomplete-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  max-height: 300px; }
-
-.autocomplete-list__item {
-  padding: 10px; }
-  .autocomplete-list__item:hover {
-    background-color: #eeeeee; }
-  .autocomplete-list__item--highlighted {
-    background-color: #e4e4e4; }
+  top: 28px;
+  right: 28px;
+  z-index: 5; }
 
 .aero-plans {
   display: grid;
@@ -130,15 +239,19 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 440px; }
-  .aero-plans svg {
-    background-color: honeydew; }
+  height: 50vh;
+  min-height: 440px;
+  max-height: 600px; }
 
-.plan-floor-boundary {
+.plan-floor-boundary-fill {
+  fill: #e4e4e4; }
+
+.plan-floor-boundary-stroke {
+  fill: none;
   stroke-width: 4px;
   stroke: #0d47a1;
-  fill: #e4e4e4;
-  stroke-linejoin: round; }
+  stroke-linejoin: round;
+  pointer-events: none; }
 
 .aero-plans__floor {
   width: 100%;
@@ -148,10 +261,11 @@
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 2;
-  background-color: #fff;
+  background-color: #eaeaea;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#eaeaea), to(#e4e4e4));
+  background-image: linear-gradient(to top right, #eaeaea, #e4e4e4);
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  height: 440px;
   opacity: 0;
   visibility: hidden;
   overflow: hidden;
@@ -207,10 +321,6 @@
   .aero-plan-popper p {
     margin: 0;
     margin-top: 8px; }
-  .aero-plan-popper[x-placement="top"]::after {
-    top: calc(100% - 5px); }
-  .aero-plan-popper[x-placement="bottom"]::after {
-    bottom: calc(100% - 5px); }
   .aero-plan-popper[x-out-of-boundaries] {
     display: none; }
 

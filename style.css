@@ -1152,7 +1152,7 @@ body.compensate-for-scrollbar {
 .input {
   width: 100%;
   max-height: 150px;
-  padding: 16px;
+  padding: 12px;
   font: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -1194,20 +1194,29 @@ body.compensate-for-scrollbar {
     position: absolute;
     top: 0;
     bottom: 0;
-    right: 10px;
-    width: 12px;
-    height: 11px;
+    right: 16px;
+    z-index: 2;
+    width: 6px;
+    height: 6px;
     margin: auto;
-    background-color: rgba(49, 128, 35, 0.678);
-    -webkit-transition: 0.2s;
-    transition: 0.2s;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    background-color: transparent;
+    border: 2px solid #7a7a7a;
+    border-top: none;
+    border-left: none;
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
     pointer-events: none; }
   .select:focus-within::before {
-    opacity: 0; }
+    -webkit-transform: rotate(-135deg);
+            transform: rotate(-135deg);
+    border-right-color: #7a7a7a;
+    border-bottom-color: #7a7a7a; }
   .select select {
     width: 100%;
     max-height: 150px;
-    padding: 15px;
+    padding: 12px;
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;
@@ -1225,22 +1234,23 @@ body.compensate-for-scrollbar {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     -webkit-transition: 0.2s;
-    transition: 0.2s; }
+    transition: 0.2s;
+    cursor: pointer; }
     .select select::-ms-expand {
       display: none; }
     .select select:hover, .select select:focus {
       background-color: #fff;
       border-color: #e0e0e0; }
   .select option {
-    font-weight: normal; }
+    font-weight: normal;
+    font-size: 20px; }
 
 .field {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-bottom: 20px; }
+      flex-wrap: wrap; }
 
 .field__label {
   margin-bottom: 6px;
@@ -1457,6 +1467,36 @@ tbody {
   background-repeat: no-repeat;
   background-position: 0 100%;
   background-size: 100% 8px; }
+
+.content-gallery__item {
+  width: 100%; }
+  .content-gallery__item a {
+    position: relative;
+    display: block;
+    overflow: hidden; }
+    .content-gallery__item a::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 0;
+      padding-top: 62.5%; }
+    .content-gallery__item a img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translateX(-50%) translateY(-50%);
+              transform: translateX(-50%) translateY(-50%);
+      width: 100%;
+      height: auto; }
+    @supports ((-o-object-fit: cover) or (object-fit: cover)) {
+      .content-gallery__item a img {
+        top: 0;
+        left: 0;
+        -webkit-transform: none;
+                transform: none;
+        height: 100%;
+        -o-object-fit: cover;
+           object-fit: cover; } }
 
 .textual {
   font-size: 1rem;
@@ -2121,6 +2161,7 @@ tbody {
   line-height: 1.2; }
 
 .header-search__result-empty {
+  display: none;
   max-width: 500px;
   font-weight: 500;
   font-size: 36px;
@@ -2666,7 +2707,7 @@ body:not(.home) .site-header {
 
 .site-header__top {
   position: relative;
-  z-index: 15; }
+  z-index: 55; }
 
 .site-header__bottom {
   position: relative;
@@ -3564,13 +3605,13 @@ body:not(.home) .site-header {
   display: flex; }
 
 .search-form__input {
-  font-weight: 300;
-  font-size: 32px;
-  line-height: 1;
   padding: 0;
   padding-top: 8px;
   padding-bottom: 8px;
   padding-right: calc(56px + 12px);
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 1;
   background-color: transparent;
   border-color: transparent;
   border-radius: 0; }
@@ -3591,10 +3632,10 @@ body:not(.home) .site-header {
 
 .search-form__submit {
   position: absolute;
+  right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  right: 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -3622,17 +3663,18 @@ body:not(.home) .site-header {
       width: 103px; } }
 
 .search-form__submit-icon {
+  display: block;
   width: 24px;
   height: 24px;
-  display: block;
   margin: auto;
   fill: #212121;
   opacity: 0.5; }
 
 .search-form__text {
+  display: none;
   margin: 0;
-  color: #7a7a7a;
-  font-weight: 400; }
+  font-weight: 400;
+  color: #7a7a7a; }
 
 .search-result-item__wraplink {
   display: block;
@@ -4180,7 +4222,7 @@ body:not(.home) .site-header {
   top: 0;
   right: 0;
   bottom: 0;
-  z-index: 3;
+  z-index: 50;
   height: 100%;
   padding-top: 72px;
   -webkit-transform: scale(1.05);

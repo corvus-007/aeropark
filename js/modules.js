@@ -426,4 +426,4 @@ window.commonPageFilter = function () {
     closeFilterOptions();
     filterItems(filterValue);
   }
-}();
+}(); ////=require modules/rent.js

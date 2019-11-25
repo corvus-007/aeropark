@@ -176,7 +176,7 @@
               </a>
             </li>
             <li class="site-menu__item">
-              <a href="" class="site-menu__link">
+              <a href="./page-entertainment.html" class="site-menu__link">
                 <span class="site-menu__frame" aria-hidden="true">
                   <span class="site-menu__decor">
                     <span class="site-menu__decor-circle site-menu__decor-circle--little"></span>
@@ -204,7 +204,7 @@
               </a>
             </li>
             <li class="site-menu__item">
-              <a href="" class="site-menu__link">
+              <a href="./page-food.html" class="site-menu__link">
                 <span class="site-menu__frame" aria-hidden="true">
                   <span class="site-menu__decor">
                     <span class="site-menu__decor-circle site-menu__decor-circle--little"></span>
@@ -232,7 +232,7 @@
               </a>
             </li>
             <li class="site-menu__item">
-              <a href="" class="site-menu__link">
+              <a href="./page-children.html" class="site-menu__link">
                 <span class="site-menu__frame" aria-hidden="true">
                   <span class="site-menu__decor">
                     <span class="site-menu__decor-circle site-menu__decor-circle--little"></span>
@@ -246,7 +246,7 @@
               </a>
             </li>
             <li class="site-menu__item">
-              <a href="" class="site-menu__link">
+              <a href="./page-services.html" class="site-menu__link">
                 <span class="site-menu__frame" aria-hidden="true">
                   <span class="site-menu__decor">
                     <span class="site-menu__decor-circle site-menu__decor-circle--little"></span>
@@ -260,7 +260,7 @@
               </a>
             </li>
             <li class="site-menu__item">
-              <a href="" class="site-menu__link">
+              <a href="./page-furniture-hall.html" class="site-menu__link">
                 <span class="site-menu__frame" aria-hidden="true">
                   <span class="site-menu__decor">
                     <span class="site-menu__decor-circle site-menu__decor-circle--little"></span>
@@ -300,6 +300,88 @@
         <div class="rent">
           <div class="rent-row">
             <div class="rent-row__content">
+
+              <div id="watch-example">
+                <p>
+                  Задайте вопрос, на который можно ответить «да» или «нет»:
+                  <input v-model="question">
+                </p>
+                <p>{{ answer }}</p>
+              </div>
+
+              <div id="rent">
+                {{ fullName }}
+                <input type="text" v-model="message">
+                <p>Изначальное сообщение: «{{ message }}»</p>
+                <p>Сообщение задом наперёд: «{{ reversedMessage }}»</p>
+                <p>Сообщение задом наперёд: «{{ reversedMessage2() }}»</p>
+
+                <ol>
+                  <todo-item
+                    v-for="item in groceryList"
+                    v-bind:todo="item"
+                    v-bind:key="item.id"
+                  ></todo-item>
+                </ol>
+
+                <form class="rent-form" action="" method="POST">
+                  <fieldset>
+                    <legend>Заявка на аренду</legend>
+                    <div>
+                      <label>
+                        <span>Вид аренды</span>
+                        <select name="" id="">
+                          <option value="Аренда помещений">Аренда помещений</option>
+                          <option value="Островная аренда">Островная аренда</option>
+                          <option value="Реклама и промо">Реклама и промо</option>
+                        </select>
+                      </label>
+                    </div>
+                    <div>
+                      <label class="field">
+                        <span>Название бренда</span>
+                        <input class="input" type="text" name="brand-name">
+                      </label>
+                    </div>
+                    <div>
+                      <label>
+                        <span>Страна происхождения бренда</span>
+                        <input class="input" type="text" name="brand-origin-country">
+                      </label>
+                    </div>
+                    <div>
+                      <label>
+                        <span>Категория бренда (магазин, ресторан, развлечение)</span>
+                        <input class="input" type="text" name="brand-category">
+                      </label>
+                    </div>
+                    <div>
+                      <label>
+                        <span>Бренд представлен (собственник/на основе договора франчайзинга)</span>
+                        <input class="input" type="text" name="brand-category">
+                      </label>
+                    </div>
+                    <div>
+                      <label>
+                        <span>Необходимая площадь</span>
+                        <span>
+                          от <input class="input" type="number">
+                          до <input class="input" type="number">
+                          м²
+                        </span>
+                        <input class="input" type="text" name="brand-category">
+                      </label>
+                    </div>
+                    <div>
+                      <label>
+                        <span>Бренд представлен (собственник/на основе договора франчайзинга)</span>
+                        <input class="input" type="text" name="brand-category">
+                      </label>
+                    </div>
+                  </fieldset>
+                </form>
+              </div>
+
               <div class="textual">
                 <p><b>Суперрегиональный торговый центр.</b></p>
                 <p>
@@ -490,7 +572,7 @@
           <div class="footer-grid__column footer-grid__column--laptop-one-half">
             <div class="site-footer__area footer-area">
               <ul class="footer-menu-list footer-menu-list--inline">
-                <li><a href="">О нас</a></li>
+                <li><a href="./page-about-us.html">О нас</a></li>
                 <li><a href="">Презентация ТРЦ</a></li>
                 <li><a href="">Планы эвакуации</a></li>
                 <li><a href="">Правовая информация</a></li>
@@ -656,6 +738,11 @@
     </div>
   </div>
 
+
+
+  <script src="./js/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
 
   <script src="js/jquery.min.js"></script>
   <script src="js/plugins.js"></script>

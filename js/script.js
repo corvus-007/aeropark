@@ -48,4 +48,11 @@ document.addEventListener('DOMContentLoaded', function () {
       prevEl: '.common-slider-button--prev'
     }
   });
+  new Swiper('[data-content-gallery]', {
+    speed: 600,
+    navigation: {
+      nextEl: '.common-slider-button--next',
+      prevEl: '.common-slider-button--prev'
+    }
+  });
 });
