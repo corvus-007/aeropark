@@ -141,45 +141,59 @@
       </header>
 
       <div class="page-content container">
-        <form class="aero-plans-filter-form" data-plans-filter-form>
-          <select class="filter-select" name="category">
-            <option value="" disabled selected>Выберите категорию</option>
-          </select>
-          <select class="filter-select" name="for-who" id="">
-            <option value="" disabled selected>Для кого</option>
-          </select>
-          <select class="filter-select" name="discount" id="">
-            <option value="" disabled selected>Скидки</option>
-          </select>
-          <button type="reset">Очистить</button>
-        </form>
-
-        <!-- <ol class="aero-plans-toggle-floors">
-          <li class="aero-plans-toggle-floors__item">
-            <button class="aero-plans-toggle-floors__button"></button>
-            <span class="aero-plans-toggle-floors__badge">
-              <span class="aero-plans-toggle-floors__badge-caption visually-hidden">общее количество наденных магазинов</span>
-              <span class="aero-plans-toggle-floors__badge-value"></span>
-            </span>
-          </li>
-        </ol> -->
-        <ol class="aero-plans-toggle-floors"></ol>
-
-        <div class="zoom-actions">
-          <button type="button" data-scale-action="down">scale down</button>
-          <button type="button" data-scale-action="reset">scale reset</button>
-          <button type="button" data-scale-action="up">scale up</button>
-        </div>
-
-        <form class="aero-plans-search-form" data-plans-search-form autocomplete="off">
-          <div class="aero-plans-search-form__field">
-            <input class="aero-plans-search-form__input" type="text" name="nameOfPlace" placeholder="Поиск по арендаторам">
-            <button class="aero-plans-search-form__button" type="button" data-clear-search-input>Очистить</button>
+        <form class="plans-filter-form" data-plans-filter-form>
+          <div class="plans-filter-form__fields">
+            <div class="plans-filter-form__select select">
+              <select class="filter-select" name="category">
+                <option value="" disabled selected>Выберите категорию</option>
+              </select>
+            </div>
+            <div class="plans-filter-form__select select">
+              <select class="filter-select" name="audience">
+                <option value="" disabled selected>Для кого</option>
+              </select>
+            </div>
+            <div class="plans-filter-form__select select">
+              <select class="filter-select" name="discount">
+                <option value="" disabled selected>Скидки</option>
+              </select>
+            </div>
           </div>
-          <ul id="places-list" class="aero-plans-search-form__result-list autocomplete-list" data-autocomplete-list></ul>
+          <button class="plans-filter-form__reset button" type="reset">Сбросить</button>
         </form>
 
-        <div class="aero-plans"></div>
+        <form class="plans-search-form" data-plans-search-form autocomplete="off">
+          <div class="plans-search-form__field">
+            <input class="plans-search-form__input input" type="text" name="nameOfPlace" placeholder="Поиск по арендаторам">
+            <button class="plans-search-form__button" type="button" data-clear-search-input>Очистить</button>
+          </div>
+          <ul id="places-list" class="plans-search-form__result-list autocomplete-list" data-autocomplete-list></ul>
+        </form>
+
+        <div class="aero-map">
+          <div class="aero-plans"></div> <!-- .aero-plans -->
+
+          <ol class="aero-map__toggle-floors toggle-floors"></ol>
+
+          <div class="aero-map__zoom-actions zoom-actions">
+            <button class="zoom-actions__button" type="button" data-scale-action="down" aria-label="Уменьшить масштаб">
+              <svg class="zoom-actions__button-icon" width="16" height="16">
+                <use xlink:href="./images/symbols.svg#icon-minus"></use>
+              </svg>
+            </button>
+            <button class="zoom-actions__button" type="button" data-scale-action="reset" aria-label="Сбросить масштаб">
+              <svg class="zoom-actions__button-icon" width="16" height="16">
+                <use xlink:href="./images/symbols.svg#icon-reload"></use>
+              </svg>
+            </button>
+            <button class="zoom-actions__button" type="button" data-scale-action="up" aria-label="Увеличить масштаб">
+              <svg class="zoom-actions__button-icon" width="16" height="16">
+                <use xlink:href="./images/symbols.svg#icon-plus"></use>
+              </svg>
+            </button>
+          </div> <!-- .zoom-actions -->
+        </div> <!-- .aero-map -->
+
         <div class="aero-plan-popper"></div>
       </div> <!-- .page-content -->
     </article>

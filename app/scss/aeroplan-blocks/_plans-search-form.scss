@@ -1,0 +1,53 @@
+.plans-search-form {
+  position: relative;
+  z-index: 10;
+  margin-bottom: 20px;
+}
+
+.plans-search-form__input {
+  padding-right: 52px;
+}
+
+.plans-search-form__button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+
+  .plans-search-form__field--filled & {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.plans-search-form__result-list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+}
+
+.autocomplete-list {
+  max-height: 300px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: auto;
+  overscroll-behavior-y: contain;
+}
+
+.autocomplete-list__item {
+  padding: 12px;
+  cursor: pointer;
+  font-size: 14px;
+
+  &:hover {
+    background-color: #eeeeee;
+  }
+
+  &--highlighted {
+    background-color: #e4e4e4;
+  }
+}

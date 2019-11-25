@@ -1,22 +1,11 @@
 @import "variables";
 @import "functions";
 @import "mixins";
-// @import "mixins-containers";
 
-
-svg {
-  // display: block;
-  // background-color: #fafafa;
-}
-
-.aero-plans-filter-form {
-  margin-bottom: 24px;
-}
-
-.filter-select {
-  font-size: 18px;
-  font-family: inherit;
-}
+@import "aeroplan-blocks/toggle-floors";
+@import "aeroplan-blocks/zoom-actions";
+@import "aeroplan-blocks/plans-filter-form";
+@import "aeroplan-blocks/plans-search-form";
 
 .plan-place {
   fill: #b5b0f7;
@@ -26,16 +15,32 @@ svg {
   stroke-linecap: round;
   transition: 0.2s;
 
-  &--hovered {
-    // fill: #8e89d8;
+  &:hover {
     fill: darken(#b5b0f7, 8%);
   }
+
+  // &--hovered {
+  //   // fill: #8e89d8;
+  //   fill: darken(#b5b0f7, 8%);
+  // }
 
   &--filtered {
     fill: #4fb1ff;
 
+    &:hover {
+      fill: darken(#4fb1ff, 8%);
+    }
+
     &.plan-place--hovered {
       fill: darken(#4fb1ff, 8%);
+    }
+  }
+
+  &--active {
+    fill: #de4383;
+
+    &:hover {
+      fill: #de4383;
     }
   }
 
@@ -48,124 +53,32 @@ svg {
   }
 }
 
+.boundary-group-fill {
+  path {
+
+  }
+}
+
 .logos-group {
   pointer-events: none;
 }
 
-.aero-plans-toggle-floors {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  margin-bottom: 24px;
-}
-
-.aero-plans-toggle-floors__item {
+.aero-map {
   position: relative;
-
-  &--active {
-  }
 }
 
-.aero-plans-toggle-floors__button {
-  display: block;
-  padding: 16px 24px;
-  font-weight: 500;
-  font-size: 18px;
-  font-family: inherit;
-  background-color: #e7e7e7;
-  border: none;
-  border-radius: 0;
-  transition: 0.2s;
-  box-sizing: border-box;
-  outline: none;
-
-  .aero-plans-toggle-floors__item--active & {
-    background-color: #b5b0f7;
-  }
-}
-
-.aero-plans-toggle-floors__badge {
+.aero-map__toggle-floors {
   position: absolute;
-  top: 0;
-  right: 0;
+  right: 28px;
+  bottom: 28px;
+  z-index: 5;
 }
 
-.aero-plans-toggle-floors__badge-caption {
-}
-
-.aero-plans-toggle-floors__badge-value {
-  display: block;
-  width: 16px;
-  height: 16px;
-  text-align: center;
-  line-height: 16px;
-  padding: 4px;
-  font-size: 14px;
-  line-height: 1;
-  background-color: #fff;
-  border-radius: 50%;
-
-  &:empty {
-    display: none;
-  }
-}
-
-.zoom-actions {
-  margin-bottom: 24px;
-}
-
-.aero-plans-search-form {
-  position: relative;
-  z-index: 1;
-}
-
-.aero-plans-search-form__input {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  padding-right: 50px;
-  box-sizing: border-box;
-}
-
-.aero-plans-search-form__button {
+.aero-map__zoom-actions {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  opacity: 0;
-  visibility: hidden;
-
-  .aero-plans-search-form__field--filled & {
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
-.aero-plans-search-form__result-list {
-  position: absolute;
-  left: 0;
-  right: 0;
-  background-color: #fff;
-}
-
-.autocomplete-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  max-height: 300px;
-}
-
-.autocomplete-list__item {
-  padding: 10px;
-
-  &:hover {
-    background-color: #eeeeee;
-  }
-
-  &--highlighted {
-    background-color: #e4e4e4;
-  }
+  top: 28px;
+  right: 28px;
+  z-index: 5;
 }
 
 .aero-plans {
@@ -174,18 +87,21 @@ svg {
   grid-template-rows: 100%;
   align-items: center;
   justify-content: center;
-  height: 440px;
-
-  svg {
-    background-color: honeydew;
-  }
+  height: 50vh;
+  min-height: 440px;
+  max-height: 600px;
 }
 
-.plan-floor-boundary {
+.plan-floor-boundary-fill {
+  fill: #e4e4e4;
+}
+
+.plan-floor-boundary-stroke {
+  fill: none;
   stroke-width: 4px;
   stroke: #0d47a1;
-  fill: #e4e4e4;
   stroke-linejoin: round;
+  pointer-events: none;
 }
 
 .aero-plans__floor {
@@ -196,10 +112,11 @@ svg {
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 2;
-  background-color: #fff;
+  background-color: $gray-234;
+  background-image: linear-gradient(to top right, $gray-234, $gray-228);
   transition: 0.2s;
 
-  height: 440px;
+  // height: 440px;
   opacity: 0;
   visibility: hidden;
   overflow: hidden;
@@ -228,12 +145,13 @@ svg {
   box-shadow: 0 2px 16px rgba(#000, 0.1);
   box-sizing: border-box;
   user-select: none;
+  // pointer-events: none;
 
   &:empty {
     display: none;
   }
 
-  :empty {
+  & :empty {
     display: none;
   }
 
@@ -263,20 +181,24 @@ svg {
     margin-top: 8px;
   }
 
-  &[x-placement="top"] {
-    &::after {
-      top: calc(100% - 5px);
-    }
-  }
+  // &[x-placement="top"] {
+  //   &::after {
+  //     top: calc(100% - 5px);
+  //   }
+  // }
 
-  &[x-placement="bottom"] {
-    &::after {
-      bottom: calc(100% - 5px);
-    }
-  }
+  // &[x-placement="bottom"] {
+  //   &::after {
+  //     bottom: calc(100% - 5px);
+  //   }
+  // }
 
   &[x-out-of-boundaries] {
     display: none;
+  }
+
+  &--has-interaction {
+    // pointer-events: all;
   }
 }
 

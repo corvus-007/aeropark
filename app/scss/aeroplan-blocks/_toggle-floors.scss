@@ -1,0 +1,80 @@
+.toggle-floors {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 0 6px rgba(#000000, 0.1),
+              0 0 20px rgba(#000000, 0.1);
+}
+
+.toggle-floors__item {
+  position: relative;
+
+  &--active {
+  }
+}
+
+.toggle-floors__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: inherit;
+  color: $base-color;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 0;
+  transition: 0.2s;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    color: #ffffff;
+    background-color: darken(#b5b0f7, 8%);
+  }
+
+  .toggle-floors__item--active & {
+    color: #ffffff;
+    background-color: darken(#b5b0f7, 12%);
+    cursor: default;
+  }
+}
+
+.toggle-floors__badge {
+}
+
+.toggle-floors__badge-caption {
+}
+
+.toggle-floors__badge-value {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 12px;
+  height: 12px;
+  padding: 0 2px;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  line-height: 1;
+  color: $muted-color;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-sizing: border-box;
+
+  &:empty {
+    display: none;
+  }
+}

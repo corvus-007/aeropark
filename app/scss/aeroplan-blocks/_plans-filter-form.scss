@@ -1,0 +1,27 @@
+.plans-filter-form {
+  display: grid;
+  gap: 36px;
+  grid-template-columns: 1fr auto;
+  max-width: 960px;
+  margin-bottom: 40px;
+}
+
+.plans-filter-form__fields {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.plans-filter-form__select {
+  select {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+.plans-filter-form__reset {
+  min-width: auto;
+  padding: 8px 12px;
+  color: $base-color;
+  background-color: $gray-228;
+}

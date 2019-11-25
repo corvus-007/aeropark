@@ -14,6 +14,7 @@ const MIN_ZOOM = 0.5;
 const MAX_ZOOM = 8;
 const PLAN_PLACE_CLASS = `plan-place`;
 const PLAN_PLACE_HOVERED_CLASS = `plan-place--hovered`;
+const PLAN_PLACE_ACTIVE_CLASS = `plan-place--active`;
 const PLAN_PLACE_SELECTED_CLASS = `plan-place--selected`;
 const PLAN_PLACE_FILTERED_CLASS = `plan-place--filtered`;
 const PLAN_PLACE_LOGO_CLASS = `plan-place-logo`;
@@ -90,12 +91,13 @@ discountFilterSelect.appendChild(createOptionsList(discountFilter));
 createToggleFloorsControls();
 
 const aeroPlansToggleFloors = document.querySelector(
-  `.aero-plans-toggle-floors`
+  `.toggle-floors`
 );
 const aeroPlansFloors = document.querySelectorAll(`.aero-plans__floor`);
 const toggleFloors = new ToggleFloors(aeroPlansToggleFloors, aeroPlansFloors);
 
 plansWrapper.addEventListener(`mouseover`, mouseroverPlansWrapperHandler);
+plansWrapper.addEventListener(`click`, clickPlansWrapperHandler);
 plansWrapper.addEventListener(`mouseout`, mouseoutPlansWrapperHandler);
 popper.addEventListener(`mouseleave`, mouseleavePopperHandler);
 
@@ -125,13 +127,15 @@ function renderPlan(plan, planIndex) {
   // console.log(nest);
 
   const mainG = svg.append(`g`);
-  const boundaryG = mainG.append(`g`);
+  const boundaryFill = mainG.append(`g`);
   const placesG = mainG.append(`g`);
   const logosG = mainG.append(`g`);
   const helpMarkersG = mainG.append(`g`);
+  const boundaryStroke = mainG.append(`g`);
 
   mainG.attr(`id`, `main-group`).classed(`main-group`, true);
-  boundaryG.attr(`id`, `boundary-group`).classed(`boundary-group`, true);
+  boundaryFill.attr(`id`, `boundary-group-fill`).classed(`boundary-group-fill`, true);
+  boundaryStroke.attr(`id`, `boundary-group-stroke`).classed(`boundary-group-stroke`, true);
   placesG.attr(`id`, `places-group`).classed(`places-group`, true);
   logosG.attr(`id`, `logos-group`).classed(`logos-group`, true);
   helpMarkersG
@@ -140,9 +144,8 @@ function renderPlan(plan, planIndex) {
 
   mainGArr.push(mainG);
 
-  const borderPath = boundaryG.append(`path`);
-
-  borderPath.attr(`d`, boundaryShape).classed(`plan-floor-boundary`, true);
+  boundaryFill.append(`path`).attr(`d`, boundaryShape).classed(`plan-floor-boundary-fill`, true);
+  boundaryStroke.append(`path`).attr(`d`, boundaryShape).classed(`plan-floor-boundary-stroke`, true);
 
   svgArr.push(svg);
 
@@ -285,7 +288,7 @@ catchTargetPlace(getFloorIndexAndObjectOfPlaceId(placeId));
 //   renderPlanPopper(placePathNode);
 // });
 
-function mouseroverPlansWrapperHandler(evt) {
+function clickPlansWrapperHandler(evt) {
   const target = evt.target;
   const pathNode =
     target.closest(`.plan-place`) || target.closest(`.plan-help-marker`);
@@ -295,15 +298,35 @@ function mouseroverPlansWrapperHandler(evt) {
   }
 
   currentPathNode = pathNode;
-  pathNode.classList.add(PLAN_PLACE_HOVERED_CLASS);
+  pathNode.classList.add(PLAN_PLACE_ACTIVE_CLASS);
 
   renderPlanPopper(pathNode);
 }
 
+function mouseroverPlansWrapperHandler(evt) {
+  const target = evt.target;
+  const pathNode =
+    target.closest(`.plan-place`) || target.closest(`.plan-help-marker`);
+
+  if (!pathNode) {
+    return;
+  }
+
+  if (pathNode.matches('.plan-help-marker')) {
+    renderPlanPopper(pathNode);
+  }
+
+  currentPathNode = pathNode;
+  // pathNode.classList.add(PLAN_PLACE_HOVERED_CLASS);
+
+}
+
 function mouseoutPlansWrapperHandler(evt) {
+  // debugger;
   if (evt.relatedTarget !== popper && currentPathNode) {
     popper.hidden = true;
-    currentPathNode.classList.remove(PLAN_PLACE_HOVERED_CLASS);
+    // currentPathNode.classList.remove(PLAN_PLACE_HOVERED_CLASS);
+    currentPathNode.classList.remove(PLAN_PLACE_ACTIVE_CLASS);
   }
 }
 
@@ -317,9 +340,10 @@ function mouseleavePopperHandler(evt) {
     return;
   }
 
-  if (pathNode !== currentPathNode || !pathNode) {
+  if (pathNode !== (currentPathNode || !pathNode)) {
     popper.hidden = true;
-    currentPathNode.classList.remove(PLAN_PLACE_HOVERED_CLASS);
+    // currentPathNode.classList.remove(PLAN_PLACE_HOVERED_CLASS);
+    currentPathNode.classList.remove(PLAN_PLACE_ACTIVE_CLASS);
   }
 }
 
@@ -366,7 +390,7 @@ function inputFilterFormHandler(evt) {
 
     const filteredAreasCount = filteredPaths.size();
     const badgeValueNode = document.querySelectorAll(
-      `.aero-plans-toggle-floors__badge-value`
+      `.toggle-floors__badge-value`
     )[planIndex];
 
     badgeValueNode.textContent = filteredAreasCount || ``;
@@ -386,7 +410,7 @@ const KEYCODES = {
 };
 const searchForm = document.querySelector(`[data-plans-search-form]`);
 const searchFormField = searchForm.querySelector(
-  `.aero-plans-search-form__field`
+  `.plans-search-form__field`
 );
 const searchInput = searchForm.querySelector(`[name="nameOfPlace"]`);
 const searchClearButton = searchForm.querySelector(`[data-clear-search-input]`);
@@ -486,6 +510,7 @@ function clickSearchClearButtonHandler(evt) {
   const value = (searchInput.value = ``);
   togglePlanSearchFormFieldFilledModifier(value);
   hideSearchResultList();
+  removeClassSelectedAreas();
 }
 
 function inputSearchInputHandler() {
@@ -495,7 +520,7 @@ function inputSearchInputHandler() {
 
 function togglePlanSearchFormFieldFilledModifier(value) {
   searchFormField.classList.toggle(
-    `aero-plans-search-form__field--filled`,
+    `plans-search-form__field--filled`,
     value
   );
 }
@@ -626,20 +651,20 @@ function resetFilter(currentSelectNode) {
 }
 
 function createToggleFloorsControls() {
-  d3.select(`.aero-plans-toggle-floors`)
-    .selectAll(`.aero-plans-toggle-floors__item`)
+  d3.select(`.toggle-floors`)
+    .selectAll(`.toggle-floors__item`)
     .data(aeroPlans)
     .enter()
     .append(`li`)
-    .classed(`aero-plans-toggle-floors__item`, true)
+    .classed(`toggle-floors__item`, true)
     .html((d, i) => {
       let floor = i + 1;
 
       return `
-      <button class="aero-plans-toggle-floors__button" type="button" data-floor-id="${floor}">${floor} этаж</button>
-        <span class="aero-plans-toggle-floors__badge">
-          <span class="aero-plans-toggle-floors__badge-caption visually-hidden">Общее количество найденных мест</span>
-          <span class="aero-plans-toggle-floors__badge-value"></span>
+      <button class="toggle-floors__button" type="button" data-floor-id="${floor}">${floor}<span class="visually-hidden">этаж</span></button>
+        <span class="toggle-floors__badge">
+          <span class="toggle-floors__badge-caption visually-hidden">Общее количество найденных мест</span>
+          <span class="toggle-floors__badge-value"></span>
         </span>
       `;
     });
@@ -795,7 +820,7 @@ function removeClassFilteredAreas() {
 
 function removePlacesCountBadge() {
   const badgesValueNodes = document.querySelectorAll(
-    `.aero-plans-toggle-floors__badge-value`
+    `.toggle-floors__badge-value`
   );
   [...badgesValueNodes].forEach(it => {
     it.textContent = ``;

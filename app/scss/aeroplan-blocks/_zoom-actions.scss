@@ -1,0 +1,43 @@
+.zoom-actions {
+  display: flex;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 0 6px rgba(#000000, 0.1),
+              0 0 20px rgba(#000000, 0.1);
+}
+
+.zoom-actions__button {
+  display: block;
+  padding: 12px;
+  color: $gray-214;
+  background-color: #ffffff;
+  border: none;
+  user-select: none;
+  cursor: pointer;
+  transition: 0.2s;
+  outline: none;
+  box-sizing: border-box;
+
+  border-right: 1px solid $gray-234;
+
+  &:last-child {
+    border-right: none;
+  }
+
+  &:hover {
+    color: $muted-color;
+  }
+
+  &:active {
+    color: $base-color;
+    transition-duration: 0.1s;
+  }
+}
+
+.zoom-actions__button-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+  pointer-events: none;
+}

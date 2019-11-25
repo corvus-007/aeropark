@@ -1,7 +1,7 @@
 export default class ToggleFloors {
   constructor(toggleControlList, floorsItems, initialIndex = 0) {
     this.toggleControlList = toggleControlList;
-    this.toggleControlsItems = toggleControlList.querySelectorAll(`.aero-plans-toggle-floors__item`);
+    this.toggleControlsItems = toggleControlList.querySelectorAll(`.toggle-floors__item`);
     this.floorsItems = floorsItems;
     this.index = initialIndex;
     this.toggleControlList.addEventListener(`click`, evt => {
@@ -29,7 +29,7 @@ export default class ToggleFloors {
     this.index = index;
 
     [...this.toggleControlsItems].forEach((control, i) => {
-      control.classList.toggle('aero-plans-toggle-floors__item--active', i == index);
+      control.classList.toggle('toggle-floors__item--active', i == index);
     });
   }
 
