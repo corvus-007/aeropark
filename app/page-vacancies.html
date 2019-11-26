@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <title>Вакансии</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  @@include('blocks/site-header.html')
+
+  <main class="site-main">
+    <article class="page rent-page">
+      <header class="page-header">
+        <div class="page-header__inner container">
+          <div class="page-header__content">
+            <h1 class="page-header__title page-title">Вакансии</h1>
+          </div>
+        </div>
+      </header>
+
+      <div class="page-content container">
+        <div class="">
+          <div class="common-page-row">
+            <div class="common-page-row__content">
+              <div class="textual">
+                <p>Сейчас вакансий нет, за подробностями обращайтесь в отдел кадров</p>
+              </div> <!-- .textual -->
+            </div> <!-- .common-page-row__content -->
+
+            <div class="common-page-row__aside">
+              <section class="rent-contact aside-info">
+                <ul class="rent-contact__list">
+                  <li class="rent-contact__item">
+                    <span class="rent-contact__item-caption">Отдел кадров</span>
+                    <a class="rent-contact__item-value rent-contact__email" href="mailto:gukova71brynsk@mail.ru">gukova71brynsk@mail.ru</a>
+                  </li>
+                  <li class="rent-contact__item">
+                    <span class="rent-contact__item-caption">Контактный телефон</span>
+                    <a class="rent-contact__item-value rent-contact__phone" href="tel:+74832599650">+7 (4832) 59-96-50</a>
+                  </li>
+                  <li class="rent-contact__item">
+                    <a class="rent-contact__presentation" href="https://trc-aeropark.ru/media/settings/%D0%90%D0%BD%D0%BA%D0%B5%D1%82%D0%B0.docx" target="_blank">
+                      <svg class="rent-contact__presentation-icon" width="16" height="16">
+                        <use xlink:href="./images/symbols.svg#icon-docx-file"></use>
+                      </svg>
+                      <span class="rent-contact__presentation-text">
+                        <span>Скачать анкету</span>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </section>
+            </div>
+          </div> <!-- .common-page-row -->
+        </div>
+      </div> <!-- .page-content -->
+    </article>
+  </main>
+
+  @@include('blocks/site-footer.html')
+  @@include('blocks/site-scripts.html')
+</body>
+</html>
