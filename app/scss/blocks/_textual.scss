@@ -1,8 +1,8 @@
 .textual {
   @include clear-mr-edges-elem();
 
-  font-size: rem(18);
   font-weight: 400;
+  font-size: rem(18);
 
   & > p {
     margin-bottom: 0;
@@ -56,7 +56,7 @@
   }
 
   & > h2 + h3 {
-    // margin-top: 0.8rem;
+    margin-top: 0.7rem;
   }
 
   & > img,
@@ -67,22 +67,11 @@
     margin-right: auto;
   }
 
-  & > ul {
+  & > ul,
+  & > ol {
     li {
       position: relative;
-
-      &::before {
-        content: "";
-        position: absolute;
-        left: -1em;
-        top: 0;
-        z-index: -1;
-        width: em(20, 16);
-        height: em(20, 16);
-        border-radius: 50%;
-        background-color: $warning-color;
-        box-sizing: border-box;
-      }
+      margin-bottom: 4px;
     }
   }
 
