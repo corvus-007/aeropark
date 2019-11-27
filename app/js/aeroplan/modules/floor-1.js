@@ -1,4 +1,8 @@
-import { categoryFilter, audienceFilter, discountFilter } from './filter-options';
+import {
+  categoryFilter,
+  audienceFilter,
+  discountFilter
+} from './filter-options';
 
 export default {
   settings: {
@@ -6,7 +10,7 @@ export default {
       width: 1619,
       height: 569
     },
-    boundaryShape: `M1618 1H1v532h61.5c41.8 41.4 104.3 51.7 156.5 0h1399z`
+    boundaryShape: `M1618,36H1V568H62.51c41.78,41.36,104.29,51.71,156.48,0H1618Z`
   },
   areas: [
     {
@@ -20,7 +24,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1618 533h-321V1h321z`
+      path: `M1618,568H1297V36h321Z`
     },
     {
       id: 12,
@@ -33,7 +37,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1248 479h18v54h-18z`
+      path: `M1248,568V514h18v54Z`
     },
     {
       id: 13,
@@ -46,7 +50,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1229 479h19v54h-19z`
+      path: `M1229,568V514h19v54Z`
     },
     {
       id: 14,
@@ -62,7 +66,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1194 479h35v54h-35z`
+      path: `M1194,568V514h35v54Z`
     },
     {
       id: 15,
@@ -88,7 +92,7 @@ export default {
       audience: new Set([audienceFilter[`Женская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1194 533h-36v-38l16-16h20z`
+      path: `M1194,568h-36V530l16-16h20Z`
     },
     {
       id: 16,
@@ -101,7 +105,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1266.3 471.5h-28v-16h28z`
+      path: `M1260.25,506.5h-16v-16h16Z`
     },
     {
       id: 17,
@@ -121,7 +125,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1227.5 471.5h-28v-16h28z`
+      path: `M1223.5,506.5h-16v-16h16Z`
     },
     {
       id: 18,
@@ -134,7 +138,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1155.5 471.5h-28v-16h28z`
+      path: `M1149.5,506.5h-16v-16h16Z`
     },
     {
       id: 19,
@@ -147,7 +151,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1057 471.5h-28v-16h28z`
+      path: `M1046.5,506.5h-16v-16h16Z`
     },
     {
       id: 110,
@@ -166,7 +170,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M978 471.5h-28v-16h28z`
+      path: `M979,506.5H963v-16h16Z`
     },
     {
       id: 111,
@@ -187,7 +191,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M930 471.5h-28v-16h28z`
+      path: `M918.5,506.5h-16v-16h16Z`
     },
     {
       id: 112,
@@ -200,7 +204,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: ``
+      path: `M766.5,506.5h-16v-16h16Z`
     },
     {
       id: 113,
@@ -213,7 +217,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M668.5 471.5h-28v-16h28z`
+      path: `M662.5,506.5h-16v-16h16Z`
     },
     {
       id: 114,
@@ -226,7 +230,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M622.5 471.5h-28v-16h28z`
+      path: `M616.5,506.5h-16v-16h16Z`
     },
     {
       id: 115,
@@ -239,7 +243,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M516 471.5h-28v-16h28z`
+      path: `M510,506.5H494v-16h16Z`
     },
     {
       id: 116,
@@ -261,7 +265,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M469.8 471.5h-28v-16h28z`
+      path: `M463.77,506.5h-16v-16h16Z`
     },
     {
       id: 117,
@@ -285,7 +289,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M336 471.5h-28v-16h28z`
+      path: `M330,506.5H314v-16h16Z`
     },
     {
       id: 118,
@@ -298,7 +302,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: ``
+      path: `M373,323H357V307h16Z`
     },
     {
       id: 119,
@@ -311,7 +315,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M543 288h-28v-16h28z`
+      path: `M537,323H521V307h16Z`
     },
     {
       id: 120,
@@ -340,7 +344,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M573.5 298.5v28h-16v-28z`
+      path: `M573.5,339.5v16h-16v-16Z`
     },
     {
       id: 121,
@@ -353,7 +357,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M599 338v18h-16v-18z`
+      path: `M599,373v18H583V373Z`
     },
     {
       id: 122,
@@ -377,7 +381,7 @@ export default {
       audience: new Set([audienceFilter[`Мужская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M573.5 406.5v28h-16v-28z`
+      path: `M573.5,447.5v16h-16v-16Z`
     },
     {
       id: 123,
@@ -396,7 +400,7 @@ export default {
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M752.5 288h-28v-16h28z`
+      path: `M746.5,323h-16V307h16Z`
     },
     {
       id: 124,
@@ -422,7 +426,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M954 288h-28v-16h28z`
+      path: `M948,323H932V307h16Z`
     },
     {
       id: 125,
@@ -446,7 +450,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M862 162v28h-16v-28z`
+      path: `M862,203v16H846V203Z`
     },
     {
       id: 126,
@@ -459,7 +463,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M862 78v28h-16V78z`
+      path: `M862,119v16H846V119Z`
     },
     {
       id: 127,
@@ -472,7 +476,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1041 288h-28v-16h28z`
+      path: `M1035,323h-16V307h16Z`
     },
     {
       id: 128,
@@ -493,7 +497,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1102 288h-28v-16h28z`
+      path: `M1096,323h-16V307h16Z`
     },
     {
       id: 129,
@@ -516,7 +520,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1183 288h-28v-16h28z`
+      path: `M1177,323h-16V307h16Z`
     },
     {
       id: 130,
@@ -532,7 +536,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1147.5 305.5v28h-16v-28z`
+      path: `M1147.5,346.5v16h-16v-16Z`
     },
     {
       id: 131,
@@ -551,20 +555,20 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1279.5 279.5v28h-16v-28z`
+      path: `M1279.5,320.5v16h-16v-16Z`
     },
     {
       id: 132,
       title: `Спортлото`,
       logoSrc: ``,
-      synonyms: [],
+      synonyms: ['спортлото'],
       description: ``,
       discount: new Set(),
       category: new Set(),
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: ``
+      path: `M1287.5,111v16h-16V111Z`
     },
     {
       id: 133,
@@ -577,7 +581,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1279.5 331.5v28h-16v-28z`
+      path: `M1279.5,372.5v16h-16v-16Z`
     },
     {
       id: 134,
@@ -609,7 +613,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1279.5 365.5v28h-16v-28z`
+      path: `M1279.5,406.5v16h-16v-16Z`
     },
     {
       id: 135,
@@ -622,7 +626,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1147.5 354.5v28h-16v-28z`
+      path: `M1147.5,395.5v16h-16v-16Z`
     },
     {
       id: 136,
@@ -635,7 +639,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1223 288h-28v-16h28z`
+      path: `M1217,323h-16V307h16Z`
     },
     {
       id: 137,
@@ -672,7 +676,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M227 414v-28h16v28z`
+      path: `M227,443V427h16v16Z`
     },
     {
       id: 139,
@@ -695,7 +699,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M184 1v28h-16V1z`
+      path: `M184,36V64H168V36Z`
     },
     {
       id: 140,
@@ -708,7 +712,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M133.5 45h-28V29h28z`
+      path: `M127.5,80h-16V64h16Z`
     },
     {
       id: 141,
@@ -730,7 +734,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1218 370v-23h-63v35h63v-12z`
+      path: `M1218,417h-63V382h63v35Z`
     },
     {
       id: 142,
@@ -754,7 +758,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1210.7 418h7.3v-36h-63v36h55.7z`
+      path: `M1189,453h-34V417h63v36h-29Z`
     },
     {
       id: 143,
@@ -767,7 +771,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1155 418v8.4l17.4 18.6h16.6v-27h-34z`
+      path: `M1189,453v27h-16.57L1155,461.43V453Z`
     },
     {
       id: 144,
@@ -795,7 +799,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1218 322h-63v25h63v-25z`
+      path: `M1218,382h-63V357h63Z`
     },
     {
       id: 145,
@@ -818,7 +822,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1193 296h-20l-18 18v8h38v-26z`
+      path: `M1193,357h-38v-8l18-18h20Z`
     },
     {
       id: 146,
@@ -831,7 +835,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1189 418h22v27h-22z`
+      path: `M1211,453v27h-22V453Z`
     },
     {
       id: 147,
@@ -844,7 +848,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1218 296v26h24v-14l-12.1-12H1218z`
+      path: `M1229.9,331l12.1,12v14h-24V331Z`
     },
     {
       id: 148,
@@ -857,7 +861,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1218 322h24v25h-24z`
+      path: `M1218,357h24v25h-24Z`
     },
     {
       id: 149,
@@ -870,7 +874,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1218 347h24v23h-24z`
+      path: `M1218,382h24v23h-24Z`
     },
     {
       id: 150,
@@ -883,7 +887,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1218 390h24v14h-24z`
+      path: `M1218,425h24v14h-24Z`
     },
     {
       id: 151,
@@ -909,7 +913,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1229 445h1.4l11.6-11.9V418h-13v27z`
+      path: `M1229,453h13v15.09L1230.44,480H1229Z`
     },
     {
       id: 152,
@@ -932,7 +936,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1218 382v8h24v-20h-24v12z`
+      path: `M1218,405h24v20h-24V405Z`
     },
     {
       id: 153,
@@ -945,7 +949,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1218 418h24v-14h-24v14z`
+      path: `M1218,439h24v14h-24Z`
     },
     {
       id: 154,
@@ -969,7 +973,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1218.4 418h-7.4v27h18v-27h-10.6z`
+      path: `M1229,453v27h-18V453h18Z`
     },
     {
       id: 155,
@@ -1002,7 +1006,7 @@ export default {
       audience: new Set([audienceFilter[`Женская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M943 479h36v54h-36z`
+      path: `M979,514v54H943V514Z`
     },
     {
       id: 156,
@@ -1015,7 +1019,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M871 490.2V533h38v-54l-38 11.2z`
+      path: `M909,514v54H871V525.22Z`
     },
     {
       id: 157,
@@ -1040,7 +1044,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M909.1 479h-.1v54h34v-54h-33.9z`
+      path: `M943,514v54H909V514l.06,0Z`
     },
     {
       id: 158,
@@ -1068,7 +1072,7 @@ export default {
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1088 479v25h-35v29h71v-36.8l-16.8-17.2H1088z`
+      path: `M1107.25,514,1124,531.15V568h-71V539h35V514Z`
     },
     {
       id: 159,
@@ -1097,7 +1101,7 @@ export default {
       audience: new Set([audienceFilter[`Женская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M979 479h38v54h-38z`
+      path: `M1017,514v54H979V514Z`
     },
     {
       id: 160,
@@ -1124,7 +1128,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1053 479h-36v54h36v-54z`
+      path: `M1053,539v29h-36V514h36Z`
     },
     {
       id: 161,
@@ -1150,7 +1154,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1053 479h35v25h-35z`
+      path: `M1053,539V514h35v25Z`
     },
     {
       id: 162,
@@ -1175,7 +1179,7 @@ export default {
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M837 231v-52h-37v85h3.4a54.9 54.9 0 0 1 33.6-33z`
+      path: `M803.37,299H800V214h37v52A55.15,55.15,0,0,0,803.37,299Z`
     },
     {
       id: 163,
@@ -1188,7 +1192,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M800 1h37v81h-37z`
+      path: `M800,117V36h37v81Z`
     },
     {
       id: 164,
@@ -1225,7 +1229,7 @@ export default {
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M800 82h37v97h-37z`
+      path: `M800,117h37v97H800Z`
     },
     {
       id: 165,
@@ -1260,7 +1264,7 @@ export default {
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M476 1v211h59v52h69V1H476z`
+      path: `M604,36V299H535V247H476V36Z`
     },
     {
       id: 166,
@@ -1282,7 +1286,7 @@ export default {
       audience: new Set([audienceFilter[`Товары для детей`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M312 75h49V1H215v115h97V75z`
+      path: `M312,151H215V36H361v74H312Z`
     },
     {
       id: 167,
@@ -1319,7 +1323,7 @@ export default {
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M800 82V1H604v263h196V82z`
+      path: `M800,214v85H604V36H800V214Z`
     },
     {
       id: 168,
@@ -1359,7 +1363,7 @@ export default {
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M417 160h59V1H361v74h-49v41h-47v148h100V160h52z`
+      path: `M365,195V299H265V151h47V110h49V36H476V195H365Z`
     },
     {
       id: 169,
@@ -1372,7 +1376,7 @@ export default {
       audience: new Set([audienceFilter[`Женская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M906 157h-35v73.4l35-27.4v-46z`
+      path: `M906,238l-35,27.37V192h35Z`
     },
     {
       id: 170,
@@ -1398,7 +1402,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M871 87h35v70h-35z`
+      path: `M906,192H871V122h35Z`
     },
     {
       id: 171,
@@ -1411,7 +1415,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1203 47h59v35h-59z`
+      path: `M1203,82h59v35h-59Z`
     },
     {
       id: 172,
@@ -1427,7 +1431,7 @@ export default {
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M871 1h35v86h-35z`
+      path: `M906,122H871V36h35Z`
     },
     {
       id: 173,
@@ -1464,7 +1468,7 @@ export default {
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M980 1h-74v202l-35 27.4a54.9 54.9 0 0 1 35.6 33.6H980V1z`
+      path: `M980,254v45H906.63A55.15,55.15,0,0,0,871,265.37h0L906,238V36h74Z`
     },
     {
       id: 174,
@@ -1477,7 +1481,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1203 126h59v44h-59z`
+      path: `M1203,161h59v44h-59Z`
     },
     {
       id: 175,
@@ -1513,7 +1517,7 @@ export default {
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1203 213V1h-104v263h75v-51h29z`
+      path: `M1174,248v51h-75V36h104V248Z`
     },
     {
       id: 176,
@@ -1526,7 +1530,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1203 82h59v44h-59z`
+      path: `M1203,117h59v44h-59Z`
     },
     {
       id: 177,
@@ -1569,7 +1573,7 @@ export default {
         url: ``
       },
       button: { text: ``, action: `` },
-      path: `M980 380h71v-84h-71v84z`
+      path: `M980,377.43V331h71v84H980Z`
     },
     {
       id: 178,
@@ -1607,7 +1611,7 @@ export default {
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M980 411h37v34h-37z`
+      path: `M1017,446v34H980V446Z`
     },
     {
       id: 179,
@@ -1620,7 +1624,7 @@ export default {
       audience: new Set([audienceFilter[`Женская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1088 348h36v32h-36z`
+      path: `M1088,383h36v32h-36Z`
     },
     {
       id: 180,
@@ -1644,7 +1648,7 @@ export default {
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1088 380h-37v65h37v-65z`
+      path: `M1088,444.84V480h-37V415h37Z`
     },
     {
       id: 181,
@@ -1660,7 +1664,7 @@ export default {
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M980 380v31h37v34h34v-65h-71z`
+      path: `M1051,415v65h-34V446H980V415Z`
     },
     {
       id: 182,
@@ -1687,7 +1691,7 @@ export default {
       audience: new Set([audienceFilter[`Женская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1088 296h20v31h-20z`
+      path: `M1088,362V331h20v31Z`
     },
     {
       id: 183,
@@ -1725,7 +1729,7 @@ export default {
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1088 380v-84h-37v84h37z`
+      path: `M1051,415V331h37v84Z`
     },
     {
       id: 184,
@@ -1738,7 +1742,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1124 327v-18.8l-11.8-12.2h-4.2v31h16z`
+      path: `M1108,362V331h4.2l11.8,12.17V362Z`
     },
     {
       id: 185,
@@ -1762,7 +1766,7 @@ export default {
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1088 327v21h36v-21h-36z`
+      path: `M1107.63,362H1124v21h-36V362Z`
     },
     {
       id: 186,
@@ -1775,7 +1779,7 @@ export default {
       audience: new Set([audienceFilter[`Мужская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1088 380h36v30h-36z`
+      path: `M1088,415h36v30h-36Z`
     },
     {
       id: 187,
@@ -1794,7 +1798,7 @@ export default {
       audience: new Set([]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M871 348h27v23h-27z`
+      path: `M898,406H871V383h27Z`
     },
     {
       id: 188,
@@ -1819,7 +1823,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M898 317.7a55.3 55.3 0 0 1-27 18.4V348h27z`
+      path: `M898,383H871V371.09a55.12,55.12,0,0,0,27-18.36Z`
     },
     {
       id: 189,
@@ -1844,7 +1848,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M871 371h27v21h-27z`
+      path: `M898,427H871V406h27Z`
     },
     {
       id: 190,
@@ -1857,7 +1861,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M935 411h45v34h-45z`
+      path: `M980,446v34H935V446Z`
     },
     {
       id: 191,
@@ -1870,7 +1874,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M905 411h30v34h-30z`
+      path: `M935,446v34H905V446Z`
     },
     {
       id: 192,
@@ -1904,7 +1908,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M898 411h-27v17l34 17v-34h-7z`
+      path: `M905,446v34l-34-17V446h34Z`
     },
     {
       id: 193,
@@ -1929,7 +1933,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M871 392h27v19h-27z`
+      path: `M898,446H871V427h27Z`
     },
     {
       id: 194,
@@ -1966,7 +1970,7 @@ export default {
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M898 347.1V411h82v-69h-27v-46h-44.5a54.4 54.4 0 0 1-10.5 21.1z`
+      path: `M898,352.08A54.06,54.06,0,0,0,908.5,331H953v46h27v69H898V352.08Z 21.1z`
     },
     {
       id: 195,
@@ -1985,7 +1989,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M953 296h27v46h-27z`
+      path: `M953,377V331h27v46Z`
     },
     {
       id: 196,
@@ -2015,7 +2019,7 @@ export default {
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1088 410v35h24l12-12v-23h-36z`
+      path: `M1124,445v23l-12,12h-24V445Z`
     },
     {
       id: 197,
@@ -2056,7 +2060,7 @@ export default {
         url: ``
       },
       button: { text: ``, action: `` },
-      path: `M980 1v218h87v45h32V1H980z`
+      path: `M1099,36V299h-32V254H980V36Z`
     },
     {
       id: 198,
@@ -2078,7 +2082,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M980 219h22v45h-22z`
+      path: `M1002,254v45H980V254Z`
     },
     {
       id: 199,
@@ -2091,7 +2095,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1203 213h20v51h-20z`
+      path: `M1223,248v51h-20V248Z`
     },
     {
       id: 1100,
@@ -2140,7 +2144,7 @@ export default {
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1174 213h29v51h-29z`
+      path: `M1203,248v51h-29V248Z`
     },
     {
       id: 1102,
@@ -2153,7 +2157,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1002 219h32v45h-32z`
+      path: `M1034,254v45h-32V254Z`
     },
     {
       id: 1103,
@@ -2176,7 +2180,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M476 160h-59v104h59V160z`
+      path: `M476,247v52H417V195h59Z`
     },
     {
       id: 1104,
@@ -2202,7 +2206,7 @@ export default {
       audience: new Set([audienceFilter[`Женская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M365 160h52v104h-52z`
+      path: `M417,195V299H365V195Z`
     },
     {
       id: 1105,
@@ -2237,7 +2241,7 @@ export default {
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M476 212h59v52h-59z`
+      path: `M535,247v52H476V247Z`
     },
     {
       id: 1106,
@@ -2250,7 +2254,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M882.5 283a27.5 27.5 0 1 1-27.5-27.5 27.5 27.5 0 0 1 27.5 27.5z`
+      path: `M882.5,318A27.5,27.5,0,1,1,855,290.5,27.5,27.5,0,0,1,882.5,318Z`
     },
     {
       id: 1107,
@@ -2280,7 +2284,7 @@ export default {
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M623 479v28h-39v26h73v-54h-34z`
+      path: `M657,514v54H584V542h39V514Z`
     },
     {
       id: 1108,
@@ -2306,7 +2310,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M692 479h38v54h-38z`
+      path: `M730,514v54H692V514Z`
     },
     {
       id: 1109,
@@ -2319,7 +2323,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M623 479h-21l-18 17v11h39v-28z`
+      path: `M623,542H584V531l18-17h21Z`
     },
     {
       id: 1110,
@@ -2342,7 +2346,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M800 479h-33v54h33v-54z`
+      path: `M800,542v26H767V514h33Z`
     },
     {
       id: 1111,
@@ -2372,7 +2376,7 @@ export default {
       audience: new Set([audienceFilter[`Товары для детей`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M657 479h35v54h-35z`
+      path: `M692,514v54H657V514Z`
     },
     {
       id: 1112,
@@ -2396,7 +2400,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M730 479h37v54h-37z`
+      path: `M767,514v54H730V514Z`
     },
     {
       id: 1113,
@@ -2419,7 +2423,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M819 507h-19v26h37v-41l-18-5.8V507z`
+      path: `M819,521.16,837,527v41H800V542h19Z`
     },
     {
       id: 1114,
@@ -2442,7 +2446,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1193 296h25v26h-25z`
+      path: `M1218,331v26h-25V331Z`
     },
     {
       id: 1115,
@@ -2455,7 +2459,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M800 507h19v-20.8l-19-7.2v28z`
+      path: `M800,514l19,7.16V542H800Z`
     },
     {
       id: 1116,
@@ -2468,7 +2472,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1243 213h19v51h-19z`
+      path: `M1262,248v51h-19V248Z`
     },
     {
       id: 1117,
@@ -2496,7 +2500,7 @@ export default {
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M692 396h36v49h-36z`
+      path: `M728,431v49H692V431Z`
     },
     {
       id: 1118,
@@ -2522,7 +2526,7 @@ export default {
       audience: new Set([audienceFilter[`Товары для детей`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M728 396v49h76l33-16v-33H728z`
+      path: `M804,431h33v33l-33,16H728V431Z`
     },
     {
       id: 1119,
@@ -2548,7 +2552,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M621 396v49h35v-49h-35z`
+      path: `M656,431v49H621V431Z`
     },
     {
       id: 1120,
@@ -2568,7 +2572,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M804 372h33v24h-33z`
+      path: `M804,407h33v24H804Z`
     },
     {
       id: 1121,
@@ -2584,7 +2588,7 @@ export default {
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M603 413h18v32h-18z`
+      path: `M621,448v32H603V448Z`
     },
     {
       id: 1122,
@@ -2597,7 +2601,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M804 303.6V372h33v-37a55 55 0 0 1-33-31.4z`
+      path: `M837,370v37H804V338.59A55.15,55.15,0,0,0,837,370Z`
     },
     {
       id: 1123,
@@ -2610,7 +2614,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1131.5 404.5h16v28h-16z`
+      path: `M1147.5,445.5v16h-16v-16Z`
     },
     {
       id: 1124,
@@ -2623,7 +2627,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M584 413v21l11 11h8v-32h-19z`
+      path: `M603,448v32h-8l-11-11V448Z`
     },
     {
       id: 1125,
@@ -2665,7 +2669,7 @@ export default {
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M621 396h107V296H621v100z`
+      path: `M621,408V331H728V431H621Z`
     },
     {
       id: 1126,
@@ -2698,7 +2702,7 @@ export default {
       audience: new Set([audienceFilter[`Женская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M804 396v-92.4a51.5 51.5 0 0 1-2.4-7.6H728v100z`
+      path: `M728,431V331h73.56a54.16,54.16,0,0,0,2.44,7.59V431Z`
     },
     {
       id: 1127,
@@ -2711,7 +2715,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M656 396h36v49h-36z`
+      path: `M692,431v49H656V431Z`
     },
     {
       id: 1128,
@@ -2736,7 +2740,7 @@ export default {
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M621 413v-40h-37v40h37z`
+      path: `M603,448H584V408h37v40Z`
     },
     {
       id: 1129,
@@ -2762,7 +2766,7 @@ export default {
       audience: new Set([audienceFilter[`Женская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M597 296l-13 13v29h15v35h22v-77h-24z`
+      path: `M621,331v77H599V373H584V344l13-13Z`
     },
     {
       id: 1130,
@@ -2782,7 +2786,7 @@ export default {
       audience: new Set([audienceFilter[`Женская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M290 377v-6h-39v27h39v-21z`
+      path: `M290,433H251V406h39v27Z`
     },
     {
       id: 1131,
@@ -2807,7 +2811,7 @@ export default {
       audience: new Set([audienceFilter['Женская одежда']]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M251 398v25l14 25h25v-50h-39z`
+      path: `M290,433v50H265l-14-25V433Z`
     },
     {
       id: 1132,
@@ -2828,7 +2832,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M265 325h25v24h-25z`
+      path: `M290,384H265V360h25Z`
     },
     {
       id: 1133,
@@ -2850,7 +2854,7 @@ export default {
       audience: new Set([audienceFilter[`Товары для детей`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M265 349h25v22h-25z`
+      path: `M290,406H265V384h25Z`
     },
     {
       id: 1134,
@@ -2883,7 +2887,7 @@ export default {
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M352 377h-62v71h62v-71z`
+      path: `M352,432v51H290V412h62Z`
     },
     {
       id: 1135,
@@ -2923,7 +2927,7 @@ export default {
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M352 397h47V296h-47v101z`
+      path: `M352,412V331h47V432H352Z`
     },
     {
       id: 1136,
@@ -2960,7 +2964,7 @@ export default {
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M426 397h51V296h-78v101h27z`
+      path: `M399,432V331h78V432H399Z`
     },
     {
       id: 1137,
@@ -2992,7 +2996,7 @@ export default {
       audience: new Set([audienceFilter[`Женская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M290 349v28h62v-81h-62v53z`
+      path: `M290,360V331h62v81H290V360Z`
     },
     {
       id: 1138,
@@ -3005,7 +3009,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M265 296h25v29h-25z`
+      path: `M290,360H265V331h25Z`
     },
     {
       id: 1139,
@@ -3035,7 +3039,7 @@ export default {
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M477 296v48h29v26h41v-61l-13-13h-57z`
+      path: `M534,331l13,13v61H506V379H477V331Z`
     },
     {
       id: 1140,
@@ -3056,7 +3060,7 @@ export default {
       audience: new Set([audienceFilter[`Женская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M477 420v28h57l13-13v-15h-70z`
+      path: `M506,455h41v15l-13,13H477V455Z`
     },
     {
       id: 1141,
@@ -3072,7 +3076,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M399 397h27v51h-27z`
+      path: `M426,432v51H399V432Z`
     },
     {
       id: 1142,
@@ -3098,7 +3102,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M477 397h-51v51h51v-51z`
+      path: `M477,455v28H426V432h51Z`
     },
     {
       id: 1143,
@@ -3120,7 +3124,7 @@ export default {
       audience: new Set([audienceFilter[`Товары для детей`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M352 397h47v51h-47z`
+      path: `M399,432v51H352V432Z`
     },
     {
       id: 1144,
@@ -3136,7 +3140,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M506 396h41v24h-41z`
+      path: `M506,431h41v24H506Z`
     },
     {
       id: 1145,
@@ -3152,7 +3156,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1203 170v43h59v-43h-59z`
+      path: `M1262,205v43h-59V205Z`
     },
     {
       id: 1146,
@@ -3165,7 +3169,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M448 479h31v28h-31z`
+      path: `M448,542V514h31v28Z`
     },
     {
       id: 1147,
@@ -3189,7 +3193,7 @@ export default {
       audience: new Set([audienceFilter[`Мужская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M364 479h35v54h-35z`
+      path: `M399,514v54H364V514Z`
     },
     {
       id: 1148,
@@ -3202,7 +3206,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M290 479h36v54h-36z`
+      path: `M326,514v54H290V514Z`
     },
     {
       id: 1149,
@@ -3223,7 +3227,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M265 479l-14 14v40h39v-54h-25z`
+      path: `M290,514v54H251V528l14-14Z`
     },
     {
       id: 1150,
@@ -3244,7 +3248,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M326 479h38v54h-38z`
+      path: `M364,514v54H326V514Z`
     },
     {
       id: 1151,
@@ -3257,7 +3261,7 @@ export default {
       audience: new Set([audienceFilter[`Женская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M533 479h-23v54h37v-40l-14-14z`
+      path: `M547,528v40H510V514h23Z`
     },
     {
       id: 1152,
@@ -3282,7 +3286,7 @@ export default {
       audience: new Set([audienceFilter[`Товары для детей`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M448 479h-49v54h49v-54z`
+      path: `M448,542v26H399V514h49Z`
     },
     {
       id: 1153,
@@ -3306,11 +3310,11 @@ export default {
       audience: new Set([audienceFilter[`Женская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M479 479v54h31v-54h-31z`
+      path: `M510,514v54H479V514Z`
     },
     {
       id: 1154,
-      title: ``,
+      title: `Помещение свободно`,
       logoSrc: ``,
       synonyms: [],
       description: ``,
@@ -3319,7 +3323,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1 373v160h61.5c41.8 41.4 104.3 51.7 156.5 0V373z`
+      path: `M1,408V568H62.51c41.78,41.36,104.29,51.71,156.48,0h0V408Z`
     },
     {
       id: 1155,
@@ -3347,7 +3351,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1 70v130h91v-26h76V70H1z`
+      path: `M95,105h73V209H92v26H1V105Z`
     },
     {
       id: 1156,
@@ -3365,7 +3369,7 @@ export default {
         audienceFilter[`Женская одежда`],
         audienceFilter[`Товары для детей`]
       ]),
-      path: `M92 200H1v173h167V174H92v26z`
+      path: `M92,209h76V408H1V235H92Z`
     },
     {
       id: 1157,
@@ -3378,7 +3382,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M95 54h73v16H95z`
+      path: `M168,89v16H95V89Z`
     },
     {
       id: 1158,
@@ -3400,7 +3404,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M248 201h-52v-65h52z`
+      path: `M248,236H196V171h52Z`
     },
     {
       id: 1159,
@@ -3413,7 +3417,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: ``
+      path: `M1194.5,506.5h-16v-16h16Z`
     },
     {
       id: 1160,
@@ -3426,7 +3430,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: ``
+      path: `M1178.5,506.5h-16v-16h16Z`
     },
     {
       id: 1161,
@@ -3445,7 +3449,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: ``
+      path: `M951,506.5H935v-16h16Z`
     },
     {
       id: 1162,
@@ -3458,7 +3462,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: ``
+      path: `M1109.5,506.5h-16v-16h16Z`
     },
     {
       id: 1163,
@@ -3479,7 +3483,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: ``
+      path: `M533.5,499h-16V483h16Z`
     },
     {
       id: 1164,
@@ -3492,7 +3496,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: ``
+      path: `M487,323H471V307h16Z`
     },
     {
       id: 1165,
@@ -3513,25 +3517,44 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1223 213h20v51h-20z`
+      path: `M1243,248v51h-20V248Z`
     }
   ],
   helpMarkers: [
-    {
-      symbolId: `foodcourt`,
-      points: [
-        {
-          title: `Фудкорт`,
-          position: [145.5, 300]
-        }
-      ]
-    },
     {
       symbolId: `parking`,
       points: [
         {
           title: `Парковка`,
-          position: [187.5, 300]
+          position: [267.96, 0]
+        },
+        {
+          title: `Парковка`,
+          position: [279.5, 588]
+        },
+        {
+          title: `Парковка`,
+          position: [629.23, 588]
+        },
+        {
+          title: `Парковка`,
+          position: [930.87, 588]
+        },
+        {
+          title: `Парковка`,
+          position: [1197.27, 588]
+        },
+        {
+          title: `Парковка`,
+          position: [1197.27, 588]
+        },
+        {
+          title: `Парковка`,
+          position: [638.57, 0]
+        },
+        {
+          title: `Парковка`,
+          position: [1113.02, 0]
         }
       ]
     },
@@ -3540,7 +3563,15 @@ export default {
       points: [
         {
           title: `Лифт`,
-          position: [229.5, 300]
+          position: [245, 259.5]
+        },
+        {
+          title: `Лифт`,
+          position: [566.34, 365.41]
+        },
+        {
+          title: `Лифт`,
+          position: [1043.04, 266.55]
         }
       ]
     },
@@ -3549,7 +3580,27 @@ export default {
       points: [
         {
           title: `Эскалатор`,
-          position: [271.5, 300]
+          position: [204.5, 155.5]
+        },
+        {
+          title: `Эскалатор`,
+          position: [204.5, 344.5]
+        },
+        {
+          title: `Эскалатор`,
+          position: [1007.35, 489]
+        },
+        {
+          title: `Эскалатор`,
+          position: [991.75, 307]
+        },
+        {
+          title: `Эскалатор`,
+          position: [831.23, 276.17]
+        },
+        {
+          title: `Эскалатор`,
+          position: [669.9, 489]
         }
       ]
     },
@@ -3558,7 +3609,7 @@ export default {
       points: [
         {
           title: `Гардероб`,
-          position: [313.5, 300]
+          position: [506.32, 410]
         }
       ]
     },
@@ -3567,7 +3618,15 @@ export default {
       points: [
         {
           title: `Туалет`,
-          position: [355.5, 300]
+          position: [23.5, 84.5]
+        },
+        {
+          title: `Туалет`,
+          position: [1223.14, 50.36]
+        },
+        {
+          title: `Туалет`,
+          position: [484.5, 410]
         }
       ]
     },
@@ -3575,35 +3634,28 @@ export default {
       symbolId: `entrance-vertical`,
       points: [
         {
-          title: `Вход`,
-          position: [397.5, 300]
-        }
-      ]
-    },
-    {
-      symbolId: `entrance-horizontal`,
-      points: [
+          title: `Вход №6`,
+          position: [191.5, 40]
+        },
         {
-          title: `Вход`,
-          position: [439.5, 300]
-        }
-      ]
-    },
-    {
-      symbolId: `entrance-diagonal`,
-      points: [
+          title: `Вход №5`,
+          position: [846, 40]
+        },
         {
-          title: `Вход`,
-          position: [481.5, 300]
-        }
-      ]
-    },
-    {
-      symbolId: `entrance-diagonal-back`,
-      points: [
+          title: `Вход №4`,
+          position: [227, 547.15]
+        },
         {
-          title: `Вход`,
-          position: [523.5, 300]
+          title: `Вход №3`,
+          position: [557.5, 547.15]
+        },
+        {
+          title: `Вход №2`,
+          position: [846, 547.15]
+        },
+        {
+          title: `Вход №1`,
+          position: [1133, 547.15]
         }
       ]
     },
@@ -3621,7 +3673,15 @@ export default {
       points: [
         {
           title: `Банкомат`,
-          position: [607.5, 300]
+          position: [528.13, 410]
+        },
+        {
+          title: `Банкомат`,
+          position: [1263.5, 424.5]
+        },
+        {
+          title: `Банкомат`,
+          position: [1263.5, 348.5]
         }
       ]
     },
@@ -3630,7 +3690,7 @@ export default {
       points: [
         {
           title: `Фонтан`,
-          position: [831, 452]
+          position: [846, 489]
         }
       ]
     },
@@ -3639,7 +3699,7 @@ export default {
       points: [
         {
           title: `Инфостойка`,
-          position: [831, 402]
+          position: [846, 454.69]
         }
       ]
     },
@@ -3648,7 +3708,11 @@ export default {
       points: [
         {
           title: `Туалет для ММГ`,
-          position: [480, 398]
+          position: [49.5, 84.5]
+        },
+        {
+          title: `Туалет для ММГ`,
+          position: [484.5, 433.84]
         }
       ]
     },
