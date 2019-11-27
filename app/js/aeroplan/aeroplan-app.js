@@ -10,7 +10,7 @@ import floor3 from './modules/floor-3';
 import * as d3 from 'd3';
 import Popper from 'popper.js';
 
-const MIN_ZOOM = 0.5;
+const MIN_ZOOM = 0.8;
 const MAX_ZOOM = 8;
 const PLAN_PLACE_CLASS = `plan-place`;
 const PLAN_PLACE_HOVERED_CLASS = `plan-place--hovered`;
@@ -21,7 +21,7 @@ const PLAN_PLACE_LOGO_CLASS = `plan-place-logo`;
 const MAX_LOGO_WIDTH = 250;
 const MAX_LOGO_HEIGHT = 250;
 const KOEF_LOGO_SIZE = 0.7;
-const MARKER_SIZE = 24;
+const MARKER_SIZE = 16;
 
 const url = new URL(window.location);
 const params = new URLSearchParams(url.search);
@@ -79,8 +79,6 @@ let currentPathNode = null;
 aeroPlans.push(floor1);
 aeroPlans.push(floor2);
 aeroPlans.push(floor3);
-
-console.dir(aeroPlans);
 
 aeroPlans.forEach(renderPlan);
 
@@ -174,8 +172,7 @@ function renderPlan(plan, planIndex) {
           .attr(
             `transform`,
             d =>
-              `translate(${d.position[0] - MARKER_SIZE / 2} ${d.position[1] -
-                MARKER_SIZE / 2})`
+              `translate(${d.position[0]} ${d.position[1]})`
           )
           .classed(`plan-help-marker`, true);
       });
@@ -577,8 +574,6 @@ function getMatches(value, data) {
 
 function renderMatches(mathList) {
   let resultHTMLStr = ``;
-
-  console.log(mathList);
 
   mathList.forEach((floorAreas, index) => {
     const numberFloor = index + 1;
