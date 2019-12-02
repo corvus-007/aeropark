@@ -98,7 +98,7 @@ other/
   description: `Одежда для современных людей`,
   discount: new Set(),
   category: new Set([categoryFilter[`Одежда`]]),
-  'for-who': new Set([
+  audience: new Set([
     forWhoFilter[`Мужская одежда`],
     forWhoFilter[`Женская одежда`]
   ]),
