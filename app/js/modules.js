@@ -9,3 +9,4 @@
 //=require modules/show-popup.js
 //=require modules/rent-store.js
 //=require modules/rent-island.js
+//=require modules/application-ad.js
