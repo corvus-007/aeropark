@@ -1,0 +1,35 @@
+.choose-rent-type-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 44px 36px;
+  text-align: center;
+}
+
+.choose-rent-type-item__title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.choose-rent-type-item__icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.choose-rent-type-item__text {
+  flex-grow: 1;
+  margin: 0;
+  margin-bottom: 40px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.choose-rent-type-item__button {
+
+}

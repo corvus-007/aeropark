@@ -1,0 +1,476 @@
+<div id="popup-rent-island" class="popup popup--wide popup-rent" data-selectable="true" hidden>
+  <div class="popup__title">Заявка на аренду острова в общих зонах ТРЦ</div>
+  <div class="popup__content">
+    <form class="form-rent" id="form-rent-island" action="" method="POST">
+      <fieldset class="form-rent-section form-section">
+        <div class="form-grid">
+          <div class="form-grid__half">
+            <label class="field field--required">
+              <span class="field__label">Название бренда / отдела</span>
+              <span class="field__control">
+                <input class="input" type="text" name="brand" required>
+              </span>
+            </label>
+          </div>
+
+          <div class="form-grid__half">
+            <label class="field field--required">
+              <span class="field__label">Страна происхождения бренда</span>
+              <span class="field__control">
+                <input class="input" type="text" name="country" list="countries" required>
+                <datalist id="countries">
+                  <option value="Австралия">
+                  <option value="Австрия">
+                  <option value="Азербайджан">
+                  <option value="Аландские о-ва">
+                  <option value="Албания">
+                  <option value="Алжир">
+                  <option value="Американское Самоа">
+                  <option value="Ангилья">
+                  <option value="Ангола">
+                  <option value="Андорра">
+                  <option value="Антарктида">
+                  <option value="Антигуа и Барбуда">
+                  <option value="Аргентина">
+                  <option value="Армения">
+                  <option value="Аруба">
+                  <option value="Афганистан">
+                  <option value="Багамы">
+                  <option value="Бангладеш">
+                  <option value="Барбадос">
+                  <option value="Бахрейн">
+                  <option value="Беларусь">
+                  <option value="Белиз">
+                  <option value="Бельгия">
+                  <option value="Бенин">
+                  <option value="Бермуды">
+                  <option value="Болгария">
+                  <option value="Боливия">
+                  <option value="Бонэйр, Синт-Эстатиус и Саба">
+                  <option value="Босния и Герцеговина">
+                  <option value="Ботсвана">
+                  <option value="Бразилия">
+                  <option value="Британская территория в Индийском океане">
+                  <option value="Бруней-Даруссалам">
+                  <option value="Буркина-Фасо">
+                  <option value="Бурунди">
+                  <option value="Бутан">
+                  <option value="Вануату">
+                  <option value="Ватикан">
+                  <option value="Великобритания">
+                  <option value="Венгрия">
+                  <option value="Венесуэла">
+                  <option value="Виргинские о-ва (Британские)">
+                  <option value="Виргинские о-ва (США)">
+                  <option value="Внешние малые о-ва (США)">
+                  <option value="Восточный Тимор">
+                  <option value="Вьетнам">
+                  <option value="Габон">
+                  <option value="Гаити">
+                  <option value="Гайана">
+                  <option value="Гамбия">
+                  <option value="Гана">
+                  <option value="Гваделупа">
+                  <option value="Гватемала">
+                  <option value="Гвинея">
+                  <option value="Гвинея-Бисау">
+                  <option value="Германия">
+                  <option value="Гернси">
+                  <option value="Гибралтар">
+                  <option value="Гондурас">
+                  <option value="Гонконг (специальный административный район)">
+                  <option value="Гренада">
+                  <option value="Гренландия">
+                  <option value="Греция">
+                  <option value="Грузия">
+                  <option value="Гуам">
+                  <option value="Дания">
+                  <option value="Джерси">
+                  <option value="Джибути">
+                  <option value="Диего-Гарсия">
+                  <option value="Доминика">
+                  <option value="Доминиканская Республика">
+                  <option value="Египет">
+                  <option value="Замбия">
+                  <option value="Западная Сахара">
+                  <option value="Зимбабве">
+                  <option value="Израиль">
+                  <option value="Индия">
+                  <option value="Индонезия">
+                  <option value="Иордания">
+                  <option value="Ирак">
+                  <option value="Иран">
+                  <option value="Ирландия">
+                  <option value="Исландия">
+                  <option value="Испания">
+                  <option value="Италия">
+                  <option value="Йемен">
+                  <option value="Кабо-Верде">
+                  <option value="Казахстан">
+                  <option value="Каймановы о-ва">
+                  <option value="Камбоджа">
+                  <option value="Камерун">
+                  <option value="Канада">
+                  <option value="Канарские о-ва">
+                  <option value="Катар">
+                  <option value="Кения">
+                  <option value="Кипр">
+                  <option value="Киргизия">
+                  <option value="Кирибати">
+                  <option value="Китай">
+                  <option value="КНДР">
+                  <option value="Кокосовые о-ва">
+                  <option value="Колумбия">
+                  <option value="Коморы">
+                  <option value="Конго - Браззавиль">
+                  <option value="Конго - Киншаса">
+                  <option value="Косово">
+                  <option value="Коста-Рика">
+                  <option value="Кот-д’Ивуар">
+                  <option value="Куба">
+                  <option value="Кувейт">
+                  <option value="Кюрасао">
+                  <option value="Лаос">
+                  <option value="Латвия">
+                  <option value="Лесото">
+                  <option value="Либерия">
+                  <option value="Ливан">
+                  <option value="Ливия">
+                  <option value="Литва">
+                  <option value="Лихтенштейн">
+                  <option value="Люксембург">
+                  <option value="Маврикий">
+                  <option value="Мавритания">
+                  <option value="Мадагаскар">
+                  <option value="Майотта">
+                  <option value="Макао (специальный административный район)">
+                  <option value="Македония">
+                  <option value="Малави">
+                  <option value="Малайзия">
+                  <option value="Мали">
+                  <option value="Мальдивы">
+                  <option value="Мальта">
+                  <option value="Марокко">
+                  <option value="Мартиника">
+                  <option value="Маршалловы Острова">
+                  <option value="Мексика">
+                  <option value="Мозамбик">
+                  <option value="Молдова">
+                  <option value="Монако">
+                  <option value="Монголия">
+                  <option value="Монтсеррат">
+                  <option value="Мьянма (Бирма)">
+                  <option value="Намибия">
+                  <option value="Науру">
+                  <option value="Непал">
+                  <option value="Нигер">
+                  <option value="Нигерия">
+                  <option value="Нидерланды">
+                  <option value="Никарагуа">
+                  <option value="Ниуэ">
+                  <option value="Новая Зеландия">
+                  <option value="Новая Каледония">
+                  <option value="Норвегия">
+                  <option value="о-в Вознесения">
+                  <option value="о-в Мэн">
+                  <option value="о-в Норфолк">
+                  <option value="о-в Рождества">
+                  <option value="о-в Св. Елены">
+                  <option value="о-ва Тёркс и Кайкос">
+                  <option value="ОАЭ">
+                  <option value="Оман">
+                  <option value="Организация Объединенных Наций">
+                  <option value="Острова Кука">
+                  <option value="острова Питкэрн">
+                  <option value="Пакистан">
+                  <option value="Палау">
+                  <option value="Палестинские территории">
+                  <option value="Панама">
+                  <option value="Папуа – Новая Гвинея">
+                  <option value="Парагвай">
+                  <option value="Перу">
+                  <option value="Польша">
+                  <option value="Португалия">
+                  <option value="Пуэрто-Рико">
+                  <option value="Республика Корея">
+                  <option value="Реюньон">
+                  <option value="Россия">
+                  <option value="Руанда">
+                  <option value="Румыния">
+                  <option value="Сальвадор">
+                  <option value="Самоа">
+                  <option value="Сан-Марино">
+                  <option value="Сан-Томе и Принсипи">
+                  <option value="Саудовская Аравия">
+                  <option value="Свазиленд">
+                  <option value="Северные Марианские о-ва">
+                  <option value="Сейшельские Острова">
+                  <option value="Сен-Бартелеми">
+                  <option value="Сен-Мартен">
+                  <option value="Сен-Пьер и Микелон">
+                  <option value="Сенегал">
+                  <option value="Сент-Винсент и Гренадины">
+                  <option value="Сент-Китс и Невис">
+                  <option value="Сент-Люсия">
+                  <option value="Сербия">
+                  <option value="Сеута и Мелилья">
+                  <option value="Сингапур">
+                  <option value="Синт-Мартен">
+                  <option value="Сирия">
+                  <option value="Словакия">
+                  <option value="Словения">
+                  <option value="Соединенные Штаты">
+                  <option value="Соломоновы Острова">
+                  <option value="Сомали">
+                  <option value="Судан">
+                  <option value="Суринам">
+                  <option value="Сьерра-Леоне">
+                  <option value="Таджикистан">
+                  <option value="Таиланд">
+                  <option value="Тайвань">
+                  <option value="Танзания">
+                  <option value="Того">
+                  <option value="Токелау">
+                  <option value="Тонга">
+                  <option value="Тринидад и Тобаго">
+                  <option value="Тристан-да-Кунья">
+                  <option value="Тувалу">
+                  <option value="Тунис">
+                  <option value="Туркменистан">
+                  <option value="Турция">
+                  <option value="Уганда">
+                  <option value="Узбекистан">
+                  <option value="Украина">
+                  <option value="Уоллис и Футуна">
+                  <option value="Уругвай">
+                  <option value="Фарерские о-ва">
+                  <option value="Федеративные Штаты Микронезии">
+                  <option value="Фиджи">
+                  <option value="Филиппины">
+                  <option value="Финляндия">
+                  <option value="Фолклендские о-ва">
+                  <option value="Франция">
+                  <option value="Французская Гвиана">
+                  <option value="Французская Полинезия">
+                  <option value="Французские Южные территории">
+                  <option value="Хорватия">
+                  <option value="ЦАР">
+                  <option value="Чад">
+                  <option value="Черногория">
+                  <option value="Чехия">
+                  <option value="Чили">
+                  <option value="Швейцария">
+                  <option value="Швеция">
+                  <option value="Шпицберген и Ян-Майен">
+                  <option value="Шри-Ланка">
+                  <option value="Эквадор">
+                  <option value="Экваториальная Гвинея">
+                  <option value="Эритрея">
+                  <option value="Эстония">
+                  <option value="Эфиопия">
+                  <option value="ЮАР">
+                  <option value="Южная Георгия и Южные Сандвичевы о-ва">
+                  <option value="Южный Судан">
+                  <option value="Ямайка">
+                  <option value="Япония">
+                  <option value="Eurozone">
+                </datalist>
+              </span>
+            </label>
+          </div>
+
+          <div class="form-grid__half">
+            <div class="field field--required">
+              <span class="field__label">Бренд представлен</span>
+              <ul class="field__control radios-list">
+                <li class="radios-list__item">
+                  <label class="radio">
+                    <input class="radio__input visually-hidden" type="radio" name="owner" value="represented" checked>
+                    <span class="radio__indicator"></span>
+                    <span class="radio__caption">Собственником</span>
+                  </label>
+                </li>
+                <li class="radios-list__item">
+                  <label class="radio">
+                    <input class="radio__input visually-hidden" type="radio" name="owner" value="franchising">
+                    <span class="radio__indicator"></span>
+                    <span class="radio__caption">На основе договора франчайзинга</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="form-grid__half">
+            <label class="field">
+              <span class="field__label">Сайт</span>
+              <span class="field__control">
+                <input class="input" type="url" name="site" placeholder="http://site.ru">
+              </span>
+            </label>
+          </div>
+
+          <div class="form-grid__full">
+            <label class="field field--required">
+              <span class="field__label">Профиль отдела и ассортимент товара</span>
+              <span class="field__control">
+                <select class="chosen-select" data-placeholder="Выбрать" name="profiles[]" multiple required>
+                  <option value="Одежда">Одежда</option>
+                  <option value="Обувь">Обувь</option>
+                  <option value="Детские товары">Детские товары</option>
+                  <option value="Парфюмерия и косметика">Парфюмерия и косметика</option>
+                  <option value="Спортивные товары">Спортивные товары</option>
+                  <option value="Кафе, рестораны, фуд-корт">Кафе, рестораны, фуд-корт</option>
+                  <option value="Нижнее белье">Нижнее белье</option>
+                  <option value="Ювелирные изделия">Ювелирные изделия</option>
+                  <option value="Техника и электроника">Техника и электроника</option>
+                  <option value="Мебель, товары для дома">Мебель, товары для дома</option>
+                  <option value="Услуги">Услуги</option>
+                  <option value="Прочее">Прочее</option>
+                </select>
+                <span class="field__text">можно более одной</span>
+              </span>
+            </label>
+          </div>
+
+          <div class="form-grid__half">
+            <label class="field">
+              <span class="field__label">Представляемые торговые марки</span>
+              <span class="field__control">
+                <input class="input" type="number" name="brands">
+              </span>
+            </label>
+          </div>
+
+          <div class="form-grid__half">
+            <label class="field field--required">
+              <span class="field__label">Средний чек, руб</span>
+              <span class="field__control">
+                <input class="input" type="number" name="averageBill" required>
+              </span>
+            </label>
+          </div>
+
+          <div class="form-grid__full">
+            <label class="field">
+              <span class="field__label">Информация об открытых отделах</span>
+              <span class="field__control">
+                <textarea class="input" name="info" rows="2"></textarea>
+              </span>
+            </label>
+          </div>
+
+          <div class="form-grid__full">
+            <div class="field field--required">
+              <span class="field__label">Размер оборудования, м</span>
+              <div class="field__control">
+                <ul class="form-rent-dimensions-fields">
+                  <li class="form-rent-dimensions-fields__item">
+                    <span class="form-rent-dimensions-fields__field">ширина <input class="input" type="number" name="dimensionWidth" min="1" max="10000" step="0.1" required></span>
+                  </li>
+                  <li class="form-rent-dimensions-fields__item">
+                    <span class="form-rent-dimensions-fields__field">длина <input class="input" type="number" name="dimensionLength" min="1" max="10000" step="0.1" required></span>
+                  </li>
+                  <li class="form-rent-dimensions-fields__item">
+                    <span class="form-rent-dimensions-fields__field">высота <input class="input" type="number" name="dimensionHeight" min="1" max="10000" step="0.1" required></span>
+                  </li>
+                </ul>
+                <span class="field__text">Рекомендуемый размер оборудования - 2.5м × 3.0м (3.5м, 4.0м) × 1.2м (ширина × длина × высота)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-grid__full">
+            <label class="field">
+              <span class="field__label">Комментарии</span>
+              <span class="field__control">
+                <textarea class="input" name="comments" rows="2"></textarea>
+              </span>
+            </label>
+          </div>
+        </div> <!-- .form-grid -->
+      </fieldset>
+
+      <fieldset class="form-rent-section form-section form-rent-section--has-bg">
+        <h2 class="form-section__title">Контактное лицо</h2>
+
+        <div class="form-grid">
+          <div class="form-grid__full">
+            <label class="field field--required">
+              <span class="field__label">Фамилия Имя Отчество</span>
+              <span class="field__control">
+                <input class="input" type="text" name="fio" required>
+              </span>
+            </label>
+          </div>
+
+          <div class="form-grid__half">
+            <label class="field field--required">
+              <span class="field__label">Контактный телефон</span>
+              <span class="field__control">
+                <input class="input" type="tel" name="phone" required>
+              </span>
+            </label>
+          </div>
+
+          <div class="form-grid__half">
+            <label class="field field--required">
+              <span class="field__label">Должность</span>
+              <span class="field__control">
+                <input class="input" type="text" name="position" required>
+              </span>
+            </label>
+          </div>
+
+          <div class="form-grid__half">
+            <label class="field field--required">
+              <span class="field__label">Электронная почта</span>
+              <span class="field__control">
+                <input class="input" type="email" name="email" placeholder="name@yourmail.ru" required>
+              </span>
+            </label>
+          </div>
+        </div> <!-- .form-grid -->
+      </fieldset>
+
+      <fieldset class="form-rent-section form-section">
+        <div class="form-grid">
+          <div class="form-grid__full">
+            <label class="field field--required">
+              <span class="field__label">Прикрепить файл до 20 Мб</span>
+              <span class="field__control">
+                <input class="input" type="file" name="file" required>
+                <span class="field__text">презентация, фото / визуализация магазинов</span>
+              </span>
+            </label>
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="form-submit-wrapper">
+        <p class="form-agreement">
+          <span class="field">
+            <span class="field__control">
+              <label class="checkbox">
+                <input class="checkbox__input visually-hidden" type="checkbox" name="agreement" value="represented" checked required>
+                <span class="checkbox__indicator"></span>
+                <span class="checkbox__caption">Я даю согласие на обработку персональных данных</span>
+              </label>
+            </span>
+          </span>
+        </p>
+
+        <p class="form-require-description"><span>*</span> - поля, обязательные для заполнения.</p>
+
+        <button class="button" type="submit">
+          <span class="button__icon-holder button__icon-holder--left">
+            <svg class="button__icon" width="16" height="16">
+              <use xlink:href="./images/symbols.svg#icon-send"></use>
+            </svg>
+          </span>
+          <span class="button__text">Отправить</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

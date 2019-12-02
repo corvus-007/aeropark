@@ -6,3 +6,6 @@
 //=require modules/site-menu.js
 //=require modules/movie-card-ambilight.js
 //=require modules/common-page-filter.js
+//=require modules/show-popup.js
+//=require modules/rent-store.js
+//=require modules/rent-island.js

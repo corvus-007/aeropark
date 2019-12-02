@@ -1,0 +1,26 @@
+.form-rent-dimensions-fields {
+  @include clear-list();
+
+  display: flex;
+  align-items: baseline;
+  font-size: 10px;
+  text-transform: uppercase;
+
+  .input {
+    width: auto;
+    max-width: 4ch;
+    margin-left: 8px;
+    margin-right: 8px;
+    padding: 4px;
+    text-align: center;
+  }
+}
+
+.form-rent-dimensions-fields__item {
+  margin-right: 20px;
+}
+
+.form-rent-dimensions-fields__field {
+  position: relative;
+  display: block;
+}

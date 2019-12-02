@@ -1,0 +1,29 @@
+.form-rent-area-fields {
+  @include clear-list();
+
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  align-items: baseline;
+  font-size: 10px;
+  text-transform: uppercase;
+
+  .input {
+    width: auto;
+    max-width: 6ch;
+    margin-left: 8px;
+    margin-right: 8px;
+    padding: 4px;
+    text-align: center;
+  }
+}
+
+.form-rent-area-fields__item {
+  display: flex;
+  align-items: baseline;
+}
+
+.form-rent-area-fields__field {
+  position: relative;
+  display: block;
+}

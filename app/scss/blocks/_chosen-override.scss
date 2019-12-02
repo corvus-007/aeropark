@@ -1,0 +1,78 @@
+.chosen-container {
+  font-size: 16px;
+  line-height: 24px;
+  min-width: 100%;
+}
+
+.chosen-container-multi .chosen-choices {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 42px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 14px;
+  line-height: 18px;
+  background-color: $gray-245;
+  background-image: none;
+  border: 1px solid $gray-214;
+  border-radius: 4px;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: $gray-234;
+  }
+}
+
+.chosen-container-active .chosen-choices {
+  box-shadow: none;
+  background-color: #ffffff;
+  border-color: #999999;
+}
+
+.chosen-container-multi .chosen-choices li.search-choice {
+  margin: 0;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-right: 6px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 28px;
+  font-weight: 400;
+  line-height: inherit;
+  color: #ffffff;
+  background-color: $base-color;
+  background-image: none;
+  border: none;
+}
+
+.chosen-container-multi .chosen-choices li.search-choice .search-choice-close {
+  top: 0;
+  right: 8px;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 47.97 47.97'%3E%3Cpath fill='%23fff' d='M28.23 23.99L47.09 5.12A3 3 0 1042.85.88L23.99 19.74 5.12.88A3 3 0 10.88 5.12L19.74 24 .88 42.85a3 3 0 104.24 4.24L24 28.23l18.86 18.86a3 3 0 004.24 0 3 3 0 000-4.24L28.23 23.99z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.6;
+  transition: 0.2s;
+
+  &:hover {
+    background-position: center;
+    opacity: 1;
+  }
+}
+
+.chosen-container .chosen-results li {
+  padding: 8px;
+}
+
+.chosen-container .chosen-results li.highlighted {
+  background-color: $base-color;
+  background-image: none;
+}
