@@ -8,7 +8,7 @@
 @import "aeroplan-blocks/plans-search-form";
 
 .plan-place {
-  fill: #b5b0f7;
+  fill: #a3a3f5;
   stroke: #fff;
   stroke-width: 0.5;
   stroke-linejoin: round;
@@ -16,12 +16,12 @@
   transition: 0.2s;
 
   &:hover {
-    fill: darken(#b5b0f7, 8%);
+    fill: darken(#a3a3f5, 8%);
   }
 
   // &--hovered {
   //   // fill: #8e89d8;
-  //   fill: darken(#b5b0f7, 8%);
+  //   fill: darken(#a3a3f5, 8%);
   // }
 
   &--filtered {
@@ -115,8 +115,6 @@
   background-color: $gray-234;
   background-image: linear-gradient(to top right, $gray-234, $gray-228);
   transition: 0.2s;
-
-  // height: 440px;
   opacity: 0;
   visibility: hidden;
   overflow: hidden;
@@ -136,9 +134,9 @@
 
 .aero-plan-popper {
   max-width: 300px;
-  padding: 15px;
-  line-height: 1.15;
+  padding: 16px;
   font-size: 16px;
+  line-height: 1.15;
   hyphens: auto;
   background-color: #fff;
   border-radius: 2px;
@@ -181,18 +179,6 @@
     margin-top: 8px;
   }
 
-  // &[x-placement="top"] {
-  //   &::after {
-  //     top: calc(100% - 5px);
-  //   }
-  // }
-
-  // &[x-placement="bottom"] {
-  //   &::after {
-  //     bottom: calc(100% - 5px);
-  //   }
-  // }
-
   &[x-out-of-boundaries] {
     display: none;
   }
@@ -204,7 +190,6 @@
 
 .aero-plan-popper__title {
   margin: 0;
-  // font-weight: 500;
   font-size: 20px;
   line-height: 1.15;
 }
