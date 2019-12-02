@@ -187,7 +187,7 @@
     background-color: #e4e4e4; }
 
 .plan-place {
-  fill: #b5b0f7;
+  fill: #a3a3f5;
   stroke: #fff;
   stroke-width: 0.5;
   stroke-linejoin: round;
@@ -195,7 +195,7 @@
   -webkit-transition: 0.2s;
   transition: 0.2s; }
   .plan-place:hover {
-    fill: #928bf3; }
+    fill: #7e7ef1; }
   .plan-place--filtered {
     fill: #4fb1ff; }
     .plan-place--filtered:hover {

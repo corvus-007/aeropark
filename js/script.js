@@ -2,7 +2,16 @@
 
 document.addEventListener('DOMContentLoaded', function () {
   svg4everybody();
-  var eventsSlider = new Swiper('[data-events-slider]', {
+  $('input[type="tel"]').inputmask({
+    mask: '+7 (999) 999-99-99'
+  });
+  $.validator.addMethod('checkPhoneMask', function (value) {
+    return /\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}/g.test(value);
+  }, 'Заполните номер телефона');
+  $('.chosen-select').chosen({
+    no_results_text: 'Ой, ничего не найдено!'
+  });
+  new Swiper('[data-events-slider]', {
     speed: 800,
     centeredSlides: true,
     slidesPerView: 'auto',
@@ -21,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
       prevEl: '.common-slider-button--prev'
     }
   });
-  var previewEventsPhotolider = new Swiper('[data-preview-events-photo-slider]', {
+  new Swiper('[data-preview-events-photo-slider]', {
     speed: 600,
     centeredSlides: true,
     slidesPerView: 'auto',
@@ -35,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function () {
       modifier: 1,
       slideShadows: true
     },
-    // Navigation arrows
     navigation: {
       nextEl: '.common-slider-button--next',
       prevEl: '.common-slider-button--prev'

@@ -426,4 +426,126 @@ window.commonPageFilter = function () {
     closeFilterOptions();
     filterItems(filterValue);
   }
-}(); ////=require modules/rent.js
+}();
+
+window.showPopup = function () {
+  'use strict';
+
+  var DATA_ATTR_MATH = 'data-show-popup';
+  document.addEventListener('click', function (evt) {
+    var popupTriggerEl = evt.target.closest("[".concat(DATA_ATTR_MATH, "]"));
+
+    if (!popupTriggerEl) {
+      return;
+    }
+
+    var popupSrc = popupTriggerEl.dataset.showPopup;
+
+    if (popupSrc) {
+      $.fancybox.open([{
+        src: popupSrc
+      }]);
+    }
+  });
+}();
+
+window.rentStore = function (window, $) {
+  'use strict';
+
+  var form = document.querySelector('#form-rent-store');
+
+  if (!form) {
+    return;
+  }
+
+  $(form).validate({
+    ignore: '.ignore-validate',
+    groups: {
+      area: 'areaMin areaMax areaOptimal'
+    },
+    errorPlacement: function errorPlacement(error, element) {
+      error.appendTo(element.closest('.field__control'));
+    },
+    submitHandler: function submitHandler(form, event) {
+      event.preventDefault();
+      var formData = new FormData(form);
+      var action = form.action;
+      formData.append('dateSendForm', new Date());
+      $.ajax({
+        url: action,
+        method: 'POST',
+        data: formData,
+        processData: false,
+        contentType: false,
+        dataType: 'json'
+      }).done(function (data) {
+        if (data.status === true) {
+          form.reset();
+          $.fancybox.close();
+          alert('Спасибо, ваша заявка отправлена ;-)');
+        } else {
+          alert('Произошла ошибка! Попробуйте снова!');
+        }
+      }).fail(function () {
+        alert('Произошла ошибка! Обновите страницу и попробуйте снова!');
+      });
+    },
+    rules: {
+      phone: {
+        checkPhoneMask: true
+      }
+    }
+  });
+}(window, jQuery);
+
+window.rentIsland = function (window, $) {
+  'use strict';
+
+  var form = document.querySelector('#form-rent-island');
+
+  if (!form) {
+    return;
+  }
+
+  $(form).validate({
+    ignore: '.ignore-validate',
+    groups: {
+      dimensions: 'dimensionWidth dimensionLength dimensionHeight'
+    },
+    errorPlacement: function errorPlacement(error, element) {
+      error.appendTo(element.closest('.field__control'));
+    },
+    submitHandler: function submitHandler(form, event) {
+      event.preventDefault();
+      var formData = new FormData(form);
+      var action = form.action;
+      formData.append('dateSendForm', new Date());
+      $.ajax({
+        url: action,
+        method: 'POST',
+        data: formData,
+        processData: false,
+        contentType: false,
+        dataType: 'json'
+      }).done(function (data) {
+        if (data.status === true) {
+          form.reset();
+          $.fancybox.close();
+          alert('Спасибо, ваша заявка отправлена ;-)');
+        } else {
+          alert('Произошла ошибка! Попробуйте снова!');
+        }
+      }).fail(function () {
+        alert('Произошла ошибка! Обновите страницу и попробуйте снова!');
+      });
+    },
+    rules: {
+      phone: {
+        checkPhoneMask: true
+      },
+      'profiles[]': {
+        required: true
+      }
+    }
+  });
+}(window, jQuery);
