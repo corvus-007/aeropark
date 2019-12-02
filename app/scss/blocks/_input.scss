@@ -1,14 +1,14 @@
 .input {
   width: 100%;
   max-height: 150px;
-  padding: 12px;
+  padding: 8px 12px;
   font: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   resize: vertical;
-  background-color: #f5f5f5;
-  border: 1px solid #f5f5f5;
+  background-color: $gray-245;
+  border: 1px solid $gray-214;
   border-radius: 4px;
   outline: none;
   box-shadow: none;
@@ -17,12 +17,36 @@
 
   &:hover,
   &:focus {
-    border-color: #e0e0e0;
-    background-color: #fff;
+    background-color: $gray-234;
+  }
+
+  &:focus {
+    background-color: #ffffff;
+    border-color: #999999;
   }
 
   &::placeholder {
     color: $base-color;
     opacity: 0.5;
+  }
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &[type="number"] {
+    -moz-appearance: textfield;
+    font-variant-numeric: tabular-nums;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      appearance: none;
+      margin: 0;
+    }
+  }
+
+  &[type="file"] {
+    // padding: 0;
+    background-color: transparent;
   }
 }

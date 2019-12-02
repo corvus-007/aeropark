@@ -1,0 +1,21 @@
+.form-grid {
+  display: grid;
+  gap: 20px 32px;
+  align-items: baseline;
+
+  @include mq-min(667px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.form-grid__half {
+  @include mq-min(667px) {
+    grid-column: span 1;
+  }
+}
+
+.form-grid__full {
+  @include mq-min(667px) {
+    grid-column: span 2;
+  }
+}
