@@ -1,8 +1,4 @@
 .rent-contact {
-  line-height: 1.2;
-  font-size: 14px;
-  letter-spacing: 0.075em;
-
   a {
     &:focus-visible {
       @include keyboard-focus-rule();

@@ -1,15 +1,25 @@
 .popup {
   width: calc(100% - 16px);
-  max-width: 500px;
-  padding: 40px;
+  padding: 20px;
   border-radius: 4px;
+
+  &--wide {
+  }
+
+  @include mq-min(667px) {
+    max-width: 500px;
+    padding: 40px;
+
+    &--wide {
+      max-width: 620px;
+    }
+  }
 }
 
 .popup__title {
   margin: 0;
-  margin-bottom: 30px;
-  font-weight: 600;
-  font-size: 30px;
+  margin-bottom: 32px;
+  font-weight: 700;
+  font-size: 32px;
   line-height: 1.15;
-  text-align: center;
 }
