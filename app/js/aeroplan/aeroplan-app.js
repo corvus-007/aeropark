@@ -17,6 +17,7 @@ const PLAN_PLACE_HOVERED_CLASS = `plan-place--hovered`;
 const PLAN_PLACE_ACTIVE_CLASS = `plan-place--active`;
 const PLAN_PLACE_SELECTED_CLASS = `plan-place--selected`;
 const PLAN_PLACE_FILTERED_CLASS = `plan-place--filtered`;
+const DATA_ATTR_PLACE_ACTION_NAME = 'data-map-place-action';
 const PLAN_PLACE_LOGO_CLASS = `plan-place-logo`;
 const MAX_LOGO_WIDTH = 250;
 const MAX_LOGO_HEIGHT = 250;
@@ -54,6 +55,16 @@ const zoomActions = {
   }
 };
 
+const placePopupActions = {
+  'show-popup-rent-store': function() {
+    $.fancybox.open([
+      {
+        src: '#popup-rent-store'
+      }
+    ]);
+  }
+};
+
 const aeroPlans = [];
 const zoomsArr = [];
 const svgArr = [];
@@ -88,9 +99,7 @@ discountFilterSelect.appendChild(createOptionsList(discountFilter));
 
 createToggleFloorsControls();
 
-const aeroPlansToggleFloors = document.querySelector(
-  `.toggle-floors`
-);
+const aeroPlansToggleFloors = document.querySelector(`.toggle-floors`);
 const aeroPlansFloors = document.querySelectorAll(`.aero-plans__floor`);
 const toggleFloors = new ToggleFloors(aeroPlansToggleFloors, aeroPlansFloors);
 
@@ -98,6 +107,7 @@ plansWrapper.addEventListener(`mouseover`, mouseroverPlansWrapperHandler);
 plansWrapper.addEventListener(`click`, clickPlansWrapperHandler);
 plansWrapper.addEventListener(`mouseout`, mouseoutPlansWrapperHandler);
 popper.addEventListener(`mouseleave`, mouseleavePopperHandler);
+document.addEventListener(`click`, clickDocumentHadler);
 
 zoomActionsContainer.addEventListener(`click`, clickZoomContainerHandler);
 
@@ -132,8 +142,12 @@ function renderPlan(plan, planIndex) {
   const boundaryStroke = mainG.append(`g`);
 
   mainG.attr(`id`, `main-group`).classed(`main-group`, true);
-  boundaryFill.attr(`id`, `boundary-group-fill`).classed(`boundary-group-fill`, true);
-  boundaryStroke.attr(`id`, `boundary-group-stroke`).classed(`boundary-group-stroke`, true);
+  boundaryFill
+    .attr(`id`, `boundary-group-fill`)
+    .classed(`boundary-group-fill`, true);
+  boundaryStroke
+    .attr(`id`, `boundary-group-stroke`)
+    .classed(`boundary-group-stroke`, true);
   placesG.attr(`id`, `places-group`).classed(`places-group`, true);
   logosG.attr(`id`, `logos-group`).classed(`logos-group`, true);
   helpMarkersG
@@ -142,8 +156,14 @@ function renderPlan(plan, planIndex) {
 
   mainGArr.push(mainG);
 
-  boundaryFill.append(`path`).attr(`d`, boundaryShape).classed(`plan-floor-boundary-fill`, true);
-  boundaryStroke.append(`path`).attr(`d`, boundaryShape).classed(`plan-floor-boundary-stroke`, true);
+  boundaryFill
+    .append(`path`)
+    .attr(`d`, boundaryShape)
+    .classed(`plan-floor-boundary-fill`, true);
+  boundaryStroke
+    .append(`path`)
+    .attr(`d`, boundaryShape)
+    .classed(`plan-floor-boundary-stroke`, true);
 
   svgArr.push(svg);
 
@@ -171,8 +191,7 @@ function renderPlan(plan, planIndex) {
           .attr(`height`, d => (d.size ? d.size : MARKER_SIZE))
           .attr(
             `transform`,
-            d =>
-              `translate(${d.position[0]} ${d.position[1]})`
+            d => `translate(${d.position[0]} ${d.position[1]})`
           )
           .classed(`plan-help-marker`, true);
       });
@@ -193,6 +212,7 @@ function renderPlan(plan, planIndex) {
     .attr(`data-link-url`, d => (d.link ? d.link.url : null))
     .attr(`data-link-text`, d => (d.link ? d.link.text : null))
     .attr(`data-button-text`, d => (d.button ? d.button.text : null))
+    .attr(`data-button-action`, d => (d.button ? d.button.action : null))
     .attr(`d`, d => {
       if (!('status' in d)) {
         return d.path;
@@ -315,11 +335,9 @@ function mouseroverPlansWrapperHandler(evt) {
 
   currentPathNode = pathNode;
   // pathNode.classList.add(PLAN_PLACE_HOVERED_CLASS);
-
 }
 
 function mouseoutPlansWrapperHandler(evt) {
-  // debugger;
   if (evt.relatedTarget !== popper && currentPathNode) {
     popper.hidden = true;
     // currentPathNode.classList.remove(PLAN_PLACE_HOVERED_CLASS);
@@ -406,9 +424,7 @@ const KEYCODES = {
   ESC: 27
 };
 const searchForm = document.querySelector(`[data-plans-search-form]`);
-const searchFormField = searchForm.querySelector(
-  `.plans-search-form__field`
-);
+const searchFormField = searchForm.querySelector(`.plans-search-form__field`);
 const searchInput = searchForm.querySelector(`[name="nameOfPlace"]`);
 const searchClearButton = searchForm.querySelector(`[data-clear-search-input]`);
 const searchResultList = searchForm.querySelector(`[data-autocomplete-list]`);
@@ -422,6 +438,7 @@ searchInput.addEventListener(`input`, inputSearchInputHandler);
 searchInput.addEventListener(`focus`, focusSearchInputHandler);
 searchClearButton.addEventListener(`click`, clickSearchClearButtonHandler);
 searchResultList.addEventListener(`click`, clickSearchResultListHandler);
+
 window.addEventListener('click', function(evt) {
   const target = evt.target;
   const searchForm = target.closest(`[data-plans-search-form]`);
@@ -430,6 +447,20 @@ window.addEventListener('click', function(evt) {
     hideSearchResultList();
   }
 });
+
+function clickDocumentHadler(evt) {
+  const triggerEl = evt.target.closest(`[${DATA_ATTR_PLACE_ACTION_NAME}]`);
+
+  if (!triggerEl) {
+    return;
+  }
+
+  const action = triggerEl.dataset.mapPlaceAction;
+
+  if (action) {
+    placePopupActions[action]();
+  }
+}
 
 function keydownSearchInputHandler(evt) {
   if (evt.keyCode == KEYCODES.ENTER) {
@@ -516,10 +547,7 @@ function inputSearchInputHandler() {
 }
 
 function togglePlanSearchFormFieldFilledModifier(value) {
-  searchFormField.classList.toggle(
-    `plans-search-form__field--filled`,
-    value
-  );
+  searchFormField.classList.toggle(`plans-search-form__field--filled`, value);
 }
 
 function clickSearchResultListHandler(evt) {
@@ -775,7 +803,8 @@ function renderPlanPopper(pathNode) {
   const linkText = pathNode.dataset.linkText || ``;
   const link = `<a href="${linkUrl}" target="_blank">${linkText}</a>`;
   const buttonText = pathNode.dataset.buttonText || ``;
-  const button = `<button type="button">${buttonText}</button>`;
+  const buttonAction = pathNode.dataset.buttonAction || ``;
+  const button = `<button type="button" data-map-place-action="${buttonAction}">${buttonText}</button>`;
   const hasInteractionElems = linkText || buttonText;
 
   popper.innerHTML = `

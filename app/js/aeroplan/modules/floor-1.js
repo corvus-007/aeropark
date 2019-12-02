@@ -3314,15 +3314,15 @@ export default {
     },
     {
       id: 1154,
-      title: `Помещение свободно`,
+      title: `Помещение для магазина 2183.7 кв.м`,
       logoSrc: ``,
       synonyms: [],
-      description: ``,
+      description: `Свободно`,
       discount: new Set(),
       category: new Set(),
       audience: new Set(),
       link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
+      button: { text: `Отправить заявку`, action: `show-popup-rent-store` },
       path: `M1,408V568H62.51c41.78,41.36,104.29,51.71,156.48,0h0V408Z`
     },
     {
