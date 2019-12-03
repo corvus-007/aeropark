@@ -114,6 +114,7 @@
         <form class="plans-search-form" data-plans-search-form autocomplete="off">
           <div class="plans-search-form__field">
             <input class="plans-search-form__input input" type="text" name="nameOfPlace" placeholder="Поиск по арендаторам">
+            <input type="hidden" name="placeId" value="{{ placeId }}">
             <button class="plans-search-form__button" type="button" data-clear-search-input>Очистить</button>
           </div>
           <ul id="places-list" class="plans-search-form__result-list autocomplete-list" data-autocomplete-list></ul>
