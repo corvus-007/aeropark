@@ -1,13 +1,16 @@
 .choose-rent-type {
-
 }
 
 .choose-rent-type__list {
   @include clear-list();
 
-  display: flex;
+  @include mq-min(667px) {
+    display: flex;
+  }
 }
 
 .choose-rent-type__item {
-
+  @include mq-min(667px) {
+    width: 50%;
+  }
 }
