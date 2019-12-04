@@ -1,4 +1,4 @@
-window.rentIsland = (function(window, $) {
+window.rentIsland = (function($) {
   'use strict';
 
   const form = document.querySelector('#form-rent-island');
@@ -53,4 +53,4 @@ window.rentIsland = (function(window, $) {
       }
     }
   });
-})(window, jQuery);
+})(window.jQuery);

@@ -1,4 +1,4 @@
-window.applicationAd = (function(window, $) {
+window.applicationAd = (function($) {
   'use strict';
 
   const form = document.querySelector('#form-application-ad');
@@ -19,7 +19,9 @@ window.applicationAd = (function(window, $) {
       const formData = new FormData(form);
 
       function getActiveNameOfAd() {
-        const activePanelEl = document.querySelector('[data-aria-accordion-panel][aria-hidden="false"]');
+        const activePanelEl = document.querySelector(
+          '[data-aria-accordion-panel][aria-hidden="false"]'
+        );
         let text = null;
 
         if (activePanelEl) {
@@ -39,7 +41,7 @@ window.applicationAd = (function(window, $) {
         data: formData,
         processData: false,
         contentType: false,
-        dataType: 'json'
+        dataType: 'json',
       })
         .done(data => {
           if (data.status === true) {
@@ -56,8 +58,8 @@ window.applicationAd = (function(window, $) {
     },
     rules: {
       phone: {
-        checkPhoneMask: true
-      }
-    }
+        checkPhoneMask: true,
+      },
+    },
   });
-})(window, jQuery);
+})(window.jQuery);

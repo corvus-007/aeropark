@@ -1,4 +1,4 @@
-window.showPopup = (function() {
+window.showPopup = (function($) {
   'use strict';
 
   const DATA_ATTR_MATH = 'data-show-popup';
@@ -15,9 +15,9 @@ window.showPopup = (function() {
     if (popupSrc) {
       $.fancybox.open([
         {
-          src: popupSrc
-        }
+          src: popupSrc,
+        },
       ]);
     }
   });
-})();
+})(window.jQuery);

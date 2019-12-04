@@ -1,4 +1,4 @@
-window.rentStore = (function(window, $) {
+window.rentStore = (function($) {
   'use strict';
 
   const form = document.querySelector('#form-rent-store');
@@ -50,4 +50,4 @@ window.rentStore = (function(window, $) {
       }
     }
   });
-})(window, jQuery);
+})(window.jQuery);

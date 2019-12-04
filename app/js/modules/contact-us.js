@@ -1,4 +1,4 @@
-window.contactUs = (function(window, $) {
+window.contactUs = (function($) {
   'use strict';
 
   const form = document.querySelector('#form-contact-us');
@@ -42,4 +42,4 @@ window.contactUs = (function(window, $) {
         });
     },
   });
-})(window, window.jQuery);
+})(window.jQuery);
