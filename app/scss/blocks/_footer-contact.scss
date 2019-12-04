@@ -52,7 +52,7 @@
   }
 }
 
-.footer-contact__item-link {
+.footer-contact__item-link[href] {
   text-decoration: none;
   color: $base-color;
   border-bottom: 1px solid rgba($base-color, 0.1);

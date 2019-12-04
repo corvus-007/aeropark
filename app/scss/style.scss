@@ -38,6 +38,7 @@
 @import "blocks/choose-rent-type-item";
 @import "blocks/choose-rent-type";
 @import "blocks/accordion";
+@import "blocks/worktime";
 @import "blocks/socials";
 @import "blocks/hatch-maker";
 // @import "blocks/custom-ol";
@@ -47,6 +48,7 @@
 @import "blocks/section-header-link";
 @import "blocks/aside-info-worktime";
 @import "blocks/aside-info";
+@import "blocks/common-caption";
 @import "blocks/common-slider-button";
 @import "blocks/common-filter-option";
 @import "blocks/common-page-filter";
@@ -115,6 +117,16 @@
 @import "blocks/shop-gallery";
 @import "blocks/shop";
 
+@import "blocks/contact-phones";
+@import "blocks/contact-transport";
+@import "blocks/contact-offices";
+@import "blocks/contact-info-section";
+@import "blocks/contact-shops-timetable-item";
+@import "blocks/contact-shops-timetable";
+@import "blocks/contact-grid-info";
+@import "blocks/contact-map";
+@import "blocks/contact";
+
 // @import "blocks/page";
 @import "blocks/footer-contact";
 @import "blocks/footer-title";
@@ -122,6 +134,7 @@
 @import "blocks/footer-area";
 @import "blocks/footer-grid";
 @import "blocks/site-footer";
+
 @import "blocks/out-cover-primary-menu";
 @import "blocks/out-cover-secondary-menu";
 @import "blocks/out-cover-info-menu";
