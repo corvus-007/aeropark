@@ -1,8 +1,12 @@
 .contact-shops-timetable-item {
   display: grid;
-  gap: 20px;
-  grid-template-columns: 1fr 1fr;
+  gap: 12px;
   align-items: baseline;
+
+  @include mq-min(400px) {
+    gap: 20;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .contact-shops-timetable-item__name {
