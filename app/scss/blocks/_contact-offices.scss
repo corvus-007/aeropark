@@ -1,0 +1,41 @@
+.contact-offices{
+
+}
+
+.contact-offices__list {
+  @include clear-list();
+}
+
+.contact-offices__item {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid $gray-214;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  @include mq-min(667px) {
+    flex-direction: row;
+  }
+}
+
+.contact-offices__title {
+  text-transform: none;
+
+  @include mq-min(667px) {
+    margin-right: 20px;
+  }
+}
+
+.contact-offices__email-link {
+  font-weight: 400;
+  font-size: 20px;
+  white-space: nowrap;
+  text-decoration: none;
+  color: $primary-color;
+}

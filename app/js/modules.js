@@ -10,3 +10,5 @@
 //=require modules/rent-store.js
 //=require modules/rent-island.js
 //=require modules/application-ad.js
+//=require modules/contact-us.js
+//=require modules/map.js

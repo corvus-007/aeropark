@@ -1,0 +1,25 @@
+.contact-transport {
+}
+
+.contact-transport__list {
+  @include clear-list();
+
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.contact-transport__item {
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.contact-transport__title {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.contact-transport__value {
+}

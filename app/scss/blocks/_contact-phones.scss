@@ -1,0 +1,25 @@
+.contact-phones {
+}
+
+.contact-phones__list {
+  @include clear-list();
+}
+
+.contact-phones__item {
+  margin-bottom: 16px;
+}
+
+.contact-phones__title {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.contact-phones__phone-link {
+  display: block;
+  font-weight: 400;
+  font-size: 24px;
+  text-decoration: none;
+  letter-spacing: normal;
+  color: inherit;
+  outline: none;
+}

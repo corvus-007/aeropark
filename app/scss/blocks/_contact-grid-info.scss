@@ -1,0 +1,9 @@
+.contact-grid-info {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.contact-grid-info__section {
+
+}

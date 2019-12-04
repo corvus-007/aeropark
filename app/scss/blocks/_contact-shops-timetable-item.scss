@@ -1,0 +1,23 @@
+.contact-shops-timetable-item {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  align-items: baseline;
+}
+
+.contact-shops-timetable-item__name {
+  margin: 0;
+  font-size: 18px;
+  text-transform: none;
+}
+
+.contact-shops-timetable-item__worktime {
+  max-width: 220px;
+
+  & > p {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 400;
+  }
+}

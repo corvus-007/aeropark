@@ -1,0 +1,37 @@
+.worktime {
+}
+
+.worktime__list {
+  @include clear-list();
+}
+
+.worktime__item {
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.worktime__days {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 400;
+}
+
+.worktime__time {
+  display: flex;
+  align-items: center;
+}
+
+.worktime__time-delimiter-sign {
+  flex-grow: 1;
+  height: 1px;
+  margin-left: 8px;
+  margin-right: 8px;
+  color: transparent;
+  background-color: $primary-color;
+  overflow: hidden;
+  user-select: none;
+  pointer-events: none;
+}

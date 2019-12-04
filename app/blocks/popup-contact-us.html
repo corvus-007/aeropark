@@ -1,0 +1,100 @@
+<div id="popup-contact-us" class="popup popup--wide popup-contact-us" data-selectable="true" hidden>
+  <div class="popup__title">Отправить сообщение</div>
+  <div class="popup__content">
+    <form class="form-contact-us" id="form-contact-us" action="" method="POST" enctype="multipart/form-data">
+      <fieldset class="form-section">
+        <div class="form-grid">
+          <div class="form-grid__full">
+            <label class="field">
+              <span class="field__label">Фамилия Имя Отчество</span>
+              <span class="field__control">
+                <input class="input" type="text" name="fio">
+              </span>
+            </label>
+          </div>
+
+          <div class="form-grid__half">
+            <label class="field field--required">
+              <span class="field__label">Электронная почта</span>
+              <span class="field__control">
+                <input class="input" type="email" name="email" placeholder="name@yourmail.ru" required>
+              </span>
+            </label>
+          </div>
+
+          <div class="form-grid__half">
+            <label class="field">
+              <span class="field__label">Контактный телефон</span>
+              <span class="field__control">
+                <input class="input" type="tel" name="phone">
+              </span>
+            </label>
+          </div>
+
+          <div class="form-grid__full">
+            <label class="field">
+              <span class="field__label">Тема</span>
+              <span class="field__control">
+                <div class="select">
+                  <select class="filter-select" name="subject">
+                    <option value="1" selected>Не выбрана</option>
+                    <option value="2">Отдел аренды</option>
+                    <option value="3">Отдел рекламы</option>
+                    <option value="4">Для подрядчиков</option>
+                    <option value="5">Пресс служба</option>
+                    <option value="6">Отдел маркетинга</option>
+                    <option value="7">Отдел кадров</option>
+                  </select>
+                </div>
+              </span>
+            </label>
+          </div>
+
+          <div class="form-grid__full">
+            <label class="field">
+              <span class="field__label">Комментарий</span>
+              <span class="field__control">
+                <textarea class="input" name="comments" rows="2"></textarea>
+              </span>
+            </label>
+          </div>
+
+          <div class="form-grid__full">
+            <label class="field">
+              <span class="field__label">Прикрепить файл до 20 Мб</span>
+              <span class="field__control">
+                <input class="input" type="file" name="file">
+                <span class="field__text"></span>
+              </span>
+            </label>
+          </div>
+        </div> <!-- .form-grid -->
+      </fieldset>
+
+      <div class="form-submit-wrapper">
+        <p class="form-agreement">
+          <span class="field">
+            <span class="field__control">
+              <label class="checkbox">
+                <input class="checkbox__input visually-hidden" type="checkbox" name="agreement" value="represented" checked required>
+                <span class="checkbox__indicator"></span>
+                <span class="checkbox__caption">Я даю согласие на обработку персональных данных</span>
+              </label>
+            </span>
+          </span>
+        </p>
+
+        <p class="form-require-description"><span>*</span> - поля, обязательные для заполнения.</p>
+
+        <button class="button" type="submit">
+          <span class="button__icon-holder button__icon-holder--left">
+            <svg class="button__icon" width="16" height="16">
+              <use xlink:href="./images/symbols.svg#icon-send"></use>
+            </svg>
+          </span>
+          <span class="button__text">Отправить</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
