@@ -1,7 +1,7 @@
 <div id="popup-rent-store" class="popup popup--wide popup-rent" data-selectable="true" hidden>
   <div class="popup__title">Заявка на аренду торгового помещения ТРЦ</div>
   <div class="popup__content">
-    <form class="form-rent" id="form-rent-store" action="" method="POST">
+    <form class="form-rent" id="form-rent-store" action="" method="POST" enctype="multipart/form-data">
       <fieldset class="form-rent-section form-section">
         <div class="form-grid">
           <div class="form-grid__half">
@@ -314,7 +314,7 @@
             <label class="field field--required">
               <span class="field__label">Профиль магазина и ассортимент товара</span>
               <span class="field__control">
-                <select class="chosen-select" data-placeholder="Выбрать" name="profiles[]" multiple required>
+                <select class="input chosen-select" data-placeholder="Выбрать" name="profiles[]" multiple required>
                   <option value="Одежда">Одежда</option>
                   <option value="Обувь">Обувь</option>
                   <option value="Детские товары">Детские товары</option>
@@ -337,7 +337,7 @@
             <label class="field">
               <span class="field__label">Представляемые торговые марки</span>
               <span class="field__control">
-                <input class="input" type="number" name="brands">
+                <input class="input" type="text name=" brands">
               </span>
             </label>
           </div>
