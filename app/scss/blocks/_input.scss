@@ -15,8 +15,7 @@
   box-sizing: border-box;
   transition: 0.2s;
 
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: $gray-234;
   }
 
@@ -46,7 +45,6 @@
   }
 
   &[type="file"] {
-    // padding: 0;
     background-color: transparent;
   }
 }
