@@ -1,12 +1,17 @@
-import { categoryFilter, audienceFilter, discountFilter } from './filter-options';
+import {
+  categoryFilter,
+  audienceFilter,
+  discountFilter,
+} from './filter-options';
 
 export default {
   settings: {
     dimensions: {
       width: 831.5,
-      height: 612.5
+      height: 612.5,
     },
-    boundaryShape: `M81,1.5V373.7C36.9,395.4,1.5,435.9,1.5,488.5A122.4,122.4,0,0,0,124,611a124.8,124.8,0,0,0,27.6-3.1h0a124.7,124.7,0,0,0,18.5-5.9L238,580.5H530v-96H830V1.5Z`
+    boundaryShape: `M81,1.5V373.74C36.85,395.45,1.5,436,1.5,488.5A122.62,122.62,0,0,0,151.65,607.87h0A122.38,122.38,0,0,0,170.11,602L238,580.5H530v-96H830V1.5Z`,
+    innerBoundaryShape: `M395,309.5H81V0H395Z`,
   },
   areas: [
     {
@@ -21,7 +26,7 @@ export default {
         'батуты',
         'скалодром',
         'fnvjcathf',
-        '\'rcnhbv-gfhr'
+        '\'rcnhbv-gfhr',
       ],
       description: ``,
       discount: new Set(),
@@ -29,7 +34,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M246,373.5H81v.2C36.9,395.4,1.5,435.9,1.5,488.5A122.4,122.4,0,0,0,124,611a124.8,124.8,0,0,0,27.6-3.1h0a124.7,124.7,0,0,0,18.5-5.9L238,580.5h8v-207Z`
+      path: `M246,462.5v118h-8L170.11,602a122.38,122.38,0,0,1-18.46,5.85h0A122.62,122.62,0,0,1,1.5,488.5C1.5,436,36.85,395.45,81,373.74v-.24H246Z`,
     },
     {
       id: 32,
@@ -42,33 +47,20 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M246,373.5H81v-64H423v64H246Z`
+      path: `M246,373.5H81v-64H423v64H246Z`,
     },
     {
       id: 33,
-      title: `Контактный зоопарк &quot;Джунгли зовут&quot;`,
-      logoSrc: ``,
-      synonyms: [],
-      description: ``,
+      title: `Laserland`,
+      logoSrc: `laser-land.svg`,
+      synonyms: ['laserland', 'лазерленд', 'лазер', 'лазертаг'],
+      description: `Центр развлечений`,
       discount: new Set(),
-      category: new Set([
-        categoryFilter[`Сотовая связь`],
-        categoryFilter[`Бытовая техника и электроника`]
-      ]),
-      audience: new Set([
-        audienceFilter[`Мужская одежда`],
-        audienceFilter[`Женская одежда`]
-      ]),
-      rent: true,
-      link: {
-        text: ``,
-        url: ``
-      },
-      button: {
-        text: `Отправить заявку`,
-        action: ``
-      },
-      path: `M423,484.5H530v96H246v-118H377v-89h46Z`
+      category: new Set(),
+      audience: new Set(),
+      link: { text: ``, url: `` },
+      button: { text: ``, action: `` },
+      path: `M423,484.5H530v96H246v-118H377v-89h46Z`,
     },
     {
       id: 34,
@@ -84,7 +76,7 @@ export default {
         'лабиринт',
         ',evthfyu',
         'lhw',
-        'hfpdktrfntkmysq wtynh'
+        'hfpdktrfntkmysq wtynh',
       ],
       description: `Аттракционы, сухой аквапарк, детское кафе`,
       discount: new Set(),
@@ -92,24 +84,27 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M830,1.5v483H423v-337H395V1.5H830Z`
+      path: `M830,1.5v483H423v-337H395V1.5H830Z`,
     },
     {
       id: 35,
-      title: `Детские ясли Атмосфера`,
-      logoSrc: ``,
-      synonyms: [],
-      description: ``,
+      title: `N1 ARENA`,
+      logoSrc: `n1-arena.svg`,
+      synonyms: [
+        'кибер спорт',
+        'n1 arena',
+        'н1 арена',
+        'арена',
+        'спорт',
+      ],
+      description: `Киберспортивная арена`,
       discount: new Set(),
-      category: new Set([
-        categoryFilter[`Сотовая связь`],
-        categoryFilter[`Бытовая техника и электроника`]
-      ]),
+      category: new Set(),
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M246,373.5H377v89H246Z`
-    }
+      path: `M246,373.5H377v89H246Z`,
+    },
   ],
   helpMarkers: [
     {
@@ -117,13 +112,18 @@ export default {
       points: [
         {
           title: `Лифт`,
-          position: [746.5, 75.5]
+          position: [397, 163.27],
         },
+      ],
+    },
+    {
+      symbolId: `escalator`,
+      points: [
         {
-          title: `Лифт`,
-          position: [446.5, 75.5]
-        }
-      ]
-    }
-  ]
+          title: `Эскалатор`,
+          position: [397, 221.37],
+        },
+      ],
+    },
+  ],
 };
