@@ -1,12 +1,16 @@
-import { categoryFilter, audienceFilter, discountFilter } from './filter-options';
+import {
+  categoryFilter,
+  audienceFilter,
+  discountFilter,
+} from './filter-options';
 
 export default {
   settings: {
     dimensions: {
       width: 2600,
-      height: 856
+      height: 856,
     },
-    boundaryShape: `M2599 196H1566V1H1v591h510v61h94v22h120v-22h94v-61h188v31.2a125 125 0 0 0 65 231.8c35.2 0 121.5-37.5 121.5-37.5l752.3-.3a249.9 249.9 0 0 0 254.6-.1H2599z`
+    boundaryShape: `M2599,196H1566V1H1V592H511v61h94v22H725V653h94V592h188v31.21A125,125,0,0,0,1072,855c35.22,0,121.5-37.5,121.5-37.5l752.28-.27a250.14,250.14,0,0,0,254.6-.09L2599,817Z`,
   },
   areas: [
     {
@@ -20,7 +24,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2543 750.5h56v33h-56z`
+      path: `M2543,750.5h56v33h-56Z`,
     },
     {
       id: 22,
@@ -33,7 +37,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2599 561h-56v106.5h56V561z`
+      path: `M2599,667.5h-56V561h56Z`,
     },
     {
       id: 23,
@@ -45,18 +49,18 @@ export default {
         'асия',
         'азиямаркет',
         'fpbzvfhrtn',
-        'fpbz vfhrtn'
+        'fpbz vfhrtn',
       ],
       description: ``,
       discount: new Set(),
       category: new Set([
         categoryFilter[`Японская кухня`],
-        categoryFilter[`Восточная кухня`]
+        categoryFilter[`Восточная кухня`],
       ]),
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2543 783.5h56V817h-56z`
+      path: `M2543,783.5h56V817h-56Z`,
     },
     {
       id: 24,
@@ -69,7 +73,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2543 703.5h56v47h-56z`
+      path: `M2599,703.5v47h-56v-47Z`,
     },
     {
       id: 25,
@@ -82,7 +86,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2543 667.5h56v36h-56z`
+      path: `M2599,703.5h-56v-36h56Z`,
     },
     {
       id: 26,
@@ -95,7 +99,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2395 561h44v60h-44z`
+      path: `M2439,561v60h-44V561Z`,
     },
     {
       id: 27,
@@ -108,7 +112,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2439 561h30v60h-30z`
+      path: `M2469,561v60h-30V561Z`,
     },
     {
       id: 28,
@@ -120,12 +124,12 @@ export default {
       category: new Set([
         categoryFilter[`Русская кухня`],
         categoryFilter[`Фастфуд`],
-        categoryFilter[`Десерты`]
+        categoryFilter[`Десерты`],
       ]),
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2507 561h36v60h-36z`
+      path: `M2543,561v60h-36V561Z`,
     },
     {
       id: 29,
@@ -138,7 +142,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2469 561h38v60h-38z`
+      path: `M2507,561v60h-38V561Z`,
     },
     {
       id: 210,
@@ -150,7 +154,7 @@ export default {
         'silver spoon',
         'детская одежда',
         'школьная одежда',
-        'школьная форма'
+        'школьная форма',
       ],
       description: `Детская одежда`,
       discount: new Set(),
@@ -158,7 +162,7 @@ export default {
       audience: new Set([audienceFilter[`Товары для детей`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1949.9 751.1h50.2v33.68h-50.2z`
+      path: `M1949.93,784.82V751.14h50.19v33.68Z`,
     },
     {
       id: 211,
@@ -169,7 +173,7 @@ export default {
         'емае',
         'детская одежда',
         'дизайнерская одежда для детей',
-        'одежда для детей'
+        'одежда для детей',
       ],
       description: `Детская одежда для мальчиков и девочек`,
       discount: new Set(),
@@ -177,7 +181,7 @@ export default {
       audience: new Set([audienceFilter[`Товары для детей`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1898.6 751.1h51.3v33.68h-51.3z`
+      path: `M1898.64,784.82V751.14h51.29v33.68Z`,
     },
     {
       id: 212,
@@ -202,18 +206,18 @@ export default {
         'усилители',
         'аккустические системы',
         'охранные сигнализации',
-        'парковочные системы'
+        'парковочные системы',
       ],
       description: `Аудио - видео продукция`,
       discount: new Set(),
       category: new Set([
         categoryFilter[`Аксессуары`],
-        categoryFilter[`Бытовая техника и электроника`]
+        categoryFilter[`Бытовая техника и электроника`],
       ]),
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2149 750.5l-34.3 34.3h34.3v-34.3z`
+      path: `M2149,784.82h-34.32L2149,750.5Z`,
     },
     {
       id: 213,
@@ -226,7 +230,7 @@ export default {
       audience: new Set([audienceFilter[`Товары для детей`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1849.1 751.1h49.5v33.68h-49.5z`
+      path: `M1849.13,784.82V751.14h49.51v33.68Z`,
     },
     {
       id: 214,
@@ -240,7 +244,7 @@ export default {
         'брелок',
         'брелоки брелки',
         'чехлы',
-        'защитные пленки'
+        'защитные пленки',
       ],
       description: `Ремонт техники, аксессуары для техники`,
       discount: new Set(),
@@ -248,7 +252,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2033.8 784.8l-33.7-33.7v33.7h33.7z`
+      path: `M2000.12,784.82V751.14l33.68,33.68Z`,
     },
     {
       id: 215,
@@ -261,7 +265,7 @@ export default {
       audience: new Set([audienceFilter[`Женская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2149 750.5h51.4v34.32H2149z`
+      path: `M2149,784.82V750.5h51.38v34.32Z`,
     },
     {
       id: 216,
@@ -275,12 +279,12 @@ export default {
         categoryFilter[`Японская кухня`],
         categoryFilter[`Американская кухня`],
         categoryFilter[`Десерты`],
-        categoryFilter[`Русская кухня`]
+        categoryFilter[`Русская кухня`],
       ]),
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1799.9 784.8v32.5h145.9a249.9 249.9 0 0 0 254.6-.1v-32.3z`
+      path: `M2200.38,784.82v32.32a250.14,250.14,0,0,1-254.6.09l-145.92,0V784.82Z`,
     },
     {
       id: 217,
@@ -303,18 +307,18 @@ export default {
         'купитьженскуюодежду',
         'платье',
         'clothing',
-        'женская одежда'
+        'женская одежда',
       ],
       description: `Женская одежда`,
       discount: new Set(),
       category: new Set([
         categoryFilter[`Одежда`],
-        categoryFilter[`Аксессуары`]
+        categoryFilter[`Аксессуары`],
       ]),
       audience: new Set([audienceFilter[`Женская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2200.4 792.3h40.2v-41.8h-40.2v41.8z`
+      path: `M2200.38,784.82V750.5h40.2v41.75h-40.2Z`,
     },
     {
       id: 218,
@@ -330,18 +334,18 @@ export default {
         'барсетки',
         'кейсы',
         'папки',
-        'кожгалантерея'
+        'кожгалантерея',
       ],
       description: `Сумки и аксессуары`,
       discount: new Set(),
       category: new Set([
         categoryFilter[`Аксессуары`],
-        categoryFilter[`Кожгалантерея`]
+        categoryFilter[`Кожгалантерея`],
       ]),
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2240.6 750.5v41.8h-40.2v24.8h84.1v-66.6h-43.9z`
+      path: `M2284.54,750.5v66.61l-44,0h-40.2V792.25h40.2V750.5Z`,
     },
     {
       id: 219,
@@ -354,7 +358,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2284.5 750.5v66.6h78.9v-66.6h-78.9z`
+      path: `M2363.36,750.5v66.58l-78.82,0V750.5Z`,
     },
     {
       id: 220,
@@ -367,7 +371,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1193.5 670.7h32.6v85.77h-32.6z`
+      path: `M1193.5,756.44V670.67h32.64v85.77Z`,
     },
     {
       id: 221,
@@ -380,7 +384,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1226.1 670.7v85.7h-32.6v61.1H1300V670.7h-73.9z`
+      path: `M1300,670.67V817.46l-106.5,0V756.44h32.64V670.67Z`,
     },
     {
       id: 222,
@@ -391,12 +395,12 @@ export default {
       discount: new Set(),
       category: new Set([
         categoryFilter[`Мебель`],
-        categoryFilter[`Товары для дома`]
+        categoryFilter[`Товары для дома`],
       ]),
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1147.2 756.4h46.3v-85.7h-12.8l-33.5 33.3v52.4z`
+      path: `M1147.17,704l33.49-33.33h12.84v85.77h-46.33Z`,
     },
     {
       id: 223,
@@ -408,18 +412,18 @@ export default {
         'обувь для детей',
         'обувь для подростков',
         'детская обувь',
-        'удобная обувь'
+        'удобная обувь',
       ],
       description: `Обувь для подростков и детей`,
       discount: new Set(),
       category: new Set([
         categoryFilter[`Обувь`],
-        categoryFilter[`Детские товары`]
+        categoryFilter[`Детские товары`],
       ]),
       audience: new Set([audienceFilter[`Товары для детей`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1618.7 751.1v66.2h64.2v-66.2h-64.2z`
+      path: `M1682.89,751.14v66.19l-64.16,0V751.14Z`,
     },
     {
       id: 224,
@@ -432,7 +436,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1444 751.1l-50.3-28.1v94.4h99.2v-66.3H1444z`
+      path: `M1492.92,751.14v66.25l-99.27,0V723L1444,751.14Z`,
     },
     {
       id: 225,
@@ -443,12 +447,12 @@ export default {
       discount: new Set(),
       category: new Set([
         categoryFilter[`Мебель`],
-        categoryFilter[`Товары для дома`]
+        categoryFilter[`Товары для дома`],
       ]),
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1492.9 751.1v66.3h34.6v-66.3h-34.6z`
+      path: `M1527.53,751.14v66.24h-34.61V751.14Z`,
     },
     {
       id: 226,
@@ -461,7 +465,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1118.6 756.4h28.6V704l-20.9 20.8c.1 1.5.2 3.1.2 4.7a49.4 49.4 0 0 1-7.9 26.9z`
+      path: `M1126.5,729.5c0-1.59-.08-3.15-.23-4.7l20.9-20.8v52.44h-28.56A49.73,49.73,0,0,0,1126.5,729.5Z`,
     },
     {
       id: 227,
@@ -475,7 +479,7 @@ export default {
         'инструменты для визажистов',
         'инструменты для мастеров маникюра',
         'средства для укладки',
-        'косметика'
+        'косметика',
       ],
       description: `Профессиональная косметика`,
       discount: new Set(),
@@ -483,7 +487,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1092.6 641.9v40.3a38.8 38.8 0 0 1 5.6 2.3l22.2-23.7v-18.9h-27.8v40.3`
+      path: `M1092.56,682.15V641.87h27.85l0,19-22.16,23.62a50.28,50.28,0,0,0-5.67-2.32V641.87`,
     },
     {
       id: 228,
@@ -496,7 +500,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1527.5 751.1v66.3h31.4v-66.3h-31.4z`
+      path: `M1558.85,751.14v66.23h-31.32V751.14Z`,
     },
     {
       id: 229,
@@ -513,7 +517,7 @@ export default {
         'одежда для детей',
         'школьная форма',
         'детские платья',
-        'детские костюмы'
+        'детские костюмы',
       ],
       description: `Модная одежда`,
       discount: new Set(),
@@ -521,7 +525,7 @@ export default {
       audience: new Set([audienceFilter[`Товары для детей`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1618.7 751.1h-59.8v66.3l59.8-.1v-66.2z`
+      path: `M1618.73,817.35l-59.88,0V751.14h59.88Z`,
     },
     {
       id: 230,
@@ -532,12 +536,12 @@ export default {
       discount: new Set(),
       category: new Set([
         categoryFilter[`Мебель`],
-        categoryFilter[`Товары для дома`]
+        categoryFilter[`Товары для дома`],
       ]),
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1300 817.5V670.7l43.4 24.2v122.5l-43.4.1z`
+      path: `M1300,817.46V670.67l43.42,24.26V817.45Z`,
     },
     {
       id: 231,
@@ -548,12 +552,12 @@ export default {
       discount: new Set(),
       category: new Set([
         categoryFilter[`Мебель`],
-        categoryFilter[`Товары для дома`]
+        categoryFilter[`Товары для дома`],
       ]),
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1343.42,817.45V694.93L1393.65,723v94.44ZM1300,624.57l53,29.75v-44.4h-53Zm77-14.65v57.87l54,30.32V609.92Z`
+      path: `M1343.42,817.45V694.93L1393.65,723v94.44ZM1300,624.57l53,29.75v-44.4h-53Zm77-14.65v57.87l54,30.32V609.92Z`,
     },
     {
       id: 232,
@@ -566,7 +570,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1076.5 679.5a48.2 48.2 0 0 1 16.1 2.7v-40.3H1007v45a80.9 80.9 0 0 0-8.3 18.2h34.2a49.7 49.7 0 0 1 43.6-25.6z`
+      path: `M1032.86,705.1H998.72a81.24,81.24,0,0,1,8.28-18.17V641.87h85.56v40.28a50,50,0,0,0-59.7,23Z`,
     },
     {
       id: 233,
@@ -579,7 +583,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1118.6 756.4a49.9 49.9 0 0 1-61.4 19.2l-11.7 11.7v17.6a81.6 81.6 0 0 0 59.1 1.1l10.3 40.6c37.2-11.1 78.6-29.1 78.6-29.1v-61.1z`
+      path: `M1193.5,756.44V817.5s-41.43,18-78.6,29.06L1104.6,806a81.68,81.68,0,0,1-59.08-1.13V787.26l11.66-11.63h0a50,50,0,0,0,61.42-19.19Z`,
     },
     {
       id: 234,
@@ -591,7 +595,7 @@ export default {
         'fissman',
         'fiszman',
         'fissmen',
-        'abccv\'y'
+        "abccv'y",
       ],
       description: `Посуда`,
       discount: new Set(),
@@ -599,7 +603,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1026.5 729.5a49 49 0 0 1 6.4-24.4h-34.2a81.9 81.9 0 0 0-3.7 24.4 79.8 79.8 0 0 0 5.2 28.6h16.1l12.8-12.7a49.1 49.1 0 0 1-2.6-15.9z`
+      path: `M1029.09,745.39v0l-12.76,12.68h-16.16a81.75,81.75,0,0,1-1.45-53h34.14a50,50,0,0,0-3.77,40.29Z`,
     },
     {
       id: 235,
@@ -611,7 +615,7 @@ export default {
         'игрушки',
         'ещн',
         'товары для детей',
-        'детские товары'
+        'детские товары',
       ],
       description: `Детские товары и игрушки`,
       discount: new Set(),
@@ -619,7 +623,7 @@ export default {
       audience: new Set([audienceFilter[`Товары для детей`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1682.9 817.3h68v-66.2h-68v66.2z`
+      path: `M1682.89,751.14h68V817.3l-68,0Z`,
     },
     {
       id: 236,
@@ -631,7 +635,7 @@ export default {
         'vjhj;rj',
         'vjhjprj',
         'мороженное',
-        'мороженое '
+        'мороженое ',
       ],
       description: `Morojko`,
       discount: new Set(),
@@ -639,7 +643,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1140.4 641.9h-20v-26h20z`
+      path: `M1140.41,641.87h-20v-26h20Z`,
     },
     {
       id: 237,
@@ -652,18 +656,18 @@ export default {
         'обби',
         'щиш',
         'obi',
-        'товары для дома'
+        'товары для дома',
       ],
       description: `Строительный гипермаркет`,
       discount: new Set(),
       category: new Set([
         categoryFilter[`Гипермаркеты`],
-        categoryFilter[`Товары для дома`]
+        categoryFilter[`Товары для дома`],
       ]),
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1 1v591h510v61h94v22h120v-22h94v-61h212V1H1z`
+      path: `M1031,1V592H819v61H725v22H605V653H511V592H1V1Z`,
     },
     {
       id: 238,
@@ -676,7 +680,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1031 548h90v44h-90z`
+      path: `M1031,548h90v44h-90Z`,
     },
     {
       id: 239,
@@ -689,18 +693,18 @@ export default {
         'товары для рукоделия',
         'товары для дома',
         'творчество',
-        'товары для творчества'
+        'товары для творчества',
       ],
       description: `Хобби-гипермаркет`,
       discount: new Set(),
       category: new Set([
         categoryFilter[`Гипермаркеты`],
-        categoryFilter[`Товары для дома`]
+        categoryFilter[`Товары для дома`],
       ]),
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1031 284h90v264h-90z`
+      path: `M1031,284h90V548h-90Z`,
     },
     {
       id: 240,
@@ -712,7 +716,7 @@ export default {
         'детская одежда',
         'одежда для детей',
         'детские товары',
-        'детская обувь'
+        'детская обувь',
       ],
       description: `Товары для детей`,
       discount: new Set(),
@@ -720,7 +724,7 @@ export default {
       audience: new Set([audienceFilter[`Товары для детей`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1031 1v283h90v-23h141V1h-231z`
+      path: `M1262,1V261H1121v23h-90V1Z`,
     },
     {
       id: 241,
@@ -739,18 +743,18 @@ export default {
         'электроника',
         'телевизор',
         'смартфон',
-        'vdbltj'
+        'vdbltj',
       ],
       description: `Магазин бытовой техники и электроники`,
       discount: new Set(),
       category: new Set([
         categoryFilter[`Товары для дома`],
-        categoryFilter[`Бытовая техника и электроника`]
+        categoryFilter[`Бытовая техника и электроника`],
       ]),
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1262 1v328h130v-18h174V1h-304z`
+      path: `M1566,1V311H1392v18H1262V1Z`,
     },
     {
       id: 242,
@@ -763,10 +767,10 @@ export default {
       audience: new Set(),
       link: {
         text: `1 действующая акция`,
-        url: `https://trc-aeropark.ru/furniture-shops/dmi-dyatkovo`
+        url: `https://trc-aeropark.ru/furniture-shops/dmi-dyatkovo`,
       },
       button: { text: ``, action: `` },
-      path: `M1328 329h64v132h-64z`
+      path: `M1392,329V461h-64V329Z`,
     },
     {
       id: 243,
@@ -777,12 +781,12 @@ export default {
       discount: new Set(),
       category: new Set([
         categoryFilter['Мебель'],
-        categoryFilter['Товары для дома']
+        categoryFilter['Товары для дома'],
       ]),
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1262 329h66v132h-66z`
+      path: `M1328,329V461h-66V329Z`,
     },
     {
       id: 244,
@@ -793,12 +797,12 @@ export default {
       discount: new Set(),
       category: new Set([
         categoryFilter['Мебель'],
-        categoryFilter['Товары для дома']
+        categoryFilter['Товары для дома'],
       ]),
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1507.5 311h58.5v150h-58.5z`
+      path: `M1507.5,311H1566V461h-58.5Z`,
     },
     {
       id: 245,
@@ -809,12 +813,12 @@ export default {
       discount: new Set(),
       category: new Set([
         categoryFilter['Мебель'],
-        categoryFilter['Товары для дома']
+        categoryFilter['Товары для дома'],
       ]),
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1392 311v150h57.5V311H1392z`
+      path: `M1449.5,311V461H1392V311Z`,
     },
     {
       id: 246,
@@ -825,12 +829,12 @@ export default {
       discount: new Set(),
       category: new Set([
         categoryFilter[`Мебель`],
-        categoryFilter[`Товары для дома`]
+        categoryFilter[`Товары для дома`],
       ]),
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1449.5 311h58v150h-58z`
+      path: `M1507.5,311V461h-58V311Z`,
     },
     {
       id: 247,
@@ -843,7 +847,7 @@ export default {
         'одежда для детей',
         'детская одежда',
         'школьная форма',
-        'игрушки'
+        'игрушки',
       ],
       description: `Детская одежда`,
       discount: new Set(),
@@ -851,7 +855,7 @@ export default {
       audience: new Set([audienceFilter[`Товары для детей`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2422 410h-72.5v51h46.5v-.5.5l26-33.3V410z`
+      path: `M2422,427.7,2396,461v0h-46.5V410H2422Z`,
     },
     {
       id: 248,
@@ -866,18 +870,18 @@ export default {
         'кожаные куртки',
         'юбки',
         'женская одежда',
-        'мужская одежда'
+        'мужская одежда',
       ],
       description: `Женская и мужская одежда, джинсы`,
       discount: new Set(),
       category: new Set([categoryFilter[`Одежда`]]),
       audience: new Set([
         audienceFilter[`Мужская одежда`],
-        audienceFilter[`Женская одежда`]
+        audienceFilter[`Женская одежда`],
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1932 461h50l18.2-51H1932v51z`
+      path: `M1932,410h68.23L1982,461h-50Z`,
     },
     {
       id: 249,
@@ -888,18 +892,18 @@ export default {
         'бытовая техника и электроника',
         'техно',
         'техника',
-        'телевизоры'
+        'телевизоры',
       ],
       description: `Бытовая техника и электроника`,
       discount: new Set(),
       category: new Set([
         categoryFilter[`Бытовая техника и электроника`],
-        categoryFilter[`Гипермаркеты`]
+        categoryFilter[`Гипермаркеты`],
       ]),
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1566 196v217h101v48h132V196h-233z`
+      path: `M1799,196V461H1667V413H1566V196Z`,
     },
     {
       id: 250,
@@ -912,7 +916,7 @@ export default {
         'перегородки',
         'кухни',
         'шкафы',
-        'мебель'
+        'мебель',
       ],
       description: `Центр интерьерных решений`,
       discount: new Set(),
@@ -920,7 +924,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1605 413h62v48h-62z`
+      path: `M1667,413v48h-62V413Z`,
     },
     {
       id: 251,
@@ -931,7 +935,7 @@ export default {
         'линия',
         'двери',
         'входные двери',
-        'белорусские двери'
+        'белорусские двери',
       ],
       description: `Входные двери`,
       discount: new Set(),
@@ -939,7 +943,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1566 413h39v48h-39z`
+      path: `M1605,413v48h-39V413Z`,
     },
     {
       id: 252,
@@ -950,12 +954,12 @@ export default {
       discount: new Set(),
       category: new Set([
         categoryFilter[`Обувь`],
-        categoryFilter[`Аксессуары`]
+        categoryFilter[`Аксессуары`],
       ]),
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1900 351V196h-101v265h101V351z`
+      path: `M1900,410v51H1799V196h101V410Z`,
     },
     {
       id: 253,
@@ -968,7 +972,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2422 410V196h-522v155h148v59h96.7l-.2-.5.2.5H2422z`
+      path: `M2349.5,410H2144.71l-.21-.5.21.5H2048V351H1900V196h522V410Z`,
     },
     {
       id: 254,
@@ -981,7 +985,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1900 351v59h148v-59h-148z`
+      path: `M2048,351v59H1900V351Z`,
     },
     {
       id: 255,
@@ -995,18 +999,18 @@ export default {
         'лн код',
         'эл эн',
         'код',
-        'code'
+        'code',
       ],
       description: `Дизайнерская одежда и аксессуары`,
       discount: new Set(),
       category: new Set([
         categoryFilter[`Одежда`],
-        categoryFilter[`Аксессуары`]
+        categoryFilter[`Аксессуары`],
       ]),
       audience: new Set([audienceFilter[`Женская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1900 410h32v51h-32z`
+      path: `M1932,410v51h-32V410Z`,
     },
     {
       id: 256,
@@ -1021,7 +1025,7 @@ export default {
         'трансформеры',
         'коляски',
         'кроватки',
-        'подгузники'
+        'подгузники',
       ],
       description: `Товары для детей`,
       discount: new Set(),
@@ -1029,7 +1033,7 @@ export default {
       audience: new Set([audienceFilter[`Товары для детей`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2422 196v231.7l-26 33.3v77h167v-61h36V196h-177z`
+      path: `M2599,196V477h-36v61H2396V461l26-33.3V196Z`,
     },
     {
       id: 257,
@@ -1042,19 +1046,19 @@ export default {
         'видеоигры',
         'консоли',
         'игровые',
-        'роботы'
+        'роботы',
       ],
       description: `Видеоигры, консоли, аксессуары к ним`,
       discount: new Set(),
       category: new Set([
         categoryFilter[`Аксессуары`],
         categoryFilter[`Подарки и сувениры`],
-        categoryFilter[`Бытовая техника и электроника`]
+        categoryFilter[`Бытовая техника и электроника`],
       ]),
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2318.5 410h31v51h-31z`
+      path: `M2349.5,410v51h-31V410Z`,
     },
     {
       id: 258,
@@ -1065,7 +1069,7 @@ export default {
         'баттон блу',
         'детская одежда',
         'одежда для детей',
-        'одежда для ребенка'
+        'одежда для ребенка',
       ],
       description: `Детская одежда`,
       discount: new Set(),
@@ -1073,7 +1077,7 @@ export default {
       audience: new Set([audienceFilter[`Товары для детей`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2198 410h47v51h-47z`
+      path: `M2245,410v51h-47V410Z`,
     },
     {
       id: 259,
@@ -1084,12 +1088,12 @@ export default {
       category: new Set([
         categoryFilter[`Детские товары`],
         categoryFilter[`Одежда`],
-        categoryFilter[`Обувь`]
+        categoryFilter[`Обувь`],
       ]),
       audience: new Set([audienceFilter[`Товары для детей`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2166 410h-21.3l21.3 51h32v-51h-32z`
+      path: `M2198,410v51h-32l-21.29-51H2198Z`,
     },
     {
       id: 260,
@@ -1102,7 +1106,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2245 410h45v51h-45z`
+      path: `M2245,410h45v51h-45Z`,
     },
     {
       id: 261,
@@ -1115,7 +1119,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2096 669v5l50 29v-34h-50z`
+      path: `M2146,669v34l-50-29v-5Z`,
     },
     {
       id: 262,
@@ -1128,7 +1132,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2122 541.9a75.9 75.9 0 0 1-26 13.9V573h26z`
+      path: `M2122,573h-26V555.75a75.77,75.77,0,0,0,26-13.84Z`,
     },
     {
       id: 263,
@@ -1143,7 +1147,7 @@ export default {
         'шампуни',
         'помада',
         'парфюм',
-        'духи'
+        'духи',
       ],
       description: `Корейская косметика`,
       discount: new Set(),
@@ -1151,7 +1155,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2122 541.9V573h24v-46.5h-9.7a72.1 72.1 0 0 1-14.3 15.4z`
+      path: `M2136.3,526.5h9.7V573h-24V541.91A76.11,76.11,0,0,0,2136.3,526.5Z`,
     },
     {
       id: 264,
@@ -1164,7 +1168,7 @@ export default {
       audience: new Set([audienceFilter[`Товары дял детей`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2198 507h51v66h-51z`
+      path: `M2198,573V507h51v66Z`,
     },
     {
       id: 265,
@@ -1182,18 +1186,18 @@ export default {
         'ботинки',
         'сапоги',
         'кошельки',
-        'стельки'
+        'стельки',
       ],
       description: `Практичная недорогая обувь`,
       discount: new Set(),
       category: new Set([
         categoryFilter[`Обувь`],
-        categoryFilter[`Аксессуары`]
+        categoryFilter[`Аксессуары`],
       ]),
       audience: new Set([audienceFilter[`Товары для детей`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2198 507h-51.9v196h52V507z`
+      path: `M2198,573V703h-52V507.32c0-.1.07-.21.11-.32H2198Z`,
     },
     {
       id: 266,
@@ -1205,11 +1209,11 @@ export default {
       category: new Set([categoryFilter[`Спортивные товары`]]),
       audience: new Set([
         audienceFilter[`Мужская одежда`],
-        audienceFilter[`Женская одежда`]
+        audienceFilter[`Женская одежда`],
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2249 573h-51v130h72v-65h78v-65h-99z`
+      path: `M2299,573h49v65h-78v65h-72V573h101Z`,
     },
     {
       id: 267,
@@ -1221,7 +1225,7 @@ export default {
         'стиль',
         'детская дизайнерская одежда',
         'stil',
-        'няшки'
+        'няшки',
       ],
       description: `Детская одежда`,
       discount: new Set(),
@@ -1229,7 +1233,7 @@ export default {
       audience: new Set([audienceFilter[`Товары для детей`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2299 507h49v66h-49z`
+      path: `M2348,507v66h-49V507Z`,
     },
     {
       id: 268,
@@ -1241,12 +1245,12 @@ export default {
       category: new Set([
         categoryFilter[`Детские товары`],
         categoryFilter[`Одежда`],
-        categoryFilter[`Обувь`]
+        categoryFilter[`Обувь`],
       ]),
       audience: new Set([audienceFilter[`Товары для детей`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2249 507h50v66h-50z`
+      path: `M2249,573V507h50v66Z`,
     },
     {
       id: 269,
@@ -1259,7 +1263,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2270 670.5h78V638h-78v32.5z`
+      path: `M2270,638h78v32.5h-78Z`,
     },
     {
       id: 270,
@@ -1273,18 +1277,18 @@ export default {
         'курасава',
         'nfrtib',
         'такеши',
-        'такеши куросава'
+        'такеши куросава',
       ],
       description: `Женская и мужская одежда`,
       discount: new Set(),
       category: new Set([categoryFilter[`Одежда`]]),
       audience: new Set([
         audienceFilter[`Мужская одежда`],
-        audienceFilter[`Женская одежда`]
+        audienceFilter[`Женская одежда`],
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2270 670.5h30.5V703H2270z`
+      path: `M2300.5,670.5V703H2270V670.5Z`,
     },
     {
       id: 271,
@@ -1297,7 +1301,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2300.5 670.5h47.5V703h-47.5z`
+      path: `M2300.5,670.5H2348V703h-47.5Z`,
     },
     {
       id: 272,
@@ -1310,18 +1314,18 @@ export default {
         'сумки',
         'чемоданы',
         'аксессуары',
-        'кожгалантерея'
+        'кожгалантерея',
       ],
       description: `Портфели, сумки, чемоданы`,
       discount: new Set(),
       category: new Set([
         categoryFilter[`Аксессуары`],
-        categoryFilter[`Кожгалантерея`]
+        categoryFilter[`Кожгалантерея`],
       ]),
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2146 573h-50v64.5h50V573z`
+      path: `M2146,637.5h-50V573h50Z`,
     },
     {
       id: 273,
@@ -1334,7 +1338,7 @@ export default {
       audience: new Set([audienceFilter[`Женская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2096 637.5h50V669h-50z`
+      path: `M2146,669h-50V637.5h50Z`,
     },
     {
       id: 274,
@@ -1346,7 +1350,7 @@ export default {
         'leprekon',
         'настольные игры',
         'игры',
-        'ktghtrjy'
+        'ktghtrjy',
       ],
       description: `Настольные игры`,
       discount: new Set(),
@@ -1354,7 +1358,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2000 703l50.2-27.9V669H2000v34z`
+      path: `M2000,669h50.22v6.09L2000,703Z`,
     },
     {
       id: 275,
@@ -1369,18 +1373,18 @@ export default {
         'брюки',
         'блузы',
         'молодежная одежда',
-        'аксессуары'
+        'аксессуары',
       ],
       description: `Женская, молодежная одежда и аксессуары`,
       discount: new Set(),
       category: new Set([
         categoryFilter[`Одежда`],
-        categoryFilter[`Аксессуары`]
+        categoryFilter[`Аксессуары`],
       ]),
       audience: new Set([audienceFilter[`Женская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2024.2 573v-32.6a71.7 71.7 0 0 1-10-10.6H2000V573z`
+      path: `M2000,573V529.83h14.17a76.41,76.41,0,0,0,10,10.55V573Z`,
     },
     {
       id: 276,
@@ -1394,7 +1398,7 @@ export default {
         'lonsdale',
         'gifted',
         'sigma',
-        'affex'
+        'affex',
       ],
       description: ``,
       discount: new Set(),
@@ -1402,7 +1406,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2000 637.5h50.2V669H2000z`
+      path: `M2000,637.5h50.22V669H2000Z`,
     },
     {
       id: 277,
@@ -1413,12 +1417,12 @@ export default {
       discount: new Set(),
       category: new Set([
         categoryFilter[`Подарки и сувениры`],
-        categoryFilter[`Товары для дома`]
+        categoryFilter[`Товары для дома`],
       ]),
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2000 604.5h50.2v33H2000z`
+      path: `M2000,604.5h50.22v33H2000Z`,
     },
     {
       id: 278,
@@ -1434,7 +1438,7 @@ export default {
         'помада',
         'парфюм',
         'духи',
-        'саем'
+        'саем',
       ],
       description: `Корейская косметика`,
       discount: new Set(),
@@ -1442,7 +1446,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2024.2 573h26v-17.8a76.1 76.1 0 0 1-26-14.8z`
+      path: `M2024.2,540.38a75.63,75.63,0,0,0,26,14.8V573h-26Z`,
     },
     {
       id: 279,
@@ -1453,12 +1457,12 @@ export default {
       discount: new Set(),
       category: new Set([
         categoryFilter[`Подарки и сувениры`],
-        categoryFilter[`Товары для дома`]
+        categoryFilter[`Товары для дома`],
       ]),
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2000 573v31.5h50.2V573H2000z`
+      path: `M2024.2,573h26v31.5H2000V573Z`,
     },
     {
       id: 280,
@@ -1471,7 +1475,7 @@ export default {
         'одежда для мам',
         'одежда для беременных',
         'для кормящих мам',
-        'аксессуары для беременных'
+        'аксессуары для беременных',
       ],
       description: `Одежда для будущих мам`,
       discount: new Set(),
@@ -1479,7 +1483,7 @@ export default {
       audience: new Set([audienceFilter[`Женская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1799 506h50.1v67H1799z`
+      path: `M1849.13,573H1799V506h50.13Z`,
     },
     {
       id: 281,
@@ -1500,21 +1504,21 @@ export default {
         'головные уборы',
         'сумки',
         'женская одежда',
-        'мужская одежда'
+        'мужская одежда',
       ],
       description: `Женская и мужская одежда, джинсы`,
       discount: new Set(),
       category: new Set([
         categoryFilter[`Одежда`],
-        categoryFilter[`Аксессуары`]
+        categoryFilter[`Аксессуары`],
       ]),
       audience: new Set([
         audienceFilter[`Мужская одежда`],
-        audienceFilter[`Женская одежда`]
+        audienceFilter[`Женская одежда`],
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1849.1 587.9h50.4V506h-50.4v81.9z`
+      path: `M1849.13,573V506h50.37v81.94h-50.37Z`,
     },
     {
       id: 282,
@@ -1527,7 +1531,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1899.5 506h51.2v81.94h-51.2z`
+      path: `M1899.5,587.94V506h51.18v81.94Z`,
     },
     {
       id: 283,
@@ -1545,7 +1549,7 @@ export default {
         'брюки',
         'сорочки',
         'рубашки',
-        'пиджаки'
+        'пиджаки',
       ],
       description: `Мужская деловая одежда`,
       discount: new Set(),
@@ -1553,7 +1557,7 @@ export default {
       audience: new Set([audienceFilter[`Мужская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1849.1 670.3V573H1799v97.3h50.1z`
+      path: `M1824.49,670.29H1799V573h50.13v97.29Z`,
     },
     {
       id: 284,
@@ -1564,7 +1568,7 @@ export default {
         'горецкая',
         'алёна',
         'fktyf ujhtncrfz',
-        'ujhtwrfz'
+        'ujhtwrfz',
       ],
       description: `Стильная женская одежда`,
       discount: new Set(),
@@ -1572,7 +1576,7 @@ export default {
       audience: new Set([audienceFilter[`Женская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1799 670.3h25.5v32.71H1799z`
+      path: `M1824.49,670.29V703H1799V670.29Z`,
     },
     {
       id: 285,
@@ -1585,7 +1589,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2000 669v-64.5h-49.3v-16.6h-51.2V703h66.5v-34h34z`
+      path: `M1966,669v34h-66.5V587.94h51.18V604.5H2000V669Z`,
     },
     {
       id: 286,
@@ -1596,15 +1600,15 @@ export default {
       discount: new Set(),
       category: new Set([
         categoryFilter[`Одежда`],
-        categoryFilter[`Детские товары`]
+        categoryFilter[`Детские товары`],
       ]),
       audience: new Set([
         audienceFilter[`Мужская одежда`],
-        audienceFilter[`Женская одежда`]
+        audienceFilter[`Женская одежда`],
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1849.1 587.9V703h50.4V587.9h-50.4z`
+      path: `M1899.5,587.94V703h-50.37V587.94Z`,
     },
     {
       id: 287,
@@ -1614,7 +1618,7 @@ export default {
         'роскошь с пеленок',
         'одежда для новорожденных',
         'детская одежда',
-        'конверты на выписку'
+        'конверты на выписку',
       ],
       description: `Товары для детей`,
       discount: new Set(),
@@ -1622,7 +1626,7 @@ export default {
       audience: new Set([audienceFilter[`Товары для детей`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1824.5 670.3h24.6v32.71h-24.6z`
+      path: `M1849.13,670.29V703h-24.64V670.29Z`,
     },
     {
       id: 288,
@@ -1635,7 +1639,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1966 669h34v34h-34z`
+      path: `M2000,669v34h-34V669Z`,
     },
     {
       id: 289,
@@ -1647,11 +1651,11 @@ export default {
       category: new Set([categoryFilter[`Одежда`]]),
       audience: new Set([
         audienceFilter[`Мужская одежда`],
-        audienceFilter[`Женская одежда`]
+        audienceFilter[`Женская одежда`],
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1950.7 604.5h49.3V506h-49.3v98.5z`
+      path: `M1950.68,587.94V506H2000v98.5h-49.32Z`,
     },
     {
       id: 290,
@@ -1662,51 +1666,13 @@ export default {
       discount: new Set(),
       category: new Set([
         categoryFilter[`Мебель`],
-        categoryFilter[`Товары для дома`]
+        categoryFilter[`Товары для дома`],
       ]),
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1264 506v79h89v-79h-89z`
+      path: `M1353,506v79h-89V506Z`,
     },
-    // {
-    //   id: 291,
-    //   title: `Респект мягкая мебель`,
-    //   logoSrc: ``,
-    //   synonyms: [],
-    //   description: ``,
-    //   discount: new Set(),
-    //   category: new Set([
-    //     categoryFilter[`Сотовая связь`],
-    //     categoryFilter[`Бытовая техника и электроника`]
-    //   ]),
-    //   audience: new Set([
-    //     audienceFilter[`Мужская одежда`],
-    //     audienceFilter[`Женская одежда`]
-    //   ]),
-    //   link: {text: ``, url: ``},
-    //   button: {text: ``, action: ``},
-    //   path: `M1300 624.6l53 29.7v-44.4h-53v14.7z`
-    // },
-    // {
-    //   id: 292,
-    //   title: `Респект мягкая мебель-2`,
-    //   logoSrc: ``,
-    //   synonyms: [],
-    //   description: ``,
-    //   discount: new Set(),
-    //   category: new Set([
-    //     categoryFilter[`Сотовая связь`],
-    //     categoryFilter[`Бытовая техника и электроника`]
-    //   ]),
-    //   audience: new Set([
-    //     audienceFilter[`Мужская одежда`],
-    //     audienceFilter[`Женская одежда`]
-    //   ]),
-    //   link: {text: ``, url: ``},
-    //   button: {text: ``, action: ``},
-    //   path: `M1377 609.9v57.9l54 30.3v-88.2h-54z`
-    // },
     {
       id: 293,
       title: `Лидер`,
@@ -1716,12 +1682,12 @@ export default {
       discount: new Set(),
       category: new Set([
         categoryFilter[`Мебель`],
-        categoryFilter[`Товары для дома`]
+        categoryFilter[`Товары для дома`],
       ]),
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1431 609.9h54v33.08h-54z`
+      path: `M1485,609.92V643h-54V609.92Z`,
     },
     {
       id: 294,
@@ -1732,12 +1698,12 @@ export default {
       discount: new Set(),
       category: new Set([
         categoryFilter[`Мебель`],
-        categoryFilter[`Товары для дома`]
+        categoryFilter[`Товары для дома`],
       ]),
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1431 698.1l12.3 6.9h41.7v-62h-54v55.1z`
+      path: `M1431,643h54v62h-41.72L1431,698.11Z`,
     },
     {
       id: 295,
@@ -1748,12 +1714,12 @@ export default {
       discount: new Set(),
       category: new Set([
         categoryFilter[`Мебель`],
-        categoryFilter[`Товары для дома`]
+        categoryFilter[`Товары для дома`],
       ]),
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1507.5 589.2h57.2v57.85h-57.2z`
+      path: `M1564.66,647.05H1507.5V589.2h57.16Z`,
     },
     {
       id: 296,
@@ -1766,7 +1732,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1564.7 559.9V544h-57.2v45.2h57.2v-29.3z`
+      path: `M1564.66,589.2H1507.5V544h57.16V589.2Z`,
     },
     {
       id: 297,
@@ -1779,18 +1745,18 @@ export default {
         'свет',
         'лампы',
         'светодиодные',
-        'энергосберегающие'
+        'энергосберегающие',
       ],
       description: `Энергосберегающие и светодиодные лампы и светильники`,
       discount: new Set(),
       category: new Set([
         categoryFilter[`Товары для дома`],
-        categoryFilter[`Бытовая техника и электроника`]
+        categoryFilter[`Бытовая техника и электроника`],
       ]),
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1564.7 559.9h39.6V506h-39.6v53.9z`
+      path: `M1564.66,544V506h39.67v53.89h-39.67Z`,
     },
     {
       id: 298,
@@ -1801,12 +1767,12 @@ export default {
       discount: new Set(),
       category: new Set([
         categoryFilter[`Мебель`],
-        categoryFilter[`Товары для дома`]
+        categoryFilter[`Товары для дома`],
       ]),
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1507.5 506h57.2v37.98h-57.2z`
+      path: `M1564.66,544H1507.5V506h57.16Z`,
     },
     {
       id: 299,
@@ -1819,7 +1785,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1507.5 647.1h57.2v57.95h-57.2z`
+      path: `M1564.66,647.05v58H1507.5v-58Z`,
     },
     {
       id: 2100,
@@ -1830,15 +1796,15 @@ export default {
       discount: new Set(),
       category: new Set([
         categoryFilter[`Одежда`],
-        categoryFilter[`Аксессуары`]
+        categoryFilter[`Аксессуары`],
       ]),
       audience: new Set([
         audienceFilter[`Мужская одежда`],
-        audienceFilter[`Женская одежда`]
+        audienceFilter[`Женская одежда`],
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1701.6 559.9h-136.9V705h136.9v-34.7h48.9v-66.4h-48.9v-44z`
+      path: `M1701.59,603.85h48.91v66.44h-48.91V705H1564.66V559.89h136.93Z`,
     },
     {
       id: 2101,
@@ -1851,7 +1817,7 @@ export default {
         'мягкая мебель',
         'корпусная',
         'лазур',
-        'kfpehbn'
+        'kfpehbn',
       ],
       description: `Мягкая и корпусная мебель`,
       discount: new Set(),
@@ -1859,7 +1825,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1655.1 506v53.9h62.4v-20h33V506h-95.4z`
+      path: `M1750.5,506v33.89h-33v20h-62.4V506Z`,
     },
     {
       id: 2102,
@@ -1872,7 +1838,7 @@ export default {
       audience: new Set([audienceFilter[`Мужская одежда`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1701.6 670.3h48.9v34.71h-48.9z`
+      path: `M1701.59,670.29h48.91V705h-48.91Z`,
     },
     {
       id: 2103,
@@ -1884,7 +1850,7 @@ export default {
         'домашний текстиль',
         'одеяла',
         'подушки',
-        'пух'
+        'пух',
       ],
       description: `Домашний текстиль`,
       discount: new Set(),
@@ -1892,7 +1858,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1604.3 506h50.8v53.89h-50.8z`
+      path: `M1604.33,559.89V506h50.78v53.89Z`,
     },
     {
       id: 2104,
@@ -1903,7 +1869,7 @@ export default {
         'nail',
         'найл',
         'все для ногтей',
-        'материалы и инструменты для ногтей'
+        'материалы и инструменты для ногтей',
       ],
       description: `Материалы и инструменты для профессионалов`,
       discount: new Set(),
@@ -1911,7 +1877,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1717.5 539.9h33v20h-33z`
+      path: `M1717.51,539.89h33v20h-33Z`,
     },
     {
       id: 2105,
@@ -1922,12 +1888,12 @@ export default {
       discount: new Set(),
       category: new Set([
         categoryFilter[`Мебель`],
-        categoryFilter[`Товары для дома`]
+        categoryFilter[`Товары для дома`],
       ]),
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1431 531.9h54v53.05h-54z`
+      path: `M1431,532h54v53h-54Z`,
     },
     {
       id: 2106,
@@ -1938,20 +1904,20 @@ export default {
         'столбери',
         'столы и стулья',
         'cnjk ,thb',
-        'f\'hj',
+        "f'hj",
         'fehj',
-        'аеро'
+        'аеро',
       ],
       description: `Столы и стулья`,
       discount: new Set(),
       category: new Set([
         categoryFilter[`Мебель`],
-        categoryFilter[`Товары для дома`]
+        categoryFilter[`Товары для дома`],
       ]),
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1431 506h-54v79h54v-79z`
+      path: `M1431,532v53h-54V506h54Z`,
     },
     {
       id: 2107,
@@ -1962,12 +1928,12 @@ export default {
       discount: new Set(),
       category: new Set([
         categoryFilter[`Мебель`],
-        categoryFilter[`Товары для дома`]
+        categoryFilter[`Товары для дома`],
       ]),
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1431 506h54v25.95h-54z`
+      path: `M1485,506v26h-54V506Z`,
     },
     {
       id: 2108,
@@ -1978,7 +1944,7 @@ export default {
         'вкусная',
         'drecyfz gjvjom',
         'кондитерская помощь',
-        'кондитерская'
+        'кондитерская',
       ],
       description: `Кондитерские изделия`,
       discount: new Set(),
@@ -1986,7 +1952,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1677 743h-28v-16h28z`
+      path: `M1671,743h-16V727h16Z`,
     },
     {
       id: 2109,
@@ -1999,7 +1965,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1606 743h-28v-16h28z`
+      path: `M1600,743h-16V727h16Z`,
     },
     {
       id: 2110,
@@ -2012,7 +1978,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1242 587h-28v-16h28z`
+      path: `M1236,587h-16V571h16Z`,
     },
     {
       id: 2112,
@@ -2026,7 +1992,7 @@ export default {
         'генеральная уборка',
         'чистящие средства',
         'моющие средства',
-        'чистить'
+        'чистить',
       ],
       description: `Группа клининговых компаний`,
       discount: new Set(),
@@ -2034,7 +2000,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1664 491h-28v-16h28z`
+      path: `M1658,491h-16V475h16Z`,
     },
     {
       id: 2113,
@@ -2047,7 +2013,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1783 653v28h-16v-28z`
+      path: `M1783,659v16h-16V659Z`,
     },
     {
       id: 2114,
@@ -2058,12 +2024,12 @@ export default {
       discount: new Set(),
       category: new Set([
         categoryFilter[`Подарки и сувениры`],
-        categoryFilter[`Товары для дома`]
+        categoryFilter[`Товары для дома`],
       ]),
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2081 574.7v28h-16v-28z`
+      path: `M2081,580.75v16h-16v-16Z`,
     },
     {
       id: 2115,
@@ -2076,7 +2042,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2014 509.8v20h-14v-20z`
+      path: `M2014,515.83v14h-14v-14Z`,
     },
     {
       id: 2116,
@@ -2094,18 +2060,18 @@ export default {
         'vini',
         'сумки',
         'клатчи',
-        'портмоне'
+        'портмоне',
       ],
       description: `Кожгалантерея`,
       discount: new Set(),
       category: new Set([
         categoryFilter[`Аксессуары`],
-        categoryFilter[`Кожгалантерея`]
+        categoryFilter[`Кожгалантерея`],
       ]),
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1962 491h-28v-16h28z`
+      path: `M1956,491h-16V475h16Z`,
     },
     {
       id: 2117,
@@ -2118,7 +2084,7 @@ export default {
       audience: new Set([audienceFilter[`Товары для детей`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2212 491h-28v-16h28z`
+      path: `M2206,491h-16V475h16Z`,
     },
     {
       id: 2118,
@@ -2131,7 +2097,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2286 491h-28v-16h28z`
+      path: `M2280,491h-16V475h16Z`,
     },
     {
       id: 2119,
@@ -2147,7 +2113,7 @@ export default {
         'квадрокоптеры',
         'роботы',
         'трансформеры',
-        'игрушки на пульте управления'
+        'игрушки на пульте управления',
       ],
       description: `Товары для детей`,
       discount: new Set(),
@@ -2155,7 +2121,7 @@ export default {
       audience: new Set([audienceFilter[`Товары для детей`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2379.5 509v28h-16v-28z`
+      path: `M2379.5,515v16h-16V515Z`,
     },
     {
       id: 2120,
@@ -2168,7 +2134,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2379.5 606.5v28h-16v-28z`
+      path: `M2379.5,612.5v16h-16v-16Z`,
     },
     {
       id: 2121,
@@ -2181,7 +2147,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2393 675v28h-16v-28z`
+      path: `M2393,681v16h-16V681Z`,
     },
     {
       id: 2122,
@@ -2194,7 +2160,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2395 587v20h-12v-20z`
+      path: `M2395,589v16h-12V589Z`,
     },
     {
       id: 2123,
@@ -2218,7 +2184,7 @@ export default {
         'щенячий патруль',
         'миньоны',
         'робокоп',
-        'поли'
+        'поли',
       ],
       description: `Товары для детей`,
       discount: new Set(),
@@ -2226,20 +2192,21 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M2395 569v16h-12v-16z`
+      path: `M2395,569v16h-12V569Z`,
     },
     {
       id: 2124,
       title: `ArtHobby`,
       logoSrc: ``,
       synonyms: [
+        'ArtHobby',
         'артхобби',
         'ahn[j,,b',
         'арт-хобби',
         'артхоби',
         'картинки по номерам',
         'рисовать',
-        'картины'
+        'картины',
       ],
       description: `Картины по номерам`,
       discount: new Set(),
@@ -2247,7 +2214,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1599 721h-28v-16h28z`
+      path: `M1593,721h-16V705h16Z`,
     },
     {
       id: 2125,
@@ -2258,15 +2225,15 @@ export default {
       discount: new Set(),
       category: new Set([
         categoryFilter[`Сотовая связь`],
-        categoryFilter[`Бытовая техника и электроника`]
+        categoryFilter[`Бытовая техника и электроника`],
       ]),
       audience: new Set([
         audienceFilter[`Мужская одежда`],
-        audienceFilter[`Женская одежда`]
+        audienceFilter[`Женская одежда`],
       ]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1639 721h-28v-16h28z`
+      path: `M1633,721h-16V705h16Z`,
     },
     {
       id: 2126,
@@ -2278,7 +2245,7 @@ export default {
         'шары',
         'воздушные шары',
         'воздушные фигуры',
-        'фигура из шаров'
+        'фигура из шаров',
       ],
       description: `Украшение детских праздников`,
       discount: new Set(),
@@ -2286,7 +2253,7 @@ export default {
       audience: new Set([audienceFilter[`Товары для детей`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: ``
+      path: `M2081,645.25v16h-16v-16Z`,
     },
     {
       id: 2127,
@@ -2299,7 +2266,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: ``
+      path: ``,
     },
     {
       id: 2128,
@@ -2310,7 +2277,7 @@ export default {
         'bambi',
         'комбинезон',
         'детская одежда',
-        'бамбинезон'
+        'бамбинезон',
       ],
       description: `Развлекательный киоск`,
       discount: new Set(),
@@ -2318,7 +2285,7 @@ export default {
       audience: new Set([audienceFilter[`Товары для детей`]]),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: ``
+      path: `M1717,743h-16V727h16Z`,
     },
     {
       id: 2129,
@@ -2331,7 +2298,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: ``
+      path: `M1084,736h-16V720h16Z`,
     },
     {
       id: 2130,
@@ -2341,7 +2308,7 @@ export default {
         'Газированная вода',
         'вендинговый аппарат',
         'газированные напитки',
-        'газвода'
+        'газвода',
       ],
       description: `Автомат по продаже газированной воды и напитков`,
       discount: new Set(),
@@ -2349,7 +2316,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: ``
+      path: `M2146,512.5v14h-14v-14Z`,
     },
     {
       id: 2131,
@@ -2362,8 +2329,8 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M1849.13,784.82h-49.27V751.14h49.27Z`
-    }
+      path: `M1849.13,784.82h-49.27V751.14h49.27Z`,
+    },
   ],
   helpMarkers: [
     {
@@ -2371,22 +2338,117 @@ export default {
       points: [
         {
           title: `Лифт`,
-          position: [746.5, 75.5]
+          position: [1244, 413],
         },
         {
           title: `Лифт`,
-          position: [446.5, 75.5]
-        }
-      ]
+          position: [1710, 574],
+        },
+        {
+          title: `Лифт`,
+          position: [2296, 419],
+        },
+      ],
+    },
+    {
+      symbolId: `escalator`,
+      points: [
+        {
+          title: `Эскалатор`,
+          position: [1128, 495.33],
+        },
+        {
+          title: `Эскалатор`,
+          position: [1244, 320.11],
+        },
+        {
+          title: `Эскалатор`,
+          position: [1809, 719],
+        },
+        {
+          title: `Эскалатор`,
+          position: [2330, 719],
+        },
+        {
+          title: `Эскалатор`,
+          position: [2313, 476],
+        },
+        {
+          title: `Эскалатор`,
+          position: [2007, 453],
+        },
+      ],
+    },
+    {
+      symbolId: 'entrance-vertical',
+      points: [
+        {
+          title: 'Вход в OBI',
+          position: [657, 679],
+        },
+      ],
+    },
+    {
+      symbolId: 'entrance-diagonal',
+      points: [
+        {
+          title: 'Вход №7',
+          position: [1022, 763],
+        },
+      ],
+    },
+    {
+      symbolId: `wc`,
+      points: [
+        {
+          title: `Туалет`,
+          position: [2573, 487.51],
+        },
+        {
+          title: `Туалет`,
+          position: [1019.57, 608.94],
+        },
+      ],
+    },
+    {
+      symbolId: `disabled`,
+      points: [
+        {
+          title: `Туалет для ММГ`,
+          position: [1045.81, 608.94],
+        },
+        {
+          title: `Туалет для ММГ`,
+          position: [2573, 515],
+        },
+      ],
+    },
+    {
+      symbolId: `wardrobe`,
+      points: [
+        {
+          title: `Гардероб`,
+          position: [1098.28, 608.94],
+        },
+      ],
+    },
+    {
+      symbolId: `baby-care`,
+      points: [
+        {
+          title: `Комната матери и ребенка`,
+          position: [1072.04, 608.94],
+        },
+      ],
     },
     {
       symbolId: `foodcourt`,
       points: [
         {
           title: `Фудкорт`,
-          position: [2226, 633]
-        }
-      ]
-    }
-  ]
+          position: [2461, 711.02],
+        },
+      ],
+    },
+  ],
 };
