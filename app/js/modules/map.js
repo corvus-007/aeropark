@@ -1,8 +1,6 @@
 window.map = (function(window) {
   'use strict';
 
-  var dirname = '/';
-
   var mapElem = document.querySelector('#contact-map');
 
   if (!mapElem) {
@@ -26,7 +24,7 @@ window.map = (function(window) {
       },
       {
         iconLayout: 'default#image',
-        iconImageHref: dirname + 'images/icon-map-pin.svg',
+        iconImageHref: 'images/icon-map-pin.svg',
         iconImageSize: [54, 54],
         iconImageOffset: [-25, -54],
       }
