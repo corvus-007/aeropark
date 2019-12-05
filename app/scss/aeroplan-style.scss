@@ -7,6 +7,34 @@
 @import "aeroplan-blocks/plans-filter-form";
 @import "aeroplan-blocks/plans-search-form";
 
+.aero-plans__floor {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  background-color: $gray-234;
+  background-image: linear-gradient(to top right, $gray-234, $gray-228);
+  transition: 0.2s;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  pointer-events: none;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+}
+
 .plan-place {
   fill: #a3a3f5;
   stroke: #fff;
@@ -53,12 +81,6 @@
   }
 }
 
-.boundary-group-fill {
-  path {
-
-  }
-}
-
 .logos-group {
   pointer-events: none;
 }
@@ -92,6 +114,12 @@
   max-height: 600px;
 }
 
+.boundary-group-fill,
+.boundary-group-stroke,
+.inner-boundary-group {
+  pointer-events: none;
+}
+
 .plan-floor-boundary-fill {
   fill: #e4e4e4;
 }
@@ -101,35 +129,14 @@
   stroke-width: 4px;
   stroke: #0d47a1;
   stroke-linejoin: round;
-  pointer-events: none;
 }
 
-.aero-plans__floor {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  background-color: $gray-234;
-  background-image: linear-gradient(to top right, $gray-234, $gray-228);
-  transition: 0.2s;
-  opacity: 0;
-  visibility: hidden;
-  overflow: hidden;
-  pointer-events: none;
-
-  svg {
-    width: 100%;
-    height: 100%;
-  }
-
-  &--active {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: all;
-  }
+.plan-floor-inner-boundary {
+  fill: darken(#e4e4e4, 4%);
+  stroke: darken(#e4e4e4, 8%);
+  stroke-width: 0.5;
+  stroke-linejoin: round;
+  stroke-linecap: round;
 }
 
 .aero-plan-popper {
