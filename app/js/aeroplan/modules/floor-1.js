@@ -2353,7 +2353,7 @@ export default {
       title: `ECCO`,
       logoSrc: `ecco.svg`,
       synonyms: [
-        "'rrj",
+        '\'rrj',
         'экко',
         'екко',
         'эко',
@@ -3017,7 +3017,7 @@ export default {
       logoSrc: `colins.svg`,
       synonyms: [
         'колинз',
-        "colin's",
+        'colin\'s',
         'colins',
         'джинсы',
         'женская одежда',
@@ -3474,8 +3474,8 @@ export default {
         'мороженое',
         'морожко',
         'эскимо',
-        "о'эскимо",
-        "'crbvj ",
+        'о\'эскимо',
+        '\'crbvj ',
       ],
       description: `Мороженое`,
       discount: new Set(),
