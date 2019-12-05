@@ -2,6 +2,24 @@
 
 document.addEventListener('DOMContentLoaded', function () {
   svg4everybody();
+  $.fancybox.defaults.animationEffect = 'zoom-in-out';
+  $.fancybox.defaults.touch = false;
+  $.fancybox.defaults.lang = 'ru';
+  $.fancybox.defaults.i18n = {
+    ru: {
+      CLOSE: 'Закрыть',
+      NEXT: 'Следующий',
+      PREV: 'Предыдущий',
+      ERROR: 'Cодержимое не смогло загрузиться. <br> Пожалуйста, повторите попытку позже',
+      PLAY_START: 'Начать слайдшоу',
+      PLAY_STOP: 'Остановить слайдшоу',
+      FULL_SCREEN: 'На весь экран',
+      THUMBS: 'Миниатрюры',
+      DOWNLOAD: 'Скачать',
+      SHARE: 'Поделиться',
+      ZOOM: 'Увеличить'
+    }
+  };
   $('input[type="tel"]').inputmask({
     mask: '+7 (999) 999-99-99'
   });
@@ -17,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
     slidesPerView: 'auto',
     loop: true,
     effect: 'coverflow',
+    loopedSlides: 2,
     coverflowEffect: {
       rotate: 0,
       stretch: -50,

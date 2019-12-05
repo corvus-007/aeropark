@@ -122,6 +122,11 @@ window.headerSearch = function () {
   'use strict';
 
   var headerSearch = document.querySelector('[data-header-search]');
+
+  if (!headerSearch) {
+    return;
+  }
+
   var toggleBtn = document.querySelector('[data-toggle-search]');
   var input = document.querySelector('[data-header-search-input]');
   var scrollWidth = window.util.getScrollbarWidth();
@@ -428,7 +433,7 @@ window.commonPageFilter = function () {
   }
 }();
 
-window.showPopup = function () {
+window.showPopup = function ($) {
   'use strict';
 
   var DATA_ATTR_MATH = 'data-show-popup';
@@ -447,9 +452,9 @@ window.showPopup = function () {
       }]);
     }
   });
-}();
+}(window.jQuery);
 
-window.rentStore = function (window, $) {
+window.rentStore = function ($) {
   'use strict';
 
   var form = document.querySelector('#form-rent-store');
@@ -496,9 +501,9 @@ window.rentStore = function (window, $) {
       }
     }
   });
-}(window, jQuery);
+}(window.jQuery);
 
-window.rentIsland = function (window, $) {
+window.rentIsland = function ($) {
   'use strict';
 
   var form = document.querySelector('#form-rent-island');
@@ -548,4 +553,134 @@ window.rentIsland = function (window, $) {
       }
     }
   });
-}(window, jQuery);
+}(window.jQuery);
+
+window.applicationAd = function ($) {
+  'use strict';
+
+  var form = document.querySelector('#form-application-ad');
+
+  if (!form) {
+    return;
+  }
+
+  $(form).validate({
+    ignore: '.ignore-validate',
+    errorPlacement: function errorPlacement(error, element) {
+      error.appendTo(element.closest('.field__control'));
+    },
+    submitHandler: function submitHandler(form, event) {
+      event.preventDefault();
+      var action = form.action;
+      var formData = new FormData(form);
+
+      function getActiveNameOfAd() {
+        var activePanelEl = document.querySelector('[data-aria-accordion-panel][aria-hidden="false"]');
+        var text = null;
+
+        if (activePanelEl) {
+          var headingEl = activePanelEl.previousElementSibling;
+          text = headingEl.textContent;
+        }
+
+        return text;
+      }
+
+      formData.append('dateSendForm', new Date());
+      formData.append('currentTypeAd', getActiveNameOfAd());
+      $.ajax({
+        url: action,
+        method: 'POST',
+        data: formData,
+        processData: false,
+        contentType: false,
+        dataType: 'json'
+      }).done(function (data) {
+        if (data.status === true) {
+          form.reset();
+          $.fancybox.close();
+          alert('Спасибо, ваша заявка отправлена ;-)');
+        } else {
+          alert('Произошла ошибка! Попробуйте снова!');
+        }
+      }).fail(function () {
+        alert('Произошла ошибка! Обновите страницу и попробуйте снова!');
+      });
+    },
+    rules: {
+      phone: {
+        checkPhoneMask: true
+      }
+    }
+  });
+}(window.jQuery);
+
+window.contactUs = function ($) {
+  'use strict';
+
+  var form = document.querySelector('#form-contact-us');
+
+  if (!form) {
+    return;
+  }
+
+  $(form).validate({
+    ignore: '.ignore-validate',
+    errorPlacement: function errorPlacement(error, element) {
+      error.appendTo(element.closest('.field__control'));
+    },
+    submitHandler: function submitHandler(form, event) {
+      event.preventDefault();
+      var action = form.action;
+      var formData = new FormData(form);
+      formData.append('dateSendForm', new Date());
+      $.ajax({
+        url: action,
+        method: 'POST',
+        data: formData,
+        processData: false,
+        contentType: false,
+        dataType: 'json'
+      }).done(function (data) {
+        if (data.status === true) {
+          form.reset();
+          $.fancybox.close();
+          alert('Спасибо, ваша заявка отправлена ;-)');
+        } else {
+          alert('Произошла ошибка! Попробуйте снова!');
+        }
+      }).fail(function () {
+        alert('Произошла ошибка! Обновите страницу и попробуйте снова!');
+      });
+    }
+  });
+}(window.jQuery);
+
+window.map = function (window) {
+  'use strict';
+
+  var mapElem = document.querySelector('#contact-map');
+
+  if (!mapElem) {
+    return;
+  }
+
+  mapElem.classList.remove('.contact__map--no-js');
+  window.ymaps.ready(function () {
+    var map = new window.ymaps.Map(mapElem, {
+      center: [53.274364, 34.316635],
+      zoom: 16,
+      controls: ['zoomControl']
+    });
+    map.behaviors.disable(['scrollZoom']);
+    var myPlacemark = new window.ymaps.Placemark([53.274364, 34.316635], {
+      hintContent: '241023, Россия, г. Брянск, ул. Объездная, д.30, 32'
+    }, {
+      iconLayout: 'default#image',
+      iconImageHref: 'images/icon-map-pin.svg',
+      iconImageSize: [54, 54],
+      iconImageOffset: [-25, -54]
+    });
+    map.geoObjects.add(myPlacemark);
+  });
+}(window);
