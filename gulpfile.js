@@ -25,19 +25,17 @@ const isDevBuild = process.env.NODE_ENV !== 'production';
 console.log(isDevBuild);
 const folder = {
   src: 'app',
-  build: 'build'
+  build: './public/build',
 };
 
 const isDevelopment =
   !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
 task('styles', () => {
-  return (
-    src(['app/scss/style.scss', 'app/scss/aeroplan-style.scss'])
-      .pipe(sass())
-      .pipe(postcss([autoprefixer()]))
-      .pipe(dest('build/'))
-      .pipe(browserSync.stream())
-  );
+  return src(['app/scss/style.scss', 'app/scss/aeroplan-style.scss'])
+    .pipe(sass())
+    .pipe(postcss([autoprefixer()]))
+    .pipe(dest(`${folder.build}/`))
+    .pipe(browserSync.stream());
 });
 
 function stylesProduction(cb) {
@@ -46,27 +44,27 @@ function stylesProduction(cb) {
       plumber({
         errorHandler: function(err) {
           console.log(err);
-        }
+        },
       })
     )
     .pipe(sass())
     .pipe(
       postcss([
         autoprefixer({
-          browsers: ['last 2 version']
+          browsers: ['last 2 version'],
         }),
-        cssnano
+        cssnano,
       ])
     )
     .pipe(dest(`${folder.build}/`))
     .pipe(
       rename({
-        suffix: '.min'
+        suffix: '.min',
       })
     )
     .pipe(
       dest(`${folder.build}/`, {
-        sourcemaps: '.'
+        sourcemaps: '.',
       })
     )
     .pipe(browserSync.stream());
@@ -91,78 +89,16 @@ function pluginsJSProduction() {
     .pipe(browserSync.stream());
 }
 
-// task('aeroplan-scripts', () => {
-//   return src('./app/js/aeroplan/aeroplan-app.js')
-//     .pipe(
-//       webpack({
-//         output: {
-//           filename: 'aeroplan-app.js'
-//         },
-//         module: {
-//           rules: [
-//             {
-//               test: /\.(js)$/,
-//               exclude: /(node_modules)/,
-//               loader: 'babel-loader',
-//               options: {
-//                 presets: ['@babel/env']
-//               }
-//             }
-//           ]
-//         },
-//         mode: isDevBuild ? 'development' : 'production',
-//         devtool: !isDevBuild ? 'inline-source-map' : false
-//       })
-//     )
-//     .pipe(dest('./build/js'));
-// });
-
 task('aeroplan-scripts', () => {
-return src('./app/js/aeroplan/aeroplan-app.js')
+  return src('./app/js/aeroplan/aeroplan-app.js')
     .pipe(
       babel({
-        presets: ['@babel/env']
+        presets: ['@babel/env'],
       })
     )
-    .pipe(
-      webpackStream(webpackConfig, webpack)
-    )
-    .pipe(dest('build/js'))
+    .pipe(webpackStream(webpackConfig, webpack))
+    .pipe(dest(`${folder.build}/js`))
     .pipe(browserSync.stream());
-});
-
-task('scripts', cb => {
-  console.log('scripts task');
-  return (
-    src('./app/js/app.js')
-      .pipe(
-        webpackStream({
-          output: {
-            filename: 'app.js'
-          },
-          module: {
-            rules: [
-              {
-                test: /\.(js)$/,
-                exclude: /(node_modules)/,
-                loader: 'babel-loader',
-                options: {
-                  presets: ['@babel/env']
-                }
-              }
-            ]
-          },
-          mode: isDevBuild ? 'development' : 'production',
-          devtool: !isDevBuild ? 'inline-source-map' : false
-        })
-      )
-      // .pipe(babel({
-      //   presets: ['@babel/env']
-      // }))
-      .pipe(dest('./demo/js'))
-  );
-
-  cb();
 });
 
 function modulesJS(cb) {
@@ -170,7 +106,7 @@ function modulesJS(cb) {
     .pipe(include())
     .pipe(
       babel({
-        presets: ['@babel/env']
+        presets: ['@babel/env'],
       })
     )
     .pipe(dest(`${folder.build}/js`))
@@ -183,12 +119,12 @@ function copyJS(cb) {
   return src([
     `${folder.src}/js/*.{js,json}`,
     `!${folder.src}/js/modules.js`,
-    `!${folder.src}/js/plugins.js`
+    `!${folder.src}/js/plugins.js`,
   ])
     .pipe(include())
     .pipe(
       babel({
-        presets: ['@babel/env']
+        presets: ['@babel/env'],
       })
     )
     .pipe(dest(`${folder.build}/js`))
@@ -201,7 +137,7 @@ function includeHtml(cb) {
   return src(`${folder.src}/*.html`)
     .pipe(
       fileinclude({
-        indent: true
+        indent: true,
       })
     )
     .pipe(dest(`${folder.build}/`));
@@ -212,7 +148,7 @@ function includeHtml(cb) {
 function copyImages(cb) {
   return src([
     `${folder.src}/images/**/*`,
-    `!${folder.src}/images/svg-symbols`
+    `!${folder.src}/images/svg-symbols`,
   ]).pipe(dest(`${folder.build}/images`));
 
   cb();
@@ -243,7 +179,7 @@ function clean(cb) {
 
 function serve(cb) {
   browserSync.init({
-    server: folder.build
+    server: folder.build,
   });
 
   watch(`${folder.src}/scss/**/*`, series('styles'));
