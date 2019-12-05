@@ -1,7 +1,8 @@
+/* eslint-disable indent */
 import {
   categoryFilter,
   audienceFilter,
-  discountFilter
+  discountFilter,
 } from './modules/filter-options';
 import ToggleFloors from './modules/toggle-floors';
 import floor1 from './modules/floor-1';
@@ -13,7 +14,7 @@ import Popper from 'popper.js';
 const MIN_ZOOM = 0.8;
 const MAX_ZOOM = 8;
 const PLAN_PLACE_CLASS = `plan-place`;
-const PLAN_PLACE_HOVERED_CLASS = `plan-place--hovered`;
+// const PLAN_PLACE_HOVERED_CLASS = `plan-place--hovered`;
 const PLAN_PLACE_ACTIVE_CLASS = `plan-place--active`;
 const PLAN_PLACE_SELECTED_CLASS = `plan-place--selected`;
 const PLAN_PLACE_FILTERED_CLASS = `plan-place--filtered`;
@@ -52,17 +53,17 @@ const zoomActions = {
       .transition()
       .duration(600)
       .call(zoom.scaleBy, 1.4);
-  }
+  },
 };
 
 const placePopupActions = {
   'show-popup-rent-store': function() {
     $.fancybox.open([
       {
-        src: '#popup-rent-store'
-      }
+        src: '#popup-rent-store',
+      },
     ]);
-  }
+  },
 };
 
 const aeroPlans = [];
@@ -78,12 +79,12 @@ const popperInstance = new Popper(reference, popper, {
   placement: 'right',
   modifiers: {
     flip: {
-      behavior: ['left']
+      behavior: ['left'],
     },
     preventOverflow: {
-      boundariesElement: plansWrapper
-    }
-  }
+      boundariesElement: plansWrapper,
+    },
+  },
 });
 let currentPathNode = null;
 
@@ -421,7 +422,7 @@ const KEYCODES = {
   ENTER: 13,
   ARROW_UP: 38,
   ARROW_DOWN: 40,
-  ESC: 27
+  ESC: 27,
 };
 const searchForm = document.querySelector(`[data-plans-search-form]`);
 const searchFormField = searchForm.querySelector(`.plans-search-form__field`);
@@ -496,26 +497,25 @@ function keyupSearchInputHandler(evt) {
 
   if (!searchResultList.hidden) {
     switch (evt.keyCode) {
-    case KEYCODES.ENTER:
-      // let value = ;
-      fillSearchInput(
-        searchResultList.children[searchResultCursor].dataset.title
-      );
-      break;
-    case KEYCODES.ARROW_UP:
-      if (searchResultCursor > 0) {
-        searchResultCursor--;
-      } else if (searchResultCursor <= 0) {
-        searchResultCursor = searchResultList.children.length - 1;
-      }
-      break;
-    case KEYCODES.ARROW_DOWN:
-      if (searchResultCursor < searchResultList.children.length - 1) {
-        searchResultCursor++;
-      } else if (searchResultCursor >= searchResultList.children.length - 1) {
-        searchResultCursor = 0;
-      }
-      break;
+      case KEYCODES.ENTER:
+        fillSearchInput(
+          searchResultList.children[searchResultCursor].dataset.title
+        );
+        break;
+      case KEYCODES.ARROW_UP:
+        if (searchResultCursor > 0) {
+          searchResultCursor--;
+        } else if (searchResultCursor <= 0) {
+          searchResultCursor = searchResultList.children.length - 1;
+        }
+        break;
+      case KEYCODES.ARROW_DOWN:
+        if (searchResultCursor < searchResultList.children.length - 1) {
+          searchResultCursor++;
+        } else if (searchResultCursor >= searchResultList.children.length - 1) {
+          searchResultCursor = 0;
+        }
+        break;
     }
     moveCursor(searchResultCursor);
   }
@@ -727,16 +727,16 @@ function calcLogoPosition(d, property) {
   const logoY = pathY + pathH / 2 - logoH / 2;
 
   switch (property) {
-  case `width`:
-    return logoW;
-  case `height`:
-    return logoH;
-  case `x`:
-    return logoX;
-  case `y`:
-    return logoY;
-  default:
-    return 0;
+    case `width`:
+      return logoW;
+    case `height`:
+      return logoH;
+    case `x`:
+      return logoX;
+    case `y`:
+      return logoY;
+    default:
+      return 0;
   }
 }
 
@@ -782,7 +782,7 @@ function catchTargetPlace({ floorIndex, areaObj }) {
 
   let translate = [
     dimensionFloorsArr[floorIndex].width / 2 - scale * cx,
-    dimensionFloorsArr[floorIndex].height / 2 - scale * cy
+    dimensionFloorsArr[floorIndex].height / 2 - scale * cy,
   ];
 
   svgArr[floorIndex]
@@ -801,10 +801,16 @@ function renderPlanPopper(pathNode) {
   const description = pathNode.dataset.description || ``;
   const linkUrl = pathNode.dataset.linkUrl || ``;
   const linkText = pathNode.dataset.linkText || ``;
-  const link = `<a href="${linkUrl}" target="_blank">${linkText}</a>`;
+  const link =
+    linkUrl && linkText
+      ? `<a href="${linkUrl}" target="_blank">${linkText}</a>`
+      : ``;
   const buttonText = pathNode.dataset.buttonText || ``;
   const buttonAction = pathNode.dataset.buttonAction || ``;
-  const button = `<button type="button" data-map-place-action="${buttonAction}">${buttonText}</button>`;
+  const button =
+    buttonText && buttonAction
+      ? `<button type="button" data-map-place-action="${buttonAction}">${buttonText}</button>`
+      : ``;
   const hasInteractionElems = linkText || buttonText;
 
   popper.innerHTML = `
@@ -874,7 +880,7 @@ function getFloorIndexAndObjectOfPlaceId(id) {
 
   return {
     floorIndex,
-    areaObj
+    areaObj,
   };
 }
 
@@ -900,6 +906,6 @@ function getFloorIndexAndObjectOfPlaceIdOnSearch(value) {
 
   return {
     floorIndex,
-    areaObj
+    areaObj,
   };
 }
