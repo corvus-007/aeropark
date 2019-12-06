@@ -5,16 +5,23 @@
     <div class="site-header-top__container container">
       <div class="site-header-top__left">
         <div class="site-header-top__search header-search" data-header-search>
-          <button class="header-search__toggle" type="button" aria-label="Показать поиск" data-toggle-search>
-            <svg class="header-search__toggle-icon" width="16" height="16">
-              <use xlink:href="./images/symbols.svg#icon-search"></use>
-            </svg>
-          </button>
+          <div class="header-search__toggles">
+            <button class="header-search__toggle header-search__toggle--open" type="button" aria-label="Показать поиск" data-toggle-search>
+              <svg class="header-search__toggle-icon" width="16" height="16">
+                <use xlink:href="./images/symbols.svg#icon-search"></use>
+              </svg>
+            </button>
+            <button class="header-search__toggle header-search__toggle--close" type="button" aria-label="Скрыть поиск" data-toggle-search>
+              <svg class="header-search__toggle-icon" width="16" height="16">
+                <use xlink:href="./images/symbols.svg#icon-close"></use>
+              </svg>
+            </button>
+          </div>
           <div class="header-search__form-wrapper">
             <div class="container">
               <p class="header-search__title">Поиск</p>
               <form class="header-search__form header-search-form" action="./page-search.html" method="GET" autocomplete="off">
-                <input class="header-search-form__input input" type="text" name="q" placeholder="Крутойс" data-header-search-input>
+                <input class="header-search-form__input input" type="text" name="q" minlength="2" placeholder="Атмосфера" data-header-search-input required>
                 <button class="header-search-form__submit" type="submit" aria-label="Начать поиск">
                   <svg class="header-search-form__submit-icon" width="16" height="16">
                     <use xlink:href="./images/symbols.svg#icon-search"></use>

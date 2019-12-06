@@ -1,9 +1,19 @@
 .header-search {
 }
 
-.header-search__toggle {
+.header-search__toggles {
   position: relative;
   z-index: 5;
+  width: 36px;
+  height: 36px;
+  background-color: $gray-234;
+  border-radius: 50%;
+}
+
+.header-search__toggle {
+  position: absolute;
+  left: 0;
+  top: 0;
   padding: 10px;
   border-radius: 50%;
   background-color: $gray-234;
@@ -23,6 +33,32 @@
 
   &:active {
     opacity: 0.7;
+  }
+
+  &--open {
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  &--close {
+    transform: scale(0);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .is-header-search-showed & {
+    &--open {
+      transform: scale(0);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    &--close {
+      transform: scale(1);
+      opacity: 1;
+      pointer-events: all;
+    }
   }
 }
 

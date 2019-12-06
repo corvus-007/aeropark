@@ -4,10 +4,11 @@
 }
 
 .header-search-form__input {
-  font-size: 28px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-right: calc(64px + 12px);
+  padding: 12px 16px;
+  padding-right: calc(88px + 16px);
+  line-height: 62px;
+  font-weight: 400;
+  font-size: 48px;
   background-color: transparent;
   border-color: transparent;
   border-left-color: $accent-color;
@@ -21,7 +22,10 @@
     display: none;
   }
 
-  &:hover,
+  &:hover {
+    background-color: transparent;
+  }
+
   &:focus {
     border-color: transparent;
     border-left-color: $accent-color;
@@ -29,27 +33,38 @@
 }
 
 .header-search-form__submit {
+  appearance: none;
   position: absolute;
   display: flex;
   right: 0;
   justify-content: center;
   align-items: center;
-  width: 64px;
+  width: 88px;
   height: 100%;
   padding: 0;
   border: none;
+  color: $base-color;
   background-color: transparent;
-  border-radius: $border-radius;
-  appearance: none;
+  border-radius: 2px;
+  opacity: 0.5;
   outline: none;
+  transition: 0.2s;
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.75;
+  }
+
+  &:active {
+    opacity: 1;
+    transition-duration: 0.1s;
+  }
 }
 
 .header-search-form__submit-icon {
+  display: block;
   width: 24px;
   height: 24px;
-  display: block;
   margin: auto;
-  fill: $base-color;
-  opacity: 0.5;
+  fill: currentColor;
 }
