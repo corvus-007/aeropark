@@ -72,16 +72,23 @@
       <div class="site-header-top__container container">
         <div class="site-header-top__left">
           <div class="site-header-top__search header-search" data-header-search>
-            <button class="header-search__toggle" type="button" aria-label="Показать поиск" data-toggle-search>
-              <svg class="header-search__toggle-icon" width="16" height="16">
-                <use xlink:href="./images/symbols.svg#icon-search"></use>
-              </svg>
-            </button>
+            <div class="header-search__toggles">
+              <button class="header-search__toggle header-search__toggle--open" type="button" aria-label="Показать поиск" data-toggle-search>
+                <svg class="header-search__toggle-icon" width="16" height="16">
+                  <use xlink:href="./images/symbols.svg#icon-search"></use>
+                </svg>
+              </button>
+              <button class="header-search__toggle header-search__toggle--close" type="button" aria-label="Скрыть поиск" data-toggle-search>
+                <svg class="header-search__toggle-icon" width="16" height="16">
+                  <use xlink:href="./images/symbols.svg#icon-close"></use>
+                </svg>
+              </button>
+            </div>
             <div class="header-search__form-wrapper">
               <div class="container">
                 <p class="header-search__title">Поиск</p>
                 <form class="header-search__form header-search-form" action="./page-search.html" method="GET" autocomplete="off">
-                  <input class="header-search-form__input input" type="text" name="q" placeholder="Крутойс" data-header-search-input>
+                  <input class="header-search-form__input input" type="text" name="q" minlength="2" placeholder="Атмосфера" data-header-search-input required>
                   <button class="header-search-form__submit" type="submit" aria-label="Начать поиск">
                     <svg class="header-search-form__submit-icon" width="16" height="16">
                       <use xlink:href="./images/symbols.svg#icon-search"></use>
@@ -647,9 +654,8 @@
           <h3 class="choose-rent-type-item__title">
             Аренда торговых <br> помещений
           </h3>
-          <svg class="choose-rent-type-item__icon" width="16" height="16">
-            <use xlink:href="./images/symbols.svg#icon"></use>
-          </svg>
+          <img class="choose-rent-type-item__icon" src="./images/icon-rent-store.svg" width="80" height="80" alt="" role="presentation">
+
           <p class="choose-rent-type-item__text">Вы хотели бы сотрудничать с нами и открыть в ТРЦ «АЭРО ПАРК» магазин? Не откладывайте свои планы и направляйте нам вашу информацию.</p>
           <button class="choose-rent-type-item__button button" type="button" data-src="#popup-rent-store" data-fancybox>Заявка на размещение</button>
         </li>
@@ -657,9 +663,7 @@
           <h3 class="choose-rent-type-item__title">
             Размещение <br> острова
           </h3>
-          <svg class="choose-rent-type-item__icon" width="16" height="16">
-            <use xlink:href="./images/symbols.svg#icon"></use>
-          </svg>
+          <img class="choose-rent-type-item__icon" src="./images/icon-rent-island.svg" width="80" height="80" alt="" role="presentation">
           <p class="choose-rent-type-item__text">Вы хотели бы открыть свой остров? Для получения более подробной информации и сведений о тех возможностях, которые мы предлагаем, заполните нашу форму.</p>
             <button class="choose-rent-type-item__button button" type="button" data-src="#popup-rent-island" data-fancybox>Заявка на размещение</button>
         </li>
@@ -954,14 +958,14 @@
                 <ul class="field__control radios-list">
                   <li class="radios-list__item">
                     <label class="radio">
-                      <input class="radio__input visually-hidden" type="radio" name="owner" value="represented" checked>
+                      <input class="radio__input visually-hidden" type="radio" name="owner" value="Собственником" checked>
                       <span class="radio__indicator"></span>
                       <span class="radio__caption">Собственником</span>
                     </label>
                   </li>
                   <li class="radios-list__item">
                     <label class="radio">
-                      <input class="radio__input visually-hidden" type="radio" name="owner" value="franchising">
+                      <input class="radio__input visually-hidden" type="radio" name="owner" value="На основе договора франчайзинга">
                       <span class="radio__indicator"></span>
                       <span class="radio__caption">На основе договора франчайзинга</span>
                     </label>
@@ -1439,14 +1443,14 @@
                 <ul class="field__control radios-list">
                   <li class="radios-list__item">
                     <label class="radio">
-                      <input class="radio__input visually-hidden" type="radio" name="owner" value="represented" checked>
+                      <input class="radio__input visually-hidden" type="radio" name="owner" value="Собственником" checked>
                       <span class="radio__indicator"></span>
                       <span class="radio__caption">Собственником</span>
                     </label>
                   </li>
                   <li class="radios-list__item">
                     <label class="radio">
-                      <input class="radio__input visually-hidden" type="radio" name="owner" value="franchising">
+                      <input class="radio__input visually-hidden" type="radio" name="owner" value="На основе договора франчайзинга">
                       <span class="radio__indicator"></span>
                       <span class="radio__caption">На основе договора франчайзинга</span>
                     </label>

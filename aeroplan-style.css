@@ -1,3 +1,11 @@
+.aeroplan-dashboard {
+  display: grid;
+  gap: 32px 80px;
+  margin-bottom: 40px; }
+  @media (min-width: 1024px) {
+    .aeroplan-dashboard {
+      grid-template-columns: 2fr 1fr; } }
+
 .toggle-floors {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -52,6 +60,9 @@
     background-color: #8178f1;
     cursor: default; }
 
+.toggle-floors__badge {
+  pointer-events: none; }
+
 .toggle-floors__badge-value {
   position: absolute;
   top: 2px;
@@ -65,15 +76,16 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-width: 12px;
-  height: 12px;
+  min-width: 14px;
+  height: 14px;
   padding: 0 2px;
-  font-size: 10px;
+  font-size: 10.5px;
   line-height: 14px;
   text-align: center;
   line-height: 1;
-  color: #7a7a7a;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #00a0ff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 12px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -124,15 +136,15 @@
 
 .plans-filter-form {
   display: grid;
-  gap: 36px;
-  grid-template-columns: 1fr auto;
-  max-width: 960px;
-  margin-bottom: 40px; }
+  gap: 20px; }
+  @media (min-width: 667px) {
+    .plans-filter-form {
+      grid-template-columns: 1fr auto; } }
 
 .plans-filter-form__fields {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(3, 1fr); }
+  grid-template-columns: repeat(2, 1fr); }
 
 .plans-filter-form__select select {
   padding-top: 8px;
@@ -140,14 +152,17 @@
 
 .plans-filter-form__reset {
   min-width: auto;
-  padding: 8px 12px;
+  padding: 12px;
   color: #212121;
   background-color: #e4e4e4; }
+  @media (min-width: 667px) {
+    .plans-filter-form__reset {
+      padding-top: 8px;
+      padding-bottom: 8px; } }
 
 .plans-search-form {
   position: relative;
-  z-index: 10;
-  margin-bottom: 20px; }
+  z-index: 10; }
 
 .plans-search-form__input {
   padding-right: 52px; }
@@ -157,17 +172,39 @@
   top: 0;
   bottom: 0;
   right: 0;
+  width: 42px;
+  color: #212121;
+  background-color: transparent;
   opacity: 0;
-  visibility: hidden; }
+  visibility: hidden;
+  opacity: 0;
+  border: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: pointer;
+  outline: none; }
   .plans-search-form__field--filled .plans-search-form__button {
-    opacity: 1;
+    opacity: 0.5;
     visibility: visible; }
+    .plans-search-form__field--filled .plans-search-form__button:hover {
+      opacity: 0.75; }
+    .plans-search-form__field--filled .plans-search-form__button:active {
+      opacity: 1;
+      -webkit-transition-duration: 0.1s;
+              transition-duration: 0.1s; }
+
+.plans-search-form__button-icon {
+  fill: currentColor; }
 
 .plans-search-form__result-list {
   position: absolute;
   left: 0;
   right: 0;
-  background-color: #fff; }
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); }
 
 .autocomplete-list {
   max-height: 300px;
@@ -194,9 +231,7 @@
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 2;
-  background-color: #eaeaea;
-  background-image: -webkit-gradient(linear, left bottom, right top, from(#eaeaea), to(#e4e4e4));
-  background-image: linear-gradient(to top right, #eaeaea, #e4e4e4);
+  background-color: #f5f5f5;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   opacity: 0;
@@ -239,16 +274,16 @@
 .logos-group {
   pointer-events: none; }
 
-.aero-map {
+.aeroplan-map {
   position: relative; }
 
-.aero-map__toggle-floors {
+.aeroplan-map__toggle-floors {
   position: absolute;
   right: 28px;
   bottom: 28px;
   z-index: 5; }
 
-.aero-map__zoom-actions {
+.aeroplan-map__zoom-actions {
   position: absolute;
   top: 28px;
   right: 28px;
@@ -267,6 +302,17 @@
   height: 50vh;
   min-height: 440px;
   max-height: 600px; }
+  @media (max-width: 767px) and (orientation: landscape) {
+    .aero-plans {
+      min-height: 320px;
+      max-height: 400px;
+      height: 84vh; } }
+  @media (min-width: 1280px) {
+    .aero-plans {
+      min-height: 460px; } }
+  @media (min-width: 1920px) {
+    .aero-plans {
+      height: 56vh; } }
 
 .boundary-group-fill,
 .boundary-group-stroke,
@@ -283,8 +329,8 @@
   stroke-linejoin: round; }
 
 .plan-floor-inner-boundary {
-  fill: #dadada;
-  stroke: #d0d0d0;
+  fill: #f5f5f5;
+  stroke: #e1e1e1;
   stroke-width: 0.5;
   stroke-linejoin: round;
   stroke-linecap: round; }

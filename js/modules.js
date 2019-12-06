@@ -127,12 +127,18 @@ window.headerSearch = function () {
     return;
   }
 
-  var toggleBtn = document.querySelector('[data-toggle-search]');
   var input = document.querySelector('[data-header-search-input]');
   var scrollWidth = window.util.getScrollbarWidth();
-  toggleBtn.addEventListener('click', onclickTogglSearchHandler);
+  document.addEventListener('click', onclickDocumentHandler);
 
-  function onclickTogglSearchHandler(evt) {
+  function onclickDocumentHandler(evt) {
+    var target = evt.target;
+    var toggleBtn = target.closest('[data-toggle-search]');
+
+    if (!toggleBtn) {
+      return;
+    }
+
     evt.preventDefault();
     var isShowSearch = document.body.classList.contains('is-header-search-showed');
 
