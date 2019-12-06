@@ -18,17 +18,18 @@
 
 .choose-rent-type-item__title {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 24px;
   line-height: 1.2;
 }
 
 .choose-rent-type-item__icon {
-  width: 64px;
-  height: 64px;
-  margin-bottom: 20px;
   display: block;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 8px;
+  object-fit: contain;
 
   @include mq-max(666px) {
     display: none;
