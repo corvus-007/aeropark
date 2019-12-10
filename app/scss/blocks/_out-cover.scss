@@ -34,12 +34,14 @@
 }
 
 .out-cover__inner {
-  display: flex;
-  flex-direction: column;
   height: 100%;
   overflow-y: auto;
   overscroll-behavior-y: contain;
-  box-sizing: border-box;
+
+  @include mq-min(768px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .out-cover__body {
