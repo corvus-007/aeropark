@@ -1,0 +1,8 @@
+.text-note {
+  @include clear-mr-edges-elem();
+
+  padding: 20px;
+  background-color: $gray-245;
+  border: 1px solid $gray-234;
+  border-radius: 4px;
+}
