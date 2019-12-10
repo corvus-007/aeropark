@@ -56,4 +56,9 @@ window.headerSearch = (function() {
       hideHeaderSearch();
     }
   }
+
+  return {
+    show: showHeaderSearch,
+    hide: hideHeaderSearch,
+  };
 })();
