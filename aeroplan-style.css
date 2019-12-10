@@ -80,13 +80,12 @@
   height: 14px;
   padding: 0 2px;
   font-size: 10.5px;
-  line-height: 14px;
-  text-align: center;
   line-height: 1;
+  text-align: center;
   color: #ffffff;
   background-color: #00a0ff;
   border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 12px;
+  border-radius: 14px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
   .toggle-floors__badge-value:empty {
@@ -217,11 +216,16 @@
 .autocomplete-list__item {
   padding: 12px;
   cursor: pointer;
-  font-size: 14px; }
+  font-size: 14px;
+  line-height: 1.2; }
   .autocomplete-list__item:hover {
     background-color: #eeeeee; }
   .autocomplete-list__item--highlighted {
     background-color: #e4e4e4; }
+  .autocomplete-list__item b {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 18px; }
 
 .aero-plans__floor {
   width: 100%;

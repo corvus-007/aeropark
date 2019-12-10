@@ -1,8 +1,10 @@
 "use strict";
 
 document.addEventListener('DOMContentLoaded', function () {
+  var $ = window.jQuery;
   svg4everybody();
   $.fancybox.defaults.animationEffect = 'zoom-in-out';
+  $.fancybox.defaults.backFocus = false;
   $.fancybox.defaults.touch = false;
   $.fancybox.defaults.lang = 'ru';
   $.fancybox.defaults.i18n = {
@@ -11,10 +13,10 @@ document.addEventListener('DOMContentLoaded', function () {
       NEXT: 'Следующий',
       PREV: 'Предыдущий',
       ERROR: 'Cодержимое не смогло загрузиться. <br> Пожалуйста, повторите попытку позже',
-      PLAY_START: 'Начать слайдшоу',
+      PLAY_START: 'Запустить слайдшоу',
       PLAY_STOP: 'Остановить слайдшоу',
       FULL_SCREEN: 'На весь экран',
-      THUMBS: 'Миниатрюры',
+      THUMBS: 'Миниатюры',
       DOWNLOAD: 'Скачать',
       SHARE: 'Поделиться',
       ZOOM: 'Увеличить'
@@ -28,6 +30,26 @@ document.addEventListener('DOMContentLoaded', function () {
   }, 'Заполните номер телефона');
   $('.chosen-select').chosen({
     no_results_text: 'Ой, ничего не найдено!'
+  });
+  document.addEventListener('click', function (evt) {
+    var target = evt.target;
+    var searchHeaderToggle = target.closest('[data-toggle-search]');
+    var outCoverToggle = target.closest('.out-cover-toggle');
+
+    if (!(searchHeaderToggle || outCoverToggle)) {
+      return;
+    }
+
+    var isShowSearch = document.body.classList.contains('is-header-search-showed');
+    var isShowOutCover = document.body.classList.contains('is-out-cover-opened');
+
+    if (searchHeaderToggle && isShowOutCover) {
+      window.outCover.hide();
+    }
+
+    if (outCoverToggle && isShowSearch) {
+      window.headerSearch.hide();
+    }
   });
   new Swiper('[data-events-slider]', {
     speed: 800,

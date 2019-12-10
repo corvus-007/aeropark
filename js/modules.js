@@ -170,6 +170,11 @@ window.headerSearch = function () {
       hideHeaderSearch();
     }
   }
+
+  return {
+    show: showHeaderSearch,
+    hide: hideHeaderSearch
+  };
 }();
 
 window.siteHeader = function () {
@@ -492,13 +497,15 @@ window.rentStore = function ($) {
       }).done(function (data) {
         if (data.status === true) {
           form.reset();
-          $.fancybox.close();
-          alert('Спасибо, ваша заявка отправлена ;-)');
+          $.fancybox.close(true);
+          setTimeout(function () {
+            $.fancybox.open("\n                <div class=\"popup-message\">\n                  <h2 class=\"popup-message__text\">\u0421\u043F\u0430\u0441\u0438\u0431\u043E, \u0432\u0430\u0448\u0430 \u0437\u0430\u044F\u0432\u043A\u0430 \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0430.</h2>\n                </div>\n              ");
+          }, 400);
         } else {
-          alert('Произошла ошибка! Попробуйте снова!');
+          $.fancybox.open("\n              <div class=\"popup-message\">\n                <h2 class=\"popup-message__text\">\u0427\u0442\u043E-\u0442\u043E \u043F\u043E\u0448\u043B\u043E \u043D\u0435 \u0442\u0430\u043A! \u041F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0441\u043D\u043E\u0432\u0430!</h2>\n              </div>\n            ");
         }
       }).fail(function () {
-        alert('Произошла ошибка! Обновите страницу и попробуйте снова!');
+        $.fancybox.open("\n            <div class=\"popup-message\">\n              <h2 class=\"popup-message__text\">\u0427\u0442\u043E-\u0442\u043E \u043F\u043E\u0448\u043B\u043E \u043D\u0435 \u0442\u0430\u043A! \u041E\u0431\u043D\u043E\u0432\u0438\u0442\u0435 \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0443 \u0438 \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0441\u043D\u043E\u0432\u0430!</h2>\n            </div>\n          ");
       });
     },
     rules: {
@@ -541,13 +548,15 @@ window.rentIsland = function ($) {
       }).done(function (data) {
         if (data.status === true) {
           form.reset();
-          $.fancybox.close();
-          alert('Спасибо, ваша заявка отправлена ;-)');
+          $.fancybox.close(true);
+          setTimeout(function () {
+            $.fancybox.open("\n                <div class=\"popup-message\">\n                  <h2 class=\"popup-message__text\">\u0421\u043F\u0430\u0441\u0438\u0431\u043E, \u0432\u0430\u0448\u0430 \u0437\u0430\u044F\u0432\u043A\u0430 \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0430.</h2>\n                </div>\n              ");
+          }, 400);
         } else {
-          alert('Произошла ошибка! Попробуйте снова!');
+          $.fancybox.open("\n              <div class=\"popup-message\">\n                <h2 class=\"popup-message__text\">\u0427\u0442\u043E-\u0442\u043E \u043F\u043E\u0448\u043B\u043E \u043D\u0435 \u0442\u0430\u043A! \u041F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0441\u043D\u043E\u0432\u0430!</h2>\n              </div>\n            ");
         }
       }).fail(function () {
-        alert('Произошла ошибка! Обновите страницу и попробуйте снова!');
+        $.fancybox.open("\n            <div class=\"popup-message\">\n              <h2 class=\"popup-message__text\">\u0427\u0442\u043E-\u0442\u043E \u043F\u043E\u0448\u043B\u043E \u043D\u0435 \u0442\u0430\u043A! \u041E\u0431\u043D\u043E\u0432\u0438\u0442\u0435 \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0443 \u0438 \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0441\u043D\u043E\u0432\u0430!</h2>\n            </div>\n          ");
       });
     },
     rules: {
@@ -604,13 +613,15 @@ window.applicationAd = function ($) {
       }).done(function (data) {
         if (data.status === true) {
           form.reset();
-          $.fancybox.close();
-          alert('Спасибо, ваша заявка отправлена ;-)');
+          $.fancybox.close(true);
+          setTimeout(function () {
+            $.fancybox.open("\n                <div class=\"popup-message\">\n                  <h2 class=\"popup-message__text\">\u0421\u043F\u0430\u0441\u0438\u0431\u043E, \u0432\u0430\u0448\u0430 \u0437\u0430\u044F\u0432\u043A\u0430 \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0430.</h2>\n                </div>\n              ");
+          }, 400);
         } else {
-          alert('Произошла ошибка! Попробуйте снова!');
+          $.fancybox.open("\n              <div class=\"popup-message\">\n                <h2 class=\"popup-message__text\">\u0427\u0442\u043E-\u0442\u043E \u043F\u043E\u0448\u043B\u043E \u043D\u0435 \u0442\u0430\u043A! \u041F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0441\u043D\u043E\u0432\u0430!</h2>\n              </div>\n            ");
         }
       }).fail(function () {
-        alert('Произошла ошибка! Обновите страницу и попробуйте снова!');
+        $.fancybox.open("\n            <div class=\"popup-message\">\n              <h2 class=\"popup-message__text\">\u0427\u0442\u043E-\u0442\u043E \u043F\u043E\u0448\u043B\u043E \u043D\u0435 \u0442\u0430\u043A! \u041E\u0431\u043D\u043E\u0432\u0438\u0442\u0435 \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0443 \u0438 \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0441\u043D\u043E\u0432\u0430!</h2>\n            </div>\n          ");
       });
     },
     rules: {
@@ -650,13 +661,15 @@ window.contactUs = function ($) {
       }).done(function (data) {
         if (data.status === true) {
           form.reset();
-          $.fancybox.close();
-          alert('Спасибо, ваша заявка отправлена ;-)');
+          $.fancybox.close(true);
+          setTimeout(function () {
+            $.fancybox.open("\n                <div class=\"popup-message\">\n                  <h2 class=\"popup-message__text\">\u0421\u043F\u0430\u0441\u0438\u0431\u043E, \u0444\u043E\u0440\u043C\u0430 \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0430.</h2>\n                </div>\n              ");
+          }, 400);
         } else {
-          alert('Произошла ошибка! Попробуйте снова!');
+          $.fancybox.open("\n              <div class=\"popup-message\">\n                <h2 class=\"popup-message__text\">\u0427\u0442\u043E-\u0442\u043E \u043F\u043E\u0448\u043B\u043E \u043D\u0435 \u0442\u0430\u043A! \u041F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0441\u043D\u043E\u0432\u0430!</h2>\n              </div>\n            ");
         }
       }).fail(function () {
-        alert('Произошла ошибка! Обновите страницу и попробуйте снова!');
+        $.fancybox.open("\n            <div class=\"popup-message\">\n              <h2 class=\"popup-message__text\">\u0427\u0442\u043E-\u0442\u043E \u043F\u043E\u0448\u043B\u043E \u043D\u0435 \u0442\u0430\u043A! \u041E\u0431\u043D\u043E\u0432\u0438\u0442\u0435 \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0443 \u0438 \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0441\u043D\u043E\u0432\u0430!</h2>\n            </div>\n          ");
       });
     }
   });
