@@ -1,12 +1,22 @@
 .popup-message {
-  max-width: 400px;
+  max-width: 480px;
   padding: 32px;
   border-radius: 4px;
   background-color: #ffffff;
+  text-align: center;
+}
+
+.popup-message__title {
+  margin: 0;
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.15;
 }
 
 .popup-message__text {
   margin: 0;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 20px;
+  line-height: 1.15;
 }
