@@ -1,4 +1,5 @@
 html {
+  height: 100%;
   font-size: $font-size;
   scroll-behavior: smooth;
 }
@@ -10,6 +11,9 @@ html {
 
 body {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   margin: 0;
   font-weight: 500;
   font-size: 100%;
