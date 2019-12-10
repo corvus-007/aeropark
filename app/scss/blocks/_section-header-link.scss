@@ -7,6 +7,7 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   text-decoration: none;
+  color: $primary-color;
 
   &:focus-visible {
     @include keyboard-focus-rule();

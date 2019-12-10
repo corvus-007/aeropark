@@ -1,5 +1,4 @@
 .shop-gallery {
-
 }
 
 .shop-gallery__item {
@@ -7,5 +6,7 @@
 
   a {
     @include make-fit-object(16, 10);
+
+    cursor: zoom-in;
   }
 }

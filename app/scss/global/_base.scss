@@ -3,6 +3,11 @@ html {
   scroll-behavior: smooth;
 }
 
+::selection {
+  color: $gray-245;
+  background-color: $base-color;
+}
+
 body {
   position: relative;
   margin: 0;
