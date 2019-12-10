@@ -10,7 +10,7 @@ window.rentStore = (function($) {
   $(form).validate({
     ignore: '.ignore-validate',
     groups: {
-      area: 'areaMin areaMax areaOptimal'
+      area: 'areaMin areaMax areaOptimal',
     },
     errorPlacement(error, element) {
       error.appendTo(element.closest('.field__control'));
@@ -29,25 +29,40 @@ window.rentStore = (function($) {
         data: formData,
         processData: false,
         contentType: false,
-        dataType: 'json'
+        dataType: 'json',
       })
         .done(data => {
           if (data.status === true) {
             form.reset();
-            $.fancybox.close();
-            alert('Спасибо, ваша заявка отправлена ;-)');
+            $.fancybox.close(true);
+
+            setTimeout(() => {
+              $.fancybox.open(`
+                <div class="popup-message">
+                  <h2 class="popup-message__text">Спасибо, ваша заявка отправлена.</h2>
+                </div>
+              `);
+            }, 400);
           } else {
-            alert('Произошла ошибка! Попробуйте снова!');
+            $.fancybox.open(`
+              <div class="popup-message">
+                <h2 class="popup-message__text">Что-то пошло не так! Попробуйте снова!</h2>
+              </div>
+            `);
           }
         })
         .fail(() => {
-          alert('Произошла ошибка! Обновите страницу и попробуйте снова!');
+          $.fancybox.open(`
+            <div class="popup-message">
+              <h2 class="popup-message__text">Что-то пошло не так! Обновите страницу и попробуйте снова!</h2>
+            </div>
+          `);
         });
     },
     rules: {
       phone: {
-        checkPhoneMask: true
-      }
-    }
+        checkPhoneMask: true,
+      },
+    },
   });
 })(window.jQuery);
