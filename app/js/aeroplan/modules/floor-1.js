@@ -8,7 +8,7 @@ export default {
   settings: {
     dimensions: {
       width: 1619,
-      height: 569,
+      height: 604.01,
     },
     boundaryShape: `M1618,36H1V568H62.51c41.78,41.36,104.29,51.71,156.48,0H1618Z`,
   },

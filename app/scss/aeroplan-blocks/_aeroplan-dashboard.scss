@@ -1,0 +1,17 @@
+.aeroplan-dashboard {
+  display: grid;
+  gap: 32px 80px;
+  margin-bottom: 40px;
+
+  @include mq-min(1024px) {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.aeroplan-dashboard__filter-form {
+
+}
+
+.aeroplan-dashboard__search-form {
+
+}

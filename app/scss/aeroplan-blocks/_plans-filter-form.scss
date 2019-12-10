@@ -1,15 +1,16 @@
 .plans-filter-form {
   display: grid;
-  gap: 36px;
-  grid-template-columns: 1fr auto;
-  max-width: 960px;
-  margin-bottom: 40px;
+  gap: 20px;
+
+  @include mq-min(667px) {
+    grid-template-columns: 1fr auto;
+  }
 }
 
 .plans-filter-form__fields {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .plans-filter-form__select {
@@ -21,7 +22,12 @@
 
 .plans-filter-form__reset {
   min-width: auto;
-  padding: 8px 12px;
+  padding: 12px;
   color: $base-color;
   background-color: $gray-228;
+
+  @include mq-min(667px) {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
 }

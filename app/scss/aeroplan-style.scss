@@ -2,6 +2,7 @@
 @import "functions";
 @import "mixins";
 
+@import "aeroplan-blocks/aeroplan-dashboard";
 @import "aeroplan-blocks/toggle-floors";
 @import "aeroplan-blocks/zoom-actions";
 @import "aeroplan-blocks/plans-filter-form";
@@ -15,8 +16,7 @@
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 2;
-  background-color: $gray-234;
-  background-image: linear-gradient(to top right, $gray-234, $gray-228);
+  background-color: $gray-245;
   transition: 0.2s;
   opacity: 0;
   visibility: hidden;
@@ -85,18 +85,18 @@
   pointer-events: none;
 }
 
-.aero-map {
+.aeroplan-map {
   position: relative;
 }
 
-.aero-map__toggle-floors {
+.aeroplan-map__toggle-floors {
   position: absolute;
   right: 28px;
   bottom: 28px;
   z-index: 5;
 }
 
-.aero-map__zoom-actions {
+.aeroplan-map__zoom-actions {
   position: absolute;
   top: 28px;
   right: 28px;
@@ -112,6 +112,20 @@
   height: 50vh;
   min-height: 440px;
   max-height: 600px;
+
+  @media (max-width: 767px) and (orientation: landscape) {
+    min-height: 320px;
+    max-height: 400px;
+    height: 84vh;
+  }
+
+  @include mq-min(1280px) {
+    min-height: 460px;
+  }
+
+  @include mq-min(1920px) {
+    height: 56vh;
+  }
 }
 
 .boundary-group-fill,
@@ -132,8 +146,8 @@
 }
 
 .plan-floor-inner-boundary {
-  fill: darken(#e4e4e4, 4%);
-  stroke: darken(#e4e4e4, 8%);
+  fill: $gray-245;
+  stroke: darken($gray-245, 8%);
   stroke-width: 0.5;
   stroke-linejoin: round;
   stroke-linecap: round;

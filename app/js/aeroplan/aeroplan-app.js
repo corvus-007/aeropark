@@ -27,7 +27,7 @@ const MARKER_SIZE = 16;
 
 const url = new URL(window.location);
 const params = new URLSearchParams(url.search);
-const placeId = params.get(`place_id`);
+const placeId = params.get(`placeId`);
 const filterForm = document.querySelector(`[data-plans-filter-form]`);
 const categoryFilterSelect = filterForm.querySelector(`[name="category"]`);
 const audienceFilterSelect = filterForm.querySelector(`[name="audience"]`);
@@ -58,7 +58,7 @@ const zoomActions = {
 
 const placePopupActions = {
   'show-popup-rent-store': function() {
-    $.fancybox.open([
+    window.jQuery.fancybox.open([
       {
         src: '#popup-rent-store',
       },
@@ -94,9 +94,17 @@ aeroPlans.push(floor3);
 
 aeroPlans.forEach(renderPlan);
 
-categoryFilterSelect.appendChild(createOptionsList(categoryFilter));
-audienceFilterSelect.appendChild(createOptionsList(audienceFilter));
-discountFilterSelect.appendChild(createOptionsList(discountFilter));
+if (categoryFilterSelect) {
+  categoryFilterSelect.appendChild(createOptionsList(categoryFilter));
+}
+
+if (audienceFilterSelect) {
+  audienceFilterSelect.appendChild(createOptionsList(audienceFilter));
+}
+
+if (discountFilterSelect) {
+  discountFilterSelect.appendChild(createOptionsList(discountFilter));
+}
 
 createToggleFloorsControls();
 
@@ -113,7 +121,11 @@ document.addEventListener(`click`, clickDocumentHadler);
 zoomActionsContainer.addEventListener(`click`, clickZoomContainerHandler);
 
 function renderPlan(plan, planIndex) {
-  const { dimensions, boundaryShape } = plan.settings;
+  const {
+    dimensions,
+    boundaryShape,
+    innerBoundaryShape = null,
+  } = plan.settings;
   const areas = plan.areas;
   // const activeAreas = areas.filter((place) => place.status);
   const helpMarkers = plan.helpMarkers;
@@ -139,10 +151,14 @@ function renderPlan(plan, planIndex) {
   const boundaryFill = mainG.append(`g`);
   const placesG = mainG.append(`g`);
   const logosG = mainG.append(`g`);
+  const innerBoundary = mainG.append(`g`);
   const helpMarkersG = mainG.append(`g`);
   const boundaryStroke = mainG.append(`g`);
 
   mainG.attr(`id`, `main-group`).classed(`main-group`, true);
+  innerBoundary
+    .attr(`id`, `inner-boundary-group`)
+    .classed(`inner-boundary-group`, true);
   boundaryFill
     .attr(`id`, `boundary-group-fill`)
     .classed(`boundary-group-fill`, true);
@@ -157,6 +173,10 @@ function renderPlan(plan, planIndex) {
 
   mainGArr.push(mainG);
 
+  innerBoundary
+    .append(`path`)
+    .attr(`d`, innerBoundaryShape)
+    .classed(`plan-floor-inner-boundary`, true);
   boundaryFill
     .append(`path`)
     .attr(`d`, boundaryShape)
@@ -169,6 +189,7 @@ function renderPlan(plan, planIndex) {
   svgArr.push(svg);
 
   // create markers
+
   if (helpMarkers) {
     helpMarkersG
       .selectAll(`g`)
@@ -229,12 +250,6 @@ function renderPlan(plan, planIndex) {
     })
     .classed(PLAN_PLACE_CLASS, true);
 
-  // placesPaths.on("click", function (d) {
-  //   alert(`
-  //       ${this.dataset.title}
-  //       ${this.dataset.description}
-  //     `);
-  // });
 
   // create logos
 
@@ -265,18 +280,9 @@ function renderPlan(plan, planIndex) {
     })
     .classed(PLAN_PLACE_LOGO_CLASS, true);
 
-  // const widthPlansWrapper = plansWrapper.clientWidth;
-  // const heightPlansWrapper = plansWrapper.clientHeight;
-  // const widthPlansWrapper =  planWidth + planWidth - plansWrapper.clientWidth;
-  // const heightPlansWrapper = planHeight+  planHeight - plansWrapper.clientHeight;
-
   const zoom = d3
     .zoom()
     .scaleExtent([MIN_ZOOM, MAX_ZOOM])
-    // .translateExtent([
-    //   [-320, -320],
-    //   [widthPlansWrapper + 320, heightPlansWrapper + 320]
-    // ])
     .on('zoom', zoomed);
 
   zoomsArr.push(zoom);
@@ -292,6 +298,7 @@ function renderPlan(plan, planIndex) {
 }
 
 // Переход со страницы магазина по указанному id
+
 catchTargetPlace(getFloorIndexAndObjectOfPlaceId(placeId));
 
 // plansWrapper.addEventListener(`click`, function (evt) {
