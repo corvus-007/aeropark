@@ -1,0 +1,61 @@
+.aero-plan-popper {
+  max-width: 300px;
+  padding: 16px;
+  font-size: 16px;
+  line-height: 1.15;
+  hyphens: auto;
+  color: $base-color;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 0 6px rgba(#000000, 0.1),
+              0 0 20px rgba(#000000, 0.1);
+  box-sizing: border-box;
+  user-select: none;
+  // pointer-events: none;
+
+  &:empty {
+    display: none;
+  }
+
+  & :empty {
+    display: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    transform: translateX(-50%) rotate(45deg);
+    background-color: #fff;
+    border-radius: 2px;
+  }
+
+  p {
+    margin: 0;
+    margin-top: 8px;
+  }
+
+  &[x-out-of-boundaries] {
+    display: none;
+  }
+
+  &--has-interaction {
+    // pointer-events: all;
+  }
+}
+
+.aero-plan-popper__link {
+}
+
+.aero-plan-popper__button {
+  margin-top: 4px;
+  max-width: none;
+}
+
+.aero-plan-popper__title {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.15;
+}

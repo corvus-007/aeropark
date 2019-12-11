@@ -3519,6 +3519,22 @@ export default {
       button: { text: ``, action: `` },
       path: `M1243,248v51h-20V248Z`,
     },
+    {
+      id: 1166,
+      title: `Аэросцена`,
+      logoSrc: ``,
+      synonyms: [
+        'Аэросцена',
+        'f\'hjcwtyf',
+      ],
+      description: ``,
+      discount: new Set(),
+      category: new Set(),
+      audience: new Set(),
+      link: { text: ``, url: `` },
+      button: { text: ``, action: `` },
+      path: `M216.5,251.5h28v32h-28Z`,
+    },
   ],
   helpMarkers: [
     {
@@ -3713,6 +3729,15 @@ export default {
         {
           title: `Туалет для ММГ`,
           position: [484.5, 433.84],
+        },
+      ],
+    },
+    {
+      symbolId: `charger`,
+      points: [
+        {
+          title: `Зарядная станция`,
+          position: [674.52, 307],
         },
       ],
     },

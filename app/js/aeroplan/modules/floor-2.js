@@ -11,7 +11,7 @@ export default {
       height: 856,
     },
     boundaryShape: `M2599,196H1566V1H1V592H511v61h94v22H725V653h94V592h188v31.21A125,125,0,0,0,1072,855c35.22,0,121.5-37.5,121.5-37.5l752.28-.27a250.14,250.14,0,0,0,254.6-.09L2599,817Z`,
-    innerBoundaryShape: `M1242,284V564h-96V284Zm831,406.5a39,39,0,1,0,39,39A39,39,0,0,0,2073,690.5Zm.11-259.89a52.39,52.39,0,1,0,52.4,52.39A52.38,52.38,0,0,0,2073.11,430.61Z`,
+    innerBoundaryShape: `M1242,284V564h-96V284Zm831,406.5a39,39,0,1,0,39,39A39,39,0,0,0,2073,690.5Zm.11-259.89a52.39,52.39,0,1,0,52.4,52.39A52.38,52.38,0,0,0,2073.11,430.61ZM2149,716.75v20h94.5v-20Zm104.5,0v20H2348v-20Zm-446.06,0v20h91.34v-20Zm101.34,0v20h91.34v-20Z`,
   },
   areas: [
     {
@@ -982,7 +982,7 @@ export default {
       synonyms: ['Black Star Burger', 'блэк стар бургер'],
       description: `Бургеры от профессиональных поваров`,
       discount: new Set(),
-      category: new Set(),
+      category: new Set([categoryFilter[`Фастфуд`]]),
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
@@ -2448,6 +2448,15 @@ export default {
         {
           title: `Фуд-корт`,
           position: [2461, 711.02],
+        },
+      ],
+    },
+    {
+      symbolId: `highchair`,
+      points: [
+        {
+          title: `Детский стульчик`,
+          position: [2511.86, 799.02],
         },
       ],
     },

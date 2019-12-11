@@ -2,6 +2,7 @@
 @import "functions";
 @import "mixins";
 
+@import "aeroplan-blocks/aero-plan-popper";
 @import "aeroplan-blocks/aeroplan-dashboard";
 @import "aeroplan-blocks/toggle-floors";
 @import "aeroplan-blocks/zoom-actions";
@@ -85,6 +86,10 @@
   pointer-events: none;
 }
 
+.help-markers-group {
+  fill: #616161;
+}
+
 .aeroplan-map {
   position: relative;
 }
@@ -151,66 +156,4 @@
   stroke-width: 0.5;
   stroke-linejoin: round;
   stroke-linecap: round;
-}
-
-.aero-plan-popper {
-  max-width: 300px;
-  padding: 16px;
-  font-size: 16px;
-  line-height: 1.15;
-  hyphens: auto;
-  background-color: #fff;
-  border-radius: 2px;
-  box-shadow: 0 2px 16px rgba(#000, 0.1);
-  box-sizing: border-box;
-  user-select: none;
-  // pointer-events: none;
-
-  &:empty {
-    display: none;
-  }
-
-  & :empty {
-    display: none;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    z-index: -1;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    width: 8px;
-    height: 8px;
-    transform: translateX(-50%) rotate(45deg);
-    background-color: #fff;
-    border-radius: 2px;
-  }
-
-  p {
-    margin: 0;
-    margin-top: 8px;
-  }
-
-  &[x-out-of-boundaries] {
-    display: none;
-  }
-
-  &--has-interaction {
-    // pointer-events: all;
-  }
-}
-
-.aero-plan-popper__title {
-  margin: 0;
-  font-size: 20px;
-  line-height: 1.15;
 }

@@ -12,7 +12,7 @@ import * as d3 from 'd3';
 import Popper from 'popper.js';
 
 const MIN_ZOOM = 0.8;
-const MAX_ZOOM = 8;
+const MAX_ZOOM = 5.5;
 const PLAN_PLACE_CLASS = `plan-place`;
 // const PLAN_PLACE_HOVERED_CLASS = `plan-place--hovered`;
 const PLAN_PLACE_ACTIVE_CLASS = `plan-place--active`;
@@ -141,11 +141,6 @@ function renderPlan(plan, planIndex) {
     .append(`svg`);
 
   svg.attr(`viewBox`, `0 0 ${planWidth} ${planHeight}`);
-
-  // const nest = d3.nest().key((d) => {
-  //   return d.category;
-  // }).entries(areas);
-  // console.log(nest);
 
   const mainG = svg.append(`g`);
   const boundaryFill = mainG.append(`g`);
@@ -810,13 +805,13 @@ function renderPlanPopper(pathNode) {
   const linkText = pathNode.dataset.linkText || ``;
   const link =
     linkUrl && linkText
-      ? `<a href="${linkUrl}" target="_blank">${linkText}</a>`
+      ? `<a class="aero-plan-popper__link" href="${linkUrl}" target="_blank">${linkText}</a>`
       : ``;
   const buttonText = pathNode.dataset.buttonText || ``;
   const buttonAction = pathNode.dataset.buttonAction || ``;
   const button =
     buttonText && buttonAction
-      ? `<button type="button" data-map-place-action="${buttonAction}">${buttonText}</button>`
+      ? `<button class="aero-plan-popper__button button" type="button" data-map-place-action="${buttonAction}">${buttonText}</button>`
       : ``;
   const hasInteractionElems = linkText || buttonText;
 
