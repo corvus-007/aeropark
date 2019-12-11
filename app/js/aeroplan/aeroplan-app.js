@@ -201,6 +201,8 @@ function renderPlan(plan, planIndex) {
           .enter()
           .append(`use`);
 
+        this.setAttribute(`data-markers-group-id`, symbolId);
+
         use
           .attr(`data-title`, d => d.title)
           .attr(`xlink:href`, `#${symbolId}`)
@@ -245,7 +247,6 @@ function renderPlan(plan, planIndex) {
     })
     .classed(PLAN_PLACE_CLASS, true);
 
-
   // create logos
 
   const logosImages = logosG
@@ -255,24 +256,12 @@ function renderPlan(plan, planIndex) {
     .append(`image`);
 
   logosImages
-    .attr(`xlink:href`, d => {
-      return getPathToLogoImage(d, planIndex);
-    })
-    .attr(`width`, d => {
-      return calcLogoPosition(d, `width`);
-    })
-    .attr('data-name', d => {
-      return d.title;
-    })
-    .attr(`height`, d => {
-      return calcLogoPosition(d, `height`);
-    })
-    .attr(`x`, d => {
-      return calcLogoPosition(d, `x`);
-    })
-    .attr(`y`, d => {
-      return calcLogoPosition(d, `y`);
-    })
+    .attr(`xlink:href`, d => getPathToLogoImage(d, planIndex))
+    .attr(`width`, d => calcLogoPosition(d, `width`))
+    .attr('data-name', d => d.title)
+    .attr(`height`, d => calcLogoPosition(d, `height`))
+    .attr(`x`, d => calcLogoPosition(d, `x`))
+    .attr(`y`, d => calcLogoPosition(d, `y`))
     .classed(PLAN_PLACE_LOGO_CLASS, true);
 
   const zoom = d3
@@ -503,6 +492,11 @@ function keyupSearchInputHandler(evt) {
         fillSearchInput(
           searchResultList.children[searchResultCursor].dataset.title
         );
+        catchTargetPlace(
+          getFloorIndexAndObjectOfPlaceId(
+            searchResultList.children[searchResultCursor].dataset.id
+          )
+        );
         break;
       case KEYCODES.ARROW_UP:
         if (searchResultCursor > 0) {
@@ -519,6 +513,7 @@ function keyupSearchInputHandler(evt) {
         }
         break;
     }
+
     moveCursor(searchResultCursor);
   }
 }
@@ -561,17 +556,16 @@ function clickSearchResultListHandler(evt) {
   }
 
   const value = li.dataset.title;
-  // const id = li.dataset.id;
+  const placeId = li.dataset.id;
 
   fillSearchInput(value);
+  catchTargetPlace(getFloorIndexAndObjectOfPlaceId(placeId));
 }
 
 function fillSearchInput(value) {
   searchInput.value = value;
   toggleResultList(`hide`);
-  searchResultCursor = 0;
-
-  catchTargetPlace(getFloorIndexAndObjectOfPlaceIdOnSearch(value));
+  // searchResultCursor = 0;
 }
 
 function toggleResultList(action) {
@@ -590,8 +584,9 @@ function getMatches(value, data) {
     const areas = data[i].areas;
 
     const filteredAreas = areas.filter(area => {
+      const title = area.title.toLowerCase();
       const synonymsStr = area.synonyms.join().toLowerCase();
-      const result = synonymsStr.search(value) != -1;
+      const result = title.includes(value) || synonymsStr.includes(value);
 
       return result;
     });
@@ -770,7 +765,7 @@ function catchTargetPlace({ floorIndex, areaObj }) {
   const cx = placeBBox.x + placeBBox.width / 2;
   const cy = placeBBox.y + placeBBox.height / 2;
   let scale =
-    0.95 *
+    0.25 *
     Math.min(
       dimensionFloorsArr[floorIndex].width / placeBBox.width,
       dimensionFloorsArr[floorIndex].height / placeBBox.height
