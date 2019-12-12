@@ -37,7 +37,7 @@
 }
 
 .plan-place {
-  fill: #a3a3f5;
+  fill: hsl(236, 72%, 72%);
   stroke: #fff;
   stroke-width: 0.5;
   stroke-linejoin: round;
@@ -45,13 +45,11 @@
   transition: 0.2s;
 
   &:hover {
-    fill: darken(#a3a3f5, 8%);
+    fill: hsl(236, 72%, 64%);
   }
 
-  // &--hovered {
-  //   // fill: #8e89d8;
-  //   fill: darken(#a3a3f5, 8%);
-  // }
+  &--hovered {
+  }
 
   &--filtered {
     fill: #4fb1ff;
@@ -87,7 +85,7 @@
 }
 
 .help-markers-group {
-  fill: #616161;
+  fill: hsl(232, 20%, 60%);
 }
 
 .aeroplan-map {
@@ -130,6 +128,11 @@
 
   @include mq-min(1920px) {
     height: 56vh;
+  }
+
+  @media (min-height: 1200px) {
+    height: 56vh;
+    max-height: 720px;
   }
 }
 
