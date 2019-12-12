@@ -112,11 +112,11 @@ const aeroPlansToggleFloors = document.querySelector(`.toggle-floors`);
 const aeroPlansFloors = document.querySelectorAll(`.aero-plans__floor`);
 const toggleFloors = new ToggleFloors(aeroPlansToggleFloors, aeroPlansFloors);
 
-plansWrapper.addEventListener(`mouseover`, mouseroverPlansWrapperHandler);
+plansWrapper.addEventListener(`mouseover`, mouseoverPlansWrapperHandler);
 plansWrapper.addEventListener(`click`, clickPlansWrapperHandler);
 plansWrapper.addEventListener(`mouseout`, mouseoutPlansWrapperHandler);
 popper.addEventListener(`mouseleave`, mouseleavePopperHandler);
-document.addEventListener(`click`, clickDocumentHadler);
+document.addEventListener(`click`, clickDocumentHandler);
 
 zoomActionsContainer.addEventListener(`click`, clickZoomContainerHandler);
 
@@ -312,7 +312,7 @@ function clickPlansWrapperHandler(evt) {
   renderPlanPopper(pathNode);
 }
 
-function mouseroverPlansWrapperHandler(evt) {
+function mouseoverPlansWrapperHandler(evt) {
   const target = evt.target;
   const pathNode =
     target.closest(`.plan-place`) || target.closest(`.plan-help-marker`);
@@ -440,7 +440,7 @@ window.addEventListener('click', function(evt) {
   }
 });
 
-function clickDocumentHadler(evt) {
+function clickDocumentHandler(evt) {
   const triggerEl = evt.target.closest(`[${DATA_ATTR_PLACE_ACTION_NAME}]`);
 
   if (!triggerEl) {
@@ -692,7 +692,7 @@ function createToggleFloorsControls() {
 
 function getPathToLogoImage(d, index) {
   return d.logoSrc
-    ? `images/aeroplan/logos/floor_${index + 1}/${d.logoSrc}`
+    ? `./images/aeroplan/logos/floor_${index + 1}/${d.logoSrc}`
     : null;
 }
 
