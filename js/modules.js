@@ -499,13 +499,13 @@ window.rentStore = function ($) {
           form.reset();
           $.fancybox.close(true);
           setTimeout(function () {
-            $.fancybox.open("\n                <div class=\"popup-message\">\n                  <h2 class=\"popup-message__text\">\u0421\u043F\u0430\u0441\u0438\u0431\u043E, \u0432\u0430\u0448\u0430 \u0437\u0430\u044F\u0432\u043A\u0430 \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0430.</h2>\n                </div>\n              ");
+            $.fancybox.open("\n                <div class=\"popup-message\">\n                  <h2 class=\"popup-message__title\">\u0421\u043F\u0430\u0441\u0438\u0431\u043E</h2><p class=\"popup-message__text\">\u0412\u0430\u0448\u0430 \u0437\u0430\u044F\u0432\u043A\u0430 \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0430.</p>\n                </div>\n              ");
           }, 400);
         } else {
-          $.fancybox.open("\n              <div class=\"popup-message\">\n                <h2 class=\"popup-message__text\">\u0427\u0442\u043E-\u0442\u043E \u043F\u043E\u0448\u043B\u043E \u043D\u0435 \u0442\u0430\u043A! \u041F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0441\u043D\u043E\u0432\u0430!</h2>\n              </div>\n            ");
+          $.fancybox.open("\n              <div class=\"popup-message\">\n                <h2 class=\"popup-message__title\">\u0427\u0442\u043E-\u0442\u043E \u043F\u043E\u0448\u043B\u043E \u043D\u0435 \u0442\u0430\u043A</h2><p class=\"popup-message__text\">\u041F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430,  \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0441\u043D\u043E\u0432\u0430.</p>\n              </div>\n            ");
         }
       }).fail(function () {
-        $.fancybox.open("\n            <div class=\"popup-message\">\n              <h2 class=\"popup-message__text\">\u0427\u0442\u043E-\u0442\u043E \u043F\u043E\u0448\u043B\u043E \u043D\u0435 \u0442\u0430\u043A! \u041E\u0431\u043D\u043E\u0432\u0438\u0442\u0435 \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0443 \u0438 \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0441\u043D\u043E\u0432\u0430!</h2>\n            </div>\n          ");
+        $.fancybox.open("\n            <div class=\"popup-message\">\n              <h2 class=\"popup-message__title\">\u0427\u0442\u043E-\u0442\u043E \u043F\u043E\u0448\u043B\u043E \u043D\u0435 \u0442\u0430\u043A</h2><p class=\"popup-message__text\">\u041F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430, \u043E\u0431\u043D\u043E\u0432\u0438\u0442\u0435 \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0443 \u0438 \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0441\u043D\u043E\u0432\u0430.</p>\n            </div>\n          ");
       });
     },
     rules: {
@@ -550,13 +550,13 @@ window.rentIsland = function ($) {
           form.reset();
           $.fancybox.close(true);
           setTimeout(function () {
-            $.fancybox.open("\n                <div class=\"popup-message\">\n                  <h2 class=\"popup-message__text\">\u0421\u043F\u0430\u0441\u0438\u0431\u043E, \u0432\u0430\u0448\u0430 \u0437\u0430\u044F\u0432\u043A\u0430 \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0430.</h2>\n                </div>\n              ");
+            $.fancybox.open("\n                <div class=\"popup-message\">\n                  <h2 class=\"popup-message__title\">\u0421\u043F\u0430\u0441\u0438\u0431\u043E</h2><p class=\"popup-message__text\">\u0412\u0430\u0448\u0430 \u0437\u0430\u044F\u0432\u043A\u0430 \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0430.</p>\n                </div>\n              ");
           }, 400);
         } else {
-          $.fancybox.open("\n              <div class=\"popup-message\">\n                <h2 class=\"popup-message__text\">\u0427\u0442\u043E-\u0442\u043E \u043F\u043E\u0448\u043B\u043E \u043D\u0435 \u0442\u0430\u043A! \u041F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0441\u043D\u043E\u0432\u0430!</h2>\n              </div>\n            ");
+          $.fancybox.open("\n              <div class=\"popup-message\">\n                <h2 class=\"popup-message__title\">\u0427\u0442\u043E-\u0442\u043E \u043F\u043E\u0448\u043B\u043E \u043D\u0435 \u0442\u0430\u043A</h2><p class=\"popup-message__text\">\u041F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430,  \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0441\u043D\u043E\u0432\u0430.</p>\n              </div>\n            ");
         }
       }).fail(function () {
-        $.fancybox.open("\n            <div class=\"popup-message\">\n              <h2 class=\"popup-message__text\">\u0427\u0442\u043E-\u0442\u043E \u043F\u043E\u0448\u043B\u043E \u043D\u0435 \u0442\u0430\u043A! \u041E\u0431\u043D\u043E\u0432\u0438\u0442\u0435 \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0443 \u0438 \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0441\u043D\u043E\u0432\u0430!</h2>\n            </div>\n          ");
+        $.fancybox.open("\n            <div class=\"popup-message\">\n              <h2 class=\"popup-message__title\">\u0427\u0442\u043E-\u0442\u043E \u043F\u043E\u0448\u043B\u043E \u043D\u0435 \u0442\u0430\u043A</h2><p class=\"popup-message__text\">\u041F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430, \u043E\u0431\u043D\u043E\u0432\u0438\u0442\u0435 \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0443 \u0438 \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0441\u043D\u043E\u0432\u0430.</p>\n            </div>\n          ");
       });
     },
     rules: {
@@ -615,13 +615,13 @@ window.applicationAd = function ($) {
           form.reset();
           $.fancybox.close(true);
           setTimeout(function () {
-            $.fancybox.open("\n                <div class=\"popup-message\">\n                  <h2 class=\"popup-message__text\">\u0421\u043F\u0430\u0441\u0438\u0431\u043E, \u0432\u0430\u0448\u0430 \u0437\u0430\u044F\u0432\u043A\u0430 \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0430.</h2>\n                </div>\n              ");
+            $.fancybox.open("\n                <div class=\"popup-message\">\n                  <h2 class=\"popup-message__title\">\u0421\u043F\u0430\u0441\u0438\u0431\u043E</h2><p class=\"popup-message__text\">\u0412\u0430\u0448\u0430 \u0437\u0430\u044F\u0432\u043A\u0430 \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0430.</p>\n                </div>\n              ");
           }, 400);
         } else {
-          $.fancybox.open("\n              <div class=\"popup-message\">\n                <h2 class=\"popup-message__text\">\u0427\u0442\u043E-\u0442\u043E \u043F\u043E\u0448\u043B\u043E \u043D\u0435 \u0442\u0430\u043A! \u041F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0441\u043D\u043E\u0432\u0430!</h2>\n              </div>\n            ");
+          $.fancybox.open("\n              <div class=\"popup-message\">\n                <h2 class=\"popup-message__title\">\u0427\u0442\u043E-\u0442\u043E \u043F\u043E\u0448\u043B\u043E \u043D\u0435 \u0442\u0430\u043A</h2><p class=\"popup-message__text\">\u041F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430,  \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0441\u043D\u043E\u0432\u0430.</p>\n              </div>\n            ");
         }
       }).fail(function () {
-        $.fancybox.open("\n            <div class=\"popup-message\">\n              <h2 class=\"popup-message__text\">\u0427\u0442\u043E-\u0442\u043E \u043F\u043E\u0448\u043B\u043E \u043D\u0435 \u0442\u0430\u043A! \u041E\u0431\u043D\u043E\u0432\u0438\u0442\u0435 \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0443 \u0438 \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0441\u043D\u043E\u0432\u0430!</h2>\n            </div>\n          ");
+        $.fancybox.open("\n            <div class=\"popup-message\">\n              <h2 class=\"popup-message__title\">\u0427\u0442\u043E-\u0442\u043E \u043F\u043E\u0448\u043B\u043E \u043D\u0435 \u0442\u0430\u043A</h2><p class=\"popup-message__text\">\u041F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430, \u043E\u0431\u043D\u043E\u0432\u0438\u0442\u0435 \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0443 \u0438 \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0441\u043D\u043E\u0432\u0430.</p>\n            </div>\n          ");
       });
     },
     rules: {
@@ -663,13 +663,13 @@ window.contactUs = function ($) {
           form.reset();
           $.fancybox.close(true);
           setTimeout(function () {
-            $.fancybox.open("\n                <div class=\"popup-message\">\n                  <h2 class=\"popup-message__text\">\u0421\u043F\u0430\u0441\u0438\u0431\u043E, \u0444\u043E\u0440\u043C\u0430 \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0430.</h2>\n                </div>\n              ");
+            $.fancybox.open("\n                <div class=\"popup-message\">\n                  <h2 class=\"popup-message__title\">\u0421\u043F\u0430\u0441\u0438\u0431\u043E</h2><p class=\"popup-message__text\">\u0424\u043E\u0440\u043C\u0430 \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0430.</p>\n                </div>\n              ");
           }, 400);
         } else {
-          $.fancybox.open("\n              <div class=\"popup-message\">\n                <h2 class=\"popup-message__text\">\u0427\u0442\u043E-\u0442\u043E \u043F\u043E\u0448\u043B\u043E \u043D\u0435 \u0442\u0430\u043A! \u041F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0441\u043D\u043E\u0432\u0430!</h2>\n              </div>\n            ");
+          $.fancybox.open("\n              <div class=\"popup-message\">\n                <h2 class=\"popup-message__title\">\u0427\u0442\u043E-\u0442\u043E \u043F\u043E\u0448\u043B\u043E \u043D\u0435 \u0442\u0430\u043A</h2><p class=\"popup-message__text\">\u041F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430,  \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0441\u043D\u043E\u0432\u0430.</p>\n              </div>\n            ");
         }
       }).fail(function () {
-        $.fancybox.open("\n            <div class=\"popup-message\">\n              <h2 class=\"popup-message__text\">\u0427\u0442\u043E-\u0442\u043E \u043F\u043E\u0448\u043B\u043E \u043D\u0435 \u0442\u0430\u043A! \u041E\u0431\u043D\u043E\u0432\u0438\u0442\u0435 \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0443 \u0438 \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0441\u043D\u043E\u0432\u0430!</h2>\n            </div>\n          ");
+        $.fancybox.open("\n            <div class=\"popup-message\">\n              <h2 class=\"popup-message__title\">\u0427\u0442\u043E-\u0442\u043E \u043F\u043E\u0448\u043B\u043E \u043D\u0435 \u0442\u0430\u043A</h2><p class=\"popup-message__text\">\u041F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430, \u043E\u0431\u043D\u043E\u0432\u0438\u0442\u0435 \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0443 \u0438 \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0441\u043D\u043E\u0432\u0430.</p>\n            </div>\n          ");
       });
     }
   });
@@ -696,7 +696,7 @@ window.map = function (window) {
       hintContent: '241023, Россия, г. Брянск, ул. Объездная, д.30, 32'
     }, {
       iconLayout: 'default#image',
-      iconImageHref: 'images/icon-map-pin.svg',
+      iconImageHref: '/build/images/icon-map-pin.svg',
       iconImageSize: [54, 54],
       iconImageOffset: [-25, -54]
     });
