@@ -299,7 +299,7 @@
     pointer-events: all; }
 
 .plan-place {
-  fill: #a3a3f5;
+  fill: #848beb;
   stroke: #fff;
   stroke-width: 0.5;
   stroke-linejoin: round;
@@ -307,7 +307,7 @@
   -webkit-transition: 0.2s;
   transition: 0.2s; }
   .plan-place:hover {
-    fill: #7e7ef1; }
+    fill: #616ae5; }
   .plan-place--filtered {
     fill: #4fb1ff; }
     .plan-place--filtered:hover {
@@ -327,7 +327,7 @@
   pointer-events: none; }
 
 .help-markers-group {
-  fill: #616161; }
+  fill: #858aad; }
 
 .aeroplan-map {
   position: relative; }
@@ -368,6 +368,10 @@
   @media (min-width: 1920px) {
     .aero-plans {
       height: 56vh; } }
+  @media (min-height: 1200px) {
+    .aero-plans {
+      height: 56vh;
+      max-height: 720px; } }
 
 .boundary-group-fill,
 .boundary-group-stroke,

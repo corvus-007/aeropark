@@ -696,7 +696,7 @@ window.map = function (window) {
       hintContent: '241023, Россия, г. Брянск, ул. Объездная, д.30, 32'
     }, {
       iconLayout: 'default#image',
-      iconImageHref: '/build/images/icon-map-pin.svg',
+      iconImageHref: './images/icon-map-pin.svg',
       iconImageSize: [54, 54],
       iconImageOffset: [-25, -54]
     });
