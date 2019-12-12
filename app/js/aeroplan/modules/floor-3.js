@@ -112,7 +112,7 @@ export default {
       points: [
         {
           title: `Лифт`,
-          position: [397, 163.27],
+          position: [387, 163.27],
         },
       ],
     },
@@ -121,7 +121,7 @@ export default {
       points: [
         {
           title: `Эскалатор`,
-          position: [397, 221.37],
+          position: [387, 225.37],
         },
       ],
     },

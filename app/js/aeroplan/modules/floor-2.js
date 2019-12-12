@@ -2339,7 +2339,7 @@ export default {
       points: [
         {
           title: `Лифт`,
-          position: [1244, 413],
+          position: [1234, 413],
         },
         {
           title: `Лифт`,
@@ -2356,19 +2356,19 @@ export default {
       points: [
         {
           title: `Эскалатор`,
-          position: [1128, 495.33],
+          position: [1138, 495],
         },
         {
           title: `Эскалатор`,
-          position: [1244, 320.11],
+          position: [1234, 320],
         },
         {
           title: `Эскалатор`,
-          position: [1809, 719],
+          position: [1799.44, 719],
         },
         {
           title: `Эскалатор`,
-          position: [2330, 719],
+          position: [2340, 719],
         },
         {
           title: `Эскалатор`,
@@ -2376,7 +2376,11 @@ export default {
         },
         {
           title: `Эскалатор`,
-          position: [2007, 453],
+          position: [2014, 465],
+        },
+        {
+          title: `Эскалатор`,
+          position: [1167, 556],
         },
       ],
     },
