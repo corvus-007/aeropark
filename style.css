@@ -3875,6 +3875,8 @@ body:not(.home) .site-header {
           flex-grow: 1;
   padding-top: calc(72px + 40px);
   padding-bottom: 60px; }
+  .site-main--no-pb {
+    padding-bottom: 0; }
   @media (min-width: 768px) {
     .site-main {
       padding-top: calc(80px + 40px); } }
