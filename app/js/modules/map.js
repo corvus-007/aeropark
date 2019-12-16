@@ -24,7 +24,7 @@ window.map = (function(window) {
       },
       {
         iconLayout: 'default#image',
-        iconImageHref: 'images/icon-map-pin.svg',
+        iconImageHref: './images/icon-map-pin.svg',
         iconImageSize: [54, 54],
         iconImageOffset: [-25, -54],
       }
