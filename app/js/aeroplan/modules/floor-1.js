@@ -3483,7 +3483,7 @@ export default {
       audience: new Set(),
       link: { text: ``, url: `` },
       button: { text: ``, action: `` },
-      path: `M533.5,499h-16V483h16Z`,
+      path: `M1279.5,467.5h-16v-16h16Z`,
     },
     {
       id: 1164,
