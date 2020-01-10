@@ -3741,5 +3741,14 @@ export default {
         },
       ],
     },
+    {
+      symbolId: `charger`,
+      points: [
+        {
+          title: `Зарядная станция`,
+          position: [391, 490.5],
+        },
+      ],
+    },
   ],
 };
