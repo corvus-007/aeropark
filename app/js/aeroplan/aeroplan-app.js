@@ -232,6 +232,7 @@ function renderPlan(plan, planIndex) {
     .attr(`data-link-text`, d => (d.link ? d.link.text : null))
     .attr(`data-button-text`, d => (d.button ? d.button.text : null))
     .attr(`data-button-action`, d => (d.button ? d.button.action : null))
+    .attr(`data-shop-url`, d => (d.shopURL ? d.shopURL : null))
     .attr(`d`, d => {
       if (!('status' in d)) {
         return d.path;
@@ -376,23 +377,57 @@ function inputFilterFormHandler(evt) {
     return;
   }
 
-  resetFilter(select);
+  let currentCategoryFilterValue = parseInt(categoryFilterSelect.value, 10);
+  let currentAudienceFilterValue = parseInt(audienceFilterSelect.value, 10);
 
-  const filterName = select.name;
-  let filterValue = parseInt(select.value, 10);
-  filterValue = isNaN(filterValue) ? select.value : filterValue;
+  currentCategoryFilterValue = isNaN(currentCategoryFilterValue)
+    ? categoryFilterSelect.value
+    : currentCategoryFilterValue;
+  currentAudienceFilterValue = isNaN(currentAudienceFilterValue)
+    ? audienceFilterSelect.value
+    : currentAudienceFilterValue;
+
+  const filterByCategory = function(d) {
+    if (d['category'] instanceof Set) {
+      if (
+        currentCategoryFilterValue === `all` ||
+        currentCategoryFilterValue === ``
+      ) {
+        return d['category'].size;
+      }
+      return d['category'].has(currentCategoryFilterValue);
+    }
+  };
+
+  const filterByAudience = function(d) {
+    if (d['audience'] instanceof Set) {
+      if (
+        currentAudienceFilterValue === `all` ||
+        currentAudienceFilterValue === ``
+      ) {
+        return d['audience'].size;
+      }
+      return d['audience'].has(currentAudienceFilterValue);
+    }
+  };
+
+  const isSelectedCategoryNeedAudience =
+    currentCategoryFilterValue === categoryFilter['Одежда'] ||
+    currentCategoryFilterValue === categoryFilter['Обувь'] ||
+    currentCategoryFilterValue === categoryFilter['Бельё'];
+
+  if (!isSelectedCategoryNeedAudience) {
+    audienceFilterSelect.selectedIndex = 0;
+    audienceFilterSelect.disabled = true;
+  } else {
+    audienceFilterSelect.disabled = false;
+  }
 
   placesPathsArr.forEach((paths, planIndex) => {
     const filteredPaths = paths
       .classed(PLAN_PLACE_FILTERED_CLASS, false)
-      .filter(d => {
-        if (d[filterName] instanceof Set) {
-          if (filterValue === `all`) {
-            return d[filterName].size;
-          }
-          return d[filterName].has(filterValue);
-        }
-      })
+      .filter(filterByCategory)
+      .filter(filterByAudience)
       .classed(PLAN_PLACE_FILTERED_CLASS, true);
 
     const filteredAreasCount = filteredPaths.size();
@@ -660,15 +695,15 @@ function searchOnPlan(value) {
   }
 }
 
-function resetFilter(currentSelectNode) {
-  const selectNodes = filterForm.querySelectorAll(`select`);
+// function resetFilter(currentSelectNode) {
+//   const selectNodes = filterForm.querySelectorAll(`select`);
 
-  [...selectNodes].forEach(it => {
-    if (it !== currentSelectNode) {
-      it.selectedIndex = 0;
-    }
-  });
-}
+//   [...selectNodes].forEach(it => {
+//     if (it !== currentSelectNode) {
+//       it.selectedIndex = 0;
+//     }
+//   });
+// }
 
 function createToggleFloorsControls() {
   d3.select(`.toggle-floors`)
@@ -737,11 +772,11 @@ function calcLogoPosition(d, property) {
   }
 }
 
-function createOptionsList(optionslist) {
+function createOptionsList(optionsList) {
   const optionsFragment = document.createDocumentFragment();
 
-  for (let item in optionslist) {
-    let optionEl = new Option(item, optionslist[item]);
+  for (let item in optionsList) {
+    let optionEl = new Option(item, optionsList[item]);
     optionsFragment.appendChild(optionEl);
   }
 
@@ -796,6 +831,10 @@ function catchTargetPlace({ floorIndex, areaObj }) {
 function renderPlanPopper(pathNode) {
   const title = pathNode.dataset.title || ``;
   const description = pathNode.dataset.description || ``;
+  const shopURL = pathNode.dataset.shopUrl || ``;
+  const shopLink = shopURL
+    ? `<a class="aero-plan-popper__shop-link button" href="${shopURL}" target="_blank">Перейти в магазин</a>`
+    : ``;
   const linkUrl = pathNode.dataset.linkUrl || ``;
   const linkText = pathNode.dataset.linkText || ``;
   const link =
@@ -808,11 +847,13 @@ function renderPlanPopper(pathNode) {
     buttonText && buttonAction
       ? `<button class="aero-plan-popper__button button" type="button" data-map-place-action="${buttonAction}">${buttonText}</button>`
       : ``;
+
   const hasInteractionElems = linkText || buttonText;
 
   popper.innerHTML = `
     <h2 class="aero-plan-popper__title">${title}</h2>
     <p>${description}</p>
+    <p>${shopLink}</p>
     <p>${link}</p>
     <p>${button}</p>
   `;
@@ -881,28 +922,28 @@ function getFloorIndexAndObjectOfPlaceId(id) {
   };
 }
 
-function getFloorIndexAndObjectOfPlaceIdOnSearch(value) {
-  let floorIndex = 0;
-  let areaObj = null;
-  value = value.toLowerCase().trim();
+// function getFloorIndexAndObjectOfPlaceIdOnSearch(value) {
+//   let floorIndex = 0;
+//   let areaObj = null;
+//   value = value.toLowerCase().trim();
 
-  for (let i = 0; i < aeroPlans.length; i++) {
-    let areas = aeroPlans[i].areas;
-    floorIndex = i;
-    areaObj = areas.find(place => {
-      const synonyms = place.synonyms.map(word => word.toLowerCase().trim());
-      const title = place.title.toLowerCase();
+//   for (let i = 0; i < aeroPlans.length; i++) {
+//     let areas = aeroPlans[i].areas;
+//     floorIndex = i;
+//     areaObj = areas.find(place => {
+//       const synonyms = place.synonyms.map(word => word.toLowerCase().trim());
+//       const title = place.title.toLowerCase();
 
-      return synonyms.includes(value) || title.includes(value);
-    });
+//       return synonyms.includes(value) || title.includes(value);
+//     });
 
-    if (areaObj) {
-      break;
-    }
-  }
+//     if (areaObj) {
+//       break;
+//     }
+//   }
 
-  return {
-    floorIndex,
-    areaObj,
-  };
-}
+//   return {
+//     floorIndex,
+//     areaObj,
+//   };
+// }
