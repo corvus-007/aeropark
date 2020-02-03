@@ -37,9 +37,9 @@ export const categoryFilter = {
 
 export const audienceFilter = {
   'Все': `all`,
-  'Мужская одежда': 1,
-  'Женская одежда': 2,
-  'Товары для детей': 3
+  'Для мужчин': 1,
+  'Для женщин': 2,
+  'Для детей': 3
 };
 
 export const discountFilter = {

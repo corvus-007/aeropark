@@ -411,32 +411,46 @@ function inputFilterFormHandler(evt) {
     }
   };
 
-  const isSelectedCategoryNeedAudience =
+  const isSelectedCategoryHasAudience =
     currentCategoryFilterValue === categoryFilter['Одежда'] ||
     currentCategoryFilterValue === categoryFilter['Обувь'] ||
     currentCategoryFilterValue === categoryFilter['Бельё'];
 
-  if (!isSelectedCategoryNeedAudience) {
+  if (!isSelectedCategoryHasAudience) {
     audienceFilterSelect.selectedIndex = 0;
     audienceFilterSelect.disabled = true;
+
+    placesPathsArr.forEach((paths, planIndex) => {
+      const filteredPaths = paths
+        .classed(PLAN_PLACE_FILTERED_CLASS, false)
+        .filter(filterByCategory)
+        .classed(PLAN_PLACE_FILTERED_CLASS, true);
+
+      const filteredAreasCount = filteredPaths.size();
+      const badgeValueNode = document.querySelectorAll(
+        `.toggle-floors__badge-value`
+      )[planIndex];
+
+      badgeValueNode.textContent = filteredAreasCount || ``;
+    });
   } else {
     audienceFilterSelect.disabled = false;
+
+    placesPathsArr.forEach((paths, planIndex) => {
+      const filteredPaths = paths
+        .classed(PLAN_PLACE_FILTERED_CLASS, false)
+        .filter(filterByCategory)
+        .filter(filterByAudience)
+        .classed(PLAN_PLACE_FILTERED_CLASS, true);
+
+      const filteredAreasCount = filteredPaths.size();
+      const badgeValueNode = document.querySelectorAll(
+        `.toggle-floors__badge-value`
+      )[planIndex];
+
+      badgeValueNode.textContent = filteredAreasCount || ``;
+    });
   }
-
-  placesPathsArr.forEach((paths, planIndex) => {
-    const filteredPaths = paths
-      .classed(PLAN_PLACE_FILTERED_CLASS, false)
-      .filter(filterByCategory)
-      .filter(filterByAudience)
-      .classed(PLAN_PLACE_FILTERED_CLASS, true);
-
-    const filteredAreasCount = filteredPaths.size();
-    const badgeValueNode = document.querySelectorAll(
-      `.toggle-floors__badge-value`
-    )[planIndex];
-
-    badgeValueNode.textContent = filteredAreasCount || ``;
-  });
 }
 
 function resetFormHandler() {
@@ -833,8 +847,8 @@ function renderPlanPopper(pathNode) {
   const description = pathNode.dataset.description || ``;
   const shopURL = pathNode.dataset.shopUrl || ``;
   const shopLink = shopURL
-    ? `<a class="aero-plan-popper__shop-link button" href="${shopURL}" target="_blank">Перейти в магазин</a>`
-    : ``;
+    ? `<a class="aero-plan-popper__shop-link" href="${shopURL}" target="_blank">${title}</a>`
+    : `${title}`;
   const linkUrl = pathNode.dataset.linkUrl || ``;
   const linkText = pathNode.dataset.linkText || ``;
   const link =
@@ -851,9 +865,8 @@ function renderPlanPopper(pathNode) {
   const hasInteractionElems = linkText || buttonText;
 
   popper.innerHTML = `
-    <h2 class="aero-plan-popper__title">${title}</h2>
+    <h2 class="aero-plan-popper__title">${shopLink}</h2>
     <p>${description}</p>
-    <p>${shopLink}</p>
     <p>${link}</p>
     <p>${button}</p>
   `;
@@ -900,9 +913,14 @@ function getTargetIdFromAreaObj(placeObj) {
 }
 
 function getFloorIndexAndObjectOfPlaceId(id) {
-  let floorIndex = 0;
+  let floorIndex = null;
   let areaObj = null;
+
   id = parseInt(id, 10);
+
+  if (isNaN(id)) {
+    return {};
+  }
 
   for (let i = 0; i < aeroPlans.length; i++) {
     let areas = aeroPlans[i].areas;
@@ -914,6 +932,10 @@ function getFloorIndexAndObjectOfPlaceId(id) {
     if (areaObj) {
       break;
     }
+  }
+
+  if (!areaObj) {
+    return {};
   }
 
   return {
