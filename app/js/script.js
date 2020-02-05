@@ -38,6 +38,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
   $('.chosen-select').chosen({ no_results_text: 'Ой, ничего не найдено!' });
 
+  function checkSwiperIfItHasOnlyOneSlide(instance) {
+    const galleryInstance = instance;
+    const gallery = galleryInstance.el;
+    const amountSlides = galleryInstance.slides.length;
+    const hasOnlyOneSlide = amountSlides <= 1;
+
+    gallery.classList.toggle('swiper-has-one-slide', hasOnlyOneSlide);
+  }
+
   document.addEventListener('click', function(evt) {
     const target = evt.target;
     const searchHeaderToggle = target.closest('[data-toggle-search]');
@@ -77,11 +86,14 @@ document.addEventListener('DOMContentLoaded', function() {
       modifier: 3,
       slideShadows: false,
     },
-
-    // Navigation arrows
     navigation: {
       nextEl: '.common-slider-button--next',
       prevEl: '.common-slider-button--prev',
+    },
+    on: {
+      init() {
+        checkSwiperIfItHasOnlyOneSlide(this);
+      },
     },
   });
 
@@ -103,6 +115,11 @@ document.addEventListener('DOMContentLoaded', function() {
       nextEl: '.common-slider-button--next',
       prevEl: '.common-slider-button--prev',
     },
+    on: {
+      init() {
+        checkSwiperIfItHasOnlyOneSlide(this);
+      },
+    },
   });
 
   new Swiper('[data-shop-gallery]', {
@@ -111,6 +128,11 @@ document.addEventListener('DOMContentLoaded', function() {
       nextEl: '.common-slider-button--next',
       prevEl: '.common-slider-button--prev',
     },
+    on: {
+      init() {
+        checkSwiperIfItHasOnlyOneSlide(this);
+      },
+    },
   });
 
   new Swiper('[data-content-gallery]', {
@@ -118,6 +140,11 @@ document.addEventListener('DOMContentLoaded', function() {
     navigation: {
       nextEl: '.common-slider-button--next',
       prevEl: '.common-slider-button--prev',
+    },
+    on: {
+      init() {
+        checkSwiperIfItHasOnlyOneSlide(this);
+      },
     },
   });
 });

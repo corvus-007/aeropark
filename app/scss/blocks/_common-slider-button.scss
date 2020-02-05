@@ -40,6 +40,10 @@
     right: 16px;
   }
 
+  .swiper-has-one-slide & {
+    display: none;
+  }
+
   &.swiper-button-disabled {
     opacity: 0.6;
     cursor: default;
