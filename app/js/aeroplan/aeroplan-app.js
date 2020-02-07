@@ -405,7 +405,7 @@ function inputFilterFormHandler(evt) {
         currentAudienceFilterValue === `all` ||
         currentAudienceFilterValue === ``
       ) {
-        return d['audience'].size;
+        return true;
       }
       return d['audience'].has(currentAudienceFilterValue);
     }
@@ -730,7 +730,7 @@ function createToggleFloorsControls() {
       let floor = i + 1;
 
       return `
-      <button class="toggle-floors__button" type="button" data-floor-id="${floor}">${floor}<span class="visually-hidden">этаж</span></button>
+      <button class="toggle-floors__button" type="button" data-floor-id="${floor}" title="${floor} этаж">${floor}<span class="visually-hidden">этаж</span></button>
         <span class="toggle-floors__badge">
           <span class="toggle-floors__badge-caption visually-hidden">Общее количество найденных мест</span>
           <span class="toggle-floors__badge-value"></span>

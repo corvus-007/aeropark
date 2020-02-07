@@ -2,10 +2,31 @@ window.commonPageFilter = (function() {
   'use strict';
 
   const COLLPASED_CLASS = 'common-page-filter--collapsed';
+  const SEARCH_PARAM_NAME = 'filter_by';
   const commonPageFilter = document.querySelector('.common-page-filter');
 
   if (!commonPageFilter) {
     return;
+  }
+
+  function getFilterSelectorFromHash() {
+    const params = new URLSearchParams(window.location.search);
+    let selector = null;
+
+    if (params.has(SEARCH_PARAM_NAME)) {
+      selector = params.get(SEARCH_PARAM_NAME);
+    }
+
+    return selector;
+  }
+
+  let initSelector = getFilterSelectorFromHash();
+  const setDefaultFilter = commonPageFilter.dataset.setDefaultFilter;
+
+  if (!initSelector && setDefaultFilter) {
+    initSelector = setDefaultFilter;
+  } else if (!initSelector) {
+    initSelector = '*';
   }
 
   commonPageFilter.classList.add(COLLPASED_CLASS);
@@ -20,8 +41,11 @@ window.commonPageFilter = (function() {
     '.common-page-filter__options'
   );
   const cardsList = document.querySelector('[data-filter-cards]');
-  const initOption = optionsList.firstElementChild;
-  const initButton = initOption.querySelector('[data-filter]');
+  let initButton = optionsList.querySelector(`[data-filter="${initSelector}"]`);
+  initButton = initButton
+    ? initButton
+    : optionsList.querySelector('[data-filter]');
+  const initOption = initButton.closest('.common-filter-option');
   const initValue = initButton.dataset.filter;
   const initTextValue = initButton.textContent;
   const toggleCollapsedStateText = ['Показать все', 'Скрыть'];
@@ -105,6 +129,7 @@ window.commonPageFilter = (function() {
   updateTextAtLabel(initTextValue);
   setActiveOption(initOption);
   filterItems(initValue);
+  updateHistory(initValue);
 
   function hideAllItems() {
     const cardsItems = cardsList.children;
@@ -137,6 +162,13 @@ window.commonPageFilter = (function() {
     labelElem.textContent = text;
   }
 
+  function updateHistory(val) {
+    const searchParams = new URLSearchParams(window.location.search);
+
+    searchParams.set(SEARCH_PARAM_NAME, val);
+    history.replaceState({}, '', `${location.pathname}?${searchParams}`);
+  }
+
   function onOptionsListClick(evt) {
     evt.preventDefault();
 
@@ -157,5 +189,6 @@ window.commonPageFilter = (function() {
     updateTextAtLabel(filterText);
     closeFilterOptions();
     filterItems(filterValue);
+    updateHistory(filterValue);
   }
 })();
