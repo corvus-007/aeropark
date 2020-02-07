@@ -59,6 +59,12 @@
       background-color: #ffffff;
       border-color: #999999;
     }
+
+    &:disabled {
+      opacity: 0.8;
+      border-color: rgba($gray-214, 0.4);
+      cursor: not-allowed;
+    }
   }
 
   option {

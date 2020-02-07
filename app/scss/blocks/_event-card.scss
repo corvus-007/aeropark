@@ -1,6 +1,17 @@
 .event-card {
 }
 
+.event-card--finished {
+  &.filter-actions {
+    display: none;
+  }
+
+  &.filter-events {
+    filter: grayscale(50%);
+    opacity: 0.6;
+  }
+}
+
 .event-card__wraplink {
   display: block;
   line-height: 1.2;

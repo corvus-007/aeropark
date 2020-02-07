@@ -9,14 +9,15 @@
 }
 
 .site-menu__item {
-  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: calc(100% / 9);
 }
 
 .site-menu__link {
   display: block;
   padding: 28px 4px;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   text-align: center;
   text-decoration: none;
   color: #505a64;
@@ -40,6 +41,10 @@
     padding-top: 12px;
     padding-bottom: 12px;
     color: #505a64;
+  }
+
+  @include mq-min(1280px) {
+    font-size: 14px;
   }
 }
 
