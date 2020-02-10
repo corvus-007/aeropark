@@ -412,9 +412,10 @@ function inputFilterFormHandler(evt) {
   };
 
   const isSelectedCategoryHasAudience =
-    currentCategoryFilterValue === categoryFilter['Одежда'] ||
-    currentCategoryFilterValue === categoryFilter['Обувь'] ||
-    currentCategoryFilterValue === categoryFilter['Бельё'];
+    currentCategoryFilterValue === categoryFilter['Одежда и аксессуары'] ||
+    currentCategoryFilterValue === categoryFilter['Обувь, сумки, кожгалантерея'] ||
+    currentCategoryFilterValue === categoryFilter['Детские товары и одежда'] ||
+    currentCategoryFilterValue === categoryFilter['Белье, чулочные изделия'];
 
   if (!isSelectedCategoryHasAudience) {
     audienceFilterSelect.selectedIndex = 0;
@@ -741,7 +742,7 @@ function createToggleFloorsControls() {
 
 function getPathToLogoImage(d, index) {
   return d.logoSrc
-    ? `./images/aeroplan/logos/floor_${index + 1}/${d.logoSrc}`
+    ? `/build/images/aeroplan/logos/floor_${index + 1}/${d.logoSrc}`
     : null;
 }
 
