@@ -703,3 +703,53 @@ window.map = function (window) {
     map.geoObjects.add(myPlacemark);
   });
 }(window);
+
+window.search = function () {
+  'use strict';
+
+  var form = document.querySelector('[data-search-form]');
+  var result = document.querySelector('[data-search-result]');
+  var resultList = result.querySelector('ul');
+
+  if (!form) {
+    return;
+  }
+
+  var INPUT_NAME = 'query'; // const url = form.action;
+
+  var url = './js/mock-search.json'; // const template = Handlebars.compile(source);
+
+  function renderItem(item) {
+    var link = item.link;
+    var title = item.title;
+    var tags = item.tags;
+    var tagsString = tags.join(', ');
+    var text = item.text;
+    var htmlString = "\n    <li class=\"search-result__item search-result-item\">\n      <a class=\"search-result-item__wraplink\" href=\"".concat(link, "\">\n        <p class=\"search-result-item__title\"><b>").concat(title, "</b></p>\n        <p class=\"search-result-item__tags\"><span class=\"hatch-maker\">").concat(tagsString, "</span></p>\n        <p class=\"search-result-item__text\">").concat(text, "</p>\n      </a>\n    </li>\n  ");
+    resultList.insertAdjacentHTML('beforeend', htmlString);
+  }
+
+  function renderEmptyMatches() {
+    var htmlString = "\n      <li class=\"search-result__item search-result-item\">\n        <p class=\"search-result__empty\">\u041F\u043E \u0432\u0430\u0448\u0435\u043C\u0443 \u0437\u0430\u043F\u0440\u043E\u0441\u0443 \u043D\u0438\u0447\u0435\u0433\u043E \u043D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D\u043E :(</p>\n      </li>\n    ";
+    resultList.insertAdjacentHTML('beforeend', htmlString);
+  }
+
+  function onSubmitFormHandler(evt) {
+    evt.preventDefault();
+    var searchString = form.elements[INPUT_NAME].value;
+    var response = fetch("".concat(url, "?").concat(INPUT_NAME, "=").concat(searchString));
+    response.then(function (response) {
+      return response.json();
+    }).then(function (data) {
+      console.log(data);
+
+      if (false) {
+        data.forEach(renderItem);
+      } else {
+        renderEmptyMatches();
+      }
+    });
+  }
+
+  form.addEventListener('submit', onSubmitFormHandler);
+}();
