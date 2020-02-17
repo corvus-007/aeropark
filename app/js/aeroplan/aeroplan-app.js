@@ -331,7 +331,14 @@ function mouseoverPlansWrapperHandler(evt) {
 }
 
 function mouseoutPlansWrapperHandler(evt) {
-  if (evt.relatedTarget !== popper && currentPathNode) {
+  const relateTargetIsPopper =
+    evt.relatedTarget.closest('.aero-plan-popper') === popper;
+
+  if (relateTargetIsPopper) {
+    return;
+  }
+
+  if (currentPathNode) {
     popper.hidden = true;
     // currentPathNode.classList.remove(PLAN_PLACE_HOVERED_CLASS);
     currentPathNode.classList.remove(PLAN_PLACE_ACTIVE_CLASS);
