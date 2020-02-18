@@ -1,6 +1,9 @@
 .events-slide {
-  border-radius: 5px;
   overflow: hidden;
+
+  @include mq-min(1024px) {
+    border-radius: 5px;
+  }
 }
 
 .events-slide__wraplink {
@@ -8,5 +11,4 @@
 }
 
 .events-slide__picture {
-
 }
