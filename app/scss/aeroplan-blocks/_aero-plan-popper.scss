@@ -1,7 +1,7 @@
 .aero-plan-popper {
   z-index: 5;
   max-width: 300px;
-  padding: 16px;
+  padding: 14px;
   font-size: 16px;
   line-height: 1.15;
   hyphens: auto;
@@ -12,7 +12,6 @@
               0 0 20px rgba(#000000, 0.1);
   box-sizing: border-box;
   user-select: none;
-  // pointer-events: none;
 
   &:empty {
     display: none;
@@ -34,20 +33,28 @@
   &--has-interaction {
     // pointer-events: all;
   }
+
+  @include mq-min(768px) {
+    font-size: 16px;
+  }
 }
 
 .aero-plan-popper__link {
 }
 
 .aero-plan-popper__button {
-  margin-top: 4px;
   max-width: none;
+  margin-top: 4px;
 }
 
 .aero-plan-popper__title {
   margin: 0;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.15;
+
+  @include mq-min(768px) {
+    font-size: 24px;
+  }
 }
 
 .aero-plan-popper__shop-link {
@@ -56,6 +63,7 @@
   text-decoration: none;
   color: currentColor;
   transition: color 0.2s;
+  touch-action: manipulation;
 
   &:hover,
   &:focus {
