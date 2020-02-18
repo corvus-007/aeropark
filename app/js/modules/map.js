@@ -1,4 +1,4 @@
-window.map = (function(window) {
+window.map = (function() {
   'use strict';
 
   var mapElem = document.querySelector('#contact-map');
@@ -24,7 +24,7 @@ window.map = (function(window) {
       },
       {
         iconLayout: 'default#image',
-        iconImageHref: './images/icon-map-pin.svg',
+        iconImageHref: '/build/images/icon-map-pin.svg',
         iconImageSize: [54, 54],
         iconImageOffset: [-25, -54],
       }
@@ -32,4 +32,4 @@ window.map = (function(window) {
 
     map.geoObjects.add(myPlacemark);
   });
-})(window);
+})();
