@@ -3,7 +3,6 @@
 //=require ../../node_modules/inputmask/dist/min/jquery.inputmask.bundle.min.js
 //=require ../../node_modules/swiper/js/swiper.min.js
 //=require ../../node_modules/animejs/lib/anime.min.js
-//=require ../../node_modules/isotope-layout/dist/isotope.pkgd.min.js
 //=require ../../node_modules/a11y_accordions/assets/js/aria.accordion.min.js
 //=require ../../node_modules/chosen-js/chosen.jquery.min.js
 //=require ../../node_modules/jquery-validation/dist/jquery.validate.min.js
