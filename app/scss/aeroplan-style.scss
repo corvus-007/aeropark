@@ -94,16 +94,26 @@
 
 .aeroplan-map__toggle-floors {
   position: absolute;
-  right: 28px;
-  bottom: 28px;
+  right: 12px;
+  bottom: 12px;
   z-index: 5;
+
+  @include mq-min(768px) {
+    right: 28px;
+    bottom: 28px;
+  }
 }
 
 .aeroplan-map__zoom-actions {
   position: absolute;
-  top: 28px;
-  right: 28px;
+  top: 12px;
+  right: 12px;
   z-index: 5;
+
+  @include mq-min(768px) {
+    top: 28px;
+    right: 28px;
+  }
 }
 
 .aero-plans {
@@ -117,9 +127,9 @@
   max-height: 600px;
 
   @media (max-width: 767px) and (orientation: landscape) {
+    height: 84vh;
     min-height: 320px;
     max-height: 400px;
-    height: 84vh;
   }
 
   @include mq-min(1280px) {
