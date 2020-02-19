@@ -33,8 +33,6 @@ export default {
       category: new Set([categoryFilter[`Развлечения`]]),
       audience: new Set(),
       shopURL: `/dynamic/entertainment/6`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M246,462.5v118h-8L170.11,602a122.38,122.38,0,0,1-18.46,5.85h0A122.62,122.62,0,0,1,1.5,488.5C1.5,436,36.85,395.45,81,373.74v-.24H246Z`,
     },
     {
@@ -47,8 +45,6 @@ export default {
       category: new Set([categoryFilter[`Кафе и рестораны`]]),
       audience: new Set(),
       shopURL: `/dynamic/eat/71`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M246,373.5H81v-64H423v64H246Z`,
     },
     {
@@ -61,8 +57,6 @@ export default {
       category: new Set([categoryFilter[`Развлечения`]]),
       audience: new Set(),
       shopURL: `/dynamic/entertainment/5`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M423,484.5H530v96H246v-118H377v-89h46Z`,
     },
     {
@@ -86,8 +80,6 @@ export default {
       category: new Set([categoryFilter[`Развлечения`]]),
       audience: new Set(),
       shopURL: `/dynamic/entertainment/9`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M830,1.5v483H423v-337H395V1.5H830Z`,
     },
     {
@@ -100,8 +92,6 @@ export default {
       category: new Set([categoryFilter[`Развлечения`]]),
       audience: new Set(),
       shopURL: `/dynamic/entertainment/3`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M246,373.5H377v89H246Z`,
     },
   ],

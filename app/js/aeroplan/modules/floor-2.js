@@ -24,8 +24,6 @@ export default {
       category: new Set([categoryFilter[`Кафе и рестораны`]]),
       audience: new Set(),
       shopURL: `/dynamic/eat/92`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2543,750.5h56v33h-56Z`,
     },
     {
@@ -38,8 +36,6 @@ export default {
       category: new Set([categoryFilter[`Кафе и рестораны`]]),
       audience: new Set(),
       shopURL: `/dynamic/eat/86`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2599,667.5h-56V561h56Z`,
     },
     {
@@ -59,8 +55,6 @@ export default {
       category: new Set([categoryFilter[`Где поесть`]]),
       audience: new Set(),
       shopURL: `/dynamic/eat/69`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2543,783.5h56V817h-56Z`,
     },
     {
@@ -73,8 +67,6 @@ export default {
       category: new Set([categoryFilter[`Кафе и рестораны`]]),
       audience: new Set(),
       shopURL: `/dynamic/eat/2`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2599,703.5v47h-56v-47Z`,
     },
     {
@@ -87,8 +79,6 @@ export default {
       category: new Set([categoryFilter[`Кафе и рестораны`]]),
       audience: new Set(),
       shopURL: `/dynamic/eat/77`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2599,703.5h-56v-36h56Z`,
     },
     {
@@ -101,8 +91,6 @@ export default {
       category: new Set([categoryFilter[`Кафе и рестораны`]]),
       audience: new Set(),
       shopURL: `/dynamic/eat/74`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2439,561v60h-44V561Z`,
     },
     {
@@ -115,8 +103,6 @@ export default {
       category: new Set([categoryFilter[`Кафе и рестораны`]]),
       audience: new Set(),
       shopURL: `/dynamic/eat/68`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2469,561v60h-30V561Z`,
     },
     {
@@ -129,8 +115,6 @@ export default {
       category: new Set([categoryFilter[`Где поесть`]]),
       audience: new Set(),
       shopURL: `/dynamic/eat/73`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2543,561v60h-36V561Z`,
     },
     {
@@ -143,8 +127,6 @@ export default {
       category: new Set([categoryFilter[`Кафе и рестораны`]]),
       audience: new Set(),
       shopURL: `/dynamic/eat/78`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2507,561v60h-38V561Z`,
     },
     {
@@ -164,8 +146,6 @@ export default {
       category: new Set([categoryFilter[`Детские товары и одежда`]]),
       audience: new Set([audienceFilter[`Для детей`]]),
       shopURL: `/shop/110`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1949.93,784.82V751.14h50.19v33.68Z`,
     },
     {
@@ -184,8 +164,6 @@ export default {
       category: new Set([categoryFilter[`Детские товары и одежда`]]),
       audience: new Set([audienceFilter[`Для детей`]]),
       shopURL: `/shop/47`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1898.64,784.82V751.14h51.29v33.68Z`,
     },
     {
@@ -218,8 +196,6 @@ export default {
       category: new Set([categoryFilter[`Бытовая техника, электроника`]]),
       audience: new Set(),
       shopURL: `/shop/159`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2149,784.82h-34.32L2149,750.5Z`,
     },
     {
@@ -232,8 +208,6 @@ export default {
       category: new Set([categoryFilter[`Детские товары и одежда`]]),
       audience: new Set([audienceFilter[`Для детей`]]),
       shopURL: `/shop/8`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1849.13,784.82V751.14h49.51v33.68Z`,
     },
     {
@@ -255,8 +229,6 @@ export default {
       category: new Set([categoryFilter[`Бытовая техника, электроника`]]),
       audience: new Set(),
       shopURL: `/shop/142`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2000.12,784.82V751.14l33.68,33.68Z`,
     },
     {
@@ -269,8 +241,6 @@ export default {
       category: new Set([categoryFilter[`Одежда и аксессуары`]]),
       audience: new Set([audienceFilter[`Для женщин`]]),
       shopURL: `/shop/57`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2149,784.82V750.5h51.38v34.32Z`,
     },
     {
@@ -283,8 +253,6 @@ export default {
       category: new Set([categoryFilter[`Где поесть`]]),
       audience: new Set(),
       shopURL: `/dynamic/eat/84`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2200.38,784.82v32.32a250.14,250.14,0,0,1-254.6.09l-145.92,0V784.82Z`,
     },
     {
@@ -315,8 +283,6 @@ export default {
       category: new Set([categoryFilter[`Одежда и аксессуары`]]),
       audience: new Set([audienceFilter[`Для женщин`]]),
       shopURL: `/shop/72`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2200.38,784.82V750.5h40.2v41.75h-40.2Z`,
     },
     {
@@ -340,8 +306,6 @@ export default {
       category: new Set([categoryFilter[`Обувь, сумки, кожгалантерея`]]),
       audience: new Set(),
       shopURL: `/shop/1`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2284.54,750.5v66.61l-44,0h-40.2V792.25h40.2V750.5Z`,
     },
     {
@@ -354,8 +318,6 @@ export default {
       category: new Set([categoryFilter[`Кафе и рестораны`]]),
       audience: new Set(),
       shopURL: `/dynamic/eat/79`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2363.36,750.5v66.58l-78.82,0V750.5Z`,
     },
     {
@@ -368,8 +330,6 @@ export default {
       category: new Set([categoryFilter[`Мебель Холл`]]),
       audience: new Set(),
       shopURL: `/dynamic/mebel-hall/47`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1193.5,756.44V670.67h32.64v85.77Z`,
     },
     {
@@ -382,8 +342,6 @@ export default {
       category: new Set([categoryFilter[`Мебель Холл`]]),
       audience: new Set(),
       shopURL: `/dynamic/mebel-hall/35`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1300,670.67V817.46l-106.5,0V756.44h32.64V670.67Z`,
     },
     {
@@ -396,8 +354,6 @@ export default {
       category: new Set([categoryFilter[`Мебель Холл`]]),
       audience: new Set(),
       shopURL: `/dynamic/mebel-hall/42`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1147.17,704l33.49-33.33h12.84v85.77h-46.33Z`,
     },
     {
@@ -417,8 +373,6 @@ export default {
       category: new Set([categoryFilter[`Детские товары и одежда`]]),
       audience: new Set([audienceFilter[`Для детей`]]),
       shopURL: `/shop/166`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1682.89,751.14v66.19l-64.16,0V751.14Z`,
     },
     {
@@ -431,8 +385,6 @@ export default {
       category: new Set([categoryFilter[`Мебель Холл`]]),
       audience: new Set(),
       shopURL: `/dynamic/mebel-hall/54`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1492.92,751.14v66.25l-99.27,0V723L1444,751.14Z`,
     },
     {
@@ -445,8 +397,6 @@ export default {
       category: new Set([categoryFilter[`Мебель Холл`]]),
       audience: new Set(),
       shopURL: `/dynamic/mebel-hall/55`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1527.53,751.14v66.24h-34.61V751.14Z`,
     },
     {
@@ -459,8 +409,6 @@ export default {
       category: new Set([categoryFilter[`Мебель Холл`]]),
       audience: new Set(),
       shopURL: `/dynamic/mebel-hall/46`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1126.5,729.5c0-1.59-.08-3.15-.23-4.7l20.9-20.8v52.44h-28.56A49.73,49.73,0,0,0,1126.5,729.5Z`,
     },
     {
@@ -482,8 +430,6 @@ export default {
       category: new Set([categoryFilter[`Парфюмерия и косметика`]]),
       audience: new Set(),
       shopURL: `/shop/101`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1092.56,682.15V641.87h27.85l0,19-22.16,23.62a50.28,50.28,0,0,0-5.67-2.32V641.87`,
     },
     {
@@ -496,8 +442,6 @@ export default {
       category: new Set([categoryFilter[`Услуги`]]),
       audience: new Set(),
       shopURL: `/dynamic/uslugi/107`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1558.85,751.14v66.23h-31.32V751.14Z`,
     },
     {
@@ -522,8 +466,6 @@ export default {
       category: new Set([categoryFilter[`Детские товары и одежда`]]),
       audience: new Set([audienceFilter[`Для детей`]]),
       shopURL: `/shop/12`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1618.73,817.35l-59.88,0V751.14h59.88Z`,
     },
     {
@@ -536,8 +478,6 @@ export default {
       category: new Set([categoryFilter[`Мебель Холл`]]),
       audience: new Set(),
       shopURL: `/dynamic/mebel-hall/43`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1300,817.46V670.67l43.42,24.26V817.45Z`,
     },
     {
@@ -550,8 +490,6 @@ export default {
       category: new Set([categoryFilter[`Мебель Холл`]]),
       audience: new Set(),
       shopURL: `/dynamic/mebel-hall/57`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1343.42,817.45V694.93L1393.65,723v94.44ZM1300,624.57l53,29.75v-44.4h-53Zm77-14.65v57.87l54,30.32V609.92Z`,
     },
     {
@@ -564,8 +502,6 @@ export default {
       category: new Set([categoryFilter[`Ювелирные изделия`]]),
       audience: new Set(),
       shopURL: `/shop/119`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1032.86,705.1H998.72a81.24,81.24,0,0,1,8.28-18.17V641.87h85.56v40.28a50,50,0,0,0-59.7,23Z`,
     },
     {
@@ -578,8 +514,6 @@ export default {
       category: new Set([categoryFilter[`Кафе и рестораны`]]),
       audience: new Set(),
       shopURL: `/dynamic/eat/62`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1193.5,756.44V817.5s-41.43,18-78.6,29.06L1104.6,806a81.68,81.68,0,0,1-59.08-1.13V787.26l11.66-11.63h0a50,50,0,0,0,61.42-19.19Z`,
     },
     {
@@ -599,8 +533,6 @@ export default {
       category: new Set([categoryFilter[`Товары для дома`]]),
       audience: new Set(),
       shopURL: `/shop/50`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1029.09,745.39v0l-12.76,12.68h-16.16a81.75,81.75,0,0,1-1.45-53h34.14a50,50,0,0,0-3.77,40.29Z`,
     },
     {
@@ -620,8 +552,6 @@ export default {
       category: new Set([categoryFilter[`Детские товары и одежда`]]),
       audience: new Set([audienceFilter[`Для детей`]]),
       shopURL: `/shop/129`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1682.89,751.14h68V817.3l-68,0Z`,
     },
     {
@@ -641,8 +571,6 @@ export default {
       category: new Set([categoryFilter[`Кафе и рестораны`]]),
       audience: new Set(),
       shopURL: `/dynamic/eat/61`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1140.41,641.87h-20v-26h20Z`,
     },
     {
@@ -663,8 +591,6 @@ export default {
       category: new Set([categoryFilter[`Товары для дома`]]),
       audience: new Set(),
       shopURL: `/shop/92`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1031,1V592H819v61H725v22H605V653H511V592H1V1Z`,
     },
     {
@@ -677,8 +603,6 @@ export default {
       category: new Set([categoryFilter[`Кафе и рестораны`]]),
       audience: new Set(),
       shopURL: `/dynamic/eat/65`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1031,548h90v44h-90Z`,
     },
     {
@@ -699,8 +623,6 @@ export default {
       category: new Set([categoryFilter[`Товары для дома`]]),
       audience: new Set(),
       shopURL: `/shop/172`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1031,284h90V548h-90Z`,
     },
     {
@@ -720,8 +642,6 @@ export default {
       category: new Set([categoryFilter[`Детские товары и одежда`]]),
       audience: new Set([audienceFilter[`Для детей`]]),
       shopURL: `/shop/155`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1262,1V261H1121v23h-90V1Z`,
     },
     {
@@ -748,8 +668,6 @@ export default {
       category: new Set([categoryFilter[`Бытовая техника, электроника`]]),
       audience: new Set(),
       shopURL: `/shop/178`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1566,1V311H1392v18H1262V1Z`,
     },
     {
@@ -762,8 +680,6 @@ export default {
       category: new Set([categoryFilter['Мебель Холл']]),
       audience: new Set(),
       shopURL: `/dynamic/mebel-hall/38`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1392,329V461h-64V329Z`,
     },
     {
@@ -776,8 +692,6 @@ export default {
       category: new Set([categoryFilter['Мебель Холл']]),
       audience: new Set(),
       shopURL: `/dynamic/mebel-hall/36`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1328,329V461h-66V329Z`,
     },
     {
@@ -790,8 +704,6 @@ export default {
       category: new Set([categoryFilter['Мебель Холл']]),
       audience: new Set(),
       shopURL: `/dynamic/mebel-hall/53`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1507.5,311H1566V461h-58.5Z`,
     },
     {
@@ -804,8 +716,6 @@ export default {
       category: new Set([categoryFilter['Мебель Холл']]),
       audience: new Set(),
       shopURL: `/dynamic/mebel-hall/60`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1449.5,311V461H1392V311Z`,
     },
     {
@@ -818,8 +728,6 @@ export default {
       category: new Set([categoryFilter[`Мебель Холл`]]),
       audience: new Set(),
       shopURL: `/dynamic/mebel-hall/44`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1507.5,311V461h-58V311Z`,
     },
     {
@@ -840,8 +748,6 @@ export default {
       category: new Set([categoryFilter[`Детские товары и одежда`]]),
       audience: new Set([audienceFilter[`Для детей`]]),
       shopURL: `/shop/54`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2422,427.7,2396,461v0h-46.5V410H2422Z`,
     },
     {
@@ -867,8 +773,6 @@ export default {
         audienceFilter[`Для женщин`],
       ]),
       shopURL: `/shop/89`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1932,410h68.23L1982,461h-50Z`,
     },
     {
@@ -887,8 +791,6 @@ export default {
       category: new Set([categoryFilter[`Бытовая техника, электроника`]]),
       audience: new Set(),
       shopURL: `/shop/205`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1799,196V461H1667V413H1566V196Z`,
     },
     {
@@ -909,8 +811,6 @@ export default {
       category: new Set([categoryFilter[`Мебель Холл`]]),
       audience: new Set(),
       shopURL: `/dynamic/mebel-hall/41`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1667,413v48h-62V413Z`,
     },
     {
@@ -929,8 +829,6 @@ export default {
       category: new Set([categoryFilter[`Мебель Холл`]]),
       audience: new Set(),
       shopURL: `/dynamic/mebel-hall/58`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1605,413v48h-39V413Z`,
     },
     {
@@ -943,8 +841,6 @@ export default {
       category: new Set([categoryFilter[`Обувь, сумки, кожгалантерея`]]),
       audience: new Set(),
       shopURL: `/shop/200`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1900,410v51H1799V196h101V410Z`,
     },
     {
@@ -957,8 +853,6 @@ export default {
       category: new Set(),
       audience: new Set(),
       shopURL: `/film`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2349.5,410H2144.71l-.21-.5.21.5H2048V351H1900V196h522V410Z`,
     },
     {
@@ -971,8 +865,6 @@ export default {
       category: new Set([categoryFilter[`Кафе и рестораны`]]),
       audience: new Set(),
       shopURL: `/dynamic/eat/90`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2048,351v59H1900V351Z`,
     },
     {
@@ -994,8 +886,6 @@ export default {
       category: new Set([categoryFilter[`Одежда и аксессуары`]]),
       audience: new Set([audienceFilter[`Для женщин`]]),
       shopURL: `/shop/71`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1932,410v51h-32V410Z`,
     },
     {
@@ -1018,8 +908,6 @@ export default {
       category: new Set([categoryFilter[`Детские товары и одежда`]]),
       audience: new Set([audienceFilter[`Для детей`]]),
       shopURL: `/shop/157`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2599,196V477h-36v61H2396V461l26-33.3V196Z`,
     },
     {
@@ -1040,8 +928,6 @@ export default {
       category: new Set([categoryFilter[`Подарки, сувениры`]]),
       audience: new Set(),
       shopURL: `/shop/216`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2349.5,410v51h-31V410Z`,
     },
     {
@@ -1060,8 +946,6 @@ export default {
       category: new Set([categoryFilter[`Детские товары и одежда`]]),
       audience: new Set([audienceFilter[`Для детей`]]),
       shopURL: `/shop/30`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2245,410v51h-47V410Z`,
     },
     {
@@ -1073,8 +957,6 @@ export default {
       category: new Set([categoryFilter[`Детские товары и одежда`]]),
       audience: new Set([audienceFilter[`Для детей`]]),
       shopURL: `/shop/163`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2198,410v51h-32l-21.29-51H2198Z`,
     },
     {
@@ -1087,8 +969,6 @@ export default {
       category: new Set([categoryFilter[`Услуги`]]),
       audience: new Set(),
       shopURL: `/dynamic/uslugi/98`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2245,410h45v51h-45Z`,
     },
     {
@@ -1101,8 +981,6 @@ export default {
       category: new Set([categoryFilter[`Подарки, сувениры`]]),
       audience: new Set(),
       shopURL: `/shop/201`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2146,669v34l-50-29v-5Z`,
     },
     {
@@ -1115,8 +993,6 @@ export default {
       category: new Set([categoryFilter[`Туристические агентства`]]),
       audience: new Set(),
       shopURL: `/shop/217`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2122,573h-26V555.75a75.77,75.77,0,0,0,26-13.84Z`,
     },
     {
@@ -1139,8 +1015,6 @@ export default {
       category: new Set([categoryFilter[`Парфюмерия и косметика`]]),
       audience: new Set(),
       shopURL: `/shop/84`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2136.3,526.5h9.7V573h-24V541.91A76.11,76.11,0,0,0,2136.3,526.5Z`,
     },
     {
@@ -1153,8 +1027,6 @@ export default {
       category: new Set([categoryFilter[`Детские товары и одежда`]]),
       audience: new Set([audienceFilter[`Товары дял детей`]]),
       shopURL: `/shop/100`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2198,573V507h51v66Z`,
     },
     {
@@ -1180,8 +1052,6 @@ export default {
       category: new Set([categoryFilter[`Обувь, сумки, кожгалантерея`]]),
       audience: new Set(),
       shopURL: `/shop/140`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2198,573V703h-52V507.32c0-.1.07-.21.11-.32H2198Z`,
     },
     {
@@ -1197,8 +1067,6 @@ export default {
         audienceFilter[`Для женщин`],
       ]),
       shopURL: `/shop/5`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2299,573h49v65h-78v65h-72V573h101Z`,
     },
     {
@@ -1219,8 +1087,6 @@ export default {
       category: new Set(),
       audience: new Set([audienceFilter[`Для детей`]]),
       shopURL: `/shop/116`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2348,507v66h-49V507Z`,
     },
     {
@@ -1233,8 +1099,6 @@ export default {
       category: new Set([categoryFilter[`Детские товары и одежда`]]),
       audience: new Set([audienceFilter[`Для детей`]]),
       shopURL: `/shop/162`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2249,573V507h50v66Z`,
     },
     {
@@ -1247,8 +1111,6 @@ export default {
       category: new Set([categoryFilter[`Хобби, книги, канцтовары`]]),
       audience: new Set(),
       shopURL: `/shop/53`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2270,638h78v32.5h-78Z`,
     },
     {
@@ -1273,8 +1135,6 @@ export default {
         audienceFilter[`Для женщин`],
       ]),
       shopURL: `/shop/121`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2300.5,670.5V703H2270V670.5Z`,
     },
     {
@@ -1287,8 +1147,6 @@ export default {
       category: new Set([categoryFilter[`Японская кухня`]]),
       audience: new Set(),
       shopURL: `/dynamic/eat/81`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2300.5,670.5H2348V703h-47.5Z`,
     },
     {
@@ -1309,8 +1167,6 @@ export default {
       category: new Set([categoryFilter[`Обувь, сумки, кожгалантерея`]]),
       audience: new Set(),
       shopURL: `/shop/64`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2146,637.5h-50V573h50Z`,
     },
     {
@@ -1323,8 +1179,6 @@ export default {
       category: new Set([categoryFilter[`Одежда и аксессуары`]]),
       audience: new Set([audienceFilter[`Для женщин`]]),
       shopURL: `/shop/7`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2146,669h-50V637.5h50Z`,
     },
     {
@@ -1344,8 +1198,6 @@ export default {
       category: new Set([categoryFilter[`Хобби, книги, канцтовары`]]),
       audience: new Set(),
       shopURL: `/shop/173`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2000,669h50.22v6.09L2000,703Z`,
     },
     {
@@ -1371,8 +1223,6 @@ export default {
       ]),
       audience: new Set([audienceFilter[`Для женщин`]]),
       shopURL: `/shop/213`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2000,573V529.83h14.17a76.41,76.41,0,0,0,10,10.55V573Z`,
     },
     {
@@ -1394,8 +1244,6 @@ export default {
       category: new Set([categoryFilter[`Одежда и аксессуары`]]),
       audience: new Set(),
       shopURL: `/shop/74`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2000,637.5h50.22V669H2000Z`,
     },
     {
@@ -1408,8 +1256,6 @@ export default {
       category: new Set([categoryFilter[`Товары для дома`]]),
       audience: new Set(),
       shopURL: `/shop/160`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2000,604.5h50.22v33H2000Z`,
     },
     {
@@ -1433,8 +1279,6 @@ export default {
       category: new Set([categoryFilter[`Парфюмерия и косметика`]]),
       audience: new Set(),
       shopURL: `/shop/127`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2024.2,540.38a75.63,75.63,0,0,0,26,14.8V573h-26Z`,
     },
     {
@@ -1447,8 +1291,6 @@ export default {
       category: new Set([categoryFilter[`Товары для дома`]]),
       audience: new Set(),
       shopURL: `/shop/176`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2024.2,573h26v31.5H2000V573Z`,
     },
     {
@@ -1469,8 +1311,6 @@ export default {
       category: new Set([categoryFilter[`Одежда и аксессуары`]]),
       audience: new Set([audienceFilter[`Для женщин`]]),
       shopURL: `/shop/150`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1849.13,573H1799V506h50.13Z`,
     },
     {
@@ -1502,8 +1342,6 @@ export default {
         audienceFilter[`Для женщин`],
       ]),
       shopURL: `/shop/80`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1849.13,573V506h50.37v81.94h-50.37Z`,
     },
     {
@@ -1516,8 +1354,6 @@ export default {
       category: new Set([categoryFilter[`Хобби, книги, канцтовары`]]),
       audience: new Set(),
       shopURL: `/shop/210`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1899.5,587.94V506h51.18v81.94Z`,
     },
     {
@@ -1543,8 +1379,6 @@ export default {
       category: new Set([categoryFilter[`Одежда и аксессуары`]]),
       audience: new Set([audienceFilter[`Для мужчин`]]),
       shopURL: `/shop/133`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1824.49,670.29H1799V573h50.13v97.29Z`,
     },
     {
@@ -1563,25 +1397,8 @@ export default {
       category: new Set([categoryFilter[`Одежда и аксессуары`]]),
       audience: new Set([audienceFilter[`Для женщин`]]),
       shopURL: `/shop/6`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1824.49,670.29V703H1799V670.29Z`,
     },
-    // {
-    //   id: 285,
-    //   title: `MEGATOP`,
-    //   status: false,
-    //   logoSrc: `megatop.svg`,
-    //   synonyms: ['megatop', 'mega', 'мегатоп', 'megatop', 'top', 'обувь'],
-    //   description: `Обувь большого города`,
-    //   discount: new Set(),
-    //   category: new Set([categoryFilter[`Обувь`]]),
-    //   audience: new Set(),
-    //   shopURL: ``,
-    //   link: { text: ``, url: `` },
-    //   button: { text: ``, action: `` },
-    //   path: `M1966,669v34h-66.5V587.94h51.18V604.5H2000V669Z`,
-    // },
     {
       id: 286,
       title: `ТВОЕ`,
@@ -1595,8 +1412,6 @@ export default {
         audienceFilter[`Для женщин`],
       ]),
       shopURL: `/shop/203`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1899.5,587.94V703h-50.37V587.94Z`,
     },
     {
@@ -1614,8 +1429,6 @@ export default {
       category: new Set([categoryFilter[`Детские товары и одежда`]]),
       audience: new Set([audienceFilter[`Для детей`]]),
       shopURL: `/shop/193`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1849.13,670.29V703h-24.64V670.29Z`,
     },
     {
@@ -1628,8 +1441,6 @@ export default {
       category: new Set([categoryFilter[`Подарки, сувениры`]]),
       audience: new Set(),
       shopURL: `/shop/158`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2000,669v34h-34V669Z`,
     },
     {
@@ -1645,8 +1456,6 @@ export default {
         audienceFilter[`Для женщин`],
       ]),
       shopURL: `/shop/75`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1950.68,587.94V506H2000v98.5h-49.32Z`,
     },
     {
@@ -1659,8 +1468,6 @@ export default {
       category: new Set([categoryFilter[`Мебель Холл`]]),
       audience: new Set(),
       shopURL: `/dynamic/mebel-hall/33`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1353,506v79h-89V506Z`,
     },
     {
@@ -1673,8 +1480,6 @@ export default {
       category: new Set([categoryFilter[`Мебель Холл`]]),
       audience: new Set(),
       shopURL: `/dynamic/mebel-hall/51`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1485,609.92V643h-54V609.92Z`,
     },
     {
@@ -1687,8 +1492,6 @@ export default {
       category: new Set([categoryFilter[`Мебель Холл`]]),
       audience: new Set(),
       shopURL: `/dynamic/mebel-hall/39`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1431,643h54v62h-41.72L1431,698.11Z`,
     },
     {
@@ -1701,8 +1504,6 @@ export default {
       category: new Set([categoryFilter[`Мебель Холл`]]),
       audience: new Set(),
       shopURL: `/dynamic/mebel-hall/52`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1564.66,647.05H1507.5V589.2h57.16Z`,
     },
     {
@@ -1715,8 +1516,6 @@ export default {
       category: new Set([categoryFilter[`Мебель Холл`]]),
       audience: new Set(),
       shopURL: `/dynamic/mebel-hall/48`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1564.66,589.2H1507.5V544h57.16V589.2Z`,
     },
     {
@@ -1737,8 +1536,6 @@ export default {
       category: new Set([categoryFilter[`Товары для дома`]]),
       audience: new Set(),
       shopURL: `/shop/45`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1564.66,544V506h39.67v53.89h-39.67Z`,
     },
     {
@@ -1751,8 +1548,6 @@ export default {
       category: new Set([categoryFilter[`Мебель Холл`]]),
       audience: new Set(),
       shopURL: `/dynamic/mebel-hall/49`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1564.66,544H1507.5V506h57.16Z`,
     },
     {
@@ -1765,8 +1560,6 @@ export default {
       category: new Set([categoryFilter[`Мебель Холл`]]),
       audience: new Set(),
       shopURL: `/dynamic/mebel-hall/40`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1564.66,647.05v58H1507.5v-58Z`,
     },
     {
@@ -1782,8 +1575,6 @@ export default {
         audienceFilter[`Для женщин`],
       ]),
       shopURL: `/shop/95`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1701.59,603.85h48.91v66.44h-48.91V705H1564.66V559.89h136.93Z`,
     },
     {
@@ -1804,8 +1595,6 @@ export default {
       category: new Set([categoryFilter[`Мебель Холл`]]),
       audience: new Set(),
       shopURL: `/dynamic/mebel-hall/50`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1750.5,506v33.89h-33v20h-62.4V506Z`,
     },
     {
@@ -1818,8 +1607,6 @@ export default {
       category: new Set([categoryFilter[`Одежда и аксессуары`]]),
       audience: new Set([audienceFilter[`Для мужчин`]]),
       shopURL: `/shop/120`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1701.59,670.29h48.91V705h-48.91Z`,
     },
     {
@@ -1839,8 +1626,6 @@ export default {
       category: new Set([categoryFilter[`Товары для дома`]]),
       audience: new Set(),
       shopURL: `/shop/222`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1604.33,559.89V506h50.78v53.89Z`,
     },
     {
@@ -1859,8 +1644,6 @@ export default {
       category: new Set([categoryFilter[`Парфюмерия и косметика`]]),
       audience: new Set(),
       shopURL: `/shop/90`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1717.51,539.89h33v20h-33Z`,
     },
     {
@@ -1873,8 +1656,6 @@ export default {
       category: new Set([categoryFilter[`Мебель Холл`]]),
       audience: new Set(),
       shopURL: `/dynamic/mebel-hall/59`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1431,532h54v53h-54Z`,
     },
     {
@@ -1895,8 +1676,6 @@ export default {
       category: new Set([categoryFilter[`Мебель Холл`]]),
       audience: new Set(),
       shopURL: `/dynamic/mebel-hall/34`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1431,532v53h-54V506h54Z`,
     },
     {
@@ -1909,8 +1688,6 @@ export default {
       category: new Set([categoryFilter[`Мебель Холл`]]),
       audience: new Set(),
       shopURL: `/dynamic/mebel-hall/45`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1485,506v26h-54V506Z`,
     },
     {
@@ -1929,8 +1706,6 @@ export default {
       category: new Set([categoryFilter[`Подарки, сувениры`]]),
       audience: new Set(),
       shopURL: `/shop/151`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1671,743h-16V727h16Z`,
     },
     {
@@ -1943,8 +1718,6 @@ export default {
       category: new Set([categoryFilter[`Услуги`]]),
       audience: new Set(),
       shopURL: `/dynamic/uslugi/93`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1600,743h-16V727h16Z`,
     },
     {
@@ -1957,8 +1730,6 @@ export default {
       category: new Set([categoryFilter[`Развлечения`]]),
       audience: new Set(),
       shopURL: `/dynamic/entertainment/7`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1236,587h-16V571h16Z`,
     },
     {
@@ -1980,8 +1751,6 @@ export default {
       category: new Set([categoryFilter[`Услуги`]]),
       audience: new Set(),
       shopURL: `/dynamic/uslugi/110`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1658,491h-16V475h16Z`,
     },
     {
@@ -1994,8 +1763,6 @@ export default {
       category: new Set([categoryFilter[`Другое`]]),
       audience: new Set(),
       shopURL: `/shop/118`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1783,659v16h-16V659Z`,
     },
     {
@@ -2008,8 +1775,6 @@ export default {
       category: new Set([categoryFilter[`Подарки, сувениры`]]),
       audience: new Set(),
       shopURL: `/shop/3`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2081,580.75v16h-16v-16Z`,
     },
     {
@@ -2022,8 +1787,6 @@ export default {
       category: new Set([categoryFilter[`Другое`]]),
       audience: new Set(),
       shopURL: `/shop/206`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2014,515.83v14h-14v-14Z`,
     },
     {
@@ -2049,8 +1812,6 @@ export default {
       category: new Set([categoryFilter[`Обувь, сумки, кожгалантерея`]]),
       audience: new Set(),
       shopURL: `/shop/134`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1956,491h-16V475h16Z`,
     },
     {
@@ -2063,8 +1824,6 @@ export default {
       category: new Set([categoryFilter[`Детские товары и одежда`]]),
       audience: new Set([audienceFilter[`Для детей`]]),
       shopURL: `/shop/67`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2206,492h-16V476h16Z`,
     },
     {
@@ -2077,8 +1836,6 @@ export default {
       category: new Set([categoryFilter[`Услуги`]]),
       audience: new Set(),
       shopURL: `/dynamic/uslugi/102`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2253,492h-16V476h16Z`,
     },
     {
@@ -2102,8 +1859,6 @@ export default {
       category: new Set([categoryFilter[`Детские товары и одежда`]]),
       audience: new Set([audienceFilter[`Для детей`]]),
       shopURL: `/shop/65`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2379.5,515v16h-16V515Z`,
     },
     {
@@ -2116,8 +1871,6 @@ export default {
       category: new Set([categoryFilter[`Кафе и рестораны`]]),
       audience: new Set(),
       shopURL: `/dynamic/eat/75`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2379.5,612.5v16h-16v-16Z`,
     },
     {
@@ -2130,8 +1883,6 @@ export default {
       category: new Set([categoryFilter[`Кафе и рестораны`]]),
       audience: new Set(),
       shopURL: `/dynamic/eat/4`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2393,681v16h-16V681Z`,
     },
     {
@@ -2144,8 +1895,6 @@ export default {
       category: new Set([categoryFilter[`Другое`]]),
       audience: new Set(),
       shopURL: `/shop/182`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2395,589v16h-12V589Z`,
     },
     {
@@ -2177,8 +1926,6 @@ export default {
       category: new Set([categoryFilter[`Детские товары`]]),
       audience: new Set(),
       shopURL: `/shop/169`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2395,569v16h-12V569Z`,
     },
     {
@@ -2200,8 +1947,6 @@ export default {
       category: new Set([categoryFilter[`Подарки, сувениры`]]),
       audience: new Set(),
       shopURL: `/shop/21`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1593,721h-16V705h16Z`,
     },
     {
@@ -2214,8 +1959,6 @@ export default {
       category: new Set(['Другое']),
       audience: new Set(),
       shopURL: `/shop/223`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1633,721h-16V705h16Z`,
     },
     {
@@ -2235,8 +1978,6 @@ export default {
       category: new Set([categoryFilter[`Другое`]]),
       audience: new Set([audienceFilter[`Для детей`]]),
       shopURL: `/shop/190`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2081,645.25v16h-16v-16Z`,
     },
     {
@@ -2249,8 +1990,6 @@ export default {
       category: new Set([categoryFilter[`Услуги`]]),
       audience: new Set(),
       shopURL: `/dynamic/uslugi/113`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: ``,
     },
     {
@@ -2269,8 +2008,6 @@ export default {
       category: new Set([categoryFilter[`Детские товары и одежда`]]),
       audience: new Set([audienceFilter[`Для детей`]]),
       shopURL: `/shop/24`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1717,743h-16V727h16Z`,
     },
     {
@@ -2283,8 +2020,6 @@ export default {
       category: new Set([categoryFilter[`Другое`]]),
       audience: new Set(),
       shopURL: `/shop/135`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1084,736h-16V720h16Z`,
     },
     {
@@ -2302,8 +2037,6 @@ export default {
       category: new Set([categoryFilter[`Кафе и рестораны`]]),
       audience: new Set(),
       shopURL: `/dynamic/eat/87`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2146,512.5v14h-14v-14Z`,
     },
     {
@@ -2316,8 +2049,6 @@ export default {
       category: new Set([categoryFilter[`Одежда и аксессуары`]]),
       audience: new Set(),
       shopURL: `/shop/42`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1849.13,784.82h-49.27V751.14h49.27Z`,
     },
     {
@@ -2330,8 +2061,6 @@ export default {
       category: new Set(),
       audience: new Set(),
       shopURL: ``,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M2348,507v66h-49V507Z`,
     },
     {
@@ -2344,8 +2073,6 @@ export default {
       category: new Set([categoryFilter[`Спортивные товары и одежда`]]),
       audience: new Set(),
       shopURL: `/shop/220`,
-      link: { text: ``, url: `` },
-      button: { text: ``, action: `` },
       path: `M1966,669v34h-66.5V587.94h51.18V604.5H2000V669Z`,
     },
   ],
