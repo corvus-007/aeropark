@@ -1,9 +1,9 @@
-window.util = (function () {
+window.util = (function() {
   'use strict';
 
   return {
     KEYCODE_ESC: 27,
-    setMaxHeight: function (selector) {
+    setMaxHeight: function(selector) {
       var maxHeight;
       var elements = document.querySelectorAll(selector);
 
@@ -11,16 +11,20 @@ window.util = (function () {
         return;
       }
 
-      maxHeight = Array.from(elements).reduce(function findMaxHeight(prevValue, element) {
+      maxHeight = Array.from(elements).reduce(function findMaxHeight(
+        prevValue,
+        element
+      ) {
         var currentValue = element.offsetHeight;
-        return (prevValue > currentValue) ? prevValue : currentValue;
-      }, 0);
+        return prevValue > currentValue ? prevValue : currentValue;
+      },
+      0);
 
       Array.from(elements).forEach(function specifyMaxHeight(it) {
         it.style.height = maxHeight + 'px';
       });
     },
-    getScrollbarWidth: function () {
+    getScrollbarWidth: function() {
       var div = document.createElement('div');
 
       div.style.overflowY = 'scroll';
@@ -33,6 +37,15 @@ window.util = (function () {
       document.body.removeChild(div);
 
       return scrollWidth;
-    }
+    },
+    checkIsBotFilledForm(formData, evt) {
+      const NORMAL_TIME_FILL_IN_FORM = 10000;
+      const offsetTimeStampSendForm = evt.timeStamp;
+      const isQucklySubmittedForm =
+        offsetTimeStampSendForm < NORMAL_TIME_FILL_IN_FORM;
+      const antispamInputIsFilled = Boolean(formData.get('main_email'));
+
+      return isQucklySubmittedForm || antispamInputIsFilled;
+    },
   };
 })();

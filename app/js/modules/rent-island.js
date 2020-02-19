@@ -18,8 +18,13 @@ window.rentIsland = (function($) {
     submitHandler(form, event) {
       event.preventDefault();
 
-      const formData = new FormData(form);
       const action = form.action;
+      const formData = new FormData(form);
+
+      if (window.util.checkIsBotFilledForm(formData, event)) {
+        window.location.href = '';
+        return;
+      }
 
       formData.append('dateSendForm', new Date());
 

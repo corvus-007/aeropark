@@ -18,6 +18,11 @@ window.contactUs = (function($) {
       const action = form.action;
       const formData = new FormData(form);
 
+      if (window.util.checkIsBotFilledForm(formData, event)) {
+        window.location.href = '';
+        return;
+      }
+
       formData.append('dateSendForm', new Date());
 
       $.ajax({

@@ -18,6 +18,11 @@ window.applicationAd = (function($) {
       const action = form.action;
       const formData = new FormData(form);
 
+      if (window.util.checkIsBotFilledForm(formData, event)) {
+        window.location.href = '';
+        return;
+      }
+
       function getActiveNameOfAd() {
         const activePanelEl = document.querySelector(
           '[data-aria-accordion-panel][aria-hidden="false"]'
