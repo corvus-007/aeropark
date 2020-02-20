@@ -874,7 +874,7 @@ function renderPlanPopper(pathNode) {
 
   popper.innerHTML = `
     <h2 class="aero-plan-popper__title">${shopLink}</h2>
-    <p>${description}</p>
+    <p class="aero-plan-popper__description">${description}</p>
     <p>${link}</p>
     <p>${button}</p>
   `;

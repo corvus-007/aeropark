@@ -49,11 +49,17 @@
 
 .aero-plan-popper__title {
   margin: 0;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.15;
 
   @include mq-min(768px) {
     font-size: 24px;
+  }
+}
+
+.aero-plan-popper__description {
+  @include mq-max(767px) {
+    display: none;
   }
 }
 
