@@ -1,0 +1,6 @@
+.screen-width-on-mobile {
+  @include mq-max(479px) {
+    margin-left: -16px !important;
+    margin-right: -16px !important;
+  }
+}
