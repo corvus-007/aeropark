@@ -12,8 +12,8 @@
   text-decoration: none;
   white-space: nowrap;
   letter-spacing: 0.025em;
-  color: $base-color;
-  background-color: #ffffff;
+  color: var(--text-color);
+  background-color: var(--bg-color);
   background-clip: padding-box;
   border: 1px solid transparent;
   box-sizing: border-box;
@@ -74,8 +74,8 @@
 
     &:hover,
     &:focus {
-      color: $base-color;
-      background-color: #ffffff;
+      color: var(--text-color);
+      background-color: var(--bg-color);
       border-color: #ffffff;
     }
   }

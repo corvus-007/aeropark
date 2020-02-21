@@ -26,7 +26,7 @@
 .socials__link {
   position: relative;
   display: block;
-  color: $base-color;
+  color: var(--text-color);
   transition: 0.2s;
   outline: none;
 

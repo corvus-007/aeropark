@@ -8,8 +8,8 @@
   height: 100%;
   padding-top: $site-header-top-mobile-height;
   transform: scale(1.05);
-  color: $base-color;
-  background-color: #ffffff;
+  color: var(--text-color);
+  background-color: var(--bg-color);
   box-sizing: border-box;
   transition: 0.2s;
   pointer-events: none;
@@ -55,7 +55,7 @@
 .out-cover__item {
   padding-top: 32px;
   padding-bottom: 32px;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid var(--layout-border-color);
 
   @include mq-min(768px) {
     padding-top: 36px;

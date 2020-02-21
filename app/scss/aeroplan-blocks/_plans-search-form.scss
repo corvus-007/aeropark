@@ -13,7 +13,7 @@
   bottom: 0;
   right: 0;
   width: 42px;
-  color: $base-color;
+  color: var(--text-color);
   background-color: transparent;
   opacity: 0;
   visibility: hidden;
@@ -47,7 +47,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  background-color: #ffffff;
+  background-color: var(--bg-color);
   box-shadow: 0 6px 6px rgba(#000000, 0.1), 0 6px 20px rgba(#000000, 0.1);
 }
 

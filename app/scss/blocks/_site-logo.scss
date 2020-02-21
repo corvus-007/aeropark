@@ -14,7 +14,7 @@
 .site-logo__svg {
   .white-header:not(.is-header-search-showed):not(.is-out-cover-opened) & {
     path {
-      fill: #ffffff;
+      --logo-fill: #ffffff;
     }
   }
 }

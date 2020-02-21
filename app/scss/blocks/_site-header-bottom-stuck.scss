@@ -5,9 +5,9 @@
   right: 0;
   z-index: 15;
   transform: translate3d(0, -100%, 0);
-  color: $base-color;
-  background-color: #ffffff;
-  border-bottom: 1px solid $gray-234;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  border-bottom: 1px solid var(--layout-border-color);
   transition: 0.1s cubic-bezier(0.73, 0.66, 0.34, 0.74);
   will-change: transform, opacity;
   opacity: 0;

@@ -34,7 +34,7 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 1.2;
-  color: #666666;
+  color: var(--text-color-muted);
   text-transform: uppercase;
 
   .field--inline & {

@@ -13,7 +13,7 @@
     display: block;
     padding: 4px;
     text-decoration: none;
-    color: $base-color;
+    color: var(--text-color);
     outline: none;
 
     &:focus-visible {

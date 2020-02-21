@@ -9,7 +9,7 @@
   display: block;
   flex-grow: 1;
   text-decoration: none;
-  color: $base-color;
+  color: var(--text-color);
   transition: 0.2s;
   user-select: none;
   outline: none;
@@ -17,7 +17,7 @@
   &:hover,
   &:focus {
     transform: translate3d(0, -4px, 0);
-    color: $base-color;
+    color: var(--text-color);
   }
 }
 

@@ -1,3 +1,59 @@
+:root {
+  --base-color: #212121;
+  --logo-fill: #2b2a29;
+  --menu-link: #505a64;
+  --layout-border-color: #d6d6d6;
+
+  --text-color: #212121;
+  --text-color-muted: #7a7a7a;
+  --bg-color: #ffffff;
+  --footer-bg-color: #edf0f0;
+  --footer-icon-fill: #7a7a7a;
+  --input-text-color: var(--text-color);
+  --input-bg-color: #fafafa;
+  --input-bg-color-hover: #f5f5f5;
+  --input-border-color: #d6d6d6;
+  --input-border-color-focus: #999999;
+  --label-text-color: var(--text-color-muted);
+  --control-indicator-bg-color: #f5f5f5;
+  --control-indicator-border-color: #e0e0e0;
+  --control-indicator-border-color-hover: #d6d6d6;
+  --page-filter-box-stop-color-1: rgba(255, 255, 255, 0.5);
+  --page-filter-box-stop-color-2: rgba(255, 255, 255, 1);
+  --event-tag-line-bg: #eaeaea;
+  --accordion-border-color: #eaeaea;
+  --accordion-trigger-bg-color: var(--bg-color);
+  --accordion-trigger-bg-color-hover: #f5f5f5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #eeeeee;
+    --text-color-muted: #a7a7a7;
+    --logo-fill: #eeeeee;
+    --menu-link: #f7f7f7;
+    --layout-border-color: hsl(240, 16%, 52%);
+
+    // --bg-color: #2B2A29;
+    --bg-color: hsl(240, 16%, 24%);
+    --footer-bg-color: hsl(240, 16%, 20%);
+    --footer-icon-fill: var(--text-color);
+    --input-bg-color: hsl(240, 16%, 26%);
+    --input-bg-color-hover: hsl(240, 16%, 28%);
+    --input-border-color: hsl(240, 16%, 44%);
+    --input-border-color-focus: hsl(240, 16%, 60%);
+    --label-text-color: #a7a7a7;
+    --control-indicator-bg-color: hsl(240, 16%, 26%);
+    --control-indicator-border-color: hsl(240, 16%, 48%);
+    --control-indicator-border-color-hover: hsl(240, 16%, 60%);
+    --page-filter-box-stop-color-1: rgba(49, 49, 73, 0.5);
+    --page-filter-box-stop-color-2: rgba(49, 49, 73, 1);
+    --event-tag-line-bg: hsl(240, 16%, 36%);
+    --accordion-border-color: hsl(240, 16%, 36%);
+    --accordion-trigger-bg-color-hover: hsl(240, 16%, 28%);
+  }
+}
+
 html {
   height: 100%;
   font-size: $font-size;
@@ -6,7 +62,7 @@ html {
 
 ::selection {
   color: $gray-245;
-  background-color: $base-color;
+  background-color: var(--text-color);
 }
 
 body {
@@ -22,8 +78,8 @@ body {
   font-variant-ligatures: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  color: $base-color;
-  background-color: #ffffff;
+  color: var(--text-color);
+  background-color: var(--bg-color);
   overflow-x: hidden;
 
   &.no-scroll-page {

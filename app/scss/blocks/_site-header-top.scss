@@ -1,7 +1,7 @@
 .site-header-top {
   padding-top: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid $gray-214;
+  border-bottom: 1px solid var(--layout-border-color);
 
   .white-header & {
     color: #ffffff;
@@ -9,7 +9,7 @@
 
   .is-out-cover-opened &,
   .is-header-search-showed & {
-    color: $base-color;
+    color: var(--text-color);
   }
 
   @include mq-min(768px) {

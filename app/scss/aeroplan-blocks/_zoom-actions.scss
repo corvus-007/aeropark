@@ -10,7 +10,7 @@
   display: block;
   padding: 12px;
   color: $gray-214;
-  background-color: #ffffff;
+  background-color: var(--bg-color);
   border: none;
   user-select: none;
   cursor: pointer;
@@ -29,7 +29,7 @@
   }
 
   &:active {
-    color: $base-color;
+    color: var(--text-color);
     transition-duration: 0.1s;
   }
 }

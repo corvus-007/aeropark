@@ -23,7 +23,7 @@
 .plans-filter-form__reset {
   min-width: auto;
   padding: 12px;
-  color: $base-color;
+  color: var(--text-color);
   background-color: $gray-228;
 
   @include mq-min(667px) {

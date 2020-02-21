@@ -28,7 +28,7 @@
 
 .chosen-container-active .chosen-choices {
   box-shadow: none;
-  background-color: #ffffff;
+  background-color: var(--bg-color);
   border-color: #999999;
 }
 
@@ -44,7 +44,7 @@
   font-weight: 400;
   line-height: inherit;
   color: #ffffff;
-  background-color: $base-color;
+  background-color: var(--text-color);
   background-image: none;
   border: none;
 }
@@ -73,6 +73,6 @@
 }
 
 .chosen-container .chosen-results li.highlighted {
-  background-color: $base-color;
+  background-color: var(--text-color);
   background-image: none;
 }
