@@ -65,6 +65,12 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    filter: brightness(var(--brightness-image-filter));
+    transition: filter 0.4s;
+
+    &:hover {
+      --brightness-image-filter: 100%;
+    }
   }
 
   & > ul,

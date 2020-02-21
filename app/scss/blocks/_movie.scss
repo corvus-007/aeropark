@@ -1,3 +1,14 @@
 .movie {
+}
 
+.movie__poster {
+  a {
+    filter: brightness(var(--brightness-image-filter));
+    transition: filter 0.4s;
+
+    &:hover,
+    &:focus {
+      --brightness-image-filter: 100%;
+    }
+  }
 }

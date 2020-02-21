@@ -79,7 +79,7 @@
     box-decoration-break: clone;
     padding-left: 4px;
     padding-right: 4px;
-    background-image: linear-gradient(#c5eafc, #c5eafc);
+    background-image: linear-gradient(var(--link-decor-stripe-bg-color), var(--link-decor-stripe-bg-color));
     background-repeat: no-repeat;
     background-position: 0 100%;
     background-size: 100% 6px;

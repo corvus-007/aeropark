@@ -7,6 +7,7 @@
   --text-color: #212121;
   --text-color-muted: #7a7a7a;
   --bg-color: #ffffff;
+  --link-decor-stripe-bg-color: #c5eafc;
   --footer-bg-color: #edf0f0;
   --footer-icon-fill: #7a7a7a;
   --input-text-color: var(--text-color);
@@ -18,25 +19,35 @@
   --control-indicator-bg-color: #f5f5f5;
   --control-indicator-border-color: #e0e0e0;
   --control-indicator-border-color-hover: #d6d6d6;
+  --common-filter-option-bg-color: #f5f5f5;
   --page-filter-box-stop-color-1: rgba(255, 255, 255, 0.5);
   --page-filter-box-stop-color-2: rgba(255, 255, 255, 1);
   --event-tag-line-bg: #eaeaea;
   --accordion-border-color: #eaeaea;
   --accordion-trigger-bg-color: var(--bg-color);
   --accordion-trigger-bg-color-hover: #f5f5f5;
+  --text-note-bg-color: #f5f5f5;
+  --text-note-border-color: var(--layout-border-color);
+  --chosen-option-bg-color-highlighted: var(--text-color);
+  --chosen-option-bg-color-selected: #f5f5f5;
+  --rent-section-bg-color: #fafafa;
+  --field-text-color-danger: #fd0d4d;
+  --field-bg-color-danger: hsla(0, 0, 100%, 50%);
+  --field-border-color-danger: #fd0d4d;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --text-color: #eeeeee;
-    --text-color-muted: #a7a7a7;
+    // --text-color-muted: #a7a7a7;
+    --text-color-muted: hsl(240, 8%, 60%);
     --logo-fill: #eeeeee;
     --menu-link: #f7f7f7;
-    --layout-border-color: hsl(240, 16%, 52%);
+    --layout-border-color: hsl(240, 16%, 44%);
 
-    // --bg-color: #2B2A29;
     --bg-color: hsl(240, 16%, 24%);
-    --footer-bg-color: hsl(240, 16%, 20%);
+    --link-decor-stripe-bg-color: hsl(240, 20%, 48%);
+    --footer-bg-color: hsl(240, 16%, 18%);
     --footer-icon-fill: var(--text-color);
     --input-bg-color: hsl(240, 16%, 26%);
     --input-bg-color-hover: hsl(240, 16%, 28%);
@@ -46,11 +57,21 @@
     --control-indicator-bg-color: hsl(240, 16%, 26%);
     --control-indicator-border-color: hsl(240, 16%, 48%);
     --control-indicator-border-color-hover: hsl(240, 16%, 60%);
+    --common-filter-option-bg-color: hsl(240, 16%, 40%);
     --page-filter-box-stop-color-1: rgba(49, 49, 73, 0.5);
     --page-filter-box-stop-color-2: rgba(49, 49, 73, 1);
     --event-tag-line-bg: hsl(240, 16%, 36%);
     --accordion-border-color: hsl(240, 16%, 36%);
     --accordion-trigger-bg-color-hover: hsl(240, 16%, 28%);
+    --text-note-bg-color: hsl(240, 16%, 28%);
+    --monochrome-image-filter: 88%;
+    --brightness-image-filter: 88%;
+    --chosen-option-bg-color-highlighted: hsl(240, 16%, 40%);
+    --chosen-option-bg-color-selected: hsl(240, 16%, 28%);
+    --rent-section-bg-color: hsl(240, 16%, 20%);
+    --field-text-color-danger: #ffffff;
+    --field-bg-color-danger: hsla(344, 96%, 52%, 50%);
+    --field-border-color-danger: hsl(344, 96%, 40%);
   }
 }
 

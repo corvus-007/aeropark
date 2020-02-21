@@ -22,7 +22,7 @@
   outline: none;
 
   .common-filter-option--active & {
-    background-color: $gray-245;
+    background-color: var(--common-filter-option-bg-color);
   }
 
   @include mq-min(768px) {
@@ -50,7 +50,7 @@
       height: 2px;
       transform: translateY(2px);
       transform-origin: bottom;
-      background-color: #c5eafc;
+      background-color: var(--link-decor-stripe-bg-color);
       opacity: 0;
       transition: 0.2s;
     }

@@ -39,9 +39,16 @@
 
   margin-bottom: 16px;
   border-radius: 4px;
+  filter: brightness(var(--brightness-image-filter));
+  transition: filter 0.4s;
 
   img {
     transition: 0.2s;
+  }
+
+  .event-card__wraplink:hover &,
+  .event-card__wraplink:focus & {
+    --brightness-image-filter: 100%;
   }
 }
 

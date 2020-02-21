@@ -3,7 +3,7 @@
     margin-left: -20px;
     margin-right: -20px;
     padding: 20px;
-    background-color: #fafafa;
+    background-color: var(--rent-section-bg-color);
   }
 
   @include mq-min(667px) {

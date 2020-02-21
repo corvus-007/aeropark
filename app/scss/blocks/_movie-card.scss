@@ -27,9 +27,16 @@
   margin-bottom: 12px;
   border-radius: 4px;
   overflow: hidden;
+  filter: brightness(var(--brightness-image-filter));
+  transition: filter 0.4s;
 
   img {
     display: block;
+  }
+
+  .movie-card__wraplink:hover &,
+  .movie-card__wraplink:focus & {
+    --brightness-image-filter: 100%;
   }
 }
 

@@ -2,7 +2,7 @@
   @include clear-mr-edges-elem();
 
   padding: 20px;
-  background-color: $gray-245;
+  background-color: var(--text-note-bg-color);
   border: 1px solid var(--layout-border-color);
   border-radius: 4px;
 }
