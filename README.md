@@ -4,25 +4,25 @@
 
 ```
 app/
-  | --scss/
-  | --global/
-  | --blocks/
-  | --vendors/ (Стили сторонних библиотек)
-  | --variables.scss
-  | --functions.scss
-  | --mixins.scss
-  | --styles.scss
-  | --images/
-  | --svg-icons/
-  | --svg-symbols/ (для объединения в один файл symbols.svg)
-  | --js/
-  | --plugins/
-  | --modules/
-  | --jQuery (Подключать отдельно)
-  | --script.js
+  | --blocks (HTML-инклюды)
   | --fonts/
-  | --blocks (инклюды)
-
+  | --images/
+    | --favicons/
+    | --svg-symbols/ (для объединения в один файл symbols.svg)
+  | --js/
+    | --plugins/
+    | --modules/
+    | --jQuery (Подключать отдельно)
+    | --script.js
+  | --scss/
+    | --aeroplan-blocks/
+    | --global/
+    | --blocks/
+    | --aeroplan-style.scss
+    | --functions.scss
+    | --mixins.scss
+    | --variables.scss
+    | --style.scss
 build/
   | --style.css
   | --fonts/
@@ -154,7 +154,7 @@ other/
 
 Файл:
 
-- `assets/markers-symbols.svg`.
+- `assets/markers-symbols.ai`.
 
 Маркеры - это svg-символы
 
@@ -162,9 +162,9 @@ other/
 
 Файлы:
 
-- `assets/floor1.svg`
-- `assets/floor2.svg`
-- `assets/floor3.svg`
+- `assets/floor1.ai`
+- `assets/floor2.ai`
+- `assets/floor3.ai`
 
 Слои:
 
