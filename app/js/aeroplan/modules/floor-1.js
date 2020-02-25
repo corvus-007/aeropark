@@ -17,10 +17,13 @@ export default {
       id: 11,
       title: `Лента`,
       logoSrc: `lenta.svg`,
-      synonyms: ['лента', 'лента'],
+      synonyms: ['лента', 'лента', 'ktynf'],
       description: `Гипермаркет`,
       discount: new Set(),
-      category: new Set([categoryFilter[`Другое`]]),
+      category: new Set([
+        categoryFilter[`Другое`],
+        categoryFilter[`Товары для дома`],
+      ]),
       audience: new Set(),
       shopURL: `/shop/171`,
       path: `M1618,568H1297V36h321Z`,
@@ -249,7 +252,10 @@ export default {
       synonyms: ['fashion optic'],
       description: `Fashion Optic`,
       discount: new Set(),
-      category: new Set([categoryFilter[`Аптека, оптика`]]),
+      category: new Set([
+        categoryFilter[`Аптека, оптика`],
+        categoryFilter[`Аксессуары и часы`],
+      ]),
       audience: new Set(),
       shopURL: `/shop/48`,
       path: `M537,323H521V307h16Z`,
@@ -402,28 +408,28 @@ export default {
       shopURL: `/shop/137`,
       path: `M1096,323h-16V307h16Z`,
     },
-    {
-      id: 129,
-      title: `Baskin Robbins`,
-      logoSrc: ``,
-      synonyms: [
-        'baskin robbins',
-        'баскин',
-        'робинс',
-        'роббинс',
-        'баскин роббинс',
-        'баскин',
-        'baskin',
-        'vjhj;tyyj',
-        'мороженное',
-      ],
-      description: `Самый большой выбор мороженого`,
-      discount: new Set(),
-      category: new Set([categoryFilter[`Десерты`]]),
-      audience: new Set(),
-      shopURL: `/dynamic/eat/85`,
-      path: `M1177,323h-16V307h16Z`,
-    },
+    // {
+    //   id: 129,
+    //   title: `Baskin Robbins`,
+    //   logoSrc: ``,
+    //   synonyms: [
+    //     'baskin robbins',
+    //     'баскин',
+    //     'робинс',
+    //     'роббинс',
+    //     'баскин роббинс',
+    //     'баскин',
+    //     'baskin',
+    //     'vjhj;tyyj',
+    //     'мороженное',
+    //   ],
+    //   description: `Самый большой выбор мороженого`,
+    //   discount: new Set(),
+    //   category: new Set([categoryFilter[`Десерты`]]),
+    //   audience: new Set(),
+    //   shopURL: `/dynamic/eat/85`,
+    //   path: `M1177,323h-16V307h16Z`,
+    // },
     {
       id: 130,
       title: `Sotopark`,
@@ -1122,6 +1128,7 @@ export default {
       category: new Set([
         categoryFilter[`Одежда и аксессуары`],
         categoryFilter[`Детские товары и одежда`],
+        categoryFilter[`Аксессуары и часы`],
       ]),
       audience: new Set([
         audienceFilter[`Для мужчин`],
@@ -1160,6 +1167,7 @@ export default {
       category: new Set([
         categoryFilter[`Одежда и аксессуары`],
         categoryFilter[`Детские товары и одежда`],
+        categoryFilter[`Аксессуары и часы`],
       ]),
       audience: new Set([
         audienceFilter[`Для мужчин`],
@@ -1253,7 +1261,10 @@ export default {
       ],
       description: `Трендовая одежда, обувь и аксессуары`,
       discount: new Set(),
-      category: new Set([categoryFilter[`Одежда и аксессуары`]]),
+      category: new Set([
+        categoryFilter[`Одежда и аксессуары`],
+        categoryFilter[`Аксессуары и часы`],
+      ]),
       audience: new Set([
         audienceFilter[`Для мужчин`],
         audienceFilter[`Для женщин`],
@@ -1297,6 +1308,7 @@ export default {
       category: new Set([
         categoryFilter[`Одежда и аксессуары`],
         categoryFilter[`Детские товары и одежда`],
+        categoryFilter[`Аксессуары и часы`],
       ]),
       audience: new Set([
         audienceFilter[`Для мужчин`],
@@ -1617,7 +1629,10 @@ export default {
       synonyms: ['оптика eye fresh', 'оптика', 'айфреш'],
       description: `Оптика`,
       discount: new Set(),
-      category: new Set([categoryFilter[`Аптека, оптика`]]),
+      category: new Set([
+        categoryFilter[`Аптека, оптика`],
+        categoryFilter[`Аксессуары и часы`],
+      ]),
       audience: new Set(),
       shopURL: `/shop/188`,
       path: `M935,446v34H905V446Z`,
@@ -1787,6 +1802,7 @@ export default {
       category: new Set([
         categoryFilter[`Одежда и аксессуары`],
         categoryFilter[`Детские товары и одежда`],
+        categoryFilter[`Аксессуары и часы`],
       ]),
       audience: new Set([
         audienceFilter[`Для мужчин`],
@@ -1911,7 +1927,10 @@ export default {
       ],
       description: `Для женщин`,
       discount: new Set([]),
-      category: new Set([categoryFilter[`Одежда и аксессуары`]]),
+      category: new Set([
+        categoryFilter[`Одежда и аксессуары`],
+        categoryFilter[`Аксессуары и часы`],
+      ]),
       audience: new Set([audienceFilter[`Для женщин`]]),
       shopURL: `/shop/86`,
       path: `M417,195V299H365V195Z`,
@@ -2327,7 +2346,10 @@ export default {
       ],
       description: `Одежда для энергичных, творческих и амбициозных молодых людей`,
       discount: new Set(),
-      category: new Set([categoryFilter[`Одежда и аксессуары`]]),
+      category: new Set([
+        categoryFilter[`Одежда и аксессуары`],
+        categoryFilter[`Аксессуары и часы`],
+      ]),
       audience: new Set([
         audienceFilter[`Для мужчин`],
         audienceFilter[`Для женщин`],
@@ -2357,7 +2379,10 @@ export default {
       ],
       description: `Женская молодежная одежда и аксессуары`,
       discount: new Set(),
-      category: new Set([categoryFilter[`Одежда и аксессуары`]]),
+      category: new Set([
+        categoryFilter[`Одежда и аксессуары`],
+        categoryFilter[`Аксессуары и часы`],
+      ]),
       audience: new Set([audienceFilter[`Для женщин`]]),
       shopURL: `/shop/117`,
       path: `M728,431V331h73.56a54.16,54.16,0,0,0,2.44,7.59V431Z`,
@@ -2959,6 +2984,7 @@ export default {
       category: new Set([
         categoryFilter[`Обувь, сумки, кожгалантерея`],
         categoryFilter[`Детские товары и одежда`],
+        categoryFilter[`Аксессуары и часы`],
       ]),
       audience: new Set(),
       shopURL: `/shop/61`,
@@ -2974,6 +3000,7 @@ export default {
       category: new Set([
         categoryFilter[`Одежда и аксессуары`],
         categoryFilter[`Детские товары и одежда`],
+        categoryFilter[`Аксессуары и часы`],
       ]),
       audience: new Set([
         audienceFilter[`Для мужчин`],
