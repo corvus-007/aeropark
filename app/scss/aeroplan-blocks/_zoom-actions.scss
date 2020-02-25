@@ -9,7 +9,7 @@
 .zoom-actions__button {
   display: block;
   padding: 12px;
-  color: $gray-214;
+  color: var(--aeroplan-zoom-control-text-color);
   background-color: var(--bg-color);
   border: none;
   user-select: none;
@@ -18,7 +18,7 @@
   outline: none;
   box-sizing: border-box;
 
-  border-right: 1px solid $gray-234;
+  border-right: 1px solid var(--aeroplan-zoom-control-border-color);
 
   &:last-child {
     border-right: none;

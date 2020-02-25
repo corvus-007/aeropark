@@ -11,11 +11,4 @@
 }
 
 .events-slide__picture {
-  filter: brightness(var(--brightness-image-filter));
-  transition: filter 0.4s;
-
-  .events-slide__wraplink:hover &,
-  .events-slide__wraplink:focus & {
-    --brightness-image-filter: 100%;
-  }
 }

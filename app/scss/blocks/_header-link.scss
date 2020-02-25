@@ -74,8 +74,8 @@
 
     &:hover,
     &:focus {
-      color: var(--text-color);
-      background-color: var(--bg-color);
+      color: var(--header-link-text-on-secondary-page-color-hover);
+      background-color: var(--header-link-bg-on-secondary-page-color-hover);
       border-color: #ffffff;
     }
   }

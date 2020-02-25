@@ -42,7 +42,7 @@
   width: 148px;
   flex-shrink: 0;
   margin-right: 32px;
-  border: 1px solid $gray-234;
+  border: 1px solid var(--layout-border-color);
   border-radius: 4px;
   filter: brightness(var(--brightness-image-filter));
 

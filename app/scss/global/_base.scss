@@ -7,6 +7,8 @@
   --text-color: #212121;
   --text-color-muted: #7a7a7a;
   --bg-color: #ffffff;
+  --header-link-text-on-secondary-page-color-hover: var(--text-color);
+  --header-link-bg-on-secondary-page-color-hover: var(--bg-color);
   --link-decor-stripe-bg-color: #c5eafc;
   --footer-bg-color: #edf0f0;
   --footer-icon-fill: #7a7a7a;
@@ -34,44 +36,82 @@
   --field-text-color-danger: #fd0d4d;
   --field-bg-color-danger: hsla(0, 0, 100%, 50%);
   --field-border-color-danger: #fd0d4d;
+
+  // aeroplan
+  --aeroplan-filter-reset-button-bg: #c4c4c4;
+  --aeroplan-search-result-bg: var(--bg-color);
+  --aeroplan-search-result-item-bg-hover: #e4e4e4;
+  --aeroplan-search-result-item-bg-highlighted: ;
+  --aeroplan-floor-bg: #f5f5f5;
+  --aeroplan-boundary-floor-fill: #e4e4e4;
+  --aeroplan-boundary-floor-stroke: #0d47a1;
+  --aeroplan-inner-boundary-floor-fill: #f5f5f5;
+  --aeroplan-inner-boundary-floor-stroke: #e1e1e1;
+  --aeroplan-place-fill: hsl(236, 72%, 72%);
+  --aeroplan-place-fill-hover: hsl(236, 72%, 64%);
+  --aeroplan-place-fill-active: hsl(336, 72%, 56%);
+  --aeroplan-place-fill-filtered: hsl(208, 100%, 64%);
+  --aeroplan-place-fill-filtered-hover: hsl(208, 100%, 56%);
+  --aeroplan-place-fill-selected: var(--aeroplan-place-fill-active);
+  --aeroplan-place-fill-selected-hover: hsl(335, 70%, 48%);
+  --aeroplan-place-stroke: #ffffff;
+  --aeroplan-zoom-control-text-color: #d6d6d6;
+  --aeroplan-zoom-control-border-color: #eaeaea;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text-color: #eeeeee;
-    // --text-color-muted: #a7a7a7;
+    --base-color: #e7e7e7;
+    --text-color: #e7e7e7;
     --text-color-muted: hsl(240, 8%, 60%);
-    --logo-fill: #eeeeee;
+    --logo-fill: #e7e7e7;
     --menu-link: #f7f7f7;
-    --layout-border-color: hsl(240, 16%, 44%);
+    --layout-border-color: hsl(240, 12%, 44%);
 
-    --bg-color: hsl(240, 16%, 24%);
+    --bg-color: hsl(240, 12%, 24%);
+    --header-link-text-on-secondary-page-color-hover: var(--bg-color);
+    --header-link-bg-on-secondary-page-color-hover: var(--text-color);
     --link-decor-stripe-bg-color: hsl(240, 20%, 48%);
-    --footer-bg-color: hsl(240, 16%, 18%);
+    --footer-bg-color: hsl(240, 12%, 18%);
     --footer-icon-fill: var(--text-color);
-    --input-bg-color: hsl(240, 16%, 26%);
-    --input-bg-color-hover: hsl(240, 16%, 28%);
-    --input-border-color: hsl(240, 16%, 44%);
-    --input-border-color-focus: hsl(240, 16%, 60%);
+    --input-bg-color: hsl(240, 12%, 26%);
+    --input-bg-color-hover: hsl(240, 12%, 28%);
+    --input-border-color: hsl(240, 12%, 44%);
+    --input-border-color-focus: hsl(240, 12%, 60%);
     --label-text-color: #a7a7a7;
-    --control-indicator-bg-color: hsl(240, 16%, 26%);
-    --control-indicator-border-color: hsl(240, 16%, 48%);
-    --control-indicator-border-color-hover: hsl(240, 16%, 60%);
-    --common-filter-option-bg-color: hsl(240, 16%, 40%);
+    --control-indicator-bg-color: hsl(240, 12%, 26%);
+    --control-indicator-border-color: hsl(240, 12%, 48%);
+    --control-indicator-border-color-hover: hsl(240, 12%, 60%);
+    --common-filter-option-bg-color: hsl(240, 12%, 40%);
     --page-filter-box-stop-color-1: rgba(49, 49, 73, 0.5);
     --page-filter-box-stop-color-2: rgba(49, 49, 73, 1);
-    --event-tag-line-bg: hsl(240, 16%, 36%);
-    --accordion-border-color: hsl(240, 16%, 36%);
-    --accordion-trigger-bg-color-hover: hsl(240, 16%, 28%);
-    --text-note-bg-color: hsl(240, 16%, 28%);
+    --event-tag-line-bg: hsl(240, 12%, 36%);
+    --accordion-border-color: hsl(240, 12%, 36%);
+    --accordion-trigger-bg-color-hover: hsl(240, 12%, 28%);
+    --text-note-bg-color: hsl(240, 12%, 28%);
     --monochrome-image-filter: 88%;
-    --brightness-image-filter: 88%;
-    --chosen-option-bg-color-highlighted: hsl(240, 16%, 40%);
-    --chosen-option-bg-color-selected: hsl(240, 16%, 28%);
-    --rent-section-bg-color: hsl(240, 16%, 20%);
+    --brightness-image-filter: 92%;
+    --chosen-option-bg-color-highlighted: hsl(240, 12%, 40%);
+    --chosen-option-bg-color-selected: hsl(240, 12%, 28%);
+    --rent-section-bg-color: hsl(240, 12%, 20%);
     --field-text-color-danger: #ffffff;
     --field-bg-color-danger: hsla(344, 96%, 52%, 50%);
     --field-border-color-danger: hsl(344, 96%, 40%);
+
+    // aeroplan
+    --aeroplan-filter-reset-button-bg: hsl(240, 12%, 28%);
+    --aeroplan-search-result-bg: hsl(240, 16%, 16%);
+    --aeroplan-search-result-item-bg-hover: hsl(240, 16%, 32%);
+    --aeroplan-search-result-item-bg-highlighted: hsl(240, 28%, 32%);
+    --aeroplan-floor-bg: hsl(240, 16%, 32%);
+    --aeroplan-boundary-floor-fill: hsl(240, 28%, 40%);
+    --aeroplan-boundary-floor-stroke: hsl(260, 28%, 56%);
+    --aeroplan-inner-boundary-floor-fill: hsl(240, 28%, 44%);
+    --aeroplan-inner-boundary-floor-stroke: hsl(240, 28%, 48%);
+    --aeroplan-place-fill: hsl(236, 60%, 60%);
+    --aeroplan-place-fill-hover: hsl(240, 60%, 52%);
+    --aeroplan-zoom-control-text-color: hsl(0, 0%, 72%);
+    --aeroplan-zoom-control-border-color: hsl(240, 12%, 36%);
   }
 }
 

@@ -24,7 +24,7 @@
   min-width: auto;
   padding: 12px;
   color: var(--text-color);
-  background-color: $gray-228;
+  background-color: var(--aeroplan-filter-reset-button-bg);
 
   @include mq-min(667px) {
     padding-top: 8px;
