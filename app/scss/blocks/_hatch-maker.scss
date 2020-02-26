@@ -1,5 +1,5 @@
 .hatch-maker {
-  background-image: linear-gradient($gray-234, $gray-234);
+  background-image: linear-gradient(var(--hatch-maker-line-bg-color), var(--hatch-maker-line-bg-color));
   background-repeat: no-repeat;
   background-position: 0 100%;
   background-size: 100% 8px;

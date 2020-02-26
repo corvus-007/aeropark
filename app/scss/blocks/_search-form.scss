@@ -73,7 +73,7 @@
   width: 24px;
   height: 24px;
   margin: auto;
-  fill: $base-color;
+  fill: var(--search-icon-fill);
   opacity: 0.5;
 }
 

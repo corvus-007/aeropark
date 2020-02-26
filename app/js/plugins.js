@@ -7,4 +7,4 @@
 //=require ../../node_modules/chosen-js/chosen.jquery.min.js
 //=require ../../node_modules/jquery-validation/dist/jquery.validate.min.js
 //=require ../../node_modules/jquery-validation/dist/localization/messages_ru.min.js
-//=require ../../node_modules//lazysizes/lazysizes.min.js
+//=require ../../node_modules/lazysizes/lazysizes.min.js
