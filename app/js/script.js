@@ -100,6 +100,9 @@ document.addEventListener('DOMContentLoaded', function() {
       nextEl: '.common-slider-button--next',
       prevEl: '.common-slider-button--prev',
     },
+    autoplay: {
+      delay: 3300
+    },
     on: {
       init() {
         checkSwiperIfItHasOnlyOneSlide(this);
