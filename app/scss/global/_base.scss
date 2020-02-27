@@ -1,9 +1,18 @@
 :root {
   --color-mode: "light";
+  --accent-color: hsl(332, 96%, 64%);
+  --primary-color: hsl(200, 100%, 52%);
+  --primary-color-darken: hsl(200, 100%, 48%);
+  --button-text-color: #ffffff;
+  --button-bg-color: var(--primary-color);
+  --button-bg-color-hover: var(--primary-color-darken);
+  --link-text-color: hsl(200, 100%, 52%);
+  --link-text-color-hover: hsl(200, 100%, 48%);
   --base-color: #212121;
   --logo-fill: #2b2a29;
   --menu-link: #505a64;
   --layout-border-color: #d6d6d6;
+  --textual-line-height: 1.5;
 
   --text-color: #212121;
   --text-color-muted: #7a7a7a;
@@ -38,6 +47,8 @@
   --field-text-color-danger: #fd0d4d;
   --field-bg-color-danger: hsla(0, 0, 100%, 50%);
   --field-border-color-danger: #fd0d4d;
+  --footer-link-border-color: hsla(0, 0%, 12%, 0.1);
+  --footer-link-border-color-hover: hsla(0, 0%, 12%, 0.3);
 
   // search
   --search-icon-fill: var(--text-color);
@@ -107,6 +118,8 @@
     --field-text-color-danger: #ffffff;
     --field-bg-color-danger: hsla(344, 96%, 52%, 50%);
     --field-border-color-danger: hsl(344, 96%, 40%);
+    --footer-link-border-color: hsla(240, 12%, 12%, 0.1);
+    --footer-link-border-color-hover: hsla(240, 12%, 12%, 0.3);
 
     // aeroplan
     --aeroplan-filter-reset-button-bg: hsl(240, 12%, 28%);
@@ -163,6 +176,8 @@
   --field-text-color-danger: #ffffff;
   --field-bg-color-danger: hsla(344, 96%, 52%, 50%);
   --field-border-color-danger: hsl(344, 96%, 40%);
+  --footer-link-border-color: hsla(240, 12%, 84%, 0.1);
+  --footer-link-border-color-hover: hsla(240, 12%, 84%, 0.3);
 
   // aeroplan
   --aeroplan-filter-reset-button-bg: hsl(240, 12%, 28%);

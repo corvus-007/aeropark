@@ -22,7 +22,7 @@
 
     &:hover,
     &:focus {
-      color: $primary-color;
+      color: var(--link-text-color-hover);
     }
   }
 }

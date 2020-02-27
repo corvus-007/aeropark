@@ -7,7 +7,12 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   text-decoration: none;
-  color: $primary-color;
+  color: var(--link-text-color);
+
+  &:hover,
+  &:focus {
+    color: var(--link-text-color-hover);
+  }
 
   &:focus-visible {
     @include keyboard-focus-rule();

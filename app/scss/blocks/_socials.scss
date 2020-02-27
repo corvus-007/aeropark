@@ -13,11 +13,6 @@
   text-decoration: none;
   border: none;
 
-  &:hover,
-  &:focus {
-    color: $accent-color;
-  }
-
   &:last-child {
     margin-right: 0;
   }
@@ -26,6 +21,7 @@
 .socials__link {
   position: relative;
   display: block;
+  text-decoration: none;
   color: var(--text-color);
   transition: 0.2s;
   outline: none;
@@ -42,7 +38,7 @@
 
   &:hover,
   &:focus {
-    color: $primary-color;
+    color: var(--link-text-color-hover);
   }
 }
 

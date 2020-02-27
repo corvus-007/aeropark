@@ -55,13 +55,13 @@
 .footer-contact__item-link[href] {
   text-decoration: none;
   color: var(--text-color);
-  border-bottom: 1px solid rgba($base-color, 0.1);
+  border-bottom: 1px solid var(--footer-link-border-color);
   outline: none;
 
   &:hover,
   &:focus {
     color: var(--text-color);
-    border-bottom-color: rgba($base-color, 0.4);
+    border-bottom-color: var(--footer-link-border-color-hover);
   }
 
   &:focus-visible {
