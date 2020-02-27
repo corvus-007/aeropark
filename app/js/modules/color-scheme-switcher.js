@@ -5,9 +5,17 @@ window.colorSchemeSwitcher = (function() {
 
   const STORAGE_KEY = 'user-color-scheme';
   const COLOR_MODE_KEY = '--color-mode';
+
+  const colorSchemeSwitcher = document.querySelector('[data-color-scheme-switcher]');
+
+  if (!colorSchemeSwitcher) {
+    return;
+  }
+
   const modeToggleButton = document.querySelector(
     '[data-color-scheme-mode-toggle]'
   );
+
   const modeToggleText = document.querySelector(
     '[data-color-scheme-mode-toggle-text]'
   );
