@@ -43,7 +43,7 @@
   .field--required &::after {
     content: "*";
     font-size: rem(14);
-    color: $danger-color;
+    color: var(--danger-color);
   }
 }
 
@@ -62,5 +62,5 @@
   margin-top: 4px;
   font-size: 12px;
   line-height: 1.25;
-  color: $muted-color;
+  color: var(--text-color-muted);
 }

@@ -3,6 +3,7 @@
   --accent-color: hsl(332, 96%, 64%);
   --primary-color: hsl(200, 100%, 52%);
   --primary-color-darken: hsl(200, 100%, 48%);
+  --danger-color: #fd0d4d;
   --button-text-color: #ffffff;
   --button-bg-color: var(--primary-color);
   --button-bg-color-hover: var(--primary-color-darken);
@@ -44,9 +45,9 @@
   --chosen-option-bg-color-highlighted: var(--text-color);
   --chosen-option-bg-color-selected: #f5f5f5;
   --rent-section-bg-color: #fafafa;
-  --field-text-color-danger: #fd0d4d;
+  --field-text-color-danger: var(--danger-color);
   --field-bg-color-danger: hsla(0, 0, 100%, 50%);
-  --field-border-color-danger: #fd0d4d;
+  --field-border-color-danger: var(--danger-color);
   --footer-link-border-color: hsla(0, 0%, 12%, 0.1);
   --footer-link-border-color-hover: hsla(0, 0%, 12%, 0.3);
 
@@ -82,6 +83,7 @@
 
   :root:not([data-user-color-scheme]) {
     --base-color: #e7e7e7;
+    --danger-color: hsla(344, 96%, 52%, 50%);
     --text-color: #e7e7e7;
     --text-color-muted: hsl(240, 8%, 60%);
     --logo-fill: #e7e7e7;
@@ -116,8 +118,8 @@
     --chosen-option-bg-color-selected: hsl(240, 12%, 28%);
     --rent-section-bg-color: hsl(240, 12%, 20%);
     --field-text-color-danger: #ffffff;
-    --field-bg-color-danger: hsla(344, 96%, 52%, 50%);
-    --field-border-color-danger: hsl(344, 96%, 40%);
+    --field-bg-color-danger: var(--danger-color);
+    --field-border-color-danger: var(--danger-color);
     --footer-link-border-color: hsla(240, 12%, 12%, 0.1);
     --footer-link-border-color-hover: hsla(240, 12%, 12%, 0.3);
 
@@ -140,6 +142,7 @@
 
 [data-user-color-scheme="dark"] {
   --base-color: #e7e7e7;
+  --danger-color: hsla(344, 96%, 52%, 50%);
   --text-color: #e7e7e7;
   --text-color-muted: hsl(240, 8%, 60%);
   --logo-fill: #e7e7e7;
@@ -174,8 +177,8 @@
   --chosen-option-bg-color-selected: hsl(240, 12%, 28%);
   --rent-section-bg-color: hsl(240, 12%, 20%);
   --field-text-color-danger: #ffffff;
-  --field-bg-color-danger: hsla(344, 96%, 52%, 50%);
-  --field-border-color-danger: hsl(344, 96%, 40%);
+  --field-bg-color-danger: var(--danger-color);
+  --field-border-color-danger: var(--danger-color);
   --footer-link-border-color: hsla(240, 12%, 84%, 0.1);
   --footer-link-border-color-hover: hsla(240, 12%, 84%, 0.3);
 
