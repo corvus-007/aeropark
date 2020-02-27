@@ -1,4 +1,5 @@
 //=require modules/util.js
+//=require modules/color-scheme-switcher.js
 //=require modules/splash-screen.js
 //=require modules/out-cover.js
 //=require modules/header-search.js

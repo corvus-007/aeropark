@@ -36,7 +36,7 @@
   width: 20px;
   height: 20px;
   margin-right: 12px;
-  fill: $muted-color;
+  fill: var(--footer-icon-fill);
 
   @include mq-min(768px) {
     width: 16px;
@@ -54,14 +54,14 @@
 
 .footer-contact__item-link[href] {
   text-decoration: none;
-  color: $base-color;
-  border-bottom: 1px solid rgba($base-color, 0.1);
+  color: var(--text-color);
+  border-bottom: 1px solid var(--footer-link-border-color);
   outline: none;
 
   &:hover,
   &:focus {
-    color: $base-color;
-    border-bottom-color: rgba($base-color, 0.4);
+    color: var(--text-color);
+    border-bottom-color: var(--footer-link-border-color-hover);
   }
 
   &:focus-visible {

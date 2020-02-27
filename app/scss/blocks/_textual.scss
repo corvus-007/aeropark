@@ -3,6 +3,7 @@
 
   font-weight: 400;
   font-size: rem(18);
+  line-height: var(--textual-line-height);
 
   & > p {
     margin-bottom: 0;
@@ -65,6 +66,12 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    filter: brightness(var(--brightness-image-filter));
+    transition: filter 0.4s;
+
+    &:hover {
+      --brightness-image-filter: 100%;
+    }
   }
 
   & > ul,

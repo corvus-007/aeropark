@@ -11,7 +11,10 @@
         right: 0;
         z-index: 1;
         width: 200px;
-        background-image: linear-gradient(to right, rgba(#ffffff, 0.5), #ffffff 40%);
+        background-image: linear-gradient(
+          to right,
+          var(--page-filter-box-stop-color-1),
+          var(--page-filter-box-stop-color-2) 40%);
       }
     }
   }
@@ -68,8 +71,8 @@
     transform: translate3d(0, 4px, 0);
     overflow-y: auto;
     overscroll-behavior-y: contain;
-    background-color: #ffffff;
-    border: 1px solid $gray-234;
+    background-color: var(--bg-color);
+    border: 1px solid var(--input-border-color);
     box-shadow: 0 4px 8px rgba(#000000, 0.1);
     opacity: 0;
     pointer-events: none;
@@ -95,7 +98,7 @@
 
 .common-page-filter__options-item {
   @include mq-max(767px) {
-    border-bottom: 1px solid $gray-234;
+    border-bottom: 1px solid var(--input-border-color);
 
     &:last-child {
       border-bottom: none;

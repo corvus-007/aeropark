@@ -4,7 +4,7 @@
 .search-result-item__wraplink {
   display: block;
   text-decoration: none;
-  color: $base-color;
+  color: var(--text-color);
   transition: 0.2s;
 
   &:hover,

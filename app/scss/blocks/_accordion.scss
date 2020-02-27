@@ -1,16 +1,15 @@
 .accordion {
-  border: 1px solid $gray-234;
+  border: 1px solid var(--accordion-border-color);
   border-radius: 4px;
   overflow: hidden;
 }
 
 .accordion__heading {
   margin: 0;
-  // font-size: 20px;
   border-left: none;
   border-right: none;
   border: none;
-  border-top: 1px solid $gray-234;
+  border-top: 1px solid var(--accordion-border-color);
 
   &:first-child {
     border-top: none;
@@ -21,22 +20,26 @@
   padding: 16px;
   padding-right: 44px;
   font-family: inherit;
-  color: $base-color;
+  color: var(--text-color);
+  background-color: var(--accordion-trigger-bg-color);
 
   &::after {
     border-top-width: 0.4em;
     border-left-width: 0.25em;
     border-right-width: 0.25em;
+    border-top-color: var(--text-color);
+    opacity: 0.4;
   }
 
   &:hover,
   &:focus {
-    color: $base-color;
-    background-color: $gray-245;
+    color: var(--text-color);
+    background-color: var(--accordion-trigger-bg-color-hover);
     outline: none;
 
     &::after {
-      border-top-color: $base-color;
+      border-top-color: var(--text-color);
+      opacity: 0.8;
     }
   }
 
@@ -54,6 +57,7 @@
 
     &::after {
       border-top-color: #ffffff;
+      opacity: 1;
     }
   }
 }

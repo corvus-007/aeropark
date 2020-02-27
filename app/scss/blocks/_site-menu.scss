@@ -20,13 +20,13 @@
   font-size: 12px;
   text-align: center;
   text-decoration: none;
-  color: #505a64;
+  color: var(--menu-link);
   user-select: none;
   outline: none;
 
   &:hover,
   &:focus {
-    color: #505a64;
+    color: var(--menu-link);
   }
 
   &:focus-visible {
@@ -40,7 +40,7 @@
   .site-header-bottom-stuck & {
     padding-top: 12px;
     padding-bottom: 12px;
-    color: #505a64;
+    color: var(--menu-link);
   }
 
   @include mq-min(1280px) {
@@ -116,13 +116,13 @@
 }
 
 .site-menu__link-text {
-  color: $base-color;
+  color: var(--text-color);
 
   .white-header & {
     color: #ffffff;
   }
 
   .site-header-bottom-stuck & {
-    color: $base-color;
+    color: var(--text-color);
   }
 }

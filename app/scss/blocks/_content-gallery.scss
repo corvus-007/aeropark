@@ -8,5 +8,12 @@
     @include make-fit-object(16, 10);
 
     cursor: zoom-in;
+    filter: brightness(var(--brightness-image-filter));
+    transition: filter 0.4s;
+
+    &:hover,
+    &:focus {
+      --brightness-image-filter: 100%;
+    }
   }
 }

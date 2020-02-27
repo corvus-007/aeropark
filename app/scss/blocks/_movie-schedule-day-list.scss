@@ -5,5 +5,5 @@
 .movie-schedule-day-list__item:not(:last-child) {
   margin-bottom: 36px;
   padding-bottom: 36px;
-  border-bottom: 1px solid $gray-214;
+  border-bottom: 1px solid var(--layout-border-color);
 }

@@ -2,7 +2,6 @@
   @include clear-list();
 
   font-size: 16px;
-  // line-height: 1.24;
 
   li {
     margin-bottom: 4px;
@@ -10,14 +9,14 @@
 
   a {
     text-decoration: none;
-    color: $base-color;
-    border-bottom: 1px solid transparent;
+    color: var(--text-color);
+    border-bottom: 1px solid var(--footer-link-border-color);
     transition: 0.2s;
     outline: none;
 
     &:hover,
     &:focus {
-      border-bottom-color: rgba($base-color, 0.2);
+      border-bottom-color: var(--footer-link-border-color-hover);
     }
 
     &:focus-visible {

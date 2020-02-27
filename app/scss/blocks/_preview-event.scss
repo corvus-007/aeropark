@@ -1,6 +1,5 @@
 .preview-event {
   &--is-slide {
-
   }
 }
 
@@ -20,6 +19,9 @@
 .preview-event__picture {
   @include make-fit-object(1, 1);
 
+  filter: brightness(var(--brightness-image-filter));
+  transition: filter 0.4s;
+
   &::after {
     content: "";
     position: absolute;
@@ -28,6 +30,11 @@
     right: 0;
     bottom: 0;
     background-image: linear-gradient(to top, #000000, rgba(#000000, 0) 54%);
+  }
+
+  .preview-event__wraplink:hover &,
+  .preview-event__wraplink:focus & {
+    --brightness-image-filter: 100%;
   }
 }
 

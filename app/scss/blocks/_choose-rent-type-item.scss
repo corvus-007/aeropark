@@ -30,6 +30,7 @@
   height: 120px;
   margin-bottom: 8px;
   object-fit: contain;
+  filter: #{"invert(var(--monochrome-image-filter))"};
 
   @include mq-max(666px) {
     display: none;

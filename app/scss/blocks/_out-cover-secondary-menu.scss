@@ -19,14 +19,14 @@
     padding-bottom: 4px;
     text-decoration: none;
     white-space: nowrap;
-    color: $base-color;
+    color: var(--text-color);
     transition: 0.2s;
     outline: none;
     user-select: none;
 
     &:hover,
     &:focus {
-      color: $primary-color;
+      color: var(--link-text-color-hover);
     }
   }
 

@@ -17,7 +17,7 @@
   line-height: 1.2;
   text-decoration: none;
   font-weight: 500;
-  color: $base-color;
+  color: var(--text-color);
   overflow: hidden;
   border-radius: 4px;
   transition: 0.2s;
@@ -26,7 +26,7 @@
   &:hover,
   &:focus {
     transform: translate3d(0, -4px, 0);
-    color: $base-color;
+    color: var(--text-color);
   }
 
   &:active {
@@ -39,9 +39,16 @@
 
   margin-bottom: 16px;
   border-radius: 4px;
+  filter: brightness(var(--brightness-image-filter));
+  transition: filter 0.4s;
 
   img {
     transition: 0.2s;
+  }
+
+  .event-card__wraplink:hover &,
+  .event-card__wraplink:focus & {
+    --brightness-image-filter: 100%;
   }
 }
 
@@ -84,7 +91,7 @@
   padding-left: 4px;
   padding-right: 4px;
   text-transform: lowercase;
-  background-image: linear-gradient($gray-234, $gray-234);
+  background-image: linear-gradient(var(--event-tag-line-bg), var(--event-tag-line-bg));
   background-repeat: no-repeat;
   background-position: 0 100%;
   background-size: 100% 8px;

@@ -10,11 +10,9 @@
   margin-right: 40px;
   font-weight: 400;
   font-size: 16px;
-  color: $muted-color;
-
-  @include mq-min(768px) {
-    width: 160px;
-  }
+  width: 160px;
+  margin-right: 40px;
+  color: var(--text-color-muted);
 }
 
 .movie-schedule-hall__session-list {

@@ -9,7 +9,7 @@
   display: block;
   flex-grow: 1;
   text-decoration: none;
-  color: $base-color;
+  color: var(--text-color);
   transition: 0.2s;
   user-select: none;
   outline: none;
@@ -17,7 +17,7 @@
   &:hover,
   &:focus {
     transform: translate3d(0, -4px, 0);
-    color: $base-color;
+    color: var(--text-color);
   }
 }
 
@@ -27,9 +27,16 @@
   margin-bottom: 12px;
   border-radius: 4px;
   overflow: hidden;
+  filter: brightness(var(--brightness-image-filter));
+  transition: filter 0.4s;
 
   img {
     display: block;
+  }
+
+  .movie-card__wraplink:hover &,
+  .movie-card__wraplink:focus & {
+    --brightness-image-filter: 100%;
   }
 }
 

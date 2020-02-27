@@ -10,21 +10,20 @@
   }
 
   .input.error {
-    border-color: $danger-color;
+    border-color: var(--field-border-color-danger);
   }
 
   label.error {
     position: absolute;
     left: 0;
     top: 100%;
-    min-width: 200px;
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
     text-transform: none;
-    color: $danger-color;
+    color: var(--field-text-color-danger);
+    background-color: var(--field-bg-color-danger);
     user-select: none;
-    background-color: rgba(#ffffff, 0.5);
   }
 }
 
@@ -34,7 +33,7 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 1.2;
-  color: #666666;
+  color: var(--text-color-muted);
   text-transform: uppercase;
 
   .field--inline & {
