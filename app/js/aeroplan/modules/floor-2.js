@@ -2065,6 +2065,7 @@ export default {
     {
       id: 2132,
       title: `Помещение для магазина`,
+      free: true,
       logoSrc: ``,
       synonyms: [],
       description: ``,

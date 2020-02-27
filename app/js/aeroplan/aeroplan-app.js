@@ -13,7 +13,9 @@ import Popper from 'popper.js';
 
 const MIN_ZOOM = 0.8;
 const MAX_ZOOM = 5.5;
+const SHOW_FREE_PLACES_CLASS = `show-free-places`;
 const PLAN_PLACE_CLASS = `plan-place`;
+const PLAN_PLACE_FREE_CLASS = `plan-place--is-free`;
 // const PLAN_PLACE_HOVERED_CLASS = `plan-place--hovered`;
 const PLAN_PLACE_ACTIVE_CLASS = `plan-place--active`;
 const PLAN_PLACE_SELECTED_CLASS = `plan-place--selected`;
@@ -28,6 +30,12 @@ const MARKER_SIZE = 16;
 const url = new URL(window.location);
 const params = new URLSearchParams(url.search);
 const placeId = params.get(`placeId`);
+const freePlaces = params.get(`showFreePlaces`);
+
+if (freePlaces !== null) {
+  document.body.classList.add(SHOW_FREE_PLACES_CLASS);
+}
+
 const filterForm = document.querySelector(`[data-plans-filter-form]`);
 const categoryFilterSelect = filterForm.querySelector(`[name="category"]`);
 const audienceFilterSelect = filterForm.querySelector(`[name="audience"]`);
@@ -246,7 +254,10 @@ function renderPlan(plan, planIndex) {
 
       return '';
     })
-    .classed(PLAN_PLACE_CLASS, true);
+    .classed(PLAN_PLACE_CLASS, true)
+    .classed(PLAN_PLACE_FREE_CLASS, (d) => {
+      return d.free;
+    });
 
   // create logos
 
