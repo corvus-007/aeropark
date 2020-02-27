@@ -36,6 +36,16 @@ document.addEventListener('DOMContentLoaded', function() {
     'Заполните номер телефона'
   );
 
+  $.validator.addMethod(
+    'checkUrl',
+    function(value) {
+      return (
+        /(^https?:\/\/)?[a-z0-9~_\-\.]+\.[a-z]{2,9}(\/|:|\?[!-~]*)?$/i.test(value) || value === ''
+      );
+    },
+    'Неверный URL'
+  );
+
   $('.chosen-select').chosen({ no_results_text: 'Ой, ничего не найдено!' });
 
   function checkSwiperIfItHasOnlyOneSlide(instance) {

@@ -68,6 +68,9 @@ window.rentStore = (function($) {
       phone: {
         checkPhoneMask: true,
       },
+      site: {
+        checkUrl: true,
+      }
     },
   });
 })(window.jQuery);

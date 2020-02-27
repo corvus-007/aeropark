@@ -68,9 +68,9 @@ window.rentIsland = (function($) {
       phone: {
         checkPhoneMask: true,
       },
-      'profiles[]': {
-        required: true,
-      },
+      site: {
+        checkUrl: true,
+      }
     },
   });
 })(window.jQuery);
