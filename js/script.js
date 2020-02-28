@@ -31,6 +31,15 @@ document.addEventListener('DOMContentLoaded', function () {
   $('.chosen-select').chosen({
     no_results_text: 'Ой, ничего не найдено!'
   });
+
+  function checkSwiperIfItHasOnlyOneSlide(instance) {
+    var galleryInstance = instance;
+    var gallery = galleryInstance.el;
+    var amountSlides = galleryInstance.slides.length;
+    var hasOnlyOneSlide = amountSlides <= 1;
+    gallery.classList.toggle('swiper-has-one-slide', hasOnlyOneSlide);
+  }
+
   document.addEventListener('click', function (evt) {
     var target = evt.target;
     var searchHeaderToggle = target.closest('[data-toggle-search]');
@@ -65,10 +74,14 @@ document.addEventListener('DOMContentLoaded', function () {
       modifier: 3,
       slideShadows: false
     },
-    // Navigation arrows
     navigation: {
       nextEl: '.common-slider-button--next',
       prevEl: '.common-slider-button--prev'
+    },
+    on: {
+      init: function init() {
+        checkSwiperIfItHasOnlyOneSlide(this);
+      }
     }
   });
   new Swiper('[data-preview-events-photo-slider]', {
@@ -88,6 +101,11 @@ document.addEventListener('DOMContentLoaded', function () {
     navigation: {
       nextEl: '.common-slider-button--next',
       prevEl: '.common-slider-button--prev'
+    },
+    on: {
+      init: function init() {
+        checkSwiperIfItHasOnlyOneSlide(this);
+      }
     }
   });
   new Swiper('[data-shop-gallery]', {
@@ -95,6 +113,11 @@ document.addEventListener('DOMContentLoaded', function () {
     navigation: {
       nextEl: '.common-slider-button--next',
       prevEl: '.common-slider-button--prev'
+    },
+    on: {
+      init: function init() {
+        checkSwiperIfItHasOnlyOneSlide(this);
+      }
     }
   });
   new Swiper('[data-content-gallery]', {
@@ -102,6 +125,11 @@ document.addEventListener('DOMContentLoaded', function () {
     navigation: {
       nextEl: '.common-slider-button--next',
       prevEl: '.common-slider-button--prev'
+    },
+    on: {
+      init: function init() {
+        checkSwiperIfItHasOnlyOneSlide(this);
+      }
     }
   });
 });

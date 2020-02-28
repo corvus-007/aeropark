@@ -1,4 +1,5 @@
 .aero-plan-popper {
+  z-index: 5;
   max-width: 300px;
   padding: 16px;
   font-size: 16px;
@@ -21,16 +22,6 @@
     display: none; }
   .aero-plan-popper :empty {
     display: none; }
-  .aero-plan-popper::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    width: 8px;
-    height: 8px;
-    -webkit-transform: translateX(-50%) rotate(45deg);
-            transform: translateX(-50%) rotate(45deg);
-    background-color: #fff;
-    border-radius: 2px; }
   .aero-plan-popper p {
     margin: 0;
     margin-top: 8px; }
@@ -43,8 +34,18 @@
 
 .aero-plan-popper__title {
   margin: 0;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 1.15; }
+
+.aero-plan-popper__shop-link {
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  color: currentColor;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s; }
+  .aero-plan-popper__shop-link:hover, .aero-plan-popper__shop-link:focus {
+    color: #00a0ff; }
 
 .aeroplan-dashboard {
   display: grid;
@@ -99,7 +100,11 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   cursor: pointer;
-  outline: none; }
+  outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
   .toggle-floors__button:hover {
     color: #ffffff;
     background-color: #928bf3; }
@@ -328,6 +333,8 @@
 
 .help-markers-group {
   fill: #858aad; }
+  .help-markers-group--selected {
+    fill: #de4383; }
 
 .aeroplan-map {
   position: relative; }
