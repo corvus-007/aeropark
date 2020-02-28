@@ -2954,11 +2954,10 @@ export default {
     },
     {
       id: 1154,
-      title: `Помещение для магазина`,
-      free: true,
+      title: ``,
       logoSrc: ``,
       synonyms: [],
-      description: ``,
+      description: `Скоро открытие`,
       discount: new Set(),
       category: new Set(),
       audience: new Set(),

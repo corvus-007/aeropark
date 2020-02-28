@@ -80,6 +80,14 @@
   }
 }
 
+.show-free-places .plan-place {
+  fill: var(--aeroplan-place-fill-inactive-on-free);
+
+  &:hover {
+    fill: var(--aeroplan-place-fill-inactive-on-free-hover);
+  }
+}
+
 .show-free-places .plan-place--is-free {
   fill: var(--aeroplan-place-fill-free);
 

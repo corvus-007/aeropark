@@ -52,6 +52,10 @@
   font-size: 16px;
   line-height: 1.15;
 
+  &:empty {
+    display: none;
+  }
+
   @include mq-min(768px) {
     font-size: 24px;
   }
@@ -61,6 +65,10 @@
   @include mq-max(767px) {
     display: none;
   }
+}
+
+.aero-plan-popper__title:empty + .aero-plan-popper__description {
+  margin-top: 0;
 }
 
 .aero-plan-popper__shop-link {
