@@ -78,4 +78,9 @@
   &:empty {
     display: none;
   }
+
+  &--free {
+    color: var(--grey-20);
+    background-color: var(--aeroplan-place-fill-free);
+  }
 }

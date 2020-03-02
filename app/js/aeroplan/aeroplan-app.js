@@ -31,11 +31,6 @@ const url = new URL(window.location);
 const params = new URLSearchParams(url.search);
 const placeId = params.get(`placeId`);
 const freePlaces = params.get(`showFreePlaces`);
-
-if (freePlaces !== null) {
-  document.body.classList.add(SHOW_FREE_PLACES_CLASS);
-}
-
 const filterForm = document.querySelector(`[data-plans-filter-form]`);
 const categoryFilterSelect = filterForm.querySelector(`[name="category"]`);
 const audienceFilterSelect = filterForm.querySelector(`[name="audience"]`);
@@ -127,6 +122,12 @@ popper.addEventListener(`mouseleave`, mouseleavePopperHandler);
 document.addEventListener(`click`, clickDocumentHandler);
 
 zoomActionsContainer.addEventListener(`click`, clickZoomContainerHandler);
+
+if (freePlaces !== null) {
+  document.body.classList.add(SHOW_FREE_PLACES_CLASS);
+
+  showFreePlaces();
+}
 
 function renderPlan(plan, planIndex) {
   const {
@@ -254,10 +255,7 @@ function renderPlan(plan, planIndex) {
 
       return '';
     })
-    .classed(PLAN_PLACE_CLASS, true)
-    .classed(PLAN_PLACE_FREE_CLASS, (d) => {
-      return d.free;
-    });
+    .classed(PLAN_PLACE_CLASS, true);
 
   // create logos
 
@@ -384,6 +382,28 @@ function clickZoomContainerHandler(evt) {
   }
 }
 
+function filterByFree(d) {
+  return d.free;
+}
+
+function showFreePlaces() {
+  placesPathsArr.forEach((paths, planIndex) => {
+    const filteredPaths = paths
+      .classed(PLAN_PLACE_FREE_CLASS, false)
+      .filter(filterByFree)
+      .classed(PLAN_PLACE_FREE_CLASS, true);
+
+    const filteredAreasCount = filteredPaths.size();
+    const badgeValueNode = document.querySelectorAll(
+      `.toggle-floors__badge-value`
+    )[planIndex];
+
+    badgeValueNode.classList.add(`toggle-floors__badge-value--free`);
+
+    badgeValueNode.textContent = filteredAreasCount || ``;
+  });
+}
+
 filterForm.addEventListener(`input`, inputFilterFormHandler);
 filterForm.addEventListener(`reset`, resetFormHandler);
 
@@ -405,7 +425,7 @@ function inputFilterFormHandler(evt) {
     ? audienceFilterSelect.value
     : currentAudienceFilterValue;
 
-  const filterByCategory = function(d) {
+  function filterByCategory(d) {
     if (d['category'] instanceof Set) {
       if (
         currentCategoryFilterValue === `all` ||
@@ -415,9 +435,9 @@ function inputFilterFormHandler(evt) {
       }
       return d['category'].has(currentCategoryFilterValue);
     }
-  };
+  }
 
-  const filterByAudience = function(d) {
+  function filterByAudience(d) {
     if (d['audience'] instanceof Set) {
       if (
         currentAudienceFilterValue === `all` ||
@@ -427,11 +447,12 @@ function inputFilterFormHandler(evt) {
       }
       return d['audience'].has(currentAudienceFilterValue);
     }
-  };
+  }
 
   const isSelectedCategoryHasAudience =
     currentCategoryFilterValue === categoryFilter['Одежда и аксессуары'] ||
-    currentCategoryFilterValue === categoryFilter['Обувь, сумки, кожгалантерея'] ||
+    currentCategoryFilterValue ===
+      categoryFilter['Обувь, сумки, кожгалантерея'] ||
     currentCategoryFilterValue === categoryFilter['Детские товары и одежда'] ||
     currentCategoryFilterValue === categoryFilter['Белье, чулочные изделия'];
 
