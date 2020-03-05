@@ -2048,7 +2048,7 @@ export default {
       category: new Set([categoryFilter[`Кафе и рестораны`]]),
       audience: new Set(),
       shopURL: `/dynamic/eat/87`,
-      path: `M2146,512.5v14h-14v-14Z`,
+      path: `M2395,608v12h-12V608Z`,
     },
     {
       id: 2131,
