@@ -1,4 +1,7 @@
 .common-page-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   display: grid;
   gap: 60px;
   margin-bottom: 68px;
@@ -25,6 +28,16 @@
 
 .common-page-row__content {
   min-width: 100%;
+
+  @include mq-min(1024px) {
+    min-width: auto;
+    width: calc(100% - 296px - 40px);
+
+    @supports (display: grid) {
+      min-width: 100%;
+      width: initial;
+    }
+  }
 }
 
 .common-page-row__aside {
@@ -33,6 +46,14 @@
   @include mq-max(767px) {
     .common-page-row--inverse-stack & {
       grid-row-start: 1;
+    }
+  }
+
+  @include mq-min(1024px) {
+    width: 296px;
+
+    @supports (display: grid) {
+      width: initial;
     }
   }
 }

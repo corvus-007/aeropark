@@ -1,10 +1,26 @@
 .shop-logos-cards {
   @include clear-list();
 
+  display: flex;
+  flex-wrap: wrap;
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+  margin-right: -20px;
+
+  @supports (display: grid) {
+    margin-right: initial;
+  }
 }
 
 .shop-logos-cards__item {
+  width: 100px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+  @supports (display: grid) {
+    width: auto;
+    margin-right: initial;
+    margin-bottom: initial;
+  }
 }

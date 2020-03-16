@@ -7,6 +7,10 @@ window.siteHeader = (function() {
     return;
   }
 
+  if (!('IntersectionObserver' in window)) {
+    return;
+  }
+
   const headerBottom = document.querySelector('.site-header-bottom');
   const headerBottomStuck = window.matchMedia('(min-width: 1024px)').matches
     ? generateHeaderBottomStuck()
@@ -16,8 +20,8 @@ window.siteHeader = (function() {
   header.after(headerSentinel, headerBottomStuck);
 
   const headerObserver = new IntersectionObserver(
-    entrys => {
-      const entry = entrys[0];
+    entries => {
+      const entry = entries[0];
       document.body.classList.toggle('is-header-sticky', !entry.isIntersecting);
     },
     { threshold: 1 }
