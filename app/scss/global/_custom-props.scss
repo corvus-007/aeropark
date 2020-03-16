@@ -1,0 +1,232 @@
+:root {
+  --color-mode: "light";
+  --accent-color: hsl(332, 96%, 64%);
+  --primary-color: hsl(200, 100%, 52%);
+  --primary-color-darken: hsl(200, 100%, 48%);
+  --danger-color: #fd0d4d;
+  --button-text-color: #ffffff;
+  --button-bg-color: var(--primary-color);
+  --button-bg-color-hover: var(--primary-color-darken);
+  --link-text-color: hsl(200, 100%, 52%);
+  --link-text-color-hover: hsl(200, 100%, 48%);
+  --grey-12: hsl(0, 0%, 12%);
+  --grey-16: hsl(0, 0%, 16%);
+  --grey-20: hsl(0, 0%, 20%);
+  --grey-40: hsl(0, 0%, 40%);
+  --grey-60: hsl(0, 0%, 60%);
+  --base-color: #212121;
+  --logo-fill: #2b2a29;
+  --menu-link: #505a64;
+  --layout-border-color: #d6d6d6;
+  --textual-line-height: 1.5;
+
+  --text-color: #212121;
+  --text-color-muted: #7a7a7a;
+  --bg-color: #ffffff;
+  --hatch-maker-line-bg-color: #eaeaea;
+  --header-link-text-on-secondary-page-color-hover: var(--text-color);
+  --header-link-bg-on-secondary-page-color-hover: var(--bg-color);
+  --link-decor-stripe-bg-color: #c5eafc;
+  --footer-bg-color: #edf0f0;
+  --footer-icon-fill: hsl(0, 0%, 48%);
+  --input-text-color: var(--text-color);
+  --input-bg-color: hsl(0, 0%, 98%);
+  --input-bg-color-hover: hsl(0, 0%, 96%);
+  --input-border-color: hsl(0, 0%, 84%);
+  --input-border-color-focus: var(--grey-60);
+  --label-text-color: var(--text-color-muted);
+  --control-indicator-bg-color: #f5f5f5;
+  --control-indicator-border-color: #e0e0e0;
+  --control-indicator-border-color-hover: #d6d6d6;
+  --common-filter-option-bg-color: #f5f5f5;
+  --page-filter-box-stop-color-1: rgba(255, 255, 255, 0.5);
+  --page-filter-box-stop-color-2: rgba(255, 255, 255, 1);
+  --event-tag-line-bg: #eaeaea;
+  --accordion-border-color: #eaeaea;
+  --accordion-trigger-bg-color: var(--bg-color);
+  --accordion-trigger-bg-color-hover: #f5f5f5;
+  --text-note-bg-color: #f5f5f5;
+  --text-note-border-color: var(--layout-border-color);
+  --chosen-option-bg-color-highlighted: var(--text-color);
+  --chosen-option-bg-color-selected: #f5f5f5;
+  --rent-section-bg-color: #fafafa;
+  --field-text-color-danger: var(--danger-color);
+  --field-bg-color-danger: hsla(0, 0, 100%, 50%);
+  --field-border-color-danger: var(--danger-color);
+  --footer-link-border-color: hsla(0, 0%, 12%, 0.1);
+  --footer-link-border-color-hover: hsla(0, 0%, 12%, 0.3);
+
+  // color scheme switcher
+  --color-switcher-button-text-color: hsl(232, 44%, 40%);
+  --color-switcher-button-text-color-hover: #ffffff;
+  --color-switcher-button-bg-color: transparent;
+  --color-switcher-button-bg-color-hover: hsl(232, 44%, 40%);
+  --color-switcher-button-border-color: hsl(232, 44%, 40%);
+  --color-switcher-button-border-color-hover: hsl(232, 44%, 40%);
+
+  // search
+  --search-icon-fill: var(--text-color);
+
+  // aeroplan
+  --aeroplan-filter-reset-button-bg: #c4c4c4;
+  --aeroplan-search-result-bg: var(--bg-color);
+  --aeroplan-search-result-item-bg-hover: #e4e4e4;
+  --aeroplan-search-result-item-bg-highlighted: ;
+  --aeroplan-floor-bg: #f5f5f5;
+  --aeroplan-boundary-floor-fill: #e4e4e4;
+  --aeroplan-boundary-floor-stroke: #0d47a1;
+  --aeroplan-inner-boundary-floor-fill: #f5f5f5;
+  --aeroplan-inner-boundary-floor-stroke: #e1e1e1;
+  --aeroplan-place-fill: hsl(236, 72%, 72%);
+  --aeroplan-place-fill-inactive-on-free: hsl(236, 36%, 72%);
+  --aeroplan-place-fill-inactive-on-free-hover: hsl(236, 48%, 72%);
+  --aeroplan-place-fill-free: hsl(80, 100%, 72%);
+  --aeroplan-place-fill-free-hover: hsl(80, 100%, 60%);
+  --aeroplan-place-fill-hover: hsl(236, 72%, 64%);
+  --aeroplan-place-fill-active: hsl(336, 72%, 56%);
+  --aeroplan-place-fill-filtered: hsl(208, 100%, 64%);
+  --aeroplan-place-fill-filtered-hover: hsl(208, 100%, 56%);
+  --aeroplan-place-fill-selected: var(--aeroplan-place-fill-active);
+  --aeroplan-place-fill-selected-hover: hsl(335, 70%, 48%);
+  --aeroplan-place-stroke: #ffffff;
+  --aeroplan-zoom-control-text-color: #d6d6d6;
+  --aeroplan-zoom-control-border-color: #eaeaea;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-mode: "dark";
+  }
+
+  :root:not([data-user-color-scheme]) {
+    --base-color: #e7e7e7;
+    --danger-color: hsla(344, 96%, 52%, 50%);
+    --text-color: #e7e7e7;
+    --text-color-muted: hsl(240, 8%, 60%);
+    --logo-fill: #e7e7e7;
+    --menu-link: #f7f7f7;
+    --layout-border-color: hsl(240, 12%, 44%);
+
+    --bg-color: hsl(240, 12%, 24%);
+    --hatch-maker-line-bg-color: hsl(240, 12%, 36%);
+    --header-link-text-on-secondary-page-color-hover: var(--bg-color);
+    --header-link-bg-on-secondary-page-color-hover: var(--text-color);
+    --link-decor-stripe-bg-color: hsl(240, 20%, 48%);
+    --footer-bg-color: hsl(240, 12%, 18%);
+    --footer-icon-fill: var(--text-color);
+    --input-bg-color: hsl(240, 12%, 26%);
+    --input-bg-color-hover: hsl(240, 12%, 28%);
+    --input-border-color: hsl(240, 12%, 44%);
+    --input-border-color-focus: hsl(240, 12%, 60%);
+    --label-text-color: #a7a7a7;
+    --control-indicator-bg-color: hsl(240, 12%, 26%);
+    --control-indicator-border-color: hsl(240, 12%, 48%);
+    --control-indicator-border-color-hover: hsl(240, 12%, 60%);
+    --common-filter-option-bg-color: hsl(240, 12%, 40%);
+    --page-filter-box-stop-color-1: hsla(240, 20%, 24%, 0.5);
+    --page-filter-box-stop-color-2: hsl(240, 20%, 24%);
+    --event-tag-line-bg: hsl(240, 12%, 36%);
+    --accordion-border-color: hsl(240, 12%, 36%);
+    --accordion-trigger-bg-color-hover: hsl(240, 12%, 28%);
+    --text-note-bg-color: hsl(240, 12%, 28%);
+    --monochrome-image-filter: 88%;
+    --brightness-image-filter: 92%;
+    --chosen-option-bg-color-highlighted: hsl(240, 12%, 40%);
+    --chosen-option-bg-color-selected: hsl(240, 12%, 28%);
+    --rent-section-bg-color: hsl(240, 12%, 20%);
+    --field-text-color-danger: #ffffff;
+    --field-bg-color-danger: var(--danger-color);
+    --field-border-color-danger: var(--danger-color);
+    --footer-link-border-color: hsla(240, 12%, 12%, 0.1);
+    --footer-link-border-color-hover: hsla(240, 12%, 12%, 0.3);
+
+    // color scheme switcher
+    --color-switcher-button-text-color: hsl(54, 64%, 60%);
+    --color-switcher-button-text-color-hover: hsl(240, 12%, 18%);
+    --color-switcher-button-bg-color: transparent;
+    --color-switcher-button-bg-color-hover: hsl(54, 64%, 60%);
+    --color-switcher-button-border-color: hsl(54, 64%, 60%);
+    --color-switcher-button-border-color-hover: hsl(54, 64%, 60%);
+
+    // aeroplan
+    --aeroplan-filter-reset-button-bg: hsl(240, 12%, 28%);
+    --aeroplan-search-result-bg: hsl(240, 16%, 16%);
+    --aeroplan-search-result-item-bg-hover: hsl(240, 16%, 32%);
+    --aeroplan-search-result-item-bg-highlighted: hsl(240, 28%, 32%);
+    --aeroplan-floor-bg: hsl(240, 16%, 32%);
+    --aeroplan-boundary-floor-fill: hsl(240, 28%, 40%);
+    --aeroplan-boundary-floor-stroke: hsl(260, 28%, 56%);
+    --aeroplan-inner-boundary-floor-fill: hsl(240, 28%, 44%);
+    --aeroplan-inner-boundary-floor-stroke: hsl(240, 28%, 48%);
+    --aeroplan-place-fill: hsl(236, 60%, 60%);
+    --aeroplan-place-fill-hover: hsl(240, 60%, 52%);
+    --aeroplan-zoom-control-text-color: hsl(0, 0%, 72%);
+    --aeroplan-zoom-control-border-color: hsl(240, 12%, 36%);
+  }
+}
+
+[data-user-color-scheme="dark"] {
+  --base-color: #e7e7e7;
+  --danger-color: hsla(344, 96%, 52%, 50%);
+  --text-color: #e7e7e7;
+  --text-color-muted: hsl(240, 8%, 60%);
+  --logo-fill: #e7e7e7;
+  --menu-link: #f7f7f7;
+  --layout-border-color: hsl(240, 12%, 44%);
+
+  --bg-color: hsl(240, 12%, 24%);
+  --hatch-maker-line-bg-color: hsl(240, 12%, 36%);
+  --header-link-text-on-secondary-page-color-hover: var(--bg-color);
+  --header-link-bg-on-secondary-page-color-hover: var(--text-color);
+  --link-decor-stripe-bg-color: hsl(240, 20%, 48%);
+  --footer-bg-color: hsl(240, 12%, 18%);
+  --footer-icon-fill: var(--text-color);
+  --input-bg-color: hsl(240, 12%, 26%);
+  --input-bg-color-hover: hsl(240, 12%, 28%);
+  --input-border-color: hsl(240, 12%, 44%);
+  --input-border-color-focus: hsl(240, 12%, 60%);
+  --label-text-color: #a7a7a7;
+  --control-indicator-bg-color: hsl(240, 12%, 26%);
+  --control-indicator-border-color: hsl(240, 12%, 48%);
+  --control-indicator-border-color-hover: hsl(240, 12%, 60%);
+  --common-filter-option-bg-color: hsl(240, 12%, 40%);
+  --page-filter-box-stop-color-1: hsla(240, 12%, 24%, 0.5);
+  --page-filter-box-stop-color-2: hsl(240, 12%, 24%);
+  --event-tag-line-bg: hsl(240, 12%, 36%);
+  --accordion-border-color: hsl(240, 12%, 36%);
+  --accordion-trigger-bg-color-hover: hsl(240, 12%, 28%);
+  --text-note-bg-color: hsl(240, 12%, 28%);
+  --monochrome-image-filter: 88%;
+  --brightness-image-filter: 92%;
+  --chosen-option-bg-color-highlighted: hsl(240, 12%, 40%);
+  --chosen-option-bg-color-selected: hsl(240, 12%, 28%);
+  --rent-section-bg-color: hsl(240, 12%, 20%);
+  --field-text-color-danger: #ffffff;
+  --field-bg-color-danger: var(--danger-color);
+  --field-border-color-danger: var(--danger-color);
+  --footer-link-border-color: hsla(240, 12%, 84%, 0.1);
+  --footer-link-border-color-hover: hsla(240, 12%, 84%, 0.3);
+
+  // color scheme switcher
+  --color-switcher-button-text-color: hsl(54, 64%, 60%);
+  --color-switcher-button-text-color-hover: hsl(240, 12%, 18%);
+  --color-switcher-button-bg-color: transparent;
+  --color-switcher-button-bg-color-hover: hsl(54, 64%, 60%);
+  --color-switcher-button-border-color: hsl(54, 64%, 60%);
+  --color-switcher-button-border-color-hover: hsl(54, 64%, 60%);
+
+  // aeroplan
+  --aeroplan-filter-reset-button-bg: hsl(240, 12%, 28%);
+  --aeroplan-search-result-bg: hsl(240, 16%, 16%);
+  --aeroplan-search-result-item-bg-hover: hsl(240, 16%, 32%);
+  --aeroplan-search-result-item-bg-highlighted: hsl(240, 28%, 32%);
+  --aeroplan-floor-bg: hsl(240, 16%, 32%);
+  --aeroplan-boundary-floor-fill: hsl(240, 28%, 40%);
+  --aeroplan-boundary-floor-stroke: hsl(260, 28%, 56%);
+  --aeroplan-inner-boundary-floor-fill: hsl(240, 28%, 44%);
+  --aeroplan-inner-boundary-floor-stroke: hsl(240, 28%, 48%);
+  --aeroplan-place-fill: hsl(236, 60%, 60%);
+  --aeroplan-place-fill-hover: hsl(240, 60%, 52%);
+  --aeroplan-zoom-control-text-color: hsl(0, 0%, 72%);
+  --aeroplan-zoom-control-border-color: hsl(240, 12%, 36%);
+}
