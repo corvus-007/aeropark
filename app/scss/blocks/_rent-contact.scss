@@ -56,9 +56,14 @@
   display: inline-flex;
   align-items: center;
   text-decoration: none;
-  color: inherit;
+  color: var(--text-color);
   transition: 0.2s;
   outline: none;
+
+  &:hover,
+  &:focus {
+    color: var(--text-color);
+  }
 
   &:active {
     opacity: 0.8;
