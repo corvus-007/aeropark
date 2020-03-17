@@ -19,19 +19,20 @@ const autoprefixer = require('autoprefixer');
 const del = require('del');
 const ghPages = require('gulp-gh-pages');
 
-const webpackConfig = require('./webpack.config');
-
-const isDevBuild = process.env.NODE_ENV !== 'production';
-console.log(isDevBuild);
 const folder = {
-  src: 'app',
+  src: './app',
   build: './public/build',
 };
+const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
+const webpackConfig = require('./webpack.config');
 
-const isDevelopment =
-  !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
+console.log({ isDevelopment });
+
 task('styles', () => {
-  return src(['app/scss/style.scss', 'app/scss/aeroplan-style.scss'])
+  return src([
+    `${folder.src}/scss/style.scss`,
+    `${folder.src}/scss/aeroplan-style.scss`,
+  ])
     .pipe(sass())
     .pipe(postcss([autoprefixer()]))
     .pipe(dest(`${folder.build}/`))
@@ -39,41 +40,44 @@ task('styles', () => {
 });
 
 function stylesProduction(cb) {
-  return src([`${folder.src}/scss/style.scss`], { sourcemaps: true })
-    .pipe(
-      plumber({
-        errorHandler: function(err) {
-          console.log(err);
-        },
-      })
+  return (
+    src(
+      [
+        `${folder.src}/scss/style.scss`,
+        `${folder.src}/scss/aeroplan-style.scss`,
+      ],
+      {
+        sourcemaps: true,
+      }
     )
-    .pipe(sass())
-    .pipe(
-      postcss([
-        autoprefixer({
-          browsers: ['last 2 version'],
-        }),
-        cssnano,
-      ])
-    )
-    .pipe(dest(`${folder.build}/`))
-    .pipe(
-      rename({
-        suffix: '.min',
-      })
-    )
-    .pipe(
-      dest(`${folder.build}/`, {
-        sourcemaps: '.',
-      })
-    )
-    .pipe(browserSync.stream());
+      .pipe(
+        plumber({
+          errorHandler: function(err) {
+            console.log(err);
+          },
+        })
+      )
+      .pipe(sass())
+      .pipe(postcss([autoprefixer(), cssnano]))
+      .pipe(dest(`${folder.build}/`))
+      // .pipe(
+      //   rename({
+      //     suffix: '.min',
+      //   })
+      // )
+      // .pipe(
+      //   dest(`${folder.build}/`, {
+      //     sourcemaps: '.',
+      //   })
+      // )
+      .pipe(browserSync.stream())
+  );
 
   cb();
 }
 
 function pluginsJSDev(cb) {
-  src([`${folder.src}/js/plugins.js`, '!./app/js/aeroplan/'])
+  src([`${folder.src}/js/plugins.js`, `!${folder.src}/js/aeroplan/`])
     .pipe(include())
     .pipe(dest(`${folder.build}/js`))
     .pipe(browserSync.stream());
@@ -81,16 +85,18 @@ function pluginsJSDev(cb) {
   cb();
 }
 
-function pluginsJSProduction() {
-  src(`${folder.src}/js/plugins.js`)
+function pluginsJSProduction(cb) {
+  src([`${folder.src}/js/plugins.js`, `!${folder.src}/js/aeroplan/`])
     .pipe(include())
     .pipe(uglify())
     .pipe(dest(`${folder.build}/js`))
     .pipe(browserSync.stream());
+
+  cb();
 }
 
 task('aeroplan-scripts', () => {
-  return src('./app/js/aeroplan/aeroplan-app.js')
+  return src(`${folder.src}/js/aeroplan/aeroplan-app.js`)
     .pipe(
       babel({
         presets: ['@babel/env'],
@@ -116,17 +122,22 @@ function modulesJS(cb) {
 }
 
 function copyJS(cb) {
-  return src([
-    `${folder.src}/js/*.{js,json}`,
-    `!${folder.src}/js/modules.js`,
-    `!${folder.src}/js/plugins.js`,
-  ])
+  return src([`${folder.src}/js/script.js`])
     .pipe(include())
     .pipe(
       babel({
         presets: ['@babel/env'],
       })
     )
+    .pipe(dest(`${folder.build}/js`))
+    .pipe(browserSync.stream());
+
+  cb();
+}
+
+function copyJSOrigin() {
+  return src([`${folder.src}/js/jquery.min.js`, `${folder.src}/js/*.{json}`])
+    .pipe(include())
     .pipe(dest(`${folder.build}/js`))
     .pipe(browserSync.stream());
 
@@ -216,6 +227,7 @@ const buildDev = series(
     'styles',
     copyImages,
     copyJS,
+    copyJSOrigin,
     modulesJS,
     pluginsJSDev,
     'aeroplan-scripts',
@@ -231,6 +243,7 @@ const buildProduction = series(
     stylesProduction,
     copyImages,
     copyJS,
+    copyJSOrigin,
     modulesJS,
     pluginsJSProduction,
     'aeroplan-scripts',
@@ -240,7 +253,7 @@ const buildProduction = series(
   )
 );
 
-if (isDevBuild) {
+if (isDevelopment) {
   exports.build = buildDev;
 } else {
   exports.build = buildProduction;
