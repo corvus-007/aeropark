@@ -3182,7 +3182,7 @@ export default {
       discount: new Set(),
       category: new Set([categoryFilter[`Парфюмерия и косметика`]]),
       audience: new Set(),
-      shopURL: ``,
+      shopURL: `/shop/227`,
       path: `M746.5,323h-16V307h16Z`,
     },
     {
