@@ -6,22 +6,27 @@
   z-index: 5;
   width: 36px;
   height: 36px;
-  background-color: $gray-234;
   border-radius: 50%;
+
+  @include mq-min(1024px) {
+    background-color: $gray-234;
+  }
 }
 
 .header-search__toggle {
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  padding: 0;
   background-color: $gray-234;
-  border: none;
+  -webkit-tap-highlight-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 50%;
   outline: none;
   transition: 0.2s;
   cursor: pointer;
@@ -64,6 +69,52 @@
       pointer-events: all;
     }
   }
+
+  @include mq-max(1023px) {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      right: -1px;
+      bottom: -1px;
+      left: -1px;
+      z-index: -2;
+      border-radius: inherit;
+      background-image: linear-gradient(45deg, #ff4b9a, #956eae, #6ed1ff);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      border-radius: inherit;
+      background-color: inherit;
+    }
+
+    .white-header:not(.is-header-search-showed):not(.is-out-cover-opened) & {
+      color: #ffffff;
+      background-color: transparent;
+      border-color: #ffffff;
+
+      &::before {
+        opacity: 0;
+      }
+
+      &:hover,
+      &:focus {
+        color: var(--header-link-text-on-secondary-page-color-hover);
+        background-color: var(--header-link-bg-on-secondary-page-color-hover);
+        border-color: #ffffff;
+      }
+    }
+  }
 }
 
 .header-search__toggle-icon {
@@ -77,12 +128,12 @@
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100vw;
   height: 100%;
+  padding-top: $site-header-top-mobile-height;
   transform: scale(1.05);
   background-color: var(--bg-color);
   transition: 0.2s;
@@ -97,14 +148,27 @@
     visibility: visible;
     pointer-events: all;
   }
+
+  @include mq-min(768px) {
+    padding-top: $site-header-top-tablet-height;
+  }
+
+  @include mq-min(1024px) {
+    z-index: 2;
+    padding-top: $site-header-top-laptop-height;
+  }
 }
 
 .header-search__title {
   margin: 0;
   margin-bottom: 16px;
   font-weight: 600;
-  font-size: 48px;
+  font-size: 32px;
   line-height: 1.2;
+
+  @include mq-min(768px) {
+    font-size: 48px;
+  }
 }
 
 .header-search__form {

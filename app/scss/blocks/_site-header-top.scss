@@ -59,10 +59,15 @@
 }
 
 .site-header-top__search {
+  margin-left: 44px;
   margin-right: 16px;
 
-  @include mq-max(1023px) {
-    display: none;
+  @include mq-min(768px) {
+    margin-left: 140px;
+  }
+
+  @include mq-min(1024px) {
+    margin-left: initial;
   }
 
   @include mq-min(1280px) {
