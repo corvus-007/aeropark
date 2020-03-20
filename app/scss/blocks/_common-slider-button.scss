@@ -12,6 +12,7 @@
   transform: translateY(-50%);
   color: var(--text-color);
   background-color: var(--bg-color);
+  -webkit-tap-highlight-color: transparent;
   box-shadow: 0 14px 25px 19px rgba(#212121, 0.4);
   border: none;
   border-radius: 50%;
@@ -21,15 +22,12 @@
   user-select: none;
 
   &:hover {
-
   }
 
   &:focus {
-
   }
 
   &:active {
-
   }
 
   &--prev {

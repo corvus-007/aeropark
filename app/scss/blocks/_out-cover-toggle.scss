@@ -7,10 +7,11 @@ $padding-cover-toggle: 8px;
   width: 16px;
   height: 15px;
   padding: $padding-cover-toggle;
-  border: none;
   color: currentColor;
-  box-sizing: content-box;
   background-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+  border: none;
+  box-sizing: content-box;
   outline: none;
   cursor: pointer;
 
