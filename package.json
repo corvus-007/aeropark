@@ -27,7 +27,7 @@
   },
   "scripts": {
     "build": "set NODE_ENV=production && gulp build",
-    "start": "npm run build && gulp serve",
+    "start": "gulp build && gulp serve",
     "deploy": "npm run build && gulp deploy"
   },
   "dependencies": {

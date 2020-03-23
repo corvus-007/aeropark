@@ -23,7 +23,8 @@ const folder = {
   src: './app',
   build: './public/build',
 };
-const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
+const isDevelopment =
+  !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
 const webpackConfig = require('./webpack.config');
 
 console.log({ isDevelopment });
@@ -77,7 +78,7 @@ function stylesProduction(cb) {
 }
 
 function pluginsJSDev(cb) {
-  src([`${folder.src}/js/plugins.js`, `!${folder.src}/js/aeroplan/`])
+  src([`${folder.src}/js/plugins.js`])
     .pipe(include())
     .pipe(dest(`${folder.build}/js`))
     .pipe(browserSync.stream());
@@ -86,7 +87,7 @@ function pluginsJSDev(cb) {
 }
 
 function pluginsJSProduction(cb) {
-  src([`${folder.src}/js/plugins.js`, `!${folder.src}/js/aeroplan/`])
+  src([`${folder.src}/js/plugins.js`])
     .pipe(include())
     .pipe(uglify())
     .pipe(dest(`${folder.build}/js`))
@@ -201,16 +202,20 @@ function serve(cb) {
     includeHtml
   ).on('change', browserSync.reload);
   watch(`${folder.src}/images/svg-symbols/**/*`, makeSymbols);
-  watch([`${folder.src}/js/*.{js,json}`], copyJS);
   watch(
     [`${folder.src}/js/plugins/*.js`, `${folder.src}/js/plugins.js`],
     pluginsJSDev
   );
+  watch('./app/js/aeroplan/**/*.js', series('aeroplan-scripts'));
   watch(
     [`${folder.src}/js/modules/*.js`, `${folder.src}/js/modules.js`],
     modulesJS
   );
-  watch('./app/js/aeroplan/**/*.js', series('aeroplan-scripts'));
+  watch([`${folder.src}/js/script.js`], copyJS);
+  watch(
+    [`${folder.src}/js/jquery.min.js`, `${folder.src}/js/*.{json}`],
+    copyJSOrigin
+  );
 
   cb();
 }
@@ -253,11 +258,8 @@ const buildProduction = series(
   )
 );
 
-if (isDevelopment) {
-  exports.build = buildDev;
-} else {
-  exports.build = buildProduction;
-}
+const build = isDevelopment ? buildDev : buildProduction;
 
-exports.serve = series(buildDev, serve);
+exports.build = build;
+exports.serve = series(serve);
 exports.deploy = deployProject;
