@@ -2128,28 +2128,28 @@ export default {
       shopURL: `/shop/146`,
       path: `M819,521.16,837,527v41H800V542h19Z`,
     },
-    {
-      id: 1114,
-      title: `Билайн`, // Возле Ленты
-      logoSrc: `beeline.svg`,
-      synonyms: [
-        'билайн',
-        'beeline.ru',
-        'мобильная связь',
-        'мобильный интернет',
-        'мобильный оператор',
-        'оператор сотовой связи',
-      ],
-      description: `Салон мобильной связи`,
-      discount: new Set(),
-      category: new Set([
-        categoryFilter[`Салоны связи`],
-        categoryFilter[`Бытовая техника, электроника`],
-      ]),
-      audience: new Set(),
-      shopURL: `/shop/146`,
-      path: `M1218,331v26h-25V331Z`,
-    },
+    // {
+    //   id: 1114,
+    //   title: `Билайн`, // Возле Ленты
+    //   logoSrc: `beeline.svg`,
+    //   synonyms: [
+    //     'билайн',
+    //     'beeline.ru',
+    //     'мобильная связь',
+    //     'мобильный интернет',
+    //     'мобильный оператор',
+    //     'оператор сотовой связи',
+    //   ],
+    //   description: `Салон мобильной связи`,
+    //   discount: new Set(),
+    //   category: new Set([
+    //     categoryFilter[`Салоны связи`],
+    //     categoryFilter[`Бытовая техника, электроника`],
+    //   ]),
+    //   audience: new Set(),
+    //   shopURL: `/shop/146`,
+    //   path: `M1218,331v26h-25V331Z`,
+    // },
     {
       id: 1115,
       title: `МТС`, // Возле входа №2
@@ -3187,7 +3187,7 @@ export default {
     },
     {
       id: 1169,
-      title: ``,
+      title: `797.8 кв.м`,
       logoSrc: ``,
       free: true,
       synonyms: [],
@@ -3200,7 +3200,7 @@ export default {
     },
     {
       id: 1170,
-      title: ``,
+      title: `36.5 кв.м`,
       logoSrc: ``,
       free: true,
       synonyms: [],
@@ -3213,7 +3213,7 @@ export default {
     },
     {
       id: 1171,
-      title: ``,
+      title: `28.3 кв.м`,
       logoSrc: ``,
       free: true,
       synonyms: [],
@@ -3223,6 +3223,19 @@ export default {
       audience: new Set(),
       shopURL: ``,
       path: `M1002,254v45H980V254Z`,
+    },
+    {
+      id: 1114,
+      title: `38.5 кв.м`,
+      logoSrc: ``,
+      free: true,
+      synonyms: [],
+      description: `Свободная площадь`,
+      discount: new Set(),
+      category: new Set(),
+      audience: new Set(),
+      shopURL: ``,
+      path: `M1218,331v26h-25V331Z`,
     },
   ],
   helpMarkers: [
