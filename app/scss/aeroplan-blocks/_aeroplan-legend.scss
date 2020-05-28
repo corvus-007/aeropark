@@ -1,0 +1,33 @@
+.aeroplan-legend {
+}
+
+.aeroplan-legend__list {
+}
+
+.aeroplan-legend__item {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.aeroplan-legend__sign {
+  position: relative;
+  top: -1px;
+  flex-shrink: 0;
+  width: rem(52px);
+  height: rem(52px);
+  margin-right: rem(20px);
+  border-radius: 4px;
+  background-color: #e7e7e7;
+
+  .aeroplan-legend__item--covid-opened & {
+    background-color: hsl(152, 72%, 48%);
+  }
+}
+
+.aeroplan-legend__description {
+  display: block;
+  font-size: rem(24px);
+  font-weight: 400;
+}

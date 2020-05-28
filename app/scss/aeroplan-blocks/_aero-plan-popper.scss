@@ -67,6 +67,11 @@
   }
 }
 
+.aero-plan-popper__extra {
+  font-size: 14px;
+  color: hsl(152, 72%, 40%);
+}
+
 .aero-plan-popper__title:empty + .aero-plan-popper__description {
   margin-top: 0;
 }

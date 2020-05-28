@@ -16,6 +16,7 @@ const MAX_ZOOM = 5.5;
 const SHOW_FREE_PLACES_CLASS = `show-free-places`;
 const PLAN_PLACE_CLASS = `plan-place`;
 const PLAN_PLACE_FREE_CLASS = `plan-place--is-free`;
+const PLAN_PLACE_COVID_OPENED_CLASS = `plan-place--covid-opened`;
 // const PLAN_PLACE_HOVERED_CLASS = `plan-place--hovered`;
 const PLAN_PLACE_ACTIVE_CLASS = `plan-place--active`;
 const PLAN_PLACE_SELECTED_CLASS = `plan-place--selected`;
@@ -237,6 +238,8 @@ function renderPlan(plan, planIndex) {
     .attr(`data-place-id`, d => d.id)
     .attr(`data-title`, d => d.title)
     .attr(`data-description`, d => d.description)
+    .attr(`data-extra`, d => d.extra)
+    // .attr(`data-covid-opened`, d => d.covidOpened)
     .attr(`data-link-url`, d => (d.link ? d.link.url : null))
     .attr(`data-link-text`, d => (d.link ? d.link.text : null))
     .attr(`data-button-text`, d => (d.button ? d.button.text : null))
@@ -256,6 +259,13 @@ function renderPlan(plan, planIndex) {
       return '';
     })
     .classed(PLAN_PLACE_CLASS, true);
+
+    const placesCovidOpened = placesPaths.filter((d, i) => {
+      return d.covidOpened === true;
+    });
+
+    placesCovidOpened.classed(PLAN_PLACE_COVID_OPENED_CLASS, true);
+
 
   // create logos
 
@@ -885,6 +895,7 @@ function catchTargetPlace({ floorIndex, areaObj }) {
 function renderPlanPopper(pathNode) {
   const title = pathNode.dataset.title || ``;
   const description = pathNode.dataset.description || ``;
+  const extra = pathNode.dataset.extra || ``;
   const shopURL = pathNode.dataset.shopUrl || ``;
   const shopLink = shopURL
     ? `<a class="aero-plan-popper__shop-link" href="${shopURL}" target="_blank">${title}</a>`
@@ -907,6 +918,7 @@ function renderPlanPopper(pathNode) {
   popper.innerHTML = `
     <h2 class="aero-plan-popper__title">${shopLink}</h2>
     <p class="aero-plan-popper__description">${description}</p>
+    <p class="aero-plan-popper__extra">${extra}</p>
     <p>${link}</p>
     <p>${button}</p>
   `;
