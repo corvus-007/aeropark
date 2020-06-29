@@ -8,6 +8,7 @@
 @import "aeroplan-blocks/zoom-actions";
 @import "aeroplan-blocks/plans-filter-form";
 @import "aeroplan-blocks/plans-search-form";
+@import "aeroplan-blocks/aeroplan-legend";
 
 .aero-plans__floor {
   width: 100%;
@@ -76,6 +77,14 @@
 
     &.plan-place--hovered {
       fill: var(--aeroplan-place-fill-selected-hover);
+    }
+  }
+
+  &--covid-opened {
+    fill: hsl(152, 72%, 48%);
+
+    &:hover {
+      fill: hsl(152, 72%, 44%);
     }
   }
 }

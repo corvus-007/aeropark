@@ -1,0 +1,48 @@
+.aeroplan-legend {
+}
+
+.aeroplan-legend__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.aeroplan-legend__item {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.2;
+  justify-content: center;
+}
+
+.aeroplan-legend__sign {
+  position: relative;
+  top: -1px;
+  flex-shrink: 0;
+  width: rem(52px);
+  height: rem(52px);
+  margin-right: rem(20px);
+  border-radius: 4px;
+  background-color: #e7e7e7;
+
+  .aeroplan-legend__item--covid-opened & {
+    background-color: hsl(152, 72%, 48%);
+  }
+}
+
+.aeroplan-legend__description {
+  display: block;
+  font-size: rem(24px);
+  font-weight: 400;
+  flex-grow: 1;
+
+  a {
+    display: block;
+    padding: 20px;
+    text-align: center;
+
+    &:hover {
+      background-color: rgba(#000000, 0.05);
+    }
+  }
+}

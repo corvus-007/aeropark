@@ -63,8 +63,13 @@
 
 .aero-plan-popper__description {
   @include mq-max(767px) {
-    display: none;
+    // display: none;
   }
+}
+
+.aero-plan-popper__extra {
+  font-size: 14px;
+  color: hsl(152, 72%, 40%);
 }
 
 .aero-plan-popper__title:empty + .aero-plan-popper__description {
