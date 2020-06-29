@@ -1,0 +1,43 @@
+.sale {
+
+}
+
+.sale__svg {
+
+}
+
+.sale__svg-hole {
+  // opacity: 0.25;
+  fill: #e5f2c7;
+  fill-opacity: 0;
+  fill-opacity: 0.2;
+  stroke: #f66493;
+  stroke: #438360;
+  stroke-width: 0;
+  filter: url(#filter);
+  // animation: stop-colors 12s infinite reverse linear;
+  transition: 0.4s;
+
+}
+
+.sale__svg-link:hover,
+.sale__svg-link:focus {
+  .sale__svg-hole {
+    // opacity: 1;
+    fill-opacity: 0;
+    stroke-opacity: 1;
+    stroke-width: 10;
+  }
+}
+
+.sale__svg-stop {
+
+}
+
+.sale__svg-picture-back {
+
+}
+
+.sale__svg-picture-front {
+  pointer-events: none;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <title>Summer Sale 2020</title>
+  <link rel="stylesheet" href="style.css">
+  @@include('blocks/site-favicons.html')
+</head>
+<body>
+  @@include('blocks/site-header.html')
+
+  <main class="site-main">
+    <article class="page sale-page">
+      <header class="page-header">
+        <div class="page-header__inner container">
+          <div class="page-header__content">
+            <h1 class="page-header__title page-title">Летний SALE</h1>
+            <p class="page-header__subtitle">Для перехода в нужную категорию скидок, нажмите на кнопку с этой категорией.</p>
+          </div>
+        </div>
+      </header>
+
+      <div class="page-content container">
+        <div class="sale">
+          <svg class="sale__svg" viewBox="0 0 2048 2048" preserveAspectRatio="xMidYMin slice">
+            <defs>
+              <filter id="filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
+                <feGaussianBlur stdDeviation="1 1" x="0%" y="0%" width="100%" height="100%" 4in="SourceGraphic" edgeMode="none" result="blur"/>
+              </filter>
+            </defs>
+            <g class="sale__svg-picture-back">
+              <image width="2048" height="2048" xlink:href="./images/sale/sale-01.jpg"/>
+            </g>
+            <g id="holes">
+              <a class="sale__svg-link" xlink:href="/event/104" target="_blank"><path class="sale__svg-hole" id="hole01" d="M461,1776c-68-17.44-162.5-9.5-183.5,65.5s95,127,95,127,132.5,51.5,192-34C618.38,1857.07,500,1786,461,1776Z"/></a>
+              <a class="sale__svg-link" xlink:href="/event/104#ukrasheniya-i-nbsp-aksessuary" target="_blank"><path class="sale__svg-hole" id="hole02" d="M498.07,1612.37c15.3,2.88,110.32,22.16,221.59,111.13,3.67,2.94,4.55,7.61,3.78,12.25-1.31,7.91-8.26,20.54-29.44,35.25-36,25-104,34-163,10s-114.43-75.16-85-130c17.12-31.9,34.84-37,41.86-38.55A48.4,48.4,0,0,1,498.07,1612.37Z"/></a>
+              <a class="sale__svg-link" xlink:href="/event/104#bele-i-nbsp-chulochnye-izdeliya" target="_blank"><path class="sale__svg-hole" id="hole03" d="M209,1149c0,41.42-40.14,69-102,69s-129-44.58-129-86,45.14-65,107-65S209,1107.58,209,1149Z"/></a>
+              <a class="sale__svg-link" xlink:href="/event/104#detskaya-odezhda" target="_blank"><path class="sale__svg-hole" id="hole04" d="M474.41,1214.7c-7.91,37.28-65.44,56.44-129.73,42.8s-102-62.92-94.09-100.2,64.44-60.44,128.73-46.8S482.32,1177.42,474.41,1214.7Z"/></a>
+              <a class="sale__svg-link" xlink:href="/event/104#obuv-i-nbsp-kozhgalantereya" target="_blank"><path class="sale__svg-hole" id="hole05" d="M730.87,1305.27c-10.36,37.25-72.5,57.89-132.62,41.17S496.77,1280,507.13,1242.73s70.5-56.89,130.62-40.17S741.23,1268,730.87,1305.27Z"/></a>
+              <a class="sale__svg-link" xlink:href="/event/104#odezhda-i-nbsp-aksessuary" target="_blank"><path class="sale__svg-hole" id="hole06" d="M837.94,1459.62A1191.43,1191.43,0,0,1,965.19,1405c.1-.69.19-1.37.26-2.07,4.19-41.2-46.52-86.5-105.86-92.54s-110.85,14.49-115,55.7C740.54,1405.54,782.29,1450.58,837.94,1459.62Z"/></a>
+              <a class="sale__svg-link" xlink:href="/event/104#bytovaya-tekhnika-i-nbsp-ehlektronika" target="_blank"><path class="sale__svg-hole" id="hole07" d="M1607,1364c0,41.42-56,85-125,85s-116-25.58-116-67,49-86,117-90C1551.92,1288,1607,1322.58,1607,1364Z"/></a>
+              <a class="sale__svg-link" xlink:href="/event/104#" target="_blank"><path class="sale__svg-hole" id="hole08" d="M1658,1545c1,50-42.61,100.92-119.91,110.29s-138.93-24.93-145-75.37,41.61-97.92,118.91-107.29S1656.94,1494.24,1658,1545Z"/></a>
+            </g>
+            <g class="sale__svg-picture-front">
+              <image width="2048" height="2048" xlink:href="./images/sale/sale-02.png"/>
+            </g>
+          </svg>
+        </div> <!-- .sale -->
+      </div> <!-- .page-content -->
+    </article>
+  </main>
+
+  @@include('blocks/site-footer.html')
+  @@include('blocks/site-scripts.html')
+</body>
+</html>

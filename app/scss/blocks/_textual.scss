@@ -82,6 +82,19 @@
     }
   }
 
+  :target {
+    animation: anim-target 4s 2s;
+  }
+
+  @keyframes anim-target {
+    0% {
+      color: var(--primary-color);
+    }
+    100% {
+      color: var(--text-color);
+    }
+  }
+
   @include mq-min(1024px) {
     .alignleft {
       float: left;
