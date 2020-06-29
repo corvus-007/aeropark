@@ -63,7 +63,7 @@
 
 .aero-plan-popper__description {
   @include mq-max(767px) {
-    display: none;
+    // display: none;
   }
 }
 

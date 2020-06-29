@@ -2,6 +2,9 @@
 }
 
 .aeroplan-legend__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .aeroplan-legend__item {
@@ -9,6 +12,7 @@
   align-items: center;
   font-size: 14px;
   line-height: 1.2;
+  justify-content: center;
 }
 
 .aeroplan-legend__sign {
@@ -30,4 +34,15 @@
   display: block;
   font-size: rem(24px);
   font-weight: 400;
+  flex-grow: 1;
+
+  a {
+    display: block;
+    padding: 20px;
+    text-align: center;
+
+    &:hover {
+      background-color: rgba(#000000, 0.05);
+    }
+  }
 }
