@@ -10,15 +10,86 @@
   // opacity: 0.25;
   fill: #e5f2c7;
   fill-opacity: 0;
-  fill-opacity: 0.2;
+  fill-opacity: 0.4;
   stroke: #f66493;
   stroke: #438360;
-  stroke-width: 0;
+  stroke-width: 8;
+  stroke-opacity: 0.5;
   filter: url(#filter);
-  // animation: stop-colors 12s infinite reverse linear;
   transition: 0.4s;
+  animation: anim-strokes 2s infinite linear alternate;
+  stroke: url("#stroke-gradient");
 
+  .sale__svg-link:nth-child(1) & {
+    animation-delay: -1s;
+  }
+
+  .sale__svg-link:nth-child(2) & {
+    animation-delay: -2s;
+  }
+
+  .sale__svg-link:nth-child(3) & {
+    animation-delay: -3s;
+  }
+
+  .sale__svg-link:nth-child(4) & {
+    animation-delay: -4s;
+  }
+
+  .sale__svg-link:nth-child(5) & {
+    animation-delay: -5s;
+  }
+
+  .sale__svg-link:nth-child(6) & {
+    animation-delay: -6s;
+  }
+
+  .sale__svg-link:nth-child(7) & {
+    animation-delay: -7s;
+  }
+
+  .sale__svg-link:nth-child(8) & {
+    animation-delay: -8s;
+  }
 }
+
+@keyframes anim-strokes {
+  0% {
+    stroke-width: 8;
+  }
+  25% {
+    stroke-width: 4;
+  }
+  50% {
+    stroke-width: 6;
+  }
+  75% {
+    stroke-width: 10;
+  }
+  100% {
+    stroke-width: 8;
+  }
+}
+
+.stroke-gradient__stop {
+  animation: stop-colors 12s infinite reverse;
+}
+
+@keyframes stop-colors {
+  0% {
+    stop-color: #e7418f;
+  }
+  33.33% {
+    stop-color: #715ba2;
+  }
+  66.66% {
+    stop-color: #75c4ee;
+  }
+  100% {
+    stop-color: #e7418f;
+  }
+}
+
 
 .sale__svg-link:hover,
 .sale__svg-link:focus {
@@ -26,7 +97,7 @@
     // opacity: 1;
     fill-opacity: 0;
     stroke-opacity: 1;
-    stroke-width: 10;
+    stroke-width: 11 !important;
   }
 }
 
