@@ -2110,7 +2110,7 @@ export default {
       discount: new Set(),
       category: new Set(),
       audience: new Set(),
-      shopURL: ``,
+      shopURL: `/shop/228`,
       path: `M2200.38,784.82V750.5h40.2v41.75h-40.2Z`,
     },
     {
