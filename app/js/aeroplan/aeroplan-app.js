@@ -792,6 +792,7 @@ function createToggleFloorsControls() {
 function getPathToLogoImage(d, index) {
   return d.logoSrc
     ? `/build/images/aeroplan/logos/floor_${index + 1}/${d.logoSrc}`
+    // ? `/images/aeroplan/logos/floor_${index + 1}/${d.logoSrc}`
     : null;
 }
 
