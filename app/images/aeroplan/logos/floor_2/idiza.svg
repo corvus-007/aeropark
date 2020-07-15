@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.42 8.4">
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g>
+        <path d="M1.2,10.2V1.8H2.52v8.4Z" transform="translate(-1.2 -1.8)" fill="#fff"/>
+        <path d="M4.92,1.8H7.86a4.08,4.08,0,0,1,3,1.24,4,4,0,0,1,1.26,3,4,4,0,0,1-1.26,3,4.08,4.08,0,0,1-3,1.24H4.92ZM7.86,3H6.23V9H7.86a2.82,2.82,0,0,0,2.08-.87A2.92,2.92,0,0,0,10.79,6a2.92,2.92,0,0,0-.85-2.13A2.82,2.82,0,0,0,7.86,3Z" transform="translate(-1.2 -1.8)" fill="#fff"/>
+        <path d="M14,10.2V1.8h1.32v8.4Z" transform="translate(-1.2 -1.8)" fill="#fff"/>
+        <path d="M21.83,3h-4.5V1.8h6.05V3L18.71,9h4.8v1.2H17.14V9Z" transform="translate(-1.2 -1.8)" fill="#fff"/>
+        <path d="M24.35,10.2l3.48-8.4h1.31l3.49,8.4H31.25L30.35,8H26.63l-.91,2.22Zm4.14-6.9L27.11,6.78h2.76Z" transform="translate(-1.2 -1.8)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -239,8 +239,8 @@ export default {
     {
       id: 215,
       title: `IDIZA`,
-      logoSrc: `kriza.svg`,
-      synonyms: ['криза', 'кризо', 'idiza', 'идиза'],
+      logoSrc: `idiza.svg`,
+      synonyms: ['idiza', 'идиза'],
       description: `Изящные женские платья`,
       discount: new Set(),
       category: new Set([categoryFilter[`Одежда и аксессуары`]]),
@@ -2178,9 +2178,8 @@ export default {
       shopURL: ``,
       path: `M1916.78,491h-16V475h16Z`,
     },
-
     {
-      id: 2140,
+      id: 2141,
       title: ``,
       logoSrc: ``,
       synonyms: [],
@@ -2190,6 +2189,18 @@ export default {
       audience: new Set(),
       shopURL: ``,
       path: `M2349.5,410v51h-31V410Z`,
+    },
+    {
+      id: 2142,
+      title: `Гелиопарк`,
+      logoSrc: ``,
+      synonyms: ['Гелиопарк', 'utkbjgfhr'],
+      description: ``,
+      discount: new Set(),
+      category: new Set([categoryFilter[`Подарки, сувениры`]]),
+      audience: new Set(),
+      shopURL: `/shop/230`,
+      path: `M1476,743h-16V727h16Z`,
     },
   ],
   helpMarkers: [
