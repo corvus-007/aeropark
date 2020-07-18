@@ -1,12 +1,44 @@
-window.commonPageFilter = (function() {
+window.commonPageFilter = (function () {
   'use strict';
 
-  const COLLPASED_CLASS = 'common-page-filter--collapsed';
+  const COLLAPSED_CLASS = 'common-page-filter--collapsed';
   const SEARCH_PARAM_NAME = 'filter_by';
   const commonPageFilter = document.querySelector('.common-page-filter');
 
   if (!commonPageFilter) {
     return;
+  }
+
+  function sortOptionsByName(list) {
+    const children = list.children;
+    const sortedChildren = [...children].sort((a, b) => {
+      const aValue = a.textContent.trim();
+      const bValue = b.textContent.trim();
+
+      if (bValue === 'Все') {
+        return 1;
+      }
+
+      return aValue.localeCompare(bValue);
+    });
+
+    for (const child of sortedChildren) {
+      list.append(child);
+    }
+  }
+
+  function sortItemsByName(list) {
+    const children = list.children;
+    const sortedChildren = [...children].sort((a, b) => {
+      const aValue = a.querySelector(`[title]`)?.title || '';
+      const bValue = b.querySelector(`[title]`)?.title || '';
+
+      return aValue.localeCompare(bValue);
+    });
+
+    for (const child of sortedChildren) {
+      list.append(child);
+    }
   }
 
   function getFilterSelectorFromHash() {
@@ -29,7 +61,12 @@ window.commonPageFilter = (function() {
     initSelector = '*';
   }
 
-  commonPageFilter.classList.add(COLLPASED_CLASS);
+  commonPageFilter.classList.add(COLLAPSED_CLASS);
+  const optionsList = commonPageFilter.querySelector(
+    '.common-page-filter__options'
+  );
+
+  sortOptionsByName(optionsList);
 
   const currentElem = commonPageFilter.querySelector(
     '.common-page-filter__current'
@@ -37,10 +74,11 @@ window.commonPageFilter = (function() {
   const labelElem = commonPageFilter.querySelector(
     '.common-page-filter__label'
   );
-  const optionsList = commonPageFilter.querySelector(
-    '.common-page-filter__options'
-  );
+
   const cardsList = document.querySelector('[data-filter-cards]');
+
+  sortItemsByName(cardsList);
+
   let initButton = optionsList.querySelector(`[data-filter="${initSelector}"]`);
   initButton = initButton
     ? initButton
@@ -91,13 +129,13 @@ window.commonPageFilter = (function() {
     evt.preventDefault();
 
     const isCollapsedOptions = commonPageFilter.classList.contains(
-      COLLPASED_CLASS
+      COLLAPSED_CLASS
     );
     toggle.textContent = !isCollapsedOptions
       ? toggleCollapsedStateText[0]
       : toggleCollapsedStateText[1];
 
-    commonPageFilter.classList.toggle(COLLPASED_CLASS, !isCollapsedOptions);
+    commonPageFilter.classList.toggle(COLLAPSED_CLASS, !isCollapsedOptions);
   }
 
   function checkIsOverflowOptions() {
@@ -118,7 +156,7 @@ window.commonPageFilter = (function() {
 
     hideAllItems();
 
-    [...cardsItems].forEach(card => {
+    [...cardsItems].forEach((card) => {
       if (card.matches(value)) {
         card.classList.remove('events-cards__item--hidden');
         card.classList.add('events-cards__item--show');
@@ -134,7 +172,7 @@ window.commonPageFilter = (function() {
   function hideAllItems() {
     const cardsItems = cardsList.children;
 
-    [...cardsItems].forEach(card => {
+    [...cardsItems].forEach((card) => {
       card.classList.add('events-cards__item--hidden');
       card.classList.remove('events-cards__item--show');
     });
