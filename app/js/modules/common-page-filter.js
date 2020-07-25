@@ -10,6 +10,10 @@ window.commonPageFilter = (function () {
   }
 
   function sortOptionsByName(list) {
+    if (!list) {
+      return;
+    }
+
     const children = list.children;
     const sortedChildren = [...children].sort((a, b) => {
       const aValue = a.textContent.trim();
@@ -28,6 +32,10 @@ window.commonPageFilter = (function () {
   }
 
   function sortItemsByName(list) {
+    if (!list) {
+      return;
+    }
+
     const children = list.children;
     const sortedChildren = [...children].sort((a, b) => {
       const aValue = a.querySelector(`[title]`)?.title || '';
@@ -77,7 +85,7 @@ window.commonPageFilter = (function () {
 
   const cardsList = document.querySelector('[data-filter-cards]');
 
-  sortItemsByName(cardsList);
+  sortItemsByName(document.querySelector('.shop-logos-cards'));
 
   let initButton = optionsList.querySelector(`[data-filter="${initSelector}"]`);
   initButton = initButton
