@@ -2203,6 +2203,18 @@ export default {
       shopURL: `/shop/230`,
       path: `M1476,743h-16V727h16Z`,
     },
+    {
+      id: 2143,
+      title: `Виртуальный ЗАГС`,
+      logoSrc: ``,
+      synonyms: ['виртуальный загс', 'dbhnefkmysq pfuc'],
+      description: ``,
+      discount: new Set(),
+      category: new Set([categoryFilter[`Развлечения`]]),
+      audience: new Set(),
+      shopURL: ``,
+      path: `M2144,410v14h-14V410Z`,
+    },
   ],
   helpMarkers: [
     {
