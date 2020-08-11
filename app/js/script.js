@@ -160,4 +160,24 @@ document.addEventListener('DOMContentLoaded', function() {
       },
     },
   });
+
+  function sortLogoCardsByName(list) {
+    if (!list) {
+      return;
+    }
+
+    const children = list.children;
+    const sortedChildren = [...children].sort((a, b) => {
+      const aValue = a.querySelector(`[title]`)?.title || '';
+      const bValue = b.querySelector(`[title]`)?.title || '';
+
+      return aValue.localeCompare(bValue);
+    });
+
+    for (const child of sortedChildren) {
+      list.append(child);
+    }
+  }
+
+  sortLogoCardsByName(document.querySelector('.shop-logos-cards'));
 });
