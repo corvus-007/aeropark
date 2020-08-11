@@ -17,7 +17,7 @@
     display: none;
   }
 
-  & :empty {
+  & :empty:not(br) {
     display: none;
   }
 
