@@ -2133,11 +2133,11 @@ export default {
       title: `Palazzo`,
       logoSrc: `palazzo.svg`,
       synonyms: [],
-      description: `Скоро открытие`,
+      description: ``,
       discount: new Set(),
       category: new Set(),
       audience: new Set(),
-      shopURL: ``,
+      shopURL: `/shop/233`,
       path: `M2024.2,573h26v31.5H2000V573Z`,
     },
     {
