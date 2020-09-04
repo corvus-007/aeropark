@@ -3374,6 +3374,18 @@ export default {
       shopURL: ``,
       path: `M573.5,339.5v16h-16v-16Z`,
     },
+    {
+      id: 1183,
+      title: `BRONOSKINS`,
+      logoSrc: ``,
+      synonyms: ['BRONOSKINS'],
+      description: `Защита на смартфоны, планшеты, смарт-часы и другие гаджеты`,
+      discount: new Set(),
+      category: new Set([categoryFilter[`Услуги`], categoryFilter[`Бытовая техника, электроника`]]),
+      audience: new Set(),
+      shopURL: `/shop/235`,
+      path: `M794.5,323h-16V307h16Z`,
+    },
   ],
   helpMarkers: [
     {
