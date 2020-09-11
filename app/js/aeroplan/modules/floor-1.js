@@ -3215,7 +3215,7 @@ export default {
       title: `STILLOK`,
       logoSrc: `stillok.svg`,
       synonyms: ['Нижнее белье', 'stillok'],
-      description: `Скоро открытие`,
+      description: ``,
       discount: new Set(),
       category: new Set([categoryFilter[`Белье, чулочные изделия`]]),
       audience: new Set(),
