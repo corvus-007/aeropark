@@ -2162,7 +2162,7 @@ export default {
       discount: new Set(),
       category: new Set([categoryFilter[`Детские товары и одежда`]]),
       audience: new Set(),
-      shopURL: ``,
+      shopURL: `/shop/236`,
       path: `M2348,507v66h-49V507Z`,
     },
     {
